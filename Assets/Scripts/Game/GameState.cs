@@ -1,0 +1,93 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameState : MonoBehaviour
+{
+    public int currentActionPoints = 2;
+    public Dictionary<MetricType, float> metrics;
+    public List<OngoingEffect> activeEffects;
+    private List<MetricEffect> pendingEffects;
+    [SerializeField] private Vector2 valueRange = new Vector2(0,100);
+
+    private void Start()
+    {
+        InitializeStats();
+    }
+    //create list and assign level start metrics
+    private void InitializeStats()
+    {
+        activeEffects = new List<OngoingEffect>();
+        pendingEffects = new List<MetricEffect>();
+        metrics = new Dictionary<MetricType, float>
+        {
+            {MetricType.WaterQuality,50f },
+            {MetricType.BiodiversityLevel,30f },
+            {MetricType.PollutionLevel, 60f }
+        };
+    }
+    public void EndTurn()
+    {
+        HandleOngoingEffects();
+        ApplyPendingEffects();
+        GenerateNextEvent();
+        ResetActionPoints();
+        HandleSaveGame();
+    }
+    //apply active effects each turn and remove when amount of active turns done
+    private void HandleOngoingEffects()
+    {
+        for(int i = activeEffects.Count - 1;i >= 0; i--)
+        {
+            var effect = activeEffects[i];
+            foreach(var metricEffect in effect.effects)
+            {
+                ApplyMetricEffect(metricEffect);
+            }
+            effect.remainingTurns--;
+            if(effect.remainingTurns <= 0)
+            {
+                activeEffects.RemoveAt(i);
+            }
+        }
+    }
+    //apply all the effects that were applied from actions this turn
+    private void ApplyPendingEffects()
+    {
+        if(pendingEffects.Count > 0)
+        {
+            foreach (var effect in pendingEffects)
+            {
+                ApplyMetricEffect(effect);
+            }
+            pendingEffects.Clear();
+        }
+    }
+    private void GenerateNextEvent()
+    {
+        //generate next turns event?
+    }
+    private void HandleSaveGame()
+    {
+        //save logic?
+    }
+    private void ResetActionPoints()
+    {
+        currentActionPoints = 2;
+    }
+    //add action effects to list so they can be applied at end turn
+    public void QueueMetricEffect(MetricEffect effect)
+    {
+        pendingEffects.Add(effect);
+    }
+    //change metric values based on effects
+    public void ApplyMetricEffect(MetricEffect effect)
+    {
+        metrics[effect.type] += effect.value;
+        metrics[effect.type] = Mathf.Clamp(metrics[effect.type], valueRange[0], valueRange[1]);
+    }
+    //add multi turn effect to list
+    public void AddOngoingEffect(OngoingEffect effect)
+    {
+        activeEffects.Add(effect);
+    }
+}
