@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -29,6 +30,12 @@ public class TurnManager : MonoBehaviour
     }
     private void Start()
     {
+        StartCoroutine(DelayedInitialize());
+    }
+    //make sure initial event subscriptions go through before sending them
+    private IEnumerator DelayedInitialize()
+    {
+        yield return null;
         Initialize();
     }
     //invoke events at game start to update all base values etc.
