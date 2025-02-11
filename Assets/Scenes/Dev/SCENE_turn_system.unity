@@ -124,7 +124,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 582234907369902583, guid: e0f1964e9d6f2964998b9e2b73b9fe12, type: 3}
   m_PrefabInstance: {fileID: 1787676602737715695}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1364263480}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d16e0681f52099f40b69d4e0155699b5, type: 3}
@@ -338,7 +338,7 @@ Transform:
   m_GameObject: {fileID: 734448270}
   serializedVersion: 2
   m_LocalRotation: {x: 0.58209944, y: 0.0012158894, z: -0.00087043067, w: 0.81311625}
-  m_LocalPosition: {x: 19.945187, y: 18.036016, z: 1.0627646}
+  m_LocalPosition: {x: 8, y: 18, z: 1.0627646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -467,6 +467,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1364263480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6062772710483095386, guid: e0f1964e9d6f2964998b9e2b73b9fe12, type: 3}
+  m_PrefabInstance: {fileID: 1787676602737715695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1364263483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364263480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2e04520e8ef0c44a1e5e2056a902db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mousePos: {x: 0, y: 0}
+  worldPos: {x: 0, y: 0, z: 0}
+  projectedPos: {x: 0, y: 0, z: 0}
+  cam: {fileID: 734448272}
 --- !u!1 &1518100639
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +514,7 @@ Transform:
   m_GameObject: {fileID: 1518100639}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.37, y: 0, z: -4.01}
+  m_LocalPosition: {x: 13.37, y: 0, z: -4.01}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -512,8 +533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrainParent: {fileID: 2068811458}
-  cellsVertical: 40
-  cellsHorizontal: 20
+  cellsVertical: 6
+  cellsHorizontal: 4
   debugMarker: {fileID: 5182276285921366024, guid: 5102e73c749e79c44bed97d3542b17a4, type: 3}
 --- !u!1 &2068811458
 GameObject:
@@ -856,7 +877,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6062772710483095386, guid: e0f1964e9d6f2964998b9e2b73b9fe12, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1364263483}
   m_SourcePrefab: {fileID: 100100000, guid: e0f1964e9d6f2964998b9e2b73b9fe12, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
