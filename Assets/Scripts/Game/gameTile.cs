@@ -7,7 +7,9 @@ public class gameTile : MonoBehaviour
    
     public List<GameObject> adjacentTiles = new List<GameObject>();
     public Vector2Int gridPosition;
-
+    public bool isSelected = false;
+    public bool isHovered = false;
+    
 
     void Start()
     {
@@ -18,17 +20,30 @@ public class gameTile : MonoBehaviour
     void Update()
     {
         
+        if (isHovered)
+        {
+            this.GetComponent<Renderer>().material.color = Color.red;
+            StartCoroutine(clearHover());
+        }
+        else
+        {
+            this.GetComponent<Renderer>().material.color = Color.white;
+        }
+        
+        
+        
+    }
+    
+
+    public string ReturnTileData()
+    {
+        return gridPosition.ToString();
     }
 
-    public void returnColor()
+    IEnumerator clearHover()
     {
-        StartCoroutine(returnColorHelper());
-    }
-
-    public IEnumerator returnColorHelper()
-    {
-        yield return new WaitForSeconds(1f);
-        GetComponent<Renderer>().material.color = Color.white;
+        isHovered = false;
+        yield return new WaitForSeconds(0.1f);
     }
     
 }

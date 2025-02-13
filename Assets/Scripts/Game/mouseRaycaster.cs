@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TouchPhase = UnityEditor.DeviceSimulation.TouchPhase;
 
 public class mouseRaycaster : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class mouseRaycaster : MonoBehaviour
     [SerializeField] private Vector3 worldPos;
     [SerializeField] private Vector3 projectedPos;
     public Camera cam;
+    public GameObject tileHoverOver;
 
 
 
@@ -24,11 +26,18 @@ public class mouseRaycaster : MonoBehaviour
         worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 18f)); //convert mouse position into world position
         projectedPos = Vector3.ProjectOnPlane(worldPos, new Vector3(0, 1, 0)); //account for camera rotation
 
-        CheckTileHitting();
-       
+        //Touch touch = Input.GetTouch(0);
+        //if (Input.GetMouseButton(0) || touch.phase == UnityEngine.TouchPhase.Began)
+        
+        GameObject selectedTile = CheckTileHitting();
+        if (selectedTile != null)
+        {
+            selectedTile.GetComponent<gameTile>().isHovered = true;
+            //selectedTile.GetComponent<gameTile>().clickHandler();
+        }
     }
 
-    void CheckTileHitting()
+    public GameObject CheckTileHitting()
     {
         RaycastHit hit;
         
@@ -36,11 +45,15 @@ public class mouseRaycaster : MonoBehaviour
         Debug.Log(hit.ToString());
         if (hit.collider.CompareTag("Tile")) //check if ray hits a tile
         {
-            var tileObj = hit.collider.gameObject.GetComponent<gameTile>(); //get tile component itself
-            tileObj.GetComponent<Renderer>().material.color = Color.red;
-
-            tileObj.returnColor();
+            return hit.collider.gameObject;
+            
+            //var tileObj = hit.collider.gameObject.GetComponent<gameTile>(); //get tile component itself
         }
+        else
+        {
+            return null;
+        }
+        
         
 
     }
