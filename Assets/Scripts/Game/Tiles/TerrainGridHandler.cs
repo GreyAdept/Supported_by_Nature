@@ -19,7 +19,7 @@ public class TerrainGridHandler : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {   
-        generateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, 4); //use inversetransformpoint to convert from global to local position
+        generateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, 5); //use inversetransformpoint to convert from global to local position
         calculateNeighbors();
         
     }
@@ -39,11 +39,14 @@ public class TerrainGridHandler : MonoBehaviour
 
                 tileComponent.transform.SetParent(this.transform); // atttach tile to terrain object
                 tileComponent.gridPosition = new Vector2Int(i, j); // assign a 2d-coordinate to the tile
+                tileComponent.tileType = tileManager.TileType.Wetland; //assign default tile type
                 mapTiles.Add(tileComponent.gridPosition, newTile); // add the newly created tile to a dictionary
 
             }
         }
     }
+
+   
     
     private void calculateNeighbors()
     {
@@ -92,9 +95,13 @@ public class TerrainGridHandler : MonoBehaviour
                     tile.adjacentTiles.Add(result);
                 }
             }
+            else
+            {
+                tile.tileType = tileManager.TileType.Water;
+            }
 
             //check top neighbor
-            if (tilePos.y != cellsVertical-1)
+            if (tilePos.y != cellsHorizontal-1)
             {
                 GameObject result;
                 mapTiles.TryGetValue(new Vector2Int(tilePos.x, tilePos.y + 1), out result);
@@ -102,6 +109,10 @@ public class TerrainGridHandler : MonoBehaviour
                 {
                     tile.adjacentTiles.Add(result);
                 }
+            }
+            else
+            {
+                tile.tileType = tileManager.TileType.Forest;
             }
 
 
