@@ -489,6 +489,11 @@ MonoBehaviour:
   projectedPos: {x: 0, y: 0, z: 0}
   cam: {fileID: 734448272}
   tileHoverOver: {fileID: 0}
+--- !u!4 &1364263484 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7078191171115482855, guid: e0f1964e9d6f2964998b9e2b73b9fe12, type: 3}
+  m_PrefabInstance: {fileID: 1787676602737715695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1405871654
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,8 +523,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0156d108de40940bd44a1167dcdf3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedTile: {fileID: 0}
   actionsWetland:
   - {fileID: 11400000, guid: 65b242b93aa08a648a06712212ec9083, type: 2}
+  tileAction: {fileID: 0}
 --- !u!4 &1405871656
 Transform:
   m_ObjectHideFlags: 0
@@ -528,12 +535,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405871654}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.725669, y: -12.622125, z: 14.577804}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1364263484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1518100639
 GameObject:
@@ -987,7 +994,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7078191171115482855, guid: e0f1964e9d6f2964998b9e2b73b9fe12, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1405871656}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6062772710483095386, guid: e0f1964e9d6f2964998b9e2b73b9fe12, type: 3}
       insertIndex: -1
@@ -1004,4 +1014,3 @@ SceneRoots:
   - {fileID: 1787676602737715695}
   - {fileID: 1392637613177842074}
   - {fileID: 1084305585}
-  - {fileID: 1405871656}

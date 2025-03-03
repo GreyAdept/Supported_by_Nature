@@ -17,7 +17,8 @@ public class gameTile : MonoBehaviour
     
     // tile data
     public tileManager.TileType tileType;
-    
+
+   
     
 
     void Start()
@@ -25,7 +26,7 @@ public class gameTile : MonoBehaviour
         tileManager = tileManager.Instance;
         rend = GetComponent<Renderer>();
         effectHandler = GetComponent<tileSelectedEffect>();
-        
+
     }
 
     

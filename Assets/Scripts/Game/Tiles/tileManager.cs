@@ -9,7 +9,17 @@ public class tileManager : SingletonMonoBehaviour<tileManager>
         Wetland,
         Forest
     };
+    
+    public gameTile selectedTile;
 
     public WetlandAction[] actionsWetland;
+
+    public tileAction tileAction;
+
+    public void doEffect(gameTile tile)
+    {
+        
+    }
+
 
 }

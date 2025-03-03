@@ -11,12 +11,13 @@ public class mouseRaycaster : MonoBehaviour
     public Camera cam;
     public GameObject tileHoverOver;
 
+    private tileManager tm;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        tm = tileManager.Instance;
     }
 
     // Update is called once per frame
@@ -32,8 +33,13 @@ public class mouseRaycaster : MonoBehaviour
         GameObject selectedTile = CheckTileHitting();
         if (selectedTile != null)
         {
-            selectedTile.GetComponent<gameTile>().isHovered = true;
+            tm.selectedTile = selectedTile.GetComponent<gameTile>(); //send selected tile to tilemanager instnace
+            selectedTile.GetComponent<gameTile>().isHovered = true; 
             //selectedTile.GetComponent<gameTile>().clickHandler();
+        }
+        else
+        {
+            tm.selectedTile = null; //if no tile hovered, select nothing
         }
     }
 
@@ -43,10 +49,10 @@ public class mouseRaycaster : MonoBehaviour
         
         Physics.Raycast(new Vector3(projectedPos.x, projectedPos.y + 1, projectedPos.z), new Vector3(0, -1, 0), out hit); //fire ray directly above tilemap
         Debug.Log(hit.ToString());
-        if (hit.collider.CompareTag("Tile")) //check if ray hits a tile
+        if (hit.collider.gameObject != null && hit.collider.CompareTag("Tile")) //check if ray hits a tile
         {
             return hit.collider.gameObject;
-            
+           
             //var tileObj = hit.collider.gameObject.GetComponent<gameTile>(); //get tile component itself
         }
         else
@@ -55,7 +61,7 @@ public class mouseRaycaster : MonoBehaviour
         }
         
         
-
+x
     }
 
     void OnDrawGizmos()
