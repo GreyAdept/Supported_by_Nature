@@ -12,6 +12,7 @@ public class mouseRaycaster : MonoBehaviour
     public GameObject tileHoverOver;
 
     private tileManager tm;
+    private GameObject selectedTile;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,10 +28,12 @@ public class mouseRaycaster : MonoBehaviour
         worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 18f)); //convert mouse position into world position
         projectedPos = Vector3.ProjectOnPlane(worldPos, new Vector3(0, 1, 0)); //account for camera rotation
 
-        //Touch touch = Input.GetTouch(0);
-        //if (Input.GetMouseButton(0) || touch.phase == UnityEngine.TouchPhase.Began)
+       
+        if (Input.GetMouseButtonDown(0))
+        {
+            selectedTile = CheckTileHitting();
+        }
         
-        GameObject selectedTile = CheckTileHitting();
         if (selectedTile != null)
         {
             tm.selectedTile = selectedTile.GetComponent<gameTile>(); //send selected tile to tilemanager instnace
@@ -48,8 +51,8 @@ public class mouseRaycaster : MonoBehaviour
         RaycastHit hit;
         
         Physics.Raycast(new Vector3(projectedPos.x, projectedPos.y + 1, projectedPos.z), new Vector3(0, -1, 0), out hit); //fire ray directly above tilemap
-        Debug.Log(hit.ToString());
-        if (hit.collider.gameObject != null && hit.collider.CompareTag("Tile")) //check if ray hits a tile
+        //Debug.Log(hit.ToString());
+        if (hit.collider != null && hit.collider.CompareTag("Tile")) //check if ray hits a tile
         {
             return hit.collider.gameObject;
            
@@ -57,11 +60,8 @@ public class mouseRaycaster : MonoBehaviour
         }
         else
         {
-            return null;
+            return selectedTile;
         }
-        
-        
-x
     }
 
     void OnDrawGizmos()

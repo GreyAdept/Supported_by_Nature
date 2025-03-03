@@ -17,6 +17,7 @@ public class gameTile : MonoBehaviour
     
     // tile data
     public tileManager.TileType tileType;
+    public List<GameObject> plants = new List<GameObject>(); 
 
    
     

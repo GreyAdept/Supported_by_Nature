@@ -1,3 +1,4 @@
+using UnityEngine;
 using Utils;
 
 public class tileManager : SingletonMonoBehaviour<tileManager>
@@ -15,11 +16,23 @@ public class tileManager : SingletonMonoBehaviour<tileManager>
     public WetlandAction[] actionsWetland;
 
     public tileAction tileAction;
-
-    public void doEffect(gameTile tile)
-    {
-        
+    public tileAction removePlantAction;
+    
+    void Update()
+    {   
+        /*
+        if (Input.GetMouseButtonDown(0) && selectedTile != null)
+        {
+            tileAction.affectTile(selectedTile);
+        }
+        if (Input.GetMouseButtonDown(1) && selectedTile != null)
+        {
+            removePlantAction.affectTile(selectedTile);
+        }
+        */
     }
+    
+    
 
 
 }

@@ -1,0 +1,14 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "RemovePlantAction", menuName = "RemovePlantAction")]
+public class RemovePlantAction : tileAction
+{
+    public override void affectTile(gameTile tile)
+    {
+        foreach (GameObject plant in tile.plants)
+        {
+            Destroy(plant);
+        }
+        tile.plants.Clear();
+    }
+}
