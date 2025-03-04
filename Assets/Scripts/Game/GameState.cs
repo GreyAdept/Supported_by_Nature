@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using System.Collections;
 
 public class GameState : MonoBehaviour
 {
@@ -7,11 +10,26 @@ public class GameState : MonoBehaviour
     public Dictionary<MetricType, float> metrics;
     public List<OngoingEffect> activeEffects;
     private List<MetricEffect> pendingEffects;
+    private RandomEventSystem randomEventSystem;
     [SerializeField] private Vector2 valueRange = new Vector2(0,100);
+
+    //add somewhere else later
+    [SerializeField] private Button goodResponseButton;
+    [SerializeField] private Button neutralResponseButton;
+    [SerializeField] private Button badResponseButton;
+    public UnityEvent onEventChoiceMade;
+    public UnityEvent onNewEvent;
+    public WetlandEvent CurrentEvent => currentEvent;
+    private WetlandEvent currentEvent;
 
     private void Start()
     {
         InitializeStats();
+        randomEventSystem = RandomEventSystem.instance;
+        //
+        goodResponseButton.onClick.AddListener(() => HandleRandomEvent(AnswerCategory.Good));
+        neutralResponseButton.onClick.AddListener(() => HandleRandomEvent(AnswerCategory.Neutral));
+        badResponseButton.onClick.AddListener(() => HandleRandomEvent(AnswerCategory.Bad));
     }
     //create list and assign level start metrics
     private void InitializeStats()
@@ -29,7 +47,7 @@ public class GameState : MonoBehaviour
     {
         HandleOngoingEffects();
         ApplyPendingEffects();
-        GenerateNextEvent();
+        GetRandomEvent();
         ResetActionPoints();
         HandleSaveGame();
     }
@@ -62,9 +80,15 @@ public class GameState : MonoBehaviour
             pendingEffects.Clear();
         }
     }
-    private void GenerateNextEvent()
+    private void GetRandomEvent()
     {
-        //generate next turns event?
+        currentEvent = randomEventSystem.GetNextEvent();
+        //Debug.Log(currentEvent.name);
+        onNewEvent?.Invoke();
+    }
+    private void HandleRandomEvent(AnswerCategory answer)
+    {
+        onEventChoiceMade?.Invoke();
     }
     private void HandleSaveGame()
     {

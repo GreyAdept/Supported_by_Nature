@@ -1,16 +1,31 @@
 using UnityEngine;
 
-public class WetlandEvent : MonoBehaviour
+[CreateAssetMenu(fileName = "WetlandEvent", menuName = "WetlandEvent")]
+public class WetlandEvent : ScriptableObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public string eventId;
+    public string eventName;
+    public string eventDescription;
+    public Sprite eventIcon;
+    public EventCategory eventCategory;
 
-    // Update is called once per frame
-    void Update()
+    public EventResponse goodResponse;
+    public EventResponse neutralResponse;
+    public EventResponse badResponse;
+
+    public EventResponse GetResponseFromAnswer(AnswerCategory answerCategory)
     {
-        
+        switch(answerCategory)
+        {
+            case AnswerCategory.Good:
+                return goodResponse;
+            case AnswerCategory.Neutral:
+                return neutralResponse;
+            case AnswerCategory.Bad:
+                return badResponse;
+            default:
+                return null;
+        }
     }
+    //event metric modifiers..
 }
