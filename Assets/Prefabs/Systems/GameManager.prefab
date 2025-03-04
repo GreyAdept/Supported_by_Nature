@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7078191171115482855}
   - component: {fileID: 582234907369902583}
   - component: {fileID: 709843759464663865}
+  - component: {fileID: 2518567336217994220}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -70,3 +71,53 @@ MonoBehaviour:
   currentActionPoints: 2
   activeEffects: []
   valueRange: {x: 0, y: 100}
+  goodResponseButton: {fileID: 0}
+  neutralResponseButton: {fileID: 0}
+  badResponseButton: {fileID: 0}
+  onEventChoiceMade:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: EventPanelUI, Assembly-CSharp
+        m_MethodName: HideEventUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onNewEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: EventPanelUI, Assembly-CSharp
+        m_MethodName: GetNewEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2518567336217994220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6062772710483095386}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2e04520e8ef0c44a1e5e2056a902db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mousePos: {x: 0, y: 0}
+  worldPos: {x: 0, y: 0, z: 0}
+  projectedPos: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  tileHoverOver: {fileID: 0}
