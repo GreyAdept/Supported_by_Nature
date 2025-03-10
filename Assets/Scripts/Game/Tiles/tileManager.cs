@@ -11,13 +11,23 @@ public class tileManager : SingletonMonoBehaviour<tileManager>
         Forest
     };
     
+    public Material materialWetland;
+    public Material materialWater;
+    public Material materialForest;
+    
     public gameTile selectedTile;
 
     public WetlandAction[] actionsWetland;
 
     public tileAction tileAction;
     public tileAction removePlantAction;
-    
+
+    void Start()
+    {
+        Instantiate(materialWetland);
+        Instantiate(materialWater);
+        Instantiate(materialForest);
+    }
     void Update()
     {   
         /*

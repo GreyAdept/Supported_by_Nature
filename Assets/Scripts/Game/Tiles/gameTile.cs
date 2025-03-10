@@ -12,13 +12,16 @@ public class gameTile : MonoBehaviour
 
     private tileManager tileManager;
     private Renderer rend;
+    
+    //tile materials
+   
 
     private tileSelectedEffect effectHandler;
     
     // tile data
     public tileManager.TileType tileType;
     public List<GameObject> plants = new List<GameObject>(); 
-
+    
    
     
 
@@ -27,7 +30,23 @@ public class gameTile : MonoBehaviour
         tileManager = tileManager.Instance;
         rend = GetComponent<Renderer>();
         effectHandler = GetComponent<tileSelectedEffect>();
-
+        
+        switch (tileType)
+        {
+            case tileManager.TileType.Forest:
+                rend.material = tileManager.materialForest;
+                break;
+            case tileManager.TileType.Water:
+                rend.material = tileManager.materialWater;
+                break;
+            case tileManager.TileType.Wetland:
+                rend.material = tileManager.materialWetland;
+                break;
+            default:
+                rend.material.color = Color.white;
+                break;
+        }
+        
     }
 
     
@@ -36,28 +55,12 @@ public class gameTile : MonoBehaviour
         
         if (isHovered)
         {
-            rend.material.color = Color.red;
             effectHandler.PlayParticle();
             StartCoroutine(clearHover());
         }
         else
-        {   
+        {
             effectHandler.StopParticle();
-            switch (tileType)
-            {
-                case tileManager.TileType.Forest:
-                    rend.material.color = Color.green;
-                    break;
-                case tileManager.TileType.Water:
-                    rend.material.color = Color.blue;
-                    break;
-                case tileManager.TileType.Wetland:
-                    rend.material.color = Color.white;
-                    break;
-                default:
-                    rend.material.color = Color.white;
-                    break;
-            }
         }
         
         
