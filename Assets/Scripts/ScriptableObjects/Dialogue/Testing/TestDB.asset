@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cedd377f1f6e2e046be146668574c019, type: 3}
+  m_Name: TestDB
+  m_EditorClassIdentifier: 
+  tutorialSequence: []
+  catastrophicEventHints:
+  - {fileID: 11400000, guid: cec26b0fd2df7dc4f86ec5efcd450c9c, type: 2}
+  badEventHints:
+  - {fileID: 11400000, guid: a1f3eacaa6b340248b12bdf8090d4f4a, type: 2}
+  neutralEventHints:
+  - {fileID: 11400000, guid: 0bfe06b41cdaa354fae6b09241c70012, type: 2}
+  goodEventHints:
+  - {fileID: 11400000, guid: 03489af9129ed4b41b852c07f23184d1, type: 2}
+  randomDialogues:
+  - {fileID: 11400000, guid: 226143ef0e41ab94497e7d42c6a065fd, type: 2}
+  jokeDialogues:
+  - {fileID: 11400000, guid: 203ce450cb9848845aa1b6666370d746, type: 2}
+  educationalDialogues:
+  - {fileID: 11400000, guid: c1b4b5c4ed6b20643a629b6c00ef8086, type: 2}

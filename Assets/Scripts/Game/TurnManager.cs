@@ -7,6 +7,7 @@ public class TurnManager : MonoBehaviour
 {
     public static TurnManager Instance;
     public GameState gameState;
+    public int CurrentTurn => currentTurn;
     private int currentTurn = 1;
 
     public UnityEvent<int> onTurnChanged;

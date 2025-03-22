@@ -26,7 +26,7 @@ public class RandomEventSystem : MonoBehaviour
 
     [Header("Other")]
     [SerializeField] private int eventQueLength; //how many events to pregenerate
-    private Queue<WetlandEvent> eventQue = new Queue<WetlandEvent>(); //que so we can pregenerate events incase we want to inform player earlier
+    public Queue<WetlandEvent> eventQue = new Queue<WetlandEvent>(); //que so we can pregenerate events incase we want to inform player earlier
     private Dictionary<EventCategory, int> categoryCooldowns = new Dictionary<EventCategory, int>();
     private Dictionary<EventCategory, float> currentWeights = new Dictionary<EventCategory, float>(); //weights that have been adjusted based on other factors
     private Dictionary<EventCategory, float> baseWeights = new Dictionary<EventCategory, float>(); //base starting weights
@@ -43,12 +43,6 @@ public class RandomEventSystem : MonoBehaviour
         {
             GenerateNewEvent();
         }
-        /*int j = 0;
-        foreach (WetlandEvent e in eventQue)
-        {
-            Debug.Log($"Event: {e.name} at id: {j}");
-            j++;
-        }*/
     }
     private void Update()
     {
@@ -194,6 +188,14 @@ public class RandomEventSystem : MonoBehaviour
     {
         if(eventQue.Count > 0)
         {
+            Debug.Log("peeking eventque");
+            int j = 0;
+            foreach (WetlandEvent e in eventQue)
+            {
+                Debug.Log($"Event: {e.name} at id: {j}");
+                j++;
+            }
+            Debug.Log($"when peeking we get {eventQue.Peek()}");
             return eventQue.Peek();
         }
         else

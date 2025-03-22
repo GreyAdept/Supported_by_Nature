@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
   m_Name: TestEventGood
   m_EditorClassIdentifier: 
-  eventId: 
+  eventId: good
   eventName: Good
   eventDescription: 
   eventIcon: {fileID: 0}
-  category: 3
+  eventCategory: 3
+  goodResponse: {fileID: 0}
+  neutralResponse: {fileID: 0}
+  badResponse: {fileID: 0}

@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
-  m_Name: TestEventNeutral
+  m_Script: {fileID: 11500000, guid: 49bd6be61d54f1b459390291a3e98b6a, type: 3}
+  m_Name: Task_two
   m_EditorClassIdentifier: 
-  eventId: neutral
-  eventName: Neutral
-  eventDescription: 
-  eventIcon: {fileID: 0}
-  eventCategory: 2
-  goodResponse: {fileID: 0}
-  neutralResponse: {fileID: 0}
-  badResponse: {fileID: 0}
+  npcName: Costeicco Guru
+  npcImage: {fileID: 0}
+  dialogueText: testing task 1
+  typeSpeed: 0
+  taskId: task_two
+  taskDescription: do something 2
+  nextDialogue: {fileID: 0}
+  isCompleted: 0
