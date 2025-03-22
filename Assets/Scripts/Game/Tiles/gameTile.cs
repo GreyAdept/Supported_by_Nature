@@ -14,14 +14,12 @@ public class gameTile : MonoBehaviour
     private Renderer rend;
     
     //tile materials
-   
-
     private tileSelectedEffect effectHandler;
     
     // tile data
     public tileManager.TileType tileType;
-    public List<GameObject> plants = new List<GameObject>(); 
-    
+    public List<GameObject> plants = new List<GameObject>();
+    public int tileOvergrownState;
    
     
 
@@ -35,12 +33,15 @@ public class gameTile : MonoBehaviour
         {
             case tileManager.TileType.Forest:
                 rend.material = tileManager.materialForest;
+                transform.Translate(Vector3.up*0.1f, Space.Self);
                 break;
             case tileManager.TileType.Water:
                 rend.material = tileManager.materialWater;
+                transform.Translate(Vector3.down*0.1f, Space.Self);
                 break;
             case tileManager.TileType.Wetland:
                 rend.material = tileManager.materialWetland;
+                tileOvergrownState = 3;
                 break;
             default:
                 rend.material.color = Color.white;

@@ -27,7 +27,6 @@ public class mouseRaycaster : MonoBehaviour
         mousePos = Mouse.current.position.ReadValue(); //read mouse position
         worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 7.88f)); //convert mouse position into world position
         projectedPos = Vector3.ProjectOnPlane(worldPos, new Vector3(0, 1, 0)); //account for camera rotation
-
        
         if (Input.GetMouseButtonDown(0))
         {
@@ -50,7 +49,7 @@ public class mouseRaycaster : MonoBehaviour
     {
         RaycastHit hit;
         
-        Physics.Raycast(new Vector3(projectedPos.x, projectedPos.y + 1, projectedPos.z), new Vector3(0, -1, 0), out hit); //fire ray directly above tilemap
+        Physics.Raycast(new Vector3(projectedPos.x, projectedPos.y+1, projectedPos.z), new Vector3(0, projectedPos.y-1, 0).normalized, out hit); //fire ray directly above tilemap
         //Debug.Log(hit.ToString());
         if (hit.collider != null && hit.collider.CompareTag("Tile")) //check if ray hits a tile
         {
