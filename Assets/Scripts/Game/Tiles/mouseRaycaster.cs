@@ -28,8 +28,8 @@ public class mouseRaycaster : MonoBehaviour
         worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 7.88f)); //convert mouse position into world position
         projectedPos = Vector3.ProjectOnPlane(worldPos, new Vector3(0, 1, 0)); //account for camera rotation
        
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (tm.toolBeingUsed)
+        {   
             selectedTile = CheckTileHitting();
         }
         
@@ -37,12 +37,8 @@ public class mouseRaycaster : MonoBehaviour
         {
             tm.selectedTile = selectedTile.GetComponent<gameTile>(); //send selected tile to tilemanager instnace
             selectedTile.GetComponent<gameTile>().isHovered = true; 
-            //selectedTile.GetComponent<gameTile>().clickHandler();
         }
-        else
-        {
-            tm.selectedTile = null; //if no tile hovered, select nothing
-        }
+       
     }
 
     public GameObject CheckTileHitting()

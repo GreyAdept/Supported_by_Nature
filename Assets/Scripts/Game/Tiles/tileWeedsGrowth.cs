@@ -15,10 +15,11 @@ public class tileWeedsGrowth : MonoBehaviour
     
     void Start()
     {
-        growStage = 0;
+        growStage = 2;
         tm = TurnManager.Instance;
         tm.onTurnChanged.AddListener(GrowWeeds);
         tile = transform.GetComponent<gameTile>();
+        UpdateWeedObject();
     }
     
     private void GrowWeeds(int random)
@@ -26,18 +27,23 @@ public class tileWeedsGrowth : MonoBehaviour
         float randomValue = Random.Range(0.0f, 1.0f);
         if (randomValue > 0.80f)
         {
-            growStage++;
-            SpawnWeedObject();
+            if (growStage < 3)
+            {
+                growStage++;
+                UpdateWeedObject();
+            }
         }
     }
 
-    private void SpawnWeedObject()
+    private void UpdateWeedObject()
     {
         switch (growStage)
         {
             case 0:
+                Destroy(currentGrowth);
                 break;
             case 1:
+                Destroy(currentGrowth);
                 currentGrowth = Instantiate(growStage1, tile.transform.position, Quaternion.identity);
                 break;
             case 2:
@@ -49,6 +55,16 @@ public class tileWeedsGrowth : MonoBehaviour
                 currentGrowth = Instantiate(growStage3, tile.transform.position, Quaternion.identity);
                 break;
         }
+    }
+
+    public void CutWeeds()
+    {
+        if (growStage > 0)
+        {
+            growStage--;
+        }
+        UpdateWeedObject();
+
     }
         
 }

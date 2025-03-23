@@ -19,15 +19,13 @@ public class gameTile : MonoBehaviour
     // tile data
     public tileManager.TileType tileType;
     public List<GameObject> plants = new List<GameObject>();
-    public int tileOvergrownState;
-   
-    
 
     void Start()
     {
         tileManager = tileManager.Instance;
         rend = GetComponent<Renderer>();
         effectHandler = GetComponent<tileSelectedEffect>();
+        StartCoroutine(ClearHover());
         
         switch (tileType)
         {
@@ -41,7 +39,6 @@ public class gameTile : MonoBehaviour
                 break;
             case tileManager.TileType.Wetland:
                 rend.material = tileManager.materialWetland;
-                tileOvergrownState = 3;
                 break;
             default:
                 rend.material.color = Color.white;
@@ -52,32 +49,37 @@ public class gameTile : MonoBehaviour
 
     
     void Update()
-    {   
+    {
         
         if (isHovered)
         {
             effectHandler.PlayParticle();
-            StartCoroutine(clearHover());
         }
         else
         {
             effectHandler.StopParticle();
         }
         
-        
-        
     }
     
-
     public string ReturnTileData()
     {
         return gridPosition.ToString();
     }
 
-    IEnumerator clearHover()
+    public void ClearHoverHelper()
+    {   
+        Invoke("ClearHover", 0.5f);
+    }
+
+    private IEnumerator ClearHover()
     {
-        isHovered = false;
-        yield return new WaitForSeconds(0.1f);
+        while (isHovered)
+        {
+            yield return new WaitForSeconds(1f);
+            isHovered = false;
+        }
+        
     }
     
 }

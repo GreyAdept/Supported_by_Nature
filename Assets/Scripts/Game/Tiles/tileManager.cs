@@ -22,6 +22,7 @@ public class tileManager : SingletonMonoBehaviour<tileManager>
     public tileAction tileAction;
     public tileAction removePlantAction;
 
+    public bool toolBeingUsed = false;
     void Start()
     {
         Instantiate(materialWetland);

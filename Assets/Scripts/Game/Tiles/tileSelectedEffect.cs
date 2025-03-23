@@ -19,7 +19,7 @@ public class tileSelectedEffect : MonoBehaviour
     }
 
     public void StopParticle()
-    {
+    {   
         if (isPlaying)
         {   
             ps.Stop();
