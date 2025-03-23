@@ -35,11 +35,12 @@ public class TerrainGridHandler : MonoBehaviour
     
 
     [ContextMenu("Destroy Tiles")]private void DestroyTiles()
-    {
+    {       
             foreach (KeyValuePair<Vector2Int, GameObject> kvp in mapTiles)
             {
                 GameObject.Destroy(kvp.Value);
             }
+            mapTiles.Clear();
     }
     
     
