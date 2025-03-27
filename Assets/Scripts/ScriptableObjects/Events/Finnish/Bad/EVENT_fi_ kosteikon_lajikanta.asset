@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: EVENT_fi_ kosteikon_lajikanta
+  m_EditorClassIdentifier: 
+  eventId: kosteikon_lajikanta
+  eventName: Kosteikon lajikanta heikkenee
+  eventDescription: "Kosteikon monimuotoisuus heikkenee, mutta miksi? Onko vesi muuttunut,
+    ravinteet v\xE4\xE4riss\xE4 suhteissa tai hauet liian v\xE4h\xE4n? Miten l\xF6yd\xE4t
+    syyn ja autat kosteikkoa palautumaan tasapainoon?"
+  eventIcon: {fileID: 0}
+  eventCategory: 1
+  goodResponse: {fileID: 11400000, guid: 3ab9129dd9b54164497c8fc5289c2279, type: 2}
+  neutralResponse: {fileID: 11400000, guid: ffcd74b3b1d939a4097e3e95766a6be2, type: 2}
+  badResponse: {fileID: 11400000, guid: a98bb359a4127574b9dae8234b3efde9, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: EVENT_fi_ kosteikolle_saapuu
+  m_EditorClassIdentifier: 
+  eventId: kosteikolle_saapuu
+  eventName: "Kosteikolle saapuu lehmi\xE4 laiduntamaan"
+  eventDescription: "Lehm\xE4t laiduntavat kosteikon reunalla, mutta niiden m\xE4\xE4r\xE4
+    vaikuttaa tasapainoon. Miten varmistat, ett\xE4 laidunnus ei muuttaa kosteikkoa
+    liian kuivaksi tai umpeenkasvaneeksi?"
+  eventIcon: {fileID: 0}
+  eventCategory: 2
+  goodResponse: {fileID: 11400000, guid: a0480789c56182a49b7aa89ec938ae19, type: 2}
+  neutralResponse: {fileID: 11400000, guid: ab5de0e2a87f752498cc22f618736ca0, type: 2}
+  badResponse: {fileID: 11400000, guid: 1d296e279278b394c9dead32e871f472, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: EVENT_fi_vieraslajit_valtaa
+  m_EditorClassIdentifier: 
+  eventId: vieraslajit_valtaa
+  eventName: Vieraslajit valtaavat kosteikon
+  eventDescription: "Vieraslajit levi\xE4v\xE4t kosteikkoon ja uhkaavat sen tasapainoa.
+    Ne valtaavat tilaa alkuper\xE4isilt\xE4 kasveilta ja levi\xE4v\xE4t nopeasti.
+    Miten torjut vieraslajien levi\xE4misen ja suojelet kosteikon monimuotoisuutta?"
+  eventIcon: {fileID: 0}
+  eventCategory: 1
+  goodResponse: {fileID: 11400000, guid: ebcab1d059175b74fb320bb070886cb0, type: 2}
+  neutralResponse: {fileID: 11400000, guid: d7e50771f7a17b946b6b4f5fab93610b, type: 2}
+  badResponse: {fileID: 11400000, guid: e7c2ea2a14560d94fbf0b86a1515cac0, type: 2}

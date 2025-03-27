@@ -27,9 +27,9 @@ public class GameState : MonoBehaviour
         InitializeStats();
         randomEventSystem = RandomEventSystem.instance;
         //
-        goodResponseButton.onClick.AddListener(() => HandleRandomEvent(AnswerCategory.Good));
+        /*goodResponseButton.onClick.AddListener(() => HandleRandomEvent(AnswerCategory.Good));
         neutralResponseButton.onClick.AddListener(() => HandleRandomEvent(AnswerCategory.Neutral));
-        badResponseButton.onClick.AddListener(() => HandleRandomEvent(AnswerCategory.Bad));
+        badResponseButton.onClick.AddListener(() => HandleRandomEvent(AnswerCategory.Bad));*/
     }
     //create list and assign level start metrics
     private void InitializeStats()
@@ -86,8 +86,9 @@ public class GameState : MonoBehaviour
         //Debug.Log(currentEvent.name);
         onNewEvent?.Invoke();
     }
-    private void HandleRandomEvent(AnswerCategory answer)
+    public void HandleRandomEvent(AnswerCategory answer)
     {
+        Debug.Log($"selected {answer.ToString()} response");
         onEventChoiceMade?.Invoke();
     }
     private void HandleSaveGame()

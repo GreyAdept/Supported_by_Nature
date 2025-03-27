@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: EVENT_fi_liikakalastus_uhkaa
+  m_EditorClassIdentifier: 
+  eventId: liikakalastus_uhkaa
+  eventName: Liikakalastus uhkaa haukikantaa
+  eventDescription: "Kalastajat viev\xE4t haukia enemm\xE4n kuin ne ehtiv\xE4t lis\xE4\xE4nty\xE4,
+    ja kosteikon tasapaino horjuu. Miten varmistat haukien suojelun ja est\xE4t s\xE4rkikalojen
+    liiallisen lis\xE4\xE4ntymisen?"
+  eventIcon: {fileID: 0}
+  eventCategory: 1
+  goodResponse: {fileID: 11400000, guid: a0dd4418ce6bb4944bc74d57321bedb9, type: 2}
+  neutralResponse: {fileID: 11400000, guid: 59bbee94079d4094595fc71a04f76e90, type: 2}
+  badResponse: {fileID: 11400000, guid: 16f6fb86e44218a4aab162538faa1a3a, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: EVENT_fi_hauen_kanta
+  m_EditorClassIdentifier: 
+  eventId: hauen_kanta
+  eventName: Hauen kanta romahtaa
+  eventDescription: "Hauet ovat v\xE4hentyneet, ja kosteikon tasapaino horjuu. S\xE4rkilalat
+    lis\xE4\xE4ntyv\xE4t, lev\xE4t runsastuvat ja vesi samentuu. Miten voit palauttaa
+    haukikannan ja suojella kosteikon ekosysteemi\xE4?"
+  eventIcon: {fileID: 0}
+  eventCategory: 1
+  goodResponse: {fileID: 11400000, guid: 5bd80f337af5b6e479ce5f2f27893673, type: 2}
+  neutralResponse: {fileID: 11400000, guid: 9b9e8dbc267ce8042963819c31683cc7, type: 2}
+  badResponse: {fileID: 11400000, guid: fa9f18020ac9d5d45baa2b91db2197da, type: 2}

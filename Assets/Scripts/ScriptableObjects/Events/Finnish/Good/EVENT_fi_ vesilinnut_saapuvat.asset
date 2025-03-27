@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: EVENT_fi_ vesilinnut_saapuvat
+  m_EditorClassIdentifier: 
+  eventId: vesilinnut_saapuvat
+  eventName: Vesilinnut saapuvat kosteikolle
+  eventDescription: "Linnut saapuvat kosteikolle, mutta niilt\xE4 puuttuu turvallinen
+    pesim\xE4paikka. Miten voit luoda suojaisat olosuhteet, joissa linnut voivat
+    kasvattaa poikasiaan ilman h\xE4iri\xF6it\xE4?"
+  eventIcon: {fileID: 0}
+  eventCategory: 3
+  goodResponse: {fileID: 11400000, guid: 98cdd5180da443545acc0789f8091985, type: 2}
+  neutralResponse: {fileID: 11400000, guid: b533c9bc0c2e1d94b8f174759eb6f36c, type: 2}
+  badResponse: {fileID: 11400000, guid: 96bdabfc955291a419df316d9a20bf0f, type: 2}

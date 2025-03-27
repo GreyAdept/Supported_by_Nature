@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: "EVENT_fi_liikakasvun_niitt\xE4minen"
+  m_EditorClassIdentifier: 
+  eventId: "liikakasvun_nitt\xE4minen"
+  eventName: "Liikakasvun niitt\xE4minen - tasapainon palauttaminen"
+  eventDescription: "Kasvit ovat tukahduttaneet kosteikon el\xE4m\xE4n. Poista liikakasvua
+    niin, ett\xE4 vesi virtaa vapaasti ja valo p\xE4\xE4see pohjaan. Miten l\xF6yd\xE4t
+    oikean tasapainon kosteikon elinvoiman s\xE4ilytt\xE4miseksi?"
+  eventIcon: {fileID: 0}
+  eventCategory: 1
+  goodResponse: {fileID: 0}
+  neutralResponse: {fileID: 0}
+  badResponse: {fileID: 0}

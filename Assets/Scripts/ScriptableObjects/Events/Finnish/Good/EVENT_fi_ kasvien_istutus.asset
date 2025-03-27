@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: EVENT_fi_ kasvien_istutus
+  m_EditorClassIdentifier: 
+  eventId: kasvien_istutus
+  eventName: Kasvien istutus kosteikon tasapainon tueksi
+  eventDescription: "Kosteikon kasvit eiv\xE4t ole tasapainossa. Mit\xE4 kasveja
+    kannattaa istuttaa, jotta ne suodattavat ravinteita, tarjoavat suojan linnuille
+    ja piilopaikkoja kaloille?"
+  eventIcon: {fileID: 0}
+  eventCategory: 3
+  goodResponse: {fileID: 11400000, guid: 4b04b10c9b294774e9271a93b26a4397, type: 2}
+  neutralResponse: {fileID: 11400000, guid: 206c0b858da9f4e489ff605cbbfbe2b2, type: 2}
+  badResponse: {fileID: 11400000, guid: 7d9e7acbcf265f5488bbfa88397cf851, type: 2}

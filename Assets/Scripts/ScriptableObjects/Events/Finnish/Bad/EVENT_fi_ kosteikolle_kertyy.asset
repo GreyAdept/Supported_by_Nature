@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: EVENT_fi_ kosteikolle_kertyy
+  m_EditorClassIdentifier: 
+  eventId: kosteikolle_kertyy
+  eventName: Kosteikolle kertyy roskaa
+  eventDescription: "Roskat t\xE4ytt\xE4v\xE4t kosteikon ja vaarantavat sen asukkaita.
+    Aiotko puuttua tilanteeseen, vai pit\xE4isik\xF6 t\xE4m\xE4 n\xE4hd\xE4 normaalina
+    osana kosteikon el\xE4m\xE4\xE4?"
+  eventIcon: {fileID: 0}
+  eventCategory: 1
+  goodResponse: {fileID: 11400000, guid: 93c5368a200269c49abd10de813c57b2, type: 2}
+  neutralResponse: {fileID: 11400000, guid: 6499404b37146ea42a0e7accd659cc55, type: 2}
+  badResponse: {fileID: 11400000, guid: 3b5393b899e57854fbe03e25b9350faf, type: 2}
