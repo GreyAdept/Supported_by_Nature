@@ -85,7 +85,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.002, z: -0.017}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6016300912242618106}
@@ -184,8 +184,8 @@ MonoBehaviour:
   isSelected: 0
   isHovered: 0
   tileType: 0
+  isNextToLand: 0
   plants: []
-  tileOvergrownState: 0
 --- !u!114 &957869917931837165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
+  growStage: 0
   growStage1: {fileID: 9177808069955180526, guid: 7a204ce239cb36944b29550f1193b1f7, type: 3}
   growStage2: {fileID: 9177808069955180526, guid: b4a840bb56db0b74b87da49e8cd7e81f, type: 3}
   growStage3: {fileID: 9177808069955180526, guid: b6cc99ed94d631746a994f6dd594cd1c, type: 3}

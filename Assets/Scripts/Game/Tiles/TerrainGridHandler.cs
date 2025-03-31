@@ -17,6 +17,8 @@ public class TerrainGridHandler : MonoBehaviour
     
     public Dictionary<Vector2Int, GameObject> mapTiles = new Dictionary<Vector2Int, GameObject>(); //dictionary data structure for game tiles 
 
+    private float prefabScale;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {  
@@ -27,8 +29,10 @@ public class TerrainGridHandler : MonoBehaviour
     
     
     [ContextMenu("Generate map")]private void EditorMapGen()
-    {
-        generateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, 1);
+    {   
+        DestroyTiles();
+        prefabScale = debugMarker.transform.localScale.x;
+        generateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, prefabScale);
         calculateNeighbors();
     }
     
@@ -45,7 +49,7 @@ public class TerrainGridHandler : MonoBehaviour
     
     
     //generate grid and spawn tiles
-    private void generateGrid(Vector3 origin, int countVertical, int countHorizontal, int cellGap)
+    private void generateGrid(Vector3 origin, int countVertical, int countHorizontal, float cellGap)
     {
         for (int i = Vector2Int.RoundToInt(origin).x; i < countVertical; i++) // use vector2int for accurate grid coordinates (no decimals)
         {
