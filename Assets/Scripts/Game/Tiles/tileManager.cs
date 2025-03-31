@@ -23,6 +23,12 @@ public class tileManager : SingletonMonoBehaviour<tileManager>
     public tileAction removePlantAction;
 
     public bool toolBeingUsed = false;
+
+
+    //overall stats
+    public int waterHealth;
+
+
     void Start()
     {
         Instantiate(materialWetland);

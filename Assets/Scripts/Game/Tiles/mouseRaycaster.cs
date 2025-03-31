@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TouchPhase = UnityEditor.DeviceSimulation.TouchPhase;
@@ -14,11 +15,26 @@ public class mouseRaycaster : MonoBehaviour
     private tileManager tm;
     private GameObject selectedTile;
 
+    private InputSystem_Actions inputActions;
+
+    //touch screen input
+    private bool isTouching;
+    [SerializeField] private Vector2 touchPosition;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         tm = tileManager.Instance;
+        
+    }
+
+
+    void Awake()
+    {
+        inputActions = new InputSystem_Actions();
+        inputActions.Enable();
+        inputActions.Touch.Touch.performed += ctx => touchPosition = ctx.ReadValue<Vector2>();
     }
 
     // Update is called once per frame
@@ -27,31 +43,35 @@ public class mouseRaycaster : MonoBehaviour
         mousePos = Mouse.current.position.ReadValue(); //read mouse position
         worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 7.88f)); //convert mouse position into world position
         projectedPos = Vector3.ProjectOnPlane(worldPos, new Vector3(0, 1, 0)); //account for camera rotation
-       
+        var newSelectedTile = CheckTileHitting();
+        /*
         if (tm.toolBeingUsed)
         {   
-            selectedTile = CheckTileHitting();
+            var newSelectedTile = CheckTileHitting();
         }
+        */
         
-        if (selectedTile != null)
+        if (selectedTile != null && newSelectedTile != selectedTile)
         {
-            tm.selectedTile = selectedTile.GetComponent<gameTile>(); //send selected tile to tilemanager instnace
-            selectedTile.GetComponent<gameTile>().isHovered = true; 
+            newSelectedTile.GetComponent<gameTile>().StartHover();
+            tm.selectedTile = newSelectedTile.GetComponent<gameTile>(); //send selected tile to tilemanager instnace
+            selectedTile.GetComponent<gameTile>().ClearHover();
         }
+
+        selectedTile = newSelectedTile;
        
-    }
+    }   
+
 
     public GameObject CheckTileHitting()
     {
         RaycastHit hit;
         
         Physics.Raycast(new Vector3(projectedPos.x, projectedPos.y+1, projectedPos.z), new Vector3(0, projectedPos.y-1, 0).normalized, out hit); //fire ray directly above tilemap
-        //Debug.Log(hit.ToString());
+  
         if (hit.collider != null && hit.collider.CompareTag("Tile")) //check if ray hits a tile
         {
             return hit.collider.gameObject;
-           
-            //var tileObj = hit.collider.gameObject.GetComponent<gameTile>(); //get tile component itself
         }
         else
         {
@@ -64,5 +84,10 @@ public class mouseRaycaster : MonoBehaviour
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(projectedPos, 0.5f);
+    }
+
+    private IEnumerator ClearHoverHelper()
+    {
+        yield return new WaitForSeconds(1);
     }
 }

@@ -18,7 +18,7 @@ public class TurnManager : MonoBehaviour
     //create global instance so we can access this easily
     private void Awake()
     {
-        if(Instance == null)
+        if(Instance == null && Instance != this)
         {
             Instance = this;
             gameState = GetComponent<GameState>();
@@ -46,6 +46,7 @@ public class TurnManager : MonoBehaviour
         onMetricsUpdated?.Invoke(gameState.metrics);
     }
     //check if action can be executed and execute it, trigger for example from a button
+    /*
     public void ExecuteAction(WetlandAction action)
     {
         if(action.CanBeExecuted(gameState))
@@ -54,6 +55,7 @@ public class TurnManager : MonoBehaviour
             onActionPointsChanged?.Invoke(gameState.currentActionPoints);
         }
     }
+    */
     //handle end turn logic and trigger events to update UI etc. for next turn 
     public void EndTurn()
     {

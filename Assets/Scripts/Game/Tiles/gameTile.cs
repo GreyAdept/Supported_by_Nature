@@ -18,16 +18,32 @@ public class gameTile : MonoBehaviour
     
     // tile data
     public tileManager.TileType tileType;
+    public bool isNextToLand;
+   
+    //plant related data
     public List<GameObject> plants = new List<GameObject>();
 
+    
+
+
     void Start()
-    {
+    {   
+        isNextToLand = false;
         tileManager = tileManager.Instance;
         rend = GetComponent<Renderer>();
         effectHandler = GetComponent<tileSelectedEffect>();
-        StartCoroutine(ClearHover());
-        
-        switch (tileType)
+         
+
+        foreach (GameObject t in adjacentTiles) //<-- check if tile is next to land
+        {
+            if (t.GetComponent<gameTile>().tileType == tileManager.TileType.Wetland)
+            {
+                isNextToLand = true;
+            }
+        }
+
+
+        switch (tileType) //<-- assign materials based on tiletype and move slightly for terrain height
         {
             case tileManager.TileType.Forest:
                 rend.material = tileManager.materialForest;
@@ -47,19 +63,11 @@ public class gameTile : MonoBehaviour
         
     }
 
+
     
     void Update()
     {
-        
-        if (isHovered)
-        {
-            effectHandler.PlayParticle();
-        }
-        else
-        {
-            effectHandler.StopParticle();
-        }
-        
+
     }
     
     public string ReturnTileData()
@@ -72,14 +80,18 @@ public class gameTile : MonoBehaviour
         Invoke("ClearHover", 0.5f);
     }
 
-    private IEnumerator ClearHover()
+    public void ClearHover()
     {
-        while (isHovered)
-        {
-            yield return new WaitForSeconds(1f);
-            isHovered = false;
-        }
-        
+        effectHandler.StopParticle();
+        isHovered = false;
     }
-    
+
+    public void StartHover()
+    {
+        effectHandler.PlayParticle();
+    }
+
+
+
+   
 }

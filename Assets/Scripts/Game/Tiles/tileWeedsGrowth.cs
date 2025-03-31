@@ -15,27 +15,52 @@ public class tileWeedsGrowth : MonoBehaviour
     
     void Start()
     {
-        growStage = 2;
         tm = TurnManager.Instance;
-        tm.onTurnChanged.AddListener(GrowWeeds);
+        tm.onTurnChanged.AddListener(SpreadPlants);
         tile = transform.GetComponent<gameTile>();
-        UpdateWeedObject();
+        GrowWeeds(0);
     }
     
     private void GrowWeeds(int random)
     {
         float randomValue = Random.Range(0.0f, 1.0f);
-        if (randomValue > 0.80f)
+
+        switch (tile.tileType) // <-- use different random values for water / wet areas
         {
-            if (growStage < 3)
-            {
-                growStage++;
-                UpdateWeedObject();
-            }
+            case tileManager.TileType.Water:
+
+                if (randomValue > 0.85f)
+                {
+                    if (growStage < 3)
+                    {
+                        growStage++;
+                        UpdateWeedObject();
+                    }
+                }
+                break;
+
+
+            case tileManager.TileType.Wetland:
+                if (randomValue > 0.60f)
+                {
+                    if (growStage < 3)
+                    {
+                        growStage++;
+                        UpdateWeedObject();
+                    }
+                }
+                break;
+
+
+            case tileManager.TileType.Forest:
+                break;
+
         }
+
+        
     }
 
-    private void UpdateWeedObject()
+    public void UpdateWeedObject()
     {
         switch (growStage)
         {
@@ -57,14 +82,26 @@ public class tileWeedsGrowth : MonoBehaviour
         }
     }
 
+
     public void CutWeeds()
     {
         if (growStage > 0)
         {
-            growStage--;
+            growStage = 1;
         }
         UpdateWeedObject();
 
+    }
+
+    public void SpreadPlants(int random)
+    {   
+        if (growStage > 0)
+        {
+            var adjacents = tile.adjacentTiles;
+            int randomChoice = Random.Range(0, adjacents.Count - 1);
+            var chosenTile = adjacents[randomChoice];
+            chosenTile.GetComponent<tileWeedsGrowth>().GrowWeeds(0);
+        }  
     }
         
 }
