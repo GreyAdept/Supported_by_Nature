@@ -22,6 +22,7 @@ public class TerrainGridHandler : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {  
+        DontDestroyOnLoad(this);
         //generateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, 1); //use inversetransformpoint to convert from global to local position
         //calculateNeighbors();
     }
@@ -30,7 +31,6 @@ public class TerrainGridHandler : MonoBehaviour
     
     [ContextMenu("Generate map")]private void EditorMapGen()
     {   
-        DestroyTiles();
         prefabScale = debugMarker.transform.localScale.x;
         generateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, prefabScale);
         calculateNeighbors();

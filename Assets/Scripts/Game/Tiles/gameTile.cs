@@ -21,6 +21,7 @@ public class gameTile : MonoBehaviour
     public bool isNextToLand;
    
     //plant related data
+    public int overgrownState;
     public List<GameObject> plants = new List<GameObject>();
 
     

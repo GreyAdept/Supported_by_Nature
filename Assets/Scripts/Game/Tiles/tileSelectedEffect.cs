@@ -9,7 +9,7 @@ public class tileSelectedEffect : MonoBehaviour
 
     public void PlayParticle()
     {
-        if (!isPlaying)
+        if (!isPlaying && tileManager.Instance.toolBeingUsed)
         { 
             ps.Play();
         }

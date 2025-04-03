@@ -80,6 +80,8 @@ public class tileWeedsGrowth : MonoBehaviour
                 currentGrowth = Instantiate(growStage3, tile.transform.position, Quaternion.identity);
                 break;
         }
+
+        tile.overgrownState = growStage;
     }
 
 

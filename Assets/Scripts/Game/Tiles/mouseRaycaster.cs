@@ -41,7 +41,7 @@ public class mouseRaycaster : MonoBehaviour
     void Update()
     {
         mousePos = Mouse.current.position.ReadValue(); //read mouse position
-        worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 7.88f)); //convert mouse position into world position
+        worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 10.35f)); //convert mouse position into world position
         projectedPos = Vector3.ProjectOnPlane(worldPos, new Vector3(0, 1, 0)); //account for camera rotation
         var newSelectedTile = CheckTileHitting();
         /*
