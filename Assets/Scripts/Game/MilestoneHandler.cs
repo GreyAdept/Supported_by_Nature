@@ -10,17 +10,22 @@ public class MilestoneHandler : MonoBehaviour
     public Toggle milestone1;
     public Toggle milestone2;
     public Toggle milestone3;
-    public Toggle milestone4;
-    public Toggle milestone5;
-
+    
     public int totalMilestoneProgress;
     public int highestMilestoneReached;
+
+    public int currentBiodiversity;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        currentBiodiversity = 0;
         totalMilestoneProgress = 0;
+        TurnManager.Instance.onTurnChanged.AddListener(ResetBiodiversity);
+        //TurnManager.Instance.onTurnChanged.AddListener(UpdateSlider);
     }
+    
+    
 
     // Update is called once per frame
     void Update()
@@ -30,26 +35,16 @@ public class MilestoneHandler : MonoBehaviour
 
     private void UpdateSlider()
     {
-        milestoneSlider.value = totalMilestoneProgress;
-        if (totalMilestoneProgress == 2)
+        milestoneSlider.value = currentBiodiversity;
+
+        if (currentBiodiversity > 100f)
         {
             milestone1.isOn = true;
         }
-        else if (totalMilestoneProgress == 4)
+
+        if (currentBiodiversity > 200f)
         {
             milestone2.isOn = true;
-        }
-        else if (totalMilestoneProgress == 6)
-        {
-            milestone3.isOn = true;
-        }
-        else if (totalMilestoneProgress == 8)
-        {
-            milestone4.isOn = true;
-        }
-        else if (totalMilestoneProgress == 10)
-        {
-            milestone5.isOn = true;
         }
     }
 
@@ -64,5 +59,23 @@ public class MilestoneHandler : MonoBehaviour
             
         }
         
+    }
+
+
+    private void ResetBiodiversity(int random)
+    {
+        currentBiodiversity = 0;
+        Invoke("UpdateSlider", 0.6f);
+    }
+
+    private void DelayedReset()
+    {
+        
+    }
+    
+    
+    public void IncrementBiodiversity(int amount)
+    {
+        currentBiodiversity += amount;
     }
 }

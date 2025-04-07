@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa774112c5fd774fb99d21a129ae890, type: 3}
+  m_Name: plantRandomPlant
+  m_EditorClassIdentifier: 
+  actionName: Plant Random
+  actionDebugMessage: Plant
+  plants:
+  - {fileID: 11400000, guid: 98aa1954ad095694b999a815e1ec3495, type: 2}
+  - {fileID: 11400000, guid: c67dff024dc84c14583dac0e8b7a82ee, type: 2}
+  - {fileID: 11400000, guid: 2a91c6bc8c4aaa34ea0bd3bd03ca9694, type: 2}

@@ -3,37 +3,65 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MetricsCalculator : MonoBehaviour
-{
+{   
+    public gameTile tile;
+    public tileWeedsGrowth tileWeeds;
 
-    private TurnManager tm;
-    public TerrainGridHandler gridObj;
-    private int tileCount;
-    public float statOvergrown;
-    
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int tileBiodiversity;
     void Start()
-    {
-        tileCount = gridObj.mapTiles.Count;
-        tm = TurnManager.Instance;
-        tm.onTurnChanged.AddListener(CalculateOvergrownStat);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void CalculateOvergrownStat(int random)
     {   
-        Debug.Log(gridObj.mapTiles.Count);
-        foreach (KeyValuePair<Vector2Int, GameObject> kvp in gridObj.mapTiles)
+        TurnManager.Instance.onTurnChanged.AddListener(DelayedCalculateBiodiversity);
+        tile = GetComponent<gameTile>();
+        tileWeeds = GetComponent<tileWeedsGrowth>();
+    }
+
+    public void DelayedCalculateBiodiversity(int random)
+    {
+        Invoke("CalculateBiodiversity", 0.5f);
+    }
+    
+    public void CalculateBiodiversity()
+    {
+        int diversity = 1;
+
+        if (tile.grownPlant != null)
         {
-            var tile = kvp.Value.GetComponent<gameTile>();
-            //statOvergrown = tile.overgrownState;
-            statOvergrown++;
+            switch (tile.grownPlant.plantGrowStage)
+            {
+                case 1:
+                    diversity++;
+                    break;
+                case 2:
+                    diversity += 2;
+                    break;
+                case 3:
+                    diversity += 3;
+                    break;
+                case 4:
+                    diversity += 4;
+                    break;
+                case 5:
+                    diversity += 5;
+                    break;
+            }
+            
         }
-        
+        switch (tileWeeds.growStage)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                diversity -= 1;
+                break;
+        }
+
+        tileBiodiversity = diversity;
+        TurnManager.Instance.milestoneHandler.IncrementBiodiversity(tileBiodiversity);
+
+
     }
 }
+
+  

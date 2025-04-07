@@ -13,7 +13,7 @@ public class TileStatUI : MonoBehaviour
     }
 
     void Update()
-    {
+    {   /*
         if (tm.selectedTile != null && tm.selectedTile.plants.Count > 0)
         {
             text.text = "Current tile\n\nType: " + tm.selectedTile.tileType.ToString() + "\n\nPlants: " + tm.selectedTile.plants.Count.ToString();
@@ -22,6 +22,6 @@ public class TileStatUI : MonoBehaviour
         {
             text.text = "Current tile\n\nType: " + tm.selectedTile.tileType.ToString() + "\n\nPlants: " + "0";
         }
-        
+        */
     }
 }

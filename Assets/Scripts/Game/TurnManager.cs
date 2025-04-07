@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class TurnManager : MonoBehaviour
 {
+    public WarningMessagesUI warningMessages;
+    public MilestoneHandler milestoneHandler;
     public static TurnManager Instance;
     public GameState gameState;
     private int currentTurn = 1;
@@ -17,7 +19,9 @@ public class TurnManager : MonoBehaviour
 
     //create global instance so we can access this easily
     private void Awake()
-    {
+    {   
+        milestoneHandler = GetComponent<MilestoneHandler>();
+        
         if(Instance == null && Instance != this)
         {
             Instance = this;
@@ -65,4 +69,5 @@ public class TurnManager : MonoBehaviour
         onActionPointsChanged?.Invoke(gameState.currentActionPoints);
         onMetricsUpdated?.Invoke(gameState.metrics);
     }
+    
 }

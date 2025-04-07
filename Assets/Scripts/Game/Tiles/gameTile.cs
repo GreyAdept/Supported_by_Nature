@@ -21,8 +21,8 @@ public class gameTile : MonoBehaviour
     public bool isNextToLand;
    
     //plant related data
-    public int overgrownState;
-    public List<GameObject> plants = new List<GameObject>();
+    public int overgrownState; // how much have the reeds grown
+    public Plant grownPlant; //plant that the player can place
 
     
 
@@ -30,9 +30,11 @@ public class gameTile : MonoBehaviour
     void Start()
     {   
         isNextToLand = false;
+        grownPlant = null;
         tileManager = tileManager.Instance;
         rend = GetComponent<Renderer>();
         effectHandler = GetComponent<tileSelectedEffect>();
+        TurnManager.Instance.onTurnChanged.AddListener(IncrementPlantGrowStage);
          
 
         foreach (GameObject t in adjacentTiles) //<-- check if tile is next to land
@@ -92,6 +94,14 @@ public class gameTile : MonoBehaviour
         effectHandler.PlayParticle();
     }
 
+    public void IncrementPlantGrowStage(int random)
+    {
+        if (grownPlant && grownPlant.plantGrowStage < 4)
+        {
+            grownPlant.plantGrowStage++;
+        }
+        
+    }
 
 
    

@@ -41,7 +41,7 @@ public class tileWeedsGrowth : MonoBehaviour
 
 
             case tileManager.TileType.Wetland:
-                if (randomValue > 0.60f)
+                if (randomValue > 0.80f)
                 {
                     if (growStage < 3)
                     {

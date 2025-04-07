@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionName: Plant Grass
   actionDebugMessage: You planted some grass
-  plant: {fileID: 11400000, guid: dcc0f897ac7c50642b0c333316d13aec, type: 2}
+  plants:
+  - {fileID: 11400000, guid: 98aa1954ad095694b999a815e1ec3495, type: 2}
+  - {fileID: 11400000, guid: c67dff024dc84c14583dac0e8b7a82ee, type: 2}
+  - {fileID: 11400000, guid: 2a91c6bc8c4aaa34ea0bd3bd03ca9694, type: 2}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95dea27302dda444b6646ad08dfad01, type: 3}
+  m_Name: Testikasvi 1
+  m_EditorClassIdentifier: 
+  organismName: Testikasvi 1
+  organismGrowFactor: 0
+  isInvasive: 0
+  organismEnvironment: 0
+  organismPrefab: {fileID: 918476010978467718, guid: 366ef9d5cf8fabc4ea137deebaa3ad45, type: 3}
+  plantNutrientDemand: 0
