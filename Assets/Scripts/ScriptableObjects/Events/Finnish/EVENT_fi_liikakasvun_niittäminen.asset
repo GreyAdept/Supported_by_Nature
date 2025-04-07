@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: "EVENT_fi_liikakasvun_niitt\xE4minen"
   m_EditorClassIdentifier: 
   eventId: "liikakasvun_nitt\xE4minen"
-  eventName: "Liikakasvun niitt\xE4minen - tasapainon palauttaminen"
+  eventName: "Liikakasvun niitt\xE4minen"
   eventDescription: "Kasvit ovat tukahduttaneet kosteikon el\xE4m\xE4n. Poista liikakasvua
     niin, ett\xE4 vesi virtaa vapaasti ja valo p\xE4\xE4see pohjaan. Miten l\xF6yd\xE4t
     oikean tasapainon kosteikon elinvoiman s\xE4ilytt\xE4miseksi?"
   eventIcon: {fileID: 0}
   eventCategory: 1
-  goodResponse: {fileID: 0}
-  neutralResponse: {fileID: 0}
-  badResponse: {fileID: 0}
+  goodResponse: {fileID: 11400000, guid: b3bcda2cc8653034a9d9aba0e75f9bea, type: 2}
+  neutralResponse: {fileID: 11400000, guid: 10ec2866ac68ab14f936b3badd3b2e17, type: 2}
+  badResponse: {fileID: 11400000, guid: aacc328ae92075041a179cee615ab2df, type: 2}

@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: vieraslajit_valtaavat
   answerCategory: 0
   responseText: "Poista vieraslajit ja korvaa ne alkuper\xE4isill\xE4 kasveilla"
-  outcomeText: 
+  outcomeText: "Ekosysteemi elpyy, monimuotoisuus lis\xE4\xE4ntyy ja kosteikon tila
+    paranee"
   effects: []

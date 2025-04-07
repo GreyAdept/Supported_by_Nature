@@ -1,17 +1,20 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class EventPanelUI : MonoBehaviour
 {
     [Header("Panels")]
     [SerializeField] private GameObject eventPopupPanel;
+    [SerializeField] private GameObject outcomePopupPanel;
     [Header("Text Boxes")]
     [SerializeField] private TMP_Text eventNameText;
     [SerializeField] private TMP_Text eventDescriptionText;
     [SerializeField] private TMP_Text goodResponseButtonText;
     [SerializeField] private TMP_Text neutralResponseButtonText;
     [SerializeField] private TMP_Text badResponseButtonText;
+    [SerializeField] private TMP_Text outcomeText;
     private WetlandEvent currentEvent;
     private TurnManager turnManager;
 
@@ -19,6 +22,7 @@ public class EventPanelUI : MonoBehaviour
     [SerializeField] private Button neutralResponseButton;
     [SerializeField] private Button badResponseButton;
     [SerializeField] private Button okButton;
+    [SerializeField] private Button closeOutcomePanelButton;
     /*[SerializeField] private Color defaultButtonColor;
     [SerializeField] private Color selectedButtonColor;*/
     [SerializeField] private Sprite defaultButtonSprite;
@@ -33,6 +37,7 @@ public class EventPanelUI : MonoBehaviour
         neutralResponseButton.onClick.AddListener(() => SelectResponse(AnswerCategory.Neutral));
         badResponseButton.onClick.AddListener(() => SelectResponse(AnswerCategory.Bad));
         okButton.onClick.AddListener(ConfirmSelection);
+        closeOutcomePanelButton.onClick.AddListener(CloseOutcomePanel);
         okButton.interactable = false;
     }
     public void GetNewEvent()
@@ -61,11 +66,14 @@ public class EventPanelUI : MonoBehaviour
     }
     public void ShowEventUI()
     {
+        eventPopupPanel.transform.localScale = Vector3.zero;
         eventPopupPanel.SetActive(true);
+        eventPopupPanel.transform.DOScale(Vector3.one, 0.4f).SetUpdate(true);
     }
     public void HideEventUI()
     {
-        eventPopupPanel.SetActive(false);
+        eventPopupPanel.transform.DOScale(Vector3.zero, 0.2f).SetUpdate(true).OnComplete(() => eventPopupPanel.SetActive(false));
+        //eventPopupPanel.SetActive(false);
     }
     private void ResetSelectionState()
     {
@@ -111,6 +119,14 @@ public class EventPanelUI : MonoBehaviour
     }
     private void DisplayEventOutcome(AnswerCategory answer)
     {
-
+        EventResponse selectedResponse = currentEvent.GetResponseFromAnswer(answer);
+        outcomePopupPanel.transform.localScale = Vector3.zero;
+        outcomePopupPanel.SetActive(true);
+        outcomeText.text = selectedResponse.outcomeText;
+        outcomePopupPanel.transform.DOScale(Vector3.one, 0.4f).SetUpdate(true);
+    }
+    private void CloseOutcomePanel()
+    {
+        outcomePopupPanel.transform.DOScale(Vector3.zero, 0.2f).SetUpdate(true).OnComplete(()=>outcomePopupPanel.SetActive(false));
     }
 }

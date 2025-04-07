@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: kasvien_istutus
   answerCategory: 2
   responseText: Istuta vieraslajeja
-  outcomeText: 
+  outcomeText: "Alkuper\xE4islajit k\xE4rsiv\xE4t, biodiversiteetti laskee ja ekosysteemi
+    h\xE4iriintyy"
   effects: []

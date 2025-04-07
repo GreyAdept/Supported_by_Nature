@@ -15,5 +15,5 @@ MonoBehaviour:
   linkedEventId: hauen_kanta
   answerCategory: 2
   responseText: Istuta paljon haukia
-  outcomeText: 
+  outcomeText: "Hauet eiv\xE4t selvi\xE4, kilpailu kovenee ja osa kuolee"
   effects: []

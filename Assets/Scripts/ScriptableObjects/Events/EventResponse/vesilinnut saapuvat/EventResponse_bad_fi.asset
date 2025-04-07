@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 2
   responseText: "Niit\xE4 kasvillisuutta"
-  outcomeText: 
+  outcomeText: "Kasvillisuuden poistaminen altistaa pesim\xE4linnut pedoille ja muulle
+    h\xE4iri\xF6lle"
   effects: []

@@ -15,5 +15,5 @@ MonoBehaviour:
   linkedEventId: kosteikolle_kertyy
   answerCategory: 0
   responseText: "Ker\xE4\xE4 kaikki roskat, jotka eiv\xE4t kuulu kosteikkoon"
-  outcomeText: 
+  outcomeText: "Kosteikko puhdistuu ja el\xE4imet v\xE4lttyv\xE4t vaaroilta"
   effects: []

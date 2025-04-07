@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: liikakalastus_uhkaa
   answerCategory: 1
   responseText: "Pyyd\xE4 kalastajia kalastamaan vain s\xE4rkikaloja"
-  outcomeText: 
+  outcomeText: "S\xE4rkikalojen m\xE4\xE4r\xE4 v\xE4henee, mutta haukipopulaatio
+    romahtaa edelleen. Ekosysteemi ajautuu ep\xE4tasapainoon ja vedenlaatu heikkenee"
   effects: []

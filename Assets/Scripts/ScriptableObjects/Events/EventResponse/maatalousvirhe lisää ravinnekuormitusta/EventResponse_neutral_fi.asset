@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: "maatalousvirhe_lis\xE4\xE4"
   answerCategory: 1
   responseText: Istuta kasveja kosteikkoon
-  outcomeText: 
+  outcomeText: "Osa ravinteista saadaan pid\xE4tetty\xE4, mutta ongelma jatkuu, jos
+    lannoitusta ei saada loppumaan"
   effects: []

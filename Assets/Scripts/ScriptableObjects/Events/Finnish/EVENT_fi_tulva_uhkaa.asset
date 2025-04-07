@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: EVENT_fi_tulva_uhkaa
+  m_EditorClassIdentifier: 
+  eventId: tulva_uhkaa
+  eventName: Tulva uhkaa kosteikkoa
+  eventDescription: "Vesi nousee ja etsii tiet\xE4\xE4n. Vesi on yst\xE4v\xE4si,
+    mutta vain, jos ohjaat sen oikeaan suuntaan. Muista, kun tulva vet\xE4ytyy, kosteikko
+    selvi\xE4\xE4 kyll\xE4 oikeanlaisella toiminnalla."
+  eventIcon: {fileID: 0}
+  eventCategory: 0
+  goodResponse: {fileID: 11400000, guid: 867ce1313dc1fb64cb7968abae92dd64, type: 2}
+  neutralResponse: {fileID: 11400000, guid: 10d0221750093784bb2e6b102a4d29b3, type: 2}
+  badResponse: {fileID: 11400000, guid: 001cdd2261f3e3544aa859ff8e7b90a0, type: 2}

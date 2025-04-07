@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: kosteikolle_saapuu
   answerCategory: 0
   responseText: Anna lehmien laiduntaa liiallinen kasvillisuus
-  outcomeText: 
+  outcomeText: "Lehm\xE4t auttavat pit\xE4m\xE4\xE4n kasvillisuuden sopivana ja ehk\xE4iset
+    kosteikon umpeenkasvua"
   effects: []

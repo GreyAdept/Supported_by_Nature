@@ -16,5 +16,6 @@ MonoBehaviour:
   answerCategory: 1
   responseText: "Ker\xE4\xE4 vain osa, pienell\xE4 m\xE4\xE4r\xE4ll\xE4 roskaa ei
     ole v\xE4li\xE4"
-  outcomeText: 
+  outcomeText: "El\xE4imet voivat yh\xE4 k\xE4rsi\xE4 ja ongelmia voi synty\xE4 ajan
+    mittaan"
   effects: []

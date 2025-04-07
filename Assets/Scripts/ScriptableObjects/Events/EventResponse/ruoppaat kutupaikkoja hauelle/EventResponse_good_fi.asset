@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: ruoppaat_kutupaikkoja
   answerCategory: 0
   responseText: Ruoppaa useita kuoppia suojaisiin paikkoihin
-  outcomeText: 
+  outcomeText: "Hauet saavat lis\xE4\xE4ntymiseen sopivia alueita, kanta elpyy ja
+    el\xE4imist\xF6 monipuolistuu ja vedenlaatu paranee"
   effects: []

@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 1
   responseText: "Lis\xE4\xE4 rantakasvustoa"
-  outcomeText: 
+  outcomeText: "Tarjoaa joillekin lajeille suojaa, mutta ei v\xE4ltt\xE4m\xE4tt\xE4
+    riit\xE4 turvaamaan pesint\xE4\xE4 kaikille vesilinnuille."
   effects: []

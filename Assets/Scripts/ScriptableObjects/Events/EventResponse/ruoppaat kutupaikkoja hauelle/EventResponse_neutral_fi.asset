@@ -15,5 +15,5 @@ MonoBehaviour:
   linkedEventId: ruoppaat_kutupaikkoja
   answerCategory: 1
   responseText: Ruoppaa yksi kuoppa suojaiseen paikkaan
-  outcomeText: 
+  outcomeText: "Teho j\xE4\xE4 v\xE4h\xE4iseksi, ja osa hauista siirtyy muualle kutemaan"
   effects: []

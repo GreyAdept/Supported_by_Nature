@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: "sateet_t\xE4ytt\xE4v\xE4t"
   answerCategory: 1
   responseText: "Istuta lis\xE4\xE4 kasveja"
-  outcomeText: 
+  outcomeText: "Kasvit eiv\xE4t juurru kunnolla ja osa kuolee. Hy\xF6ty on pieni,
+    mutta vaikutus j\xE4\xE4 lyhytaikaiseksi"
   effects: []

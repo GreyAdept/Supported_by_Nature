@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkedEventId: hauen_kanta
   answerCategory: 0
-  responseText: "Istuta paljon haukia ja lis\xE4\xE4 niille suojapaikkoja"
-  outcomeText: 
+  responseText: "Istuta lis\xE4\xE4 haukia ja lis\xE4\xE4 niille suojapaikkoja"
+  outcomeText: Haukipopulaatio elpyy, vedenlaatu paranee ja kosteikon tasapaino vahvistuu
   effects: []

@@ -205,6 +205,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void InteractWithNPC()
     {
+        hasGivenHintThisTurn = true;
         if(isDialogueRunning)
         {
             Debug.Log("dialoguerunning");

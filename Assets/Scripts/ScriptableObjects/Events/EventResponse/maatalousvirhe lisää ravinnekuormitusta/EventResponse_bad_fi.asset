@@ -15,5 +15,5 @@ MonoBehaviour:
   linkedEventId: "maatalousvirhe_lis\xE4\xE4"
   answerCategory: 2
   responseText: "Sabotoi viljelij\xE4n peltoja"
-  outcomeText: 
+  outcomeText: "Viljelij\xE4 suuttuu ja jatkaa toimintaansa, kosteikko on kohta mennytt\xE4"
   effects: []

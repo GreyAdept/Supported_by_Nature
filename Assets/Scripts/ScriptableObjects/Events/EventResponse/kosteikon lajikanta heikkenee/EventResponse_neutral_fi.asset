@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: lajikanta_heikkenee
   answerCategory: 1
   responseText: Huolehdi kasvillisuuden monimuotoisuudesta
-  outcomeText: 
+  outcomeText: "Linnut ja kalat viihtyv\xE4t hetken, mutta voivat l\xE4hte\xE4 ilman
+    suojaisaa kotia."
   effects: []

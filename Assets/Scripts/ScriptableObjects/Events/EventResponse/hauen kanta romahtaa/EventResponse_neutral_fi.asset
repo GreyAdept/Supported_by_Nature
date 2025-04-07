@@ -15,5 +15,7 @@ MonoBehaviour:
   linkedEventId: hauen_kanta
   answerCategory: 1
   responseText: "Lis\xE4\xE4 vain suojapaikkoja"
-  outcomeText: 
+  outcomeText: "Haukien m\xE4\xE4r\xE4 ei kasva vain suojapaikkoja lis\xE4\xE4m\xE4ll\xE4,
+    mutta on toivoa, ett\xE4 muualta tulee viel\xE4 haukia kosteikkoon ja kosteikon
+    tasapaino palautuu"
   effects: []

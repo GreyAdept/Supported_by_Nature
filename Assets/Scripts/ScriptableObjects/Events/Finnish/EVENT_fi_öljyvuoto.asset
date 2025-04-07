@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: "EVENT_fi_\xF6ljyvuoto"
+  m_EditorClassIdentifier: 
+  eventId: "\xF6ljyvuoto"
+  eventName: "\xD6ljyvuoto"
+  eventDescription: "H\xE4lytys! Suuri \xF6ljytankkeri on ajanut karille It\xE4merell\xE4
+    ja vuotanut \xF6ljy uhkaa levit\xE4 rannikolle."
+  eventIcon: {fileID: 0}
+  eventCategory: 0
+  goodResponse: {fileID: 11400000, guid: ea249e50d4e8f964280bdeff7f957b65, type: 2}
+  neutralResponse: {fileID: 11400000, guid: b2e5a2a992ecbb14abea7199a64c5fc7, type: 2}
+  badResponse: {fileID: 11400000, guid: 34deafb431814984b87333b08837864c, type: 2}

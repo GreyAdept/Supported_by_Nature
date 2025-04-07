@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: vieraslajit_valtaavat
   answerCategory: 2
   responseText: Anna kasvien kasvaa
-  outcomeText: 
+  outcomeText: "Kosteikon tila heikkenee ja pian vieraslajit ottavat vallan syrj\xE4ytt\xE4en
+    alkuper\xE4isen kasvillisuuden"
   effects: []

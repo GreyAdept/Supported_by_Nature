@@ -15,5 +15,5 @@ MonoBehaviour:
   linkedEventId: ruoppaat_kutupaikkoja
   answerCategory: 2
   responseText: Ruoppaa kuoppia avonaisille paikoille
-  outcomeText: 
+  outcomeText: "Kutukuopat ei kelpaa hauille, vaan ne siirtyv\xE4t muualle"
   effects: []

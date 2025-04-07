@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: "EVENT_fi_j\xE4rviruoon_poistaminen"
+  m_EditorClassIdentifier: 
+  eventId: "j\xE4rviruoon_poistaminen"
+  eventName: "J\xE4rviruo'on poistaminen"
+  eventDescription: "J\xE4rviruoko on ottanut oman paikkansa, eik\xE4 oikein anna
+    en\xE4\xE4 muiden kasvien l\xF6yt\xE4\xE4 omaa paikkaansa. Vesi kaipaa tilaa
+    virrata, kasvit tarvitsevat valoa kasvaakseen, ja el\xE4imet tarvitsevat monimuotoisen
+    elinymp\xE4rist\xF6n. Mit\xE4 teet?"
+  eventIcon: {fileID: 0}
+  eventCategory: 3
+  goodResponse: {fileID: 11400000, guid: 4c976590141926d438032fd4c1f2de63, type: 2}
+  neutralResponse: {fileID: 11400000, guid: f984b49cd357f8444aa8296bd855093c, type: 2}
+  badResponse: {fileID: 11400000, guid: 753614df847acd74bb0f518f0f587528, type: 2}

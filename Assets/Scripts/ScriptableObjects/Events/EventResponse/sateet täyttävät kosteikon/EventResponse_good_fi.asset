@@ -16,5 +16,6 @@ MonoBehaviour:
   answerCategory: 0
   responseText: Tarkista tulvauomat ja hallitse virtausta tarvittaessa kaivamalla
     viivytysaltaita
-  outcomeText: 
+  outcomeText: "Vesi viipyy pidemp\xE4\xE4n kosteikossa, ravinteet imeytyy kasveihin
+    ja mahdolliset tulvavahingot estet\xE4\xE4n."
   effects: []

@@ -15,5 +15,5 @@ MonoBehaviour:
   linkedEventId: vieraslajit_valtaavat
   answerCategory: 1
   responseText: Poista vieraslajit satunnaisesti
-  outcomeText: 
+  outcomeText: "Tilanne paranee hetkeksi, mutta vieraslajit jatkavat lis\xE4\xE4ntymist\xE4"
   effects: []

@@ -15,5 +15,5 @@ MonoBehaviour:
   linkedEventId: kosteikolle_kertyy
   answerCategory: 2
   responseText: "Odota, ett\xE4 sade huuhtoo roskat pois"
-  outcomeText: 
+  outcomeText: "Roskat kulkeutuvat vesist\xF6ihin ja saastuttavat laajemman alueen"
   effects: []

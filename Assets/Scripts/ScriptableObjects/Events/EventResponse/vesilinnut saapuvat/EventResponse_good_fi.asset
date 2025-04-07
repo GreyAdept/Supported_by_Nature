@@ -15,5 +15,6 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 0
   responseText: "Lis\xE4\xE4 kelluvia pesim\xE4paikkoja"
-  outcomeText: 
+  outcomeText: "Linnut l\xF6yt\xE4v\xE4t turvallisen paikan pesimiseen ja kosteikon
+    monimuotoisuus rikastuu"
   effects: []

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
+  m_Name: EVENT_fi_oikea_tasapaino
+  m_EditorClassIdentifier: 
+  eventId: oikea_tasapaino
+  eventName: "Oikea tasapaino niitt\xE4misess\xE4"
+  eventDescription: "Kosteikon kasvusto kasvaa ja uusiutuu. Oikea tasapaino on avain
+    kosteikon hyvinvointiin. Mutta kuinka aiot l\xF6yt\xE4\xE4 sen?"
+  eventIcon: {fileID: 0}
+  eventCategory: 2
+  goodResponse: {fileID: 11400000, guid: 40417c2aa50544149b9b94b03906aea5, type: 2}
+  neutralResponse: {fileID: 11400000, guid: 50f4de65edd7bc2438b87e0d48e946d2, type: 2}
+  badResponse: {fileID: 11400000, guid: 6d168ec983aa49849908b2f1df7cdeda, type: 2}

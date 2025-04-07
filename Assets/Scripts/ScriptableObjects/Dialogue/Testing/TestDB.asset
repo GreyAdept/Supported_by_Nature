@@ -24,6 +24,18 @@ MonoBehaviour:
   randomDialogues:
   - {fileID: 11400000, guid: 226143ef0e41ab94497e7d42c6a065fd, type: 2}
   jokeDialogues:
-  - {fileID: 11400000, guid: 203ce450cb9848845aa1b6666370d746, type: 2}
+  - {fileID: 11400000, guid: 4f85678ffc803834abd3780c89f486b9, type: 2}
+  - {fileID: 11400000, guid: ca75a27740e035847ab4ead9e5152e0a, type: 2}
+  - {fileID: 11400000, guid: 00d1e062ad7f9cd4f900ceedf38e666a, type: 2}
+  - {fileID: 11400000, guid: 3e56d4f321be1e646b8558dfe4d93ee9, type: 2}
+  - {fileID: 11400000, guid: 1d09cbc6fcf28fe4bbe8401d56618d39, type: 2}
+  - {fileID: 11400000, guid: ed408e7a32fd06046ab5faf48fb02b53, type: 2}
+  - {fileID: 11400000, guid: 786bc2b317226554794473a956a03ee7, type: 2}
+  - {fileID: 11400000, guid: 365edffce948eca41ac5eb1837ed5274, type: 2}
+  - {fileID: 11400000, guid: d12cc7c6269187f4188e3e0644144192, type: 2}
+  - {fileID: 11400000, guid: e514b33f246deb74188fe3971484070c, type: 2}
+  - {fileID: 11400000, guid: 60d4ed42d72f2884aaff32426de89413, type: 2}
+  - {fileID: 11400000, guid: fdb60a4fa37ac0340bb4836d6cc31d02, type: 2}
+  - {fileID: 11400000, guid: 94493f0aa1d435a49afa2e7203bea47d, type: 2}
   educationalDialogues:
   - {fileID: 11400000, guid: c1b4b5c4ed6b20643a629b6c00ef8086, type: 2}
