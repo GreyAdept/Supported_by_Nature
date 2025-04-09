@@ -12,14 +12,16 @@ public class PlantAction : tileAction
         {
             if (tile.grownPlant == null)
             {
-                if (tile.overgrownState < 2)
+                if (tile.overgrownState < 3)
                 {
                     TurnManager.Instance.gameState.currentActionPoints -= 1;
                     TurnManager.Instance.onActionPointsChanged?.Invoke(TurnManager.Instance.gameState.currentActionPoints);
                     int randomIndex = Random.Range(0, plants.Length - 1);
-                    GameObject plantPrefab = plants[randomIndex].organismPrefab;
-                    GameObject newPlant = Instantiate(plantPrefab, tile.gameObject.transform.position, Quaternion.identity);
                     tile.grownPlant = plants[randomIndex];
+                    tile.grownPlant.plantGrowStage = 0;
+                    tile.plantPrefab = plants[randomIndex].organismPrefab;
+                    tile.UpdatePlant();
+                    
                 }
                 else
                 {

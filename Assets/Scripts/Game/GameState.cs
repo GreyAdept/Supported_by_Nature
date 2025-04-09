@@ -6,7 +6,7 @@ using System.Collections;
 
 public class GameState : MonoBehaviour
 {
-    public int currentActionPoints = 2;
+    public int currentActionPoints = 4;
     public Dictionary<MetricType, float> metrics;
     public List<OngoingEffect> activeEffects;
     private List<MetricEffect> pendingEffects;
@@ -96,7 +96,7 @@ public class GameState : MonoBehaviour
     }
     private void ResetActionPoints()
     {
-        currentActionPoints = 2;
+        currentActionPoints = 4;
     }
     //add action effects to list so they can be applied at end turn
     public void QueueMetricEffect(MetricEffect effect)

@@ -41,8 +41,20 @@ public class mouseRaycaster : MonoBehaviour
     void Update()
     {
         mousePos = Mouse.current.position.ReadValue(); //read mouse position
-        worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 10.35f)); //convert mouse position into world position
+        /* // this is the old raycast script (for top down camera)
+        worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Vector3.Distance(GameObject.Find("TerrainGrid").transform.position, cam.transform.position))); //convert mouse position into world position
         projectedPos = Vector3.ProjectOnPlane(worldPos, new Vector3(0, 1, 0)); //account for camera rotation
+        //projectedPos = worldPos;
+        */
+        
+        Plane plane = new Plane(Vector3.up, Vector3.zero);
+        Ray ray = cam.ScreenPointToRay(mousePos);
+        if (plane.Raycast(ray, out float distance))
+        {
+            worldPos = ray.GetPoint(distance);
+            projectedPos = worldPos;
+        }
+        
         var newSelectedTile = CheckTileHitting();
         /*
         if (tm.toolBeingUsed)
@@ -83,7 +95,7 @@ public class mouseRaycaster : MonoBehaviour
     {
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(projectedPos, 0.5f);
+        Gizmos.DrawSphere(worldPos, 0.5f);
     }
 
     private IEnumerator ClearHoverHelper()

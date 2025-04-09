@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,12 +14,14 @@ public class tileWeedsGrowth : MonoBehaviour
 
     private TurnManager tm;
     
+    
     void Start()
     {
         tm = TurnManager.Instance;
         tm.onTurnChanged.AddListener(SpreadPlants);
         tile = transform.GetComponent<gameTile>();
-        GrowWeeds(0);
+        growStage = 1;
+        UpdateWeedObject();
     }
     
     private void GrowWeeds(int random)
@@ -29,7 +32,7 @@ public class tileWeedsGrowth : MonoBehaviour
         {
             case tileManager.TileType.Water:
 
-                if (randomValue > 0.85f)
+                if (randomValue > 0.90f)
                 {
                     if (growStage < 3)
                     {
@@ -41,7 +44,7 @@ public class tileWeedsGrowth : MonoBehaviour
 
 
             case tileManager.TileType.Wetland:
-                if (randomValue > 0.80f)
+                if (randomValue > 0.90f)
                 {
                     if (growStage < 3)
                     {
@@ -69,15 +72,15 @@ public class tileWeedsGrowth : MonoBehaviour
                 break;
             case 1:
                 Destroy(currentGrowth);
-                currentGrowth = Instantiate(growStage1, tile.transform.position, Quaternion.identity);
+                currentGrowth = Instantiate(growStage1, tile.transform.position, growStage1.transform.rotation * Quaternion.Euler(0, 0, Random.Range(0f, 180f)));
                 break;
             case 2:
                 Destroy(currentGrowth);
-                currentGrowth = Instantiate(growStage2, tile.transform.position, Quaternion.identity);
+                currentGrowth = Instantiate(growStage2, tile.transform.position, growStage2.transform.rotation * Quaternion.Euler(0, 0, Random.Range(0f, 180f)));
                 break;
             case 3:
                 Destroy(currentGrowth);
-                currentGrowth = Instantiate(growStage3, tile.transform.position, Quaternion.identity);
+                currentGrowth = Instantiate(growStage3, tile.transform.position, growStage3.transform.rotation * Quaternion.Euler(0, 0, Random.Range(0f, 180f)));
                 break;
         }
 
@@ -87,10 +90,7 @@ public class tileWeedsGrowth : MonoBehaviour
 
     public void CutWeeds()
     {
-        if (growStage > 0)
-        {
-            growStage = 1;
-        }
+        growStage = 1;
         UpdateWeedObject();
 
     }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class gameTile : MonoBehaviour
 {
@@ -23,6 +25,8 @@ public class gameTile : MonoBehaviour
     //plant related data
     public int overgrownState; // how much have the reeds grown
     public Plant grownPlant; //plant that the player can place
+    public GameObject plantPrefab;
+    
 
     
 
@@ -96,11 +100,36 @@ public class gameTile : MonoBehaviour
 
     public void IncrementPlantGrowStage(int random)
     {
-        if (grownPlant && grownPlant.plantGrowStage < 4)
+        if (grownPlant && grownPlant.plantGrowStage < 3 && overgrownState < 3)
         {
             grownPlant.plantGrowStage++;
         }
-        
+
+        UpdatePlant();
+    }
+
+    public void UpdatePlant()
+    {   
+        if (grownPlant)
+        {
+            switch (grownPlant.plantGrowStage)
+            {
+                case 0:
+                    Debug.Log(plantPrefab.name);
+                    plantPrefab = Instantiate(grownPlant.organismPrefab, this.transform.position, plantPrefab.transform.rotation);
+                    break;
+                
+                case 1:
+                    Destroy(plantPrefab);
+                    plantPrefab = Instantiate(grownPlant.plantGrowStagePrefab2, this.transform.position, plantPrefab.transform.rotation);
+                    break;
+                case 2:
+                    Destroy(plantPrefab);
+                    plantPrefab = Instantiate(grownPlant.plantGrowStagePrefab3, this.transform.position, plantPrefab.transform.rotation);
+                    break;
+               
+            }
+        }
     }
 
 
