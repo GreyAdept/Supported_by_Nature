@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 582234907369902583}
   - component: {fileID: 709843759464663865}
   - component: {fileID: 2518567336217994220}
+  - component: {fileID: 5063698494265965479}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -56,6 +57,7 @@ MonoBehaviour:
   onMetricsUpdated:
     m_PersistentCalls:
       m_Calls: []
+  endTurnButton: {fileID: 0}
 --- !u!114 &709843759464663865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,9 +73,6 @@ MonoBehaviour:
   currentActionPoints: 2
   activeEffects: []
   valueRange: {x: 0, y: 100}
-  goodResponseButton: {fileID: 0}
-  neutralResponseButton: {fileID: 0}
-  badResponseButton: {fileID: 0}
   onEventChoiceMade:
     m_PersistentCalls:
       m_Calls:
@@ -121,3 +120,34 @@ MonoBehaviour:
   projectedPos: {x: 0, y: 0, z: 0}
   cam: {fileID: 0}
   tileHoverOver: {fileID: 0}
+--- !u!114 &5063698494265965479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6062772710483095386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3816be4dd9ec8324ead4e5e69d1e3698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueDB: {fileID: 11400000, guid: 54f3e24d2b61c6d41affa9688f307e44, type: 2}
+  dialoguePanel: {fileID: 0}
+  speakerNameText: {fileID: 0}
+  dialogueText: {fileID: 0}
+  speakerImage: {fileID: 0}
+  taskPanel: {fileID: 0}
+  taskDescriptionText: {fileID: 0}
+  taskImage: {fileID: 0}
+  useEffect: 1
+  baseTypingSpeed: 50
+  onTaskAssigned:
+    m_PersistentCalls:
+      m_Calls: []
+  onTaskCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  onTutorialCompleted:
+    m_PersistentCalls:
+      m_Calls: []

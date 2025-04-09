@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class TurnManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class TurnManager : MonoBehaviour
     public UnityEvent<int> onTurnChanged;
     public UnityEvent<int> onActionPointsChanged;
     public UnityEvent<Dictionary<MetricType, float>> onMetricsUpdated;
+    [SerializeField] private Button endTurnButton;
     //and more...
 
 
@@ -63,5 +65,13 @@ public class TurnManager : MonoBehaviour
         onTurnChanged?.Invoke(currentTurn);
         onActionPointsChanged?.Invoke(gameState.currentActionPoints);
         onMetricsUpdated?.Invoke(gameState.metrics);
+        ToggleEndTurnButton(false);
+    }
+    public void ToggleEndTurnButton(bool state)
+    {
+        if(endTurnButton != null)
+        {
+            endTurnButton.interactable = state;
+        }
     }
 }

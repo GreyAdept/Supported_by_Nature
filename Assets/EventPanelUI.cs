@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using DG.Tweening;
+using NUnit.Framework;
+using System.Collections.Generic;
 
 public class EventPanelUI : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class EventPanelUI : MonoBehaviour
     [SerializeField] private TMP_Text outcomeText;
     private WetlandEvent currentEvent;
     private TurnManager turnManager;
+    private SoundManager soundManager;
 
     [SerializeField] private Button goodResponseButton;
     [SerializeField] private Button neutralResponseButton;
@@ -33,6 +36,7 @@ public class EventPanelUI : MonoBehaviour
     private void Start()
     {
         turnManager = TurnManager.Instance;
+        soundManager = SoundManager.Instance;
         goodResponseButton.onClick.AddListener(() => SelectResponse(AnswerCategory.Good));
         neutralResponseButton.onClick.AddListener(() => SelectResponse(AnswerCategory.Neutral));
         badResponseButton.onClick.AddListener(() => SelectResponse(AnswerCategory.Bad));
@@ -49,11 +53,6 @@ public class EventPanelUI : MonoBehaviour
     }
     private void SetupEventUI()
     {
-        /*eventNameText.text = currentEvent.eventName ?? string.Empty;
-        eventDescriptionText.text = currentEvent.eventDescription ?? string.Empty;
-        goodResponseButtonText.text = currentEvent.GetResponseFromAnswer(AnswerCategory.Good).responseText ?? string.Empty;
-        neutralResponseButtonText.text = currentEvent.GetResponseFromAnswer(AnswerCategory.Neutral).responseText ?? string.Empty;
-        badResponseButtonText.text = currentEvent.GetResponseFromAnswer(AnswerCategory.Bad).responseText ?? string.Empty;*/
         eventNameText.text = currentEvent.eventName ?? string.Empty;
         eventDescriptionText.text = currentEvent.eventDescription ?? string.Empty;
         var goodResponse = currentEvent.GetResponseFromAnswer(AnswerCategory.Good);
@@ -62,6 +61,7 @@ public class EventPanelUI : MonoBehaviour
         neutralResponseButtonText.text = neutralResponse != null ? (neutralResponse.responseText ?? string.Empty) : string.Empty;
         var badResponse = currentEvent.GetResponseFromAnswer(AnswerCategory.Bad);
         badResponseButtonText.text = badResponse != null ? (badResponse.responseText ?? string.Empty) : string.Empty;
+        ShuffleButtons();
         ShowEventUI();
     }
     public void ShowEventUI()
@@ -69,6 +69,7 @@ public class EventPanelUI : MonoBehaviour
         eventPopupPanel.transform.localScale = Vector3.zero;
         eventPopupPanel.SetActive(true);
         eventPopupPanel.transform.DOScale(Vector3.one, 0.4f).SetUpdate(true);
+        if (soundManager != null) soundManager.PlayUISound("eventPopup");
     }
     public void HideEventUI()
     {
@@ -128,5 +129,32 @@ public class EventPanelUI : MonoBehaviour
     private void CloseOutcomePanel()
     {
         outcomePopupPanel.transform.DOScale(Vector3.zero, 0.2f).SetUpdate(true).OnComplete(()=>outcomePopupPanel.SetActive(false));
+        turnManager.ToggleEndTurnButton(true); //temp move somewhere
+    }
+    private void ShuffleButtons()
+    {
+        List<Button> buttons = new List<Button> { goodResponseButton, neutralResponseButton, badResponseButton};
+        List<int> positions = new List<int>();
+        for(int i = 0; i < buttons.Count; i++)
+        {
+            positions.Add(buttons[i].transform.GetSiblingIndex());
+        }
+        ShuffleList(positions);
+        for(int i = 0; i < buttons.Count; i++)
+        {
+            buttons[i].transform.SetSiblingIndex(positions[i]);
+        }
+    }
+    private void ShuffleList<T>(List<T> list)
+    {
+        int n = list.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = Random.Range(0, n + 1);
+            T value = list[k];
+            list[k] = list[n];
+            list[n] = value;
+        }
     }
 }

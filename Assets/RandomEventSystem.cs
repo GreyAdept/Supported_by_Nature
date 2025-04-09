@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class RandomEventSystem : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class RandomEventSystem : MonoBehaviour
     [SerializeField] private int catastrophicCooldown = 3;
 
     [Header("Event Storage")]
+    [SerializeField] private List<WetlandEvent> forcedEvents = new List<WetlandEvent>();
     [SerializeField] private List<WetlandEvent> catastrophicEvents = new List<WetlandEvent>();
     [SerializeField] private List<WetlandEvent> badEvents = new List<WetlandEvent>();
     [SerializeField] private List<WetlandEvent> neutralEvents = new List<WetlandEvent>();
@@ -48,7 +50,8 @@ public class RandomEventSystem : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            GenerateNewEvent();
+            ForceNextEvent("kosteikolle_saapuu");
+            //GenerateNewEvent();
         }
     }
     private void InitializeWeights()
@@ -64,6 +67,22 @@ public class RandomEventSystem : MonoBehaviour
         categoryCooldowns[EventCategory.Bad] = 0;
         categoryCooldowns[EventCategory.Neutral] = 0;
         categoryCooldowns[EventCategory.Good] = 0;
+    }
+    public void ForceNextEvent(string forcedEventId)
+    {
+        WetlandEvent nextEvent = null;
+        foreach(WetlandEvent evt in forcedEvents)
+        {
+            if(evt.eventId == forcedEventId)
+            {
+                nextEvent = evt;
+                break;
+            }
+        }
+        WetlandEvent[] events = eventQue.ToArray();
+        eventQue.Clear();
+        eventQue.Enqueue(nextEvent);
+        foreach(WetlandEvent evt in events) eventQue.Enqueue(evt);
     }
     public WetlandEvent GetNextEvent()
     {

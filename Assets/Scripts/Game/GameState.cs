@@ -13,10 +13,6 @@ public class GameState : MonoBehaviour
     private RandomEventSystem randomEventSystem;
     [SerializeField] private Vector2 valueRange = new Vector2(0,100);
 
-    //add somewhere else later
-    [SerializeField] private Button goodResponseButton;
-    [SerializeField] private Button neutralResponseButton;
-    [SerializeField] private Button badResponseButton;
     public UnityEvent onEventChoiceMade;
     public UnityEvent onNewEvent;
     public WetlandEvent CurrentEvent => currentEvent;
@@ -26,10 +22,6 @@ public class GameState : MonoBehaviour
     {
         InitializeStats();
         randomEventSystem = RandomEventSystem.instance;
-        //
-        /*goodResponseButton.onClick.AddListener(() => HandleRandomEvent(AnswerCategory.Good));
-        neutralResponseButton.onClick.AddListener(() => HandleRandomEvent(AnswerCategory.Neutral));
-        badResponseButton.onClick.AddListener(() => HandleRandomEvent(AnswerCategory.Bad));*/
     }
     //create list and assign level start metrics
     private void InitializeStats()
