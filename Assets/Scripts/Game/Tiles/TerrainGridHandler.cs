@@ -97,7 +97,8 @@ public class TerrainGridHandler : MonoBehaviour
                    
                 }
             }
-
+           
+           
             //check right neighbor
             if (tilePos.x != cellsHorizontal-1)
             {
@@ -131,9 +132,6 @@ public class TerrainGridHandler : MonoBehaviour
                     tile.adjacentTiles.Add(result);
                 }
             }
-            
-
-
         }
 
     }
