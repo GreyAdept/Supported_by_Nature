@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95dea27302dda444b6646ad08dfad01, type: 3}
+  m_Name: Lumme
+  m_EditorClassIdentifier: 
+  organismName: Lumme
+  organismGrowFactor: 0
+  isInvasive: 0
+  organismEnvironment: 0
+  organismPrefab: {fileID: 6905689483747698436, guid: 701847e39a9a1614bbc35a92fd2c20f7, type: 3}
+  plantGrowStage: 3
+  plantGrowStagePrefab2: {fileID: 3235698965254342275, guid: 91fcf50d526c5114888735443d592882, type: 3}
+  plantGrowStagePrefab3: {fileID: 3874363047754449474, guid: 81807f66bed09bc42926f6fc7607c165, type: 3}

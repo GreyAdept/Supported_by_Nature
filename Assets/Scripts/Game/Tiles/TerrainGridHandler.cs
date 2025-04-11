@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Linq; //used for dictionarys
 
 
+
 public class TerrainGridHandler : MonoBehaviour
 {
 
@@ -16,16 +17,39 @@ public class TerrainGridHandler : MonoBehaviour
     
     public Dictionary<Vector2Int, GameObject> mapTiles = new Dictionary<Vector2Int, GameObject>(); //dictionary data structure for game tiles 
 
+    private float prefabScale;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
+    {  
+        DontDestroyOnLoad(this);
+        //generateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, 1); //use inversetransformpoint to convert from global to local position
+        //calculateNeighbors();
+    }
+
+    
+    
+    [ContextMenu("Generate map")]private void EditorMapGen()
     {   
-        generateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, 5); //use inversetransformpoint to convert from global to local position
+        prefabScale = debugMarker.transform.localScale.x;
+        generateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, prefabScale);
         calculateNeighbors();
-        
     }
     
+    
+
+    [ContextMenu("Destroy Tiles")]private void DestroyTiles()
+    {       
+            foreach (KeyValuePair<Vector2Int, GameObject> kvp in mapTiles)
+            {
+                GameObject.Destroy(kvp.Value);
+            }
+            mapTiles.Clear();
+    }
+    
+    
     //generate grid and spawn tiles
-    private void generateGrid(Vector3 origin, int countVertical, int countHorizontal, int cellGap)
+    private void generateGrid(Vector3 origin, int countVertical, int countHorizontal, float cellGap)
     {
         for (int i = Vector2Int.RoundToInt(origin).x; i < countVertical; i++) // use vector2int for accurate grid coordinates (no decimals)
         {
@@ -33,7 +57,7 @@ public class TerrainGridHandler : MonoBehaviour
             {
 
                 var newPosition = new Vector3(i * cellGap, 0, j * cellGap); 
-                var newTile =  Instantiate(debugMarker, newPosition, Quaternion.Euler(90,0,0)); //rotate tile 90 deg
+                var newTile =  Instantiate(debugMarker, newPosition, Quaternion.Euler(0,0,0)); 
 
                 var tileComponent = newTile.GetComponent<gameTile>();
 
@@ -73,7 +97,8 @@ public class TerrainGridHandler : MonoBehaviour
                    
                 }
             }
-
+           
+           
             //check right neighbor
             if (tilePos.x != cellsHorizontal-1)
             {
@@ -95,10 +120,7 @@ public class TerrainGridHandler : MonoBehaviour
                     tile.adjacentTiles.Add(result);
                 }
             }
-            else
-            {
-                tile.tileType = tileManager.TileType.Water;
-            }
+            
 
             //check top neighbor
             if (tilePos.y != cellsHorizontal-1)
@@ -110,12 +132,6 @@ public class TerrainGridHandler : MonoBehaviour
                     tile.adjacentTiles.Add(result);
                 }
             }
-            else
-            {
-                tile.tileType = tileManager.TileType.Forest;
-            }
-
-
         }
 
     }
