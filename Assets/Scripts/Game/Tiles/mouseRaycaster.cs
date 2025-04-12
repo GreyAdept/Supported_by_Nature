@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TouchPhase = UnityEditor.DeviceSimulation.TouchPhase;
+
 
 public class mouseRaycaster : MonoBehaviour
 {
@@ -19,7 +19,7 @@ public class mouseRaycaster : MonoBehaviour
 
     //touch screen input
     private bool isTouching;
-    [SerializeField] private Vector2 touchPosition;
+    public Vector2 touchPosition;
 
 
 

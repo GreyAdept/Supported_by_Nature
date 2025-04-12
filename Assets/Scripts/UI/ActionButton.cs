@@ -12,11 +12,13 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
     public TextMeshProUGUI buttonText;
     private bool selected = false;
     private Vector3 originalPosition;
+    private mouseRaycaster mouseRaycaster;
 
     void Start()
     {
         originalPosition = GetComponent<RectTransform>().anchoredPosition;
         tm = tileManager.Instance;
+        mouseRaycaster = tm.gameObject.GetComponent<mouseRaycaster>();
         /*
         if (action != null)
         {
@@ -32,10 +34,18 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
     void Update()
     {
         if (selected)
-        {   
-            var mousePos = Mouse.current.position.ReadValue();
-            transform.position = mousePos;
-            //Debug.Log(tm.selectedTile.name);
+        {
+            if (Touchscreen.current == null)
+            {
+                var mousePos = Mouse.current.position.ReadValue();
+                transform.position = mousePos;
+            }
+            else
+            {
+                transform.position = mouseRaycaster.touchPosition;
+            }
+            
+            
         }
     }
     public void OnPointerEnter(PointerEventData eventData)
