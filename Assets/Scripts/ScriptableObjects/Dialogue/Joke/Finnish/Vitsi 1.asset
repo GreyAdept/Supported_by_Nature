@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vitsi 1
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
-  npcImage: {fileID: 0}
+  npcImage: {fileID: 21300000, guid: 539b1fb467eadee4e8bbea246fabc30b, type: 3}
   dialogueText: "Hauki, ahven ja s\xE4rki k\xE4veliv\xE4t baarin. Haluamme huurteiset
     sanoi hauki.\nEmme tarjoile p\xE4iv\xE4llist\xE4 sanoi baarimikko."
   typeSpeed: 1

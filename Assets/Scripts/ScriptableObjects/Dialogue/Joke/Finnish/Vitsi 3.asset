@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vitsi 3
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
-  npcImage: {fileID: 0}
+  npcImage: {fileID: 21300000, guid: 539b1fb467eadee4e8bbea246fabc30b, type: 3}
   dialogueText: "Kaksi miest\xE4 oli kalassa. Toinen sai j\xE4ttim\xE4isen hauen,
     mutta heitti sen takaisin mereen.\n\u2013 Miksi teit noin? ihmetteli toinen.\n\u2013
     Ei minulla ole varaa sy\xF6d\xE4 haukea!"

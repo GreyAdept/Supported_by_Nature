@@ -5,6 +5,8 @@ using System.Runtime.CompilerServices;
 [CreateAssetMenu(fileName = "DialogueDatabase", menuName = "DialogueDatabase")]
 public class DialogueDatabase : ScriptableObject
 {
+    public Language dbLanguage;
+
     [Header("TutorialSequence")]
     public List<TutorialDialogue> tutorialSequence = new List<TutorialDialogue>();
 
@@ -18,6 +20,7 @@ public class DialogueDatabase : ScriptableObject
     public List<RandomDialogue> randomDialogues = new List<RandomDialogue>();
     public List<RandomDialogue> jokeDialogues = new List<RandomDialogue>();
     public List<RandomDialogue> educationalDialogues = new List<RandomDialogue>();
+
 
     public EventHintDialogue GetHintForEvent(WetlandEvent upcomingEvent)
     {

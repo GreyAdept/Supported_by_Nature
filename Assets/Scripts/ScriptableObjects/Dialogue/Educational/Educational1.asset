@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Educational1
   m_EditorClassIdentifier: 
   npcName: Costeicco guru
-  npcImage: {fileID: 21300000, guid: 1d431d65592e6d64abb523ccc2e5b629, type: 3}
+  npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
   dialogueText: "Tiesitk\xF6 ett\xE4 hauki on kala."
   typeSpeed: 1
   isJoke: 0

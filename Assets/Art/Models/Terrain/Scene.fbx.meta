@@ -3,7 +3,32 @@ guid: b04e4432366a5a24096d9f4475b90341
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass
+    second: {fileID: 2100000, guid: 95549112c5325714fb179efbe449dc10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Gradient
+    second: {fileID: 2100000, guid: c2c7734397ffdd7468311386ccb9a0ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Vegetation
+    second: {fileID: 2100000, guid: ba47ee8d3a56f8e47a10ff9adf8caba6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Water
+    second: {fileID: 2100000, guid: 7e06ec89c0cdf3b46bf7c8dcf7f79247, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cottage_mat.001
+    second: {fileID: 2100000, guid: aa6769fa7cad05941b9eb05fc19a4806, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

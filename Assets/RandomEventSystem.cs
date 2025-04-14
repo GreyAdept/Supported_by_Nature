@@ -110,7 +110,6 @@ public class RandomEventSystem : MonoBehaviour
         {
             totalWeight += weight.Value;
         }
-
         float randomValue = Random.Range(0, totalWeight);
         float checkWeight = 0;
         foreach(var weight in currentWeights)
