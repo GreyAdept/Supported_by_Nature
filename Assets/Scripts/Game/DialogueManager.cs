@@ -55,7 +55,7 @@ public class DialogueManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A)) InteractWithNPC();
+        //if (Input.GetKeyDown(KeyCode.A)) InteractWithNPC();
         TemporaryQuestManager();
     }
     private void OnTurnChanged(int turnNumber)
@@ -68,7 +68,6 @@ public class DialogueManager : MonoBehaviour
     {
         if(currentTutorialIndex < dialogueDB.tutorialSequence.Count)
         {
-            Debug.Log("we in the wrong place");
             TutorialDialogue tutorial = dialogueDB.tutorialSequence[currentTutorialIndex];
             ShowDialogue(tutorial);
             if(!string.IsNullOrEmpty(tutorial.taskDescription))
@@ -78,7 +77,6 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("we in some other place");
             tutorialActive = false;
             onTutorialCompleted?.Invoke();
         }
@@ -99,7 +97,6 @@ public class DialogueManager : MonoBehaviour
             }
             else if (currentTutorialIndex >= dialogueDB.tutorialSequence.Count)
             {
-                Debug.Log("tutorial not active");
                 tutorialActive = false;
                 onTutorialCompleted?.Invoke();
             }
@@ -129,20 +126,16 @@ public class DialogueManager : MonoBehaviour
     {
         if(hasGivenHintThisTurn)
         {
-            Debug.Log("has given hint?");
             ShowRandomDialogue();
             return;
         }
-        Debug.Log("trying to get next turn event");
         WetlandEvent nextEvent = randomEventSystem.CheckNextEvent();
         Debug.Log(nextEvent.eventCategory.ToString());
         if(nextEvent != null)
         {
-            Debug.Log("next event not null");
             EventHintDialogue hint = dialogueDB.GetHintForEvent(nextEvent);
             if(hint != null)
             {
-                Debug.Log("hint not null");
                 ShowDialogue(hint);
                 hasGivenHintThisTurn = true;
             }
@@ -158,7 +151,6 @@ public class DialogueManager : MonoBehaviour
     }
     public void ShowDialogue(DialogueBase dialogue)
     {
-        Debug.Log("in the showdialogue script");
         dialoguePanel.SetActive(true);
         speakerNameText.text = dialogue.npcName;
         if(useEffect)
@@ -208,40 +200,34 @@ public class DialogueManager : MonoBehaviour
         hasGivenHintThisTurn = true;
         if(isDialogueRunning)
         {
-            Debug.Log("dialoguerunning");
             if(typeWriterEffectCoroutine != null)
             {
-                Debug.Log("typewriter not null");
                 StopCoroutine(typeWriterEffectCoroutine);
                 dialogueText.text = finalText;
                 typeWriterEffectCoroutine = null;
             }
             else
             {
-                Debug.Log("trying to hide");
                 HideDialogue();
             }
             return;
         }
         if(tutorialActive)
         {
-            Debug.Log("trying to show tutorial");
             ShowNextTutorialDialogue();
         }
         else if(!hasGivenHintThisTurn)
         {
-            Debug.Log("trying to give hint");
             GiveHintForNextEvent();
         }
         else
         {
-            Debug.Log("trying to show random dialogue");
             ShowRandomDialogue();
         }
     }
     private void TemporaryQuestManager()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) CompleteTask("task_one");
-        if (Input.GetKeyDown(KeyCode.Alpha2)) CompleteTask("task_two");
+        /*if (Input.GetKeyDown(KeyCode.Alpha1)) CompleteTask("task_one");
+        if (Input.GetKeyDown(KeyCode.Alpha2)) CompleteTask("task_two");*/
     }
 }
