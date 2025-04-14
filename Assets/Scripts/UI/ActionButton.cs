@@ -35,14 +35,14 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
     {
         if (selected)
         {
-            if (Touchscreen.current == null)
+            Vector2 inputPos;
+            if (Touchscreen.current != null && mouseRaycaster.isTouching)
             {
-                var mousePos = Mouse.current.position.ReadValue();
-                transform.position = mousePos;
+                inputPos = mouseRaycaster.touchPosition;
             }
             else
             {
-                transform.position = mouseRaycaster.touchPosition;
+                inputPos = Mouse.current.position.ReadValue();
             }
             
             
@@ -76,6 +76,10 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerUp(PointerEventData pointerEventData)
     {
+        if(selected && tm.selectedTile != null)
+        {
+            action.affectTile(tm.selectedTile);
+        }
         selected = false;
         tm.toolBeingUsed = false;
         GetComponent<RectTransform>().anchoredPosition = originalPosition;
