@@ -18,6 +18,7 @@ public class mouseRaycaster : MonoBehaviour
     private InputSystem_Actions inputActions;
 
     //touch screen input
+    private bool useTouch = true;
     private bool isTouching;
     public Vector2 touchPosition;
 
@@ -49,7 +50,9 @@ public class mouseRaycaster : MonoBehaviour
         */
         
         Plane plane = new Plane(Vector3.up, Vector3.zero);
-        Ray ray = cam.ScreenPointToRay(mousePos);
+        Ray ray = new Ray();
+        if (useTouch) ray = cam.ScreenPointToRay(touchPosition);
+        else cam.ScreenPointToRay(mousePos);
         if (plane.Raycast(ray, out float distance))
         {
             worldPos = ray.GetPoint(distance);
