@@ -22,41 +22,51 @@ public class tileWeedsGrowth : MonoBehaviour
         tile = transform.GetComponent<gameTile>();
         growStage = 1;
         UpdateWeedObject();
+
+        if (this.gameObject.activeSelf == false)
+        {
+            this.enabled = false;
+        }
     }
     
     private void GrowWeeds(int random)
     {
-        float randomValue = Random.Range(0.0f, 1.0f);
-
-        switch (tile.tileType) // <-- use different random values for water / wet areas (this feature was discarded)
+        if (this.gameObject.activeSelf == true)
         {
-            case tileManager.TileType.Water:
+            float randomValue = Random.Range(0.0f, 1.0f);
 
-                if (randomValue > 0.90f)
-                {
-                    if (growStage < 3)
+            switch (tile.tileType) // <-- use different random values for water / wet areas (this feature was discarded)
+            {
+                case tileManager.TileType.Water:
+
+                    if (randomValue > 2f)
                     {
-                        growStage++;
-                        UpdateWeedObject();
+                        if (growStage < 3)
+                        {
+                            growStage++;
+                            UpdateWeedObject();
+                        }
                     }
-                }
-                break;
+
+                    break;
 
 
-            case tileManager.TileType.Wetland:
-                if (randomValue > 0.90f)
-                {
-                    if (growStage < 3)
+                case tileManager.TileType.Wetland:
+                    if (randomValue > 0.96f)
                     {
-                        growStage++;
-                        UpdateWeedObject();
+                        if (growStage < 3)
+                        {
+                            growStage++;
+                            UpdateWeedObject();
+                        }
                     }
-                }
-                break;
+
+                    break;
 
 
-            case tileManager.TileType.Forest:
-                break;
+                case tileManager.TileType.Forest:
+                    break;
+            }
         }
     }
 

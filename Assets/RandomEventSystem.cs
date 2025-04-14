@@ -47,12 +47,14 @@ public class RandomEventSystem : MonoBehaviour
         }
     }
     private void Update()
-    {
+    {   
+        /*
         if(Input.GetKeyDown(KeyCode.Space))
         {
             ForceNextEvent("kosteikolle_saapuu");
             //GenerateNewEvent();
         }
+        */
     }
     private void InitializeWeights()
     {

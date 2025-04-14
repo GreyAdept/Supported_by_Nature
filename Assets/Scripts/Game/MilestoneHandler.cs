@@ -1,5 +1,7 @@
-using UnityEditor.UI;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MilestoneHandler : MonoBehaviour
@@ -11,10 +13,21 @@ public class MilestoneHandler : MonoBehaviour
     public Toggle milestone2;
     public Toggle milestone3;
     
+    public Button milestone1Button;
+    public Button milestone2Button;
+    public Button milestone3Button;
+    
+    public int milestone1Progress;
+    public int milestone2Progress;
+    public int milestone3Progress;
+    
     public int totalMilestoneProgress;
     public int highestMilestoneReached;
 
     public int currentBiodiversity;
+    [SerializeField] private int maxBiodiversity;
+
+    [SerializeField] private int tileCount;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,7 +35,15 @@ public class MilestoneHandler : MonoBehaviour
         currentBiodiversity = 0;
         totalMilestoneProgress = 0;
         TurnManager.Instance.onTurnChanged.AddListener(ResetBiodiversity);
-        //TurnManager.Instance.onTurnChanged.AddListener(UpdateSlider);
+        
+        milestone1Button.interactable = false;
+        milestone2Button.interactable = false;
+        milestone3Button.interactable = false;
+
+        tileCount = GameObject.FindGameObjectsWithTag("Tile").Length - 1;
+
+        maxBiodiversity = tileCount * 6;
+
     }
     
     
@@ -37,27 +58,97 @@ public class MilestoneHandler : MonoBehaviour
     {
         milestoneSlider.value = currentBiodiversity;
 
-        if (currentBiodiversity > 100f)
+        if (currentBiodiversity > maxBiodiversity * 0.25)
         {
-            milestone1.isOn = true;
+            milestone1Button.interactable = true;
         }
 
-        if (currentBiodiversity > 200f)
+        if (currentBiodiversity > maxBiodiversity * 0.50)
         {
-            milestone2.isOn = true;
+            milestone2Button.interactable = true;
+        }
+
+        if (currentBiodiversity > maxBiodiversity * 0.90)
+        {
+            milestone3Button.interactable = true;
         }
     }
 
-    public void ProgressMilestone()
-    {
-        if (TurnManager.Instance.gameState.currentActionPoints >= 1)
-        {
-            TurnManager.Instance.gameState.currentActionPoints -= 1;
+    public void ProgressMilestone(int milestone)
+    {   
+        
+            switch (milestone)
+            {
+                case 1:
+                    if (milestone1Progress < 3 && milestone1.isOn == false)
+                    {
+                        if (TurnManager.Instance.gameState.currentActionPoints >= 1)
+                        {
+                            TurnManager.Instance.gameState.currentActionPoints -= 1;
+                            milestone1Progress++;
+                            milestone1Button.GetComponentInChildren<TextMeshProUGUI>().text = milestone1Progress + "/3 (AP)";
+                            if (milestone1Progress >= 3)
+                            {
+                                milestone1.isOn = true;
+                                milestone1Button.interactable = false;
+                                milestone1Button.gameObject.SetActive(false);
+                                RandomEventSystem.instance.ForceNextEvent("kosteikolle_saapuu");
+                                
+                            }
+                        }
+                            
+                        
+                    }
+                    
+                    break;
+                case 2:
+                    if (milestone2Progress < 3 && milestone2.isOn == false)
+                    {
+                        if (TurnManager.Instance.gameState.currentActionPoints >= 1)
+                        {
+                            TurnManager.Instance.gameState.currentActionPoints -= 1;
+                            milestone2Progress++;
+                            milestone2Button.GetComponentInChildren<TextMeshProUGUI>().text = milestone2Progress + "/3 (AP)";
+                            if (milestone2Progress >= 3)
+                            {
+                                milestone2.isOn = true;
+                                milestone2Button.interactable = false;
+                                milestone2Button.gameObject.SetActive(false);
+                                RandomEventSystem.instance.ForceNextEvent("vesilinnut_saapuvat");
+                                
+                            }
+                        }
+
+                        
+                    }
+                    break;
+                case 3:
+                    if (milestone3Progress < 3 && milestone3.isOn == false)
+                    {
+                        if (TurnManager.Instance.gameState.currentActionPoints >= 1)
+                        {
+                            TurnManager.Instance.gameState.currentActionPoints -= 1;
+                            milestone3Progress++;
+                            milestone3Button.GetComponentInChildren<TextMeshProUGUI>().text = milestone3Progress + "/3 (AP)";
+                            if (milestone3Progress >= 3)
+                            {
+                                milestone3.isOn = true;
+                                milestone3Button.interactable = false;
+                                milestone3Button.gameObject.SetActive(false);
+                                
+                                Debug.Log("you're winner");
+                            }
+                        }
+
+                        
+                    }
+                    break;
+            }
             TurnManager.Instance.onActionPointsChanged.Invoke(TurnManager.Instance.gameState.currentActionPoints);
-            totalMilestoneProgress += 1;
+            //totalMilestoneProgress += 1;
             UpdateSlider();
             
-        }
+        
         
     }
 
@@ -68,14 +159,13 @@ public class MilestoneHandler : MonoBehaviour
         Invoke("UpdateSlider", 0.6f);
     }
 
-    private void DelayedReset()
-    {
-        
-    }
+  
     
     
     public void IncrementBiodiversity(int amount)
     {
         currentBiodiversity += amount;
     }
+
+ 
 }
