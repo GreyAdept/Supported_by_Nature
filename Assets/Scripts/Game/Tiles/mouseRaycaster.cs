@@ -63,7 +63,7 @@ public class mouseRaycaster : MonoBehaviour
             projectedPos = worldPos;
         }
         var newSelectedTile = CheckTileHitting();
-        if ((selectedTile != null && newSelectedTile != selectedTile)
+        if ((selectedTile != null && newSelectedTile != selectedTile))
         {
             newSelectedTile.GetComponent<gameTile>().StartHover();
             tm.selectedTile = newSelectedTile.GetComponent<gameTile>();
