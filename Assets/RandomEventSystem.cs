@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+using UnityEngine.InputSystem;
 public class RandomEventSystem : MonoBehaviour
 {
     public static RandomEventSystem instance;
@@ -34,6 +34,7 @@ public class RandomEventSystem : MonoBehaviour
     private Dictionary<EventCategory, float> baseWeights = new Dictionary<EventCategory, float>(); //base starting weights
     //ui good, neutral, bad response buttons? send event from button to get event answercategory effects?
 
+
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -48,13 +49,16 @@ public class RandomEventSystem : MonoBehaviour
     }
     private void Update()
     {   
-        /*
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            ForceNextEvent("kosteikolle_saapuu");
-            //GenerateNewEvent();
+            for(int i = 0; i < 100f;  i++)
+                GenerateNewEvent();
         }
-        */
+        /*if(Input.GetKeyDown(KeyCode.Space))
+        {
+            //ForceNextEvent("kosteikolle_saapuu");
+            GenerateNewEvent();
+        }*/
     }
     private void InitializeWeights()
     {
@@ -103,7 +107,7 @@ public class RandomEventSystem : MonoBehaviour
         WetlandEvent newEvent = SelectRandomEvent(category);
         eventQue.Enqueue(newEvent); //select event from random category and add to que
         UpdateEventsCooldowns(category); //set cooldown for category and reduce others
-        Debug.Log($"Generated event type: {category}");
+        Debug.Log($"Generated event type: {category} with name: {newEvent.name}");
     }
     private EventCategory SelectCategory()
     {
