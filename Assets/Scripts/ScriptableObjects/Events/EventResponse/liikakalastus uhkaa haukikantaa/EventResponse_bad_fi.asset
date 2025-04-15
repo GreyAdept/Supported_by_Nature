@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: liikakalastus_uhkaa
   answerCategory: 2
   responseText: Salli vain isojen haukien kalastus
+  responseTextLocalized:
+    fi: Salli vain isojen haukien kalastus
+    sw: "Till\xE5t endast fiske efter stor g\xE4dda"
+    en: Allow only the fishing of large pike.
   outcomeText: "Suuret hauet ovat lis\xE4\xE4ntymiskykyisimpi\xE4, niiden poistaminen
     nopeuttaa kannan romahtamista"
+  outcomeTextLocalized:
+    fi: "Suuret hauet ovat lis\xE4\xE4ntymiskykyisimpi\xE4, niiden poistaminen nopeuttaa
+      kannan romahtamista"
+    sw: "Stora g\xE4ddor \xE4r de mest reproduktiva, att ta bort dem kommer att p\xE5skynda
+      kollapsen av populationen."
+    en: Large pike are the most reproductively capable, and their removal accelerates
+      the collapse of the population.
   effects: []

@@ -17,6 +17,20 @@ MonoBehaviour:
   eventDescription: "Vesi nousee ja etsii tiet\xE4\xE4n. Vesi on yst\xE4v\xE4si,
     mutta vain, jos ohjaat sen oikeaan suuntaan. Muista, kun tulva vet\xE4ytyy, kosteikko
     selvi\xE4\xE4 kyll\xE4 oikeanlaisella toiminnalla."
+  eventNameLocalized:
+    fi: Tulva uhkaa kosteikkoa
+    sw: "\xD6versv\xE4mning hotar v\xE5tmarker"
+    en: Flood threatens wetland
+  eventDescriptionLocalized:
+    fi: "Vesi nousee ja etsii tiet\xE4\xE4n. Vesi on yst\xE4v\xE4si, mutta vain,
+      jos ohjaat sen oikeaan suuntaan. Muista, kun tulva vet\xE4ytyy, kosteikko selvi\xE4\xE4
+      kyll\xE4 oikeanlaisella toiminnalla."
+    sw: "Vattnet stiger och s\xF6ker sin v\xE4g. Vattnet \xE4r din v\xE4n, men bara
+      om du styr det i r\xE4tt riktning. Kom ih\xE5g att n\xE4r \xF6versv\xE4mningsvattnet
+      drar sig tillbaka kommer v\xE5tmarken att \xF6verleva med r\xE4tt typ av \xE5tg\xE4rder."
+    en: The water rises and finds its way. Water is your friend, but only if you
+      guide it in the right direction. Remember, when the flood recedes, the wetland
+      will survive with the right actions.
   eventIcon: {fileID: 0}
   eventCategory: 0
   goodResponse: {fileID: 11400000, guid: 867ce1313dc1fb64cb7968abae92dd64, type: 2}

@@ -17,6 +17,20 @@ MonoBehaviour:
   eventDescription: "Kasvit ovat tukahduttaneet kosteikon el\xE4m\xE4n. Poista liikakasvua
     niin, ett\xE4 vesi virtaa vapaasti ja valo p\xE4\xE4see pohjaan. Miten l\xF6yd\xE4t
     oikean tasapainon kosteikon elinvoiman s\xE4ilytt\xE4miseksi?"
+  eventNameLocalized:
+    fi: "Liikakasvun niitt\xE4minen"
+    sw: "Klippa \xF6verskottsv\xE4xt"
+    en: Cutting excess plantgrowth
+  eventDescriptionLocalized:
+    fi: "Kasvit ovat tukahduttaneet kosteikon el\xE4m\xE4n. Poista liikakasvua niin,
+      ett\xE4 vesi virtaa vapaasti ja valo p\xE4\xE4see pohjaan. Miten l\xF6yd\xE4t
+      oikean tasapainon kosteikon elinvoiman palauttamiseksi?"
+    sw: "V\xE4xterna har kv\xE4vt livet i v\xE5tmarken. Ta bort tillv\xE4xten s\xE5
+      att vattnet kan fl\xF6da fritt och ljuset kan n\xE5 botten. Hur hittar du r\xE4tt
+      balans f\xF6r att \xE5terst\xE4lla v\xE5tmarkens vitalitet?"
+    en: "Plants have smothered the life in the wetland. Remove overgrowth so that
+      water can flow freely and light reaches the bottom. How can you find the right
+      balance to restore the wetland\u2019s vitality?"
   eventIcon: {fileID: 0}
   eventCategory: 1
   goodResponse: {fileID: 11400000, guid: b3bcda2cc8653034a9d9aba0e75f9bea, type: 2}

@@ -15,6 +15,16 @@ MonoBehaviour:
   linkedEventId: vieraslajit_valtaavat
   answerCategory: 0
   responseText: "Poista vieraslajit ja korvaa ne alkuper\xE4isill\xE4 kasveilla"
+  responseTextLocalized:
+    fi: "Poista vieraslajit ja korvaa ne alkuper\xE4isill\xE4 kasveilla"
+    sw: "Ta bort invasiva arter och ers\xE4tt dem med inhemska v\xE4xter"
+    en: Remove invasive species and replace them with native plants
   outcomeText: "Ekosysteemi elpyy, monimuotoisuus lis\xE4\xE4ntyy ja kosteikon tila
     paranee"
+  outcomeTextLocalized:
+    fi: "Ekosysteemi elpyy, monimuotoisuus lis\xE4\xE4ntyy ja kosteikon tila paranee"
+    sw: "Ekosystemet \xE5terh\xE4mtar sig, den biologiska m\xE5ngfalden \xF6kar och
+      v\xE5tmarkens tillst\xE5nd f\xF6rb\xE4ttras"
+    en: The ecosystem recovers, biodiversity increases, and the condition of the
+      wetland improves.
   effects: []

@@ -15,5 +15,14 @@ MonoBehaviour:
   linkedEventId: ruoppaat_kutupaikkoja
   answerCategory: 2
   responseText: Ruoppaa kuoppia avonaisille paikoille
+  responseTextLocalized:
+    fi: Ruoppaa kuoppia avonaisille paikoille
+    sw: "Gr\xE4va gropar p\xE5 \xF6ppna platser"
+    en: Dredge pits in open areas.
   outcomeText: "Kutukuopat ei kelpaa hauille, vaan ne siirtyv\xE4t muualle"
+  outcomeTextLocalized:
+    fi: "Kutukuopat ei kelpaa hauille, vaan ne siirtyv\xE4t muualle"
+    sw: "Lekh\xE5l \xE4r inte l\xE4mpliga f\xF6r g\xE4dda och de flyttar n\xE5gon
+      annanstans"
+    en: The spawning pits are unsuitable for pike, and they move elsewhere
   effects: []

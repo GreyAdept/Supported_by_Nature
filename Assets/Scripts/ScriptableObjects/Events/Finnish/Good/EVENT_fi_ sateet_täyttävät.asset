@@ -17,6 +17,20 @@ MonoBehaviour:
   eventDescription: "Sade voi tuoda el\xE4m\xE4\xE4 kosteikolle, mutta hallitsematon
     virtaus vie ravinteet mukanaan. Miten varmistat, ett\xE4 vesi pysyy hallinnassa
     ja kosteikko saa sateista hy\xF6dyn ilman, ett\xE4 ravinteet hukkuvat?"
+  eventNameLocalized:
+    fi: "Sateet t\xE4ytt\xE4v\xE4t kosteikon"
+    sw: "Regn fyller v\xE5tmarken"
+    en: Rains fill the wetland
+  eventDescriptionLocalized:
+    fi: "Sade voi tuoda el\xE4m\xE4\xE4 kosteikolle, mutta hallitsematon virtaus
+      vie ravinteet mukanaan. Miten varmistat, ett\xE4 vesi pysyy hallinnassa ja
+      kosteikko saa sateista hy\xF6dyn ilman, ett\xE4 ravinteet hukkuvat?"
+    sw: "Regn kan ge liv \xE5t en v\xE5tmark, men okontrollerat fl\xF6de f\xF6r med
+      sig n\xE4rings\xE4mnen. Hur ser du till att vattnet kontrolleras och att v\xE5tmarken
+      drar nytta av regn utan att f\xF6rlora n\xE4rings\xE4mnen?"
+    en: Rain can bring life to the wetland, but uncontrolled runoff carries nutrients
+      away. How can you ensure that the water remains under control and the wetland
+      benefits from the rain without losing nutrients?
   eventIcon: {fileID: 0}
   eventCategory: 3
   goodResponse: {fileID: 11400000, guid: d527c93d7f3d1944b8ad6de799d98e4e, type: 2}

@@ -17,6 +17,19 @@ MonoBehaviour:
   eventDescription: "Linnut saapuvat kosteikolle, mutta niilt\xE4 puuttuu turvallinen
     pesim\xE4paikka. Miten voit luoda suojaisat olosuhteet, joissa linnut voivat
     kasvattaa poikasiaan ilman h\xE4iri\xF6it\xE4?"
+  eventNameLocalized:
+    fi: Vesilinnut saapuvat kosteikolle
+    sw: "F\xE5glar anl\xE4nder till v\xE5tmarken"
+    en: Birds arrive into the wetland
+  eventDescriptionLocalized:
+    fi: "Linnut saapuvat kosteikolle, mutta niilt\xE4 puuttuu turvallinen pesim\xE4paikka.
+      Miten voit luoda suojaisat olosuhteet, joissa linnut voivat kasvattaa poikasiaan
+      ilman h\xE4iri\xF6it\xE4?"
+    sw: "F\xE5glar anl\xE4nder till v\xE5tmarken, men saknar en s\xE4ker h\xE4ckningsplats.
+      Hur kan du skapa skyddade f\xF6rh\xE5llanden d\xE4r f\xE5glarna kan f\xF6da
+      upp sina ungar utan att bli st\xF6rda?"
+    en: Birds arrive at the wetland, but they lack safe nesting sites. How can you
+      create sheltered conditions where birds can raise their young without disturbances
   eventIcon: {fileID: 0}
   eventCategory: 3
   goodResponse: {fileID: 11400000, guid: 98cdd5180da443545acc0789f8091985, type: 2}

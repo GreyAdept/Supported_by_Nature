@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: "maatalousvirhe_lis\xE4\xE4"
   answerCategory: 1
   responseText: Istuta kasveja kosteikkoon
+  responseTextLocalized:
+    fi: Istuta kasveja kosteikkoon
+    sw: "Plantera v\xE4xter i v\xE5tmarken"
+    en: Plant vegetation in the wetland.
   outcomeText: "Osa ravinteista saadaan pid\xE4tetty\xE4, mutta ongelma jatkuu, jos
     lannoitusta ei saada loppumaan"
+  outcomeTextLocalized:
+    fi: "Osa ravinteista saadaan pid\xE4tetty\xE4, mutta ongelma jatkuu, jos lannoitusta
+      ei saada loppumaan"
+    sw: "En del n\xE4rings\xE4mnen h\xE5lls kvar, men problemet kommer att forts\xE4tta
+      om g\xF6dslingen inte upph\xF6r"
+    en: Some nutrients are retained, but the problem will continue if fertilizer
+      application doesn't stop.
   effects: []

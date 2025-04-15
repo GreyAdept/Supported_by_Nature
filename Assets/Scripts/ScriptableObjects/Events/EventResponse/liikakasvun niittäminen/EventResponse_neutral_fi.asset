@@ -15,5 +15,13 @@ MonoBehaviour:
   linkedEventId: liikakalastus_uhkaa
   answerCategory: 1
   responseText: "Niit\xE4 vain visuaalisesti h\xE4iritsev\xE4t kohdat"
+  responseTextLocalized:
+    fi: "Niit\xE4 vain visuaalisesti h\xE4iritsev\xE4t kohdat"
+    sw: "Sl\xE5 bara visuellt distraherande punkter"
+    en: Only remove the areas that are visually disturbing.
   outcomeText: "Osa alueista paranee, mutta vaikutus j\xE4\xE4 vain puolikkaaksi"
+  outcomeTextLocalized:
+    fi: "Osa alueista paranee, mutta vaikutus j\xE4\xE4 vain puolikkaaksi"
+    sw: "Vissa omr\xE5den f\xF6rb\xE4ttras, men effekten \xE4r bara halv"
+    en: Some areas improve, but the effect is only partial.
   effects: []

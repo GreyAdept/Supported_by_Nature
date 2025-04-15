@@ -16,6 +16,18 @@ MonoBehaviour:
   eventName: "\xD6ljyvuoto"
   eventDescription: "H\xE4lytys! Suuri \xF6ljytankkeri on ajanut karille It\xE4merell\xE4
     ja vuotanut \xF6ljy uhkaa levit\xE4 rannikolle."
+  eventNameLocalized:
+    fi: "\xD6ljyvuoto"
+    sw: "Oljeutsl\xE4pp"
+    en: Oilspill
+  eventDescriptionLocalized:
+    fi: "H\xE4lytys! Suuri \xF6ljytankkeri on ajanut karille It\xE4merell\xE4 ja
+      vuotanut \xF6ljy uhkaa levit\xE4 rannikolle."
+    sw: "Varning! En stor oljetanker har g\xE5tt p\xE5 grund i \xD6stersj\xF6n och
+      oljeutsl\xE4ppet hotar att sprida sig l\xE4ngs kusten."
+    en: Alert! A large oil tanker has run aground in the Baltic Sea, and the oil
+      spill threatens to spread to the coastline. How can you respond to this emergency
+      and prevent further damage to the environment?
   eventIcon: {fileID: 0}
   eventCategory: 0
   goodResponse: {fileID: 11400000, guid: ea249e50d4e8f964280bdeff7f957b65, type: 2}

@@ -15,5 +15,13 @@ MonoBehaviour:
   linkedEventId: kosteikolle_kertyy
   answerCategory: 0
   responseText: "Ker\xE4\xE4 kaikki roskat, jotka eiv\xE4t kuulu kosteikkoon"
+  responseTextLocalized:
+    fi: "Ker\xE4\xE4 kaikki roskat, jotka eiv\xE4t kuulu kosteikkoon"
+    sw: "Samla ihop allt skr\xE4p som inte h\xF6r hemma i v\xE5tmarken"
+    en: "Collect all the trash that doesn\u2019t belong in the wetland."
   outcomeText: "Kosteikko puhdistuu ja el\xE4imet v\xE4lttyv\xE4t vaaroilta"
+  outcomeTextLocalized:
+    fi: "Kosteikko puhdistuu ja el\xE4imet v\xE4lttyv\xE4t vaaroilta"
+    sw: "V\xE5tmarken st\xE4das och djuren undg\xE5r fara."
+    en: The wetland is cleaned, and animals are protected from harm.
   effects: []

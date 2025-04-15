@@ -17,6 +17,20 @@ MonoBehaviour:
   eventDescription: "Kappas, sielt\xE4 tulee joukko paikallisia asukkaita kohti kosteikkoa.
     T\xE4m\xE4 voi olla hyv\xE4 asia \u2013 mutta vain, jos osaat ohjata heid\xE4n
     kulkunsa viisaasti."
+  eventNameLocalized:
+    fi: Paikalliset asukkaat vierailevat kosteikolla
+    sw: "Lokalbor bes\xF6ker v\xE5tmarken"
+    en: Locals come to visit the wetland
+  eventDescriptionLocalized:
+    fi: "Kappas, sielt\xE4 tulee joukko paikallisia asukkaita kohti kosteikkoa. T\xE4m\xE4
+      voi olla hyv\xE4 asia \u2013 mutta vain, jos osaat ohjata heid\xE4n kulkunsa
+      viisaasti."
+    sw: "Ser man p\xE5, h\xE4r kommer en grupp lokalinv\xE5nare som \xE4r p\xE5 v\xE4g
+      mot v\xE5tmarken. Det kan vara bra - men bara om du vet hur du ska v\xE4gleda
+      dem p\xE5 ett klokt s\xE4tt."
+    en: "Here comes a group of local residents heading toward the wetland. This could
+      be a good thing \u2013 but only if you can guide their path wisely. How will
+      you ensure they enjoy the wetland without causing harm?"
   eventIcon: {fileID: 0}
   eventCategory: 2
   goodResponse: {fileID: 11400000, guid: 9344a13e41447eb4f9da25eb33ca0844, type: 2}

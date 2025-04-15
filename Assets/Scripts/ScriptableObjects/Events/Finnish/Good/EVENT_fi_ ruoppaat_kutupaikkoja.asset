@@ -17,6 +17,19 @@ MonoBehaviour:
   eventDescription: "Hauet tarvitsevat sopivia kutupaikkoja lis\xE4\xE4ntymiseen.
     Miten varmistat, ett\xE4 ne voivat l\xF6yt\xE4\xE4 rauhallisia ja suojaisia alueita,
     joissa niiden lis\xE4\xE4ntyminen onnistuu?"
+  eventNameLocalized:
+    fi: Ruoppaat kutupaikkoja hauelle
+    sw: "Muddring av lekplatser f\xF6r g\xE4dda"
+    en: Dredging spawning grounds for pike
+  eventDescriptionLocalized:
+    fi: "Hauet tarvitsevat sopivia kutupaikkoja lis\xE4\xE4ntymiseen. Miten varmistat,
+      ett\xE4 ne voivat l\xF6yt\xE4\xE4 rauhallisia ja suojaisia alueita, joissa
+      niiden lis\xE4\xE4ntyminen onnistuu?"
+    sw: "G\xE4ddor beh\xF6ver l\xE4mpliga lekplatser f\xF6r att fortplanta sig. Hur
+      ser du till att de kan hitta lugna och skyddade omr\xE5den d\xE4r de kan leka
+      framg\xE5ngsrikt?"
+    en: Pike need suitable spawning sites for reproduction. How can you ensure they
+      can find calm and sheltered areas where their reproduction can succeed?
   eventIcon: {fileID: 0}
   eventCategory: 3
   goodResponse: {fileID: 11400000, guid: 129f39663c2ebd34da651dedda95b4de, type: 2}

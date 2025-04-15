@@ -16,6 +16,14 @@ MonoBehaviour:
   answerCategory: 1
   responseText: "Ker\xE4\xE4 vain osa, pienell\xE4 m\xE4\xE4r\xE4ll\xE4 roskaa ei
     ole v\xE4li\xE4"
+  responseTextLocalized:
+    fi: "Ker\xE4\xE4 vain osa, pienell\xE4 m\xE4\xE4r\xE4ll\xE4 roskaa ei ole v\xE4li\xE4"
+    sw: "Samla bara lite, en liten m\xE4ngd skr\xE4p spelar ingen roll"
+    en: "Collect only some; a small amount of trash doesn\u2019t matter."
   outcomeText: "El\xE4imet voivat yh\xE4 k\xE4rsi\xE4 ja ongelmia voi synty\xE4 ajan
     mittaan"
+  outcomeTextLocalized:
+    fi: "El\xE4imet voivat yh\xE4 k\xE4rsi\xE4 ja ongelmia voi synty\xE4 ajan mittaan"
+    sw: "Djuren kan fortfarande lida och problem kan uppst\xE5 med tiden"
+    en: Animals may still suffer, and problems may arise over time.
   effects: []

@@ -15,5 +15,14 @@ MonoBehaviour:
   linkedEventId: vieraslajit_valtaavat
   answerCategory: 1
   responseText: Poista vieraslajit satunnaisesti
+  responseTextLocalized:
+    fi: Poista vieraslajit satunnaisesti
+    sw: "Slumpm\xE4ssigt avl\xE4gsna invasiva arter"
+    en: Remove invasive species randomly
   outcomeText: "Tilanne paranee hetkeksi, mutta vieraslajit jatkavat lis\xE4\xE4ntymist\xE4"
+  outcomeTextLocalized:
+    fi: "Tilanne paranee hetkeksi, mutta vieraslajit jatkavat lis\xE4\xE4ntymist\xE4"
+    sw: "Situationen f\xF6rb\xE4ttras under en tid, men invasiva arter forts\xE4tter
+      att spridas"
+    en: The situation improves temporarily, but invasive species continue to spread
   effects: []

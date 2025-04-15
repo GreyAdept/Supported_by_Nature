@@ -16,6 +16,17 @@ MonoBehaviour:
   eventName: "Oikea tasapaino niitt\xE4misess\xE4"
   eventDescription: "Kosteikon kasvusto kasvaa ja uusiutuu. Oikea tasapaino on avain
     kosteikon hyvinvointiin. Mutta kuinka aiot l\xF6yt\xE4\xE4 sen?"
+  eventNameLocalized:
+    fi: "Oikea tasapaino niitt\xE4misess\xE4"
+    sw: "R\xE4tt balans vid klippning"
+    en: The right balance in mowing
+  eventDescriptionLocalized:
+    fi: "Kosteikon kasvusto kasvaa ja uusiutuu. Oikea tasapaino on avain kosteikon
+      hyvinvointiin. Mutta kuinka aiot l\xF6yt\xE4\xE4 sen?"
+    sw: "V\xE5tmarksvegetationen v\xE4xer och \xE5terh\xE4mtar sig. R\xE4tt balans
+      \xE4r nyckeln till v\xE5tmarkens v\xE4lbefinnande. Men hur ska du hitta den?"
+    en: The vegetation in the wetland is growing and regenerating. The right balance
+      is key to the wetland's well-being. But how will you find it?
   eventIcon: {fileID: 0}
   eventCategory: 2
   goodResponse: {fileID: 11400000, guid: 40417c2aa50544149b9b94b03906aea5, type: 2}

@@ -17,6 +17,20 @@ MonoBehaviour:
   eventDescription: "Lehm\xE4t laiduntavat kosteikon reunalla, mutta niiden m\xE4\xE4r\xE4
     vaikuttaa tasapainoon. Miten varmistat, ett\xE4 laidunnus ei muuttaa kosteikkoa
     liian kuivaksi tai umpeenkasvaneeksi?"
+  eventNameLocalized:
+    fi: "Kosteikolle saapuu lehmi\xE4 laiduntamaan"
+    sw: "\rKor kommer f\xF6r att beta i v\xE5tmarken"
+    en: Cows arrive to graze in the wetland
+  eventDescriptionLocalized:
+    fi: "Lehm\xE4t laiduntavat kosteikon reunalla, mutta niiden m\xE4\xE4r\xE4 vaikuttaa
+      tasapainoon. Miten varmistat, ett\xE4 laidunnus ei muuttaa kosteikkoa liian
+      kuivaksi tai umpeenkasvaneeksi?"
+    sw: "Kor betar l\xE4ngs kanten av v\xE5tmarken, men deras antal p\xE5verkar balansen.
+      Hur ser du till att betet inte g\xF6r att v\xE5tmarken blir f\xF6r torr eller
+      v\xE4xer igen?"
+    en: "Cows are grazing at the edge of the wetland, but their numbers are affecting
+      the balance. How can you ensure that grazing doesn\u2019t turn the wetland
+      too dry or overgrown?"
   eventIcon: {fileID: 0}
   eventCategory: 2
   goodResponse: {fileID: 11400000, guid: a0480789c56182a49b7aa89ec938ae19, type: 2}

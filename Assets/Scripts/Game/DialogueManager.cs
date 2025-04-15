@@ -152,11 +152,11 @@ public class DialogueManager : MonoBehaviour
     public void ShowDialogue(DialogueBase dialogue)
     {
         dialoguePanel.SetActive(true);
-        speakerNameText.text = dialogue.npcName;
+        speakerNameText.text = dialogue.npcNameLocalized.GetText();
         if(useEffect)
         {
             dialogueText.text = "";
-            typeWriterEffectCoroutine = StartCoroutine(TypeWriterEffect(dialogue.dialogueText, dialogue.typeSpeed));
+            typeWriterEffectCoroutine = StartCoroutine(TypeWriterEffect(dialogue.dialogueTextLocalized.GetText(), dialogue.typeSpeed));
         }
         if(dialogue.npcImage != null)
         {

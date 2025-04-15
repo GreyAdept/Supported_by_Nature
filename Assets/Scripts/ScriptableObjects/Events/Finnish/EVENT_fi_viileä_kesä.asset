@@ -18,6 +18,22 @@ MonoBehaviour:
     eiv\xE4t nouse yht\xE4 nopeasti. Linnut viipyv\xE4t hetken, mutta jatkavat matkaansa
     eteenp\xE4in. Miten toimit, jotta kosteikko selvi\xE4\xE4 viile\xE4mm\xE4st\xE4kin
     kes\xE4st\xE4?"
+  eventNameLocalized:
+    fi: "Viile\xE4 kes\xE4 hidastaa kosteikon kasvua"
+    sw: "Sval sommar bromsar v\xE5tmarkstillv\xE4xten"
+    en: Cool summer slows wetland growth
+  eventDescriptionLocalized:
+    fi: "Kes\xE4n voima on heikompi t\xE4n\xE4 vuonna, ja kosteikon kasvit eiv\xE4t
+      nouse yht\xE4 nopeasti. Linnut viipyv\xE4t hetken, mutta jatkavat matkaansa
+      eteenp\xE4in. Miten toimit, jotta kosteikko selvi\xE4\xE4 viile\xE4mm\xE4st\xE4kin
+      kes\xE4st\xE4?"
+    sw: "I \xE5r \xE4r sommarstyrkan svagare och v\xE5tmarksv\xE4xterna kommer inte
+      upp lika snabbt. F\xE5glarna dr\xF6jer sig kvar en stund, men forts\xE4tter
+      sedan sin v\xE4g. Vad kan du g\xF6ra f\xF6r att hj\xE4lpa din v\xE5tmark att
+      \xF6verleva den svalare sommaren?"
+    en: "This year, summer\u2019s power is weaker, and the wetland plants are not
+      growing as quickly. The birds stay for a while but then continue their journey.
+      What can you do to ensure the wetland survives an even cooler summer?"
   eventIcon: {fileID: 0}
   eventCategory: 2
   goodResponse: {fileID: 11400000, guid: c7d5a6726071ab5469eed6ac9c198e8b, type: 2}

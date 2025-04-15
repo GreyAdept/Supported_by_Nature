@@ -18,6 +18,22 @@ MonoBehaviour:
     en\xE4\xE4 muiden kasvien l\xF6yt\xE4\xE4 omaa paikkaansa. Vesi kaipaa tilaa
     virrata, kasvit tarvitsevat valoa kasvaakseen, ja el\xE4imet tarvitsevat monimuotoisen
     elinymp\xE4rist\xF6n. Mit\xE4 teet?"
+  eventNameLocalized:
+    fi: "J\xE4rviruo'on poistaminen"
+    sw: "Ta bort sj\xF6vass"
+    en: Removing reeds
+  eventDescriptionLocalized:
+    fi: "J\xE4rviruoko on ottanut oman paikkansa, eik\xE4 oikein anna en\xE4\xE4
+      muiden kasvien l\xF6yt\xE4\xE4 omaa paikkaansa. Vesi kaipaa tilaa virrata,
+      kasvit tarvitsevat valoa kasvaakseen, ja el\xE4imet tarvitsevat monimuotoisen
+      elinymp\xE4rist\xF6n. Mit\xE4 teet?"
+    sw: "Vassen har tagit sin plats och l\xE5ter inte riktigt andra v\xE4xter hitta
+      sin egen plats l\xE4ngre. Vatten beh\xF6ver utrymme f\xF6r att fl\xF6da, v\xE4xter
+      beh\xF6ver ljus f\xF6r att v\xE4xa och djur beh\xF6ver en varierad livsmilj\xF6.
+      Vad ska du g\xF6ra \xE5t saken?"
+    en: The common reed has taken its place and doesn't really allow other plants
+      to find theirs. The water needs space to flow, plants require light to grow,
+      and animals need a diverse habitat. What do you do?
   eventIcon: {fileID: 0}
   eventCategory: 3
   goodResponse: {fileID: 11400000, guid: 4c976590141926d438032fd4c1f2de63, type: 2}

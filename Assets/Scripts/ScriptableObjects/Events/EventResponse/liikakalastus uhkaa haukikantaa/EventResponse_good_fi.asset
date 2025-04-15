@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: liikakalastus_uhkaa
   answerCategory: 0
   responseText: Aitaa alueita, joissa ei saa kalastaa
+  responseTextLocalized:
+    fi: Aitaa alueita, joissa ei saa kalastaa
+    sw: "St\xE4ngsla av omr\xE5den d\xE4r fiske \xE4r f\xF6rbjudet"
+    en: Fence off areas where fishing is prohibited.
   outcomeText: "Hauet saavat lis\xE4\xE4nty\xE4 rauhassa suojatuilla alueilla. Kanta
     elpyy, ekosysteemi pysyy tasapainossa ja kalastajat ovat tyytyv\xE4isi\xE4"
+  outcomeTextLocalized:
+    fi: "Hauet saavat lis\xE4\xE4nty\xE4 rauhassa suojatuilla alueilla. Kanta elpyy,
+      ekosysteemi pysyy tasapainossa ja kalastajat ovat tyytyv\xE4isi\xE4"
+    sw: "G\xE4ddor f\xE5r f\xF6r\xF6ka sig i fred i skyddade omr\xE5den. Best\xE5ndet
+      \xE5terh\xE4mtar sig, ekosystemet \xE4r i balans och fiskarna \xE4r n\xF6jda"
+    en: Pike are able to spawn peacefully in protected areas. The population recovers,
+      the ecosystem remains balanced, and fishermen are satisfied.
   effects: []

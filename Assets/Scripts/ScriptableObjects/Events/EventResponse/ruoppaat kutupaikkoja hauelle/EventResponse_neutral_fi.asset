@@ -15,5 +15,14 @@ MonoBehaviour:
   linkedEventId: ruoppaat_kutupaikkoja
   answerCategory: 1
   responseText: Ruoppaa yksi kuoppa suojaiseen paikkaan
+  responseTextLocalized:
+    fi: Ruoppaa yksi kuoppa suojaiseen paikkaan
+    sw: "Gr\xE4va en grop p\xE5 en skyddad plats"
+    en: Dredge one pit in a sheltered area.
   outcomeText: "Teho j\xE4\xE4 v\xE4h\xE4iseksi, ja osa hauista siirtyy muualle kutemaan"
+  outcomeTextLocalized:
+    fi: "Teho j\xE4\xE4 v\xE4h\xE4iseksi, ja osa hauista siirtyy muualle kutemaan"
+    sw: "Effekten \xE4r begr\xE4nsad och vissa g\xE4ddor flyttar n\xE5gon annanstans
+      f\xF6r att leka"
+    en: The effect is minimal, and some pike move elsewhere to spawn.
   effects: []

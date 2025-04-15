@@ -15,5 +15,13 @@ MonoBehaviour:
   linkedEventId: kosteikolle_kertyy
   answerCategory: 2
   responseText: "Odota, ett\xE4 sade huuhtoo roskat pois"
+  responseTextLocalized:
+    fi: "Odota, ett\xE4 sade huuhtoo roskat pois"
+    sw: "V\xE4nta p\xE5 att regnet ska sk\xF6lja bort skr\xE4pet"
+    en: Wait for the rain to wash the trash away.
   outcomeText: "Roskat kulkeutuvat vesist\xF6ihin ja saastuttavat laajemman alueen"
+  outcomeTextLocalized:
+    fi: "Roskat kulkeutuvat vesist\xF6ihin ja saastuttavat laajemman alueen"
+    sw: "Skr\xE4p f\xF6rs ut i vattendrag och f\xF6rorenar ett st\xF6rre omr\xE5de"
+    en: The trash will be carried into water systems, contaminating a larger area.
   effects: []

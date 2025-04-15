@@ -17,6 +17,20 @@ MonoBehaviour:
   eventDescription: "Kalastajat viev\xE4t haukia enemm\xE4n kuin ne ehtiv\xE4t lis\xE4\xE4nty\xE4,
     ja kosteikon tasapaino horjuu. Miten varmistat haukien suojelun ja est\xE4t s\xE4rkikalojen
     liiallisen lis\xE4\xE4ntymisen?"
+  eventNameLocalized:
+    fi: Liikakalastus uhkaa haukikantaa
+    sw: "\xD6verfiske hotar g\xE4ddbest\xE5nden"
+    en: Overfishing threatens pike population
+  eventDescriptionLocalized:
+    fi: "Kalastajat viev\xE4t haukia enemm\xE4n kuin ne ehtiv\xE4t lis\xE4\xE4nty\xE4,
+      ja kosteikon tasapaino horjuu. Miten varmistat haukien suojelun ja est\xE4t
+      s\xE4rkikalojen liiallisen lis\xE4\xE4ntymisen?"
+    sw: "Fiskare tar upp fler g\xE4ddor \xE4n de hinner reproducera sig och balansen
+      i v\xE5tmarken rubbas. Hur kan man skydda g\xE4ddor och f\xF6rhindra \xF6veravel
+      av karpfiskar?"
+    en: Fishermen are taking more pike than can reproduce, and the balance of the
+      wetland is being disrupted. How can you ensure the protection of pike and prevent
+      the overpopulation of cyprinid fish?
   eventIcon: {fileID: 0}
   eventCategory: 1
   goodResponse: {fileID: 11400000, guid: a0dd4418ce6bb4944bc74d57321bedb9, type: 2}

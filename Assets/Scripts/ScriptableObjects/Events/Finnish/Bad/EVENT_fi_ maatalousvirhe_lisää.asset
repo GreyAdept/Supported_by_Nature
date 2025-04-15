@@ -17,6 +17,19 @@ MonoBehaviour:
   eventDescription: "Viljelij\xE4 on levitt\xE4nyt lannoitetta liian l\xE4helle kosteikkoa,
     ja sade huuhtoo ravinteet sinne. Miten est\xE4t veden rehev\xF6itymisen ja suojelet
     kosteikkoa?"
+  eventNameLocalized:
+    fi: "Maatalousvirhe lis\xE4\xE4 ravinnekuormitusta"
+    sw: "Jordbruksfel \xF6kar n\xE4ringsbelastningen"
+    en: Agricultural error increases nutrient load
+  eventDescriptionLocalized:
+    fi: "Viljelij\xE4 on levitt\xE4nyt lannoitetta liian l\xE4helle kosteikkoa, ja
+      sade huuhtoo ravinteet sinne. Miten est\xE4t veden rehev\xF6itymisen ja suojelet
+      kosteikkoa?"
+    sw: "Bonden har spridit g\xF6dningsmedel f\xF6r n\xE4ra v\xE5tmarken och regnet
+      sk\xF6ljer bort n\xE4rings\xE4mnena. Hur f\xF6rhindrar du \xF6verg\xF6dning
+      och skyddar v\xE5tmarken?"
+    en: A farmer has spread fertilizer too close to the wetland, and rain is washing
+      the nutrients into it. How can you prevent eutrophication and protect the wetland?
   eventIcon: {fileID: 0}
   eventCategory: 1
   goodResponse: {fileID: 11400000, guid: 86b425cf1d1975740ac89b87547daec0, type: 2}

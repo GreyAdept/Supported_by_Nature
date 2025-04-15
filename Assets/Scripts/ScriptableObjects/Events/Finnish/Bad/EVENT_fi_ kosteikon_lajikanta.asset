@@ -17,6 +17,21 @@ MonoBehaviour:
   eventDescription: "Kosteikon monimuotoisuus heikkenee, mutta miksi? Onko vesi muuttunut,
     ravinteet v\xE4\xE4riss\xE4 suhteissa tai hauet liian v\xE4h\xE4n? Miten l\xF6yd\xE4t
     syyn ja autat kosteikkoa palautumaan tasapainoon?"
+  eventNameLocalized:
+    fi: Kosteikon lajikanta heikkenee
+    sw: "V\xE5tmarkens artbest\xE5nd minskar"
+    en: Wetland biodiversity declining
+  eventDescriptionLocalized:
+    fi: "Kosteikon monimuotoisuus heikkenee, mutta miksi? Onko vesi muuttunut, ravinteet
+      v\xE4\xE4riss\xE4 suhteissa tai hauet liian v\xE4h\xE4n? Miten l\xF6yd\xE4t
+      syyn ja autat kosteikkoa palautumaan tasapainoon?"
+    sw: "Den biologiska m\xE5ngfalden i v\xE5tmarker minskar, men varf\xF6r? Har
+      vattnet f\xF6r\xE4ndrats, n\xE4rings\xE4mnena hamnat i obalans eller finns
+      det f\xF6r lite fisk? Hur kan du hitta orsaken och hj\xE4lpa din v\xE5tmark
+      att \xE5terf\xE5 balansen?"
+    en: The wetland's biodiversity is declining, but why? Has the water changed,
+      are the nutrients in the wrong balance, or are there too few pike? How can
+      you identify the cause and help the wetland restore its balance?
   eventIcon: {fileID: 0}
   eventCategory: 1
   goodResponse: {fileID: 11400000, guid: 3ab9129dd9b54164497c8fc5289c2279, type: 2}

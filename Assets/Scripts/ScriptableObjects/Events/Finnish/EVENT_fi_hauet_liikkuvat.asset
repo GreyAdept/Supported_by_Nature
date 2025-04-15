@@ -17,6 +17,20 @@ MonoBehaviour:
   eventDescription: "Hauet ovat l\xE4hteneet liikkeelle. Ne eiv\xE4t ole kadonneet
     \u2013 ne etsiv\xE4t vain uusia vesi\xE4, uusia saalispaikkoja. Miten aiot toimia,
     kun haukien m\xE4\xE4r\xE4 v\xE4henee?"
+  eventNameLocalized:
+    fi: Hauet liikkuvat eri vesialueille
+    sw: "G\xE4ddan flyttar till olika vattenomr\xE5den"
+    en: Pike move to different waters
+  eventDescriptionLocalized:
+    fi: "Hauet ovat l\xE4hteneet liikkeelle. Ne eiv\xE4t ole kadonneet \u2013 ne
+      etsiv\xE4t vain uusia vesi\xE4, uusia saalispaikkoja. Miten aiot toimia, kun
+      haukien m\xE4\xE4r\xE4 v\xE4henee?"
+    sw: "G\xE4ddor har b\xF6rjat r\xF6ra p\xE5 sig. De har inte f\xF6rsvunnit - de
+      letar bara efter nya vatten, nya platser att f\xE5nga dem p\xE5. Vad ska du
+      g\xF6ra n\xE4r antalet g\xE4ddorna minskar?"
+    en: "The pike have started to move. They haven\u2019t disappeared \u2013 they\u2019re
+      just searching for new waters, new hunting grounds. How will you act as the
+      number of pike decreases?"
   eventIcon: {fileID: 0}
   eventCategory: 2
   goodResponse: {fileID: 11400000, guid: 02b558ea91fd92246a0a8f06ee029983, type: 2}

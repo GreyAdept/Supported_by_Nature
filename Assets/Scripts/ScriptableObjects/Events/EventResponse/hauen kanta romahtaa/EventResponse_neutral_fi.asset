@@ -15,7 +15,20 @@ MonoBehaviour:
   linkedEventId: hauen_kanta
   answerCategory: 1
   responseText: "Lis\xE4\xE4 vain suojapaikkoja"
+  responseTextLocalized:
+    fi: "Lis\xE4\xE4 vain suojapaikkoja"
+    sw: Bara fler skyddsrum
+    en: Only add more shelter.
   outcomeText: "Haukien m\xE4\xE4r\xE4 ei kasva vain suojapaikkoja lis\xE4\xE4m\xE4ll\xE4,
     mutta on toivoa, ett\xE4 muualta tulee viel\xE4 haukia kosteikkoon ja kosteikon
     tasapaino palautuu"
+  outcomeTextLocalized:
+    fi: "Haukien m\xE4\xE4r\xE4 ei kasva vain suojapaikkoja lis\xE4\xE4m\xE4ll\xE4,
+      mutta on toivoa, ett\xE4 muualta tulee viel\xE4 haukia kosteikkoon ja kosteikon
+      tasapaino palautuu"
+    sw: "Antalet g\xE4ddor kommer inte att \xF6ka bara genom att \xF6ka antalet refuger,
+      men det finns hopp om att g\xE4ddor fortfarande kommer att komma fr\xE5n andra
+      platser och balansen i v\xE5tmarken kommer att \xE5terst\xE4llas"
+    en: The number of pike doesn't increase just by adding shelter, but there's hope
+      that pike will migrate from elsewhere and help restore the wetland's balance.
   effects: []

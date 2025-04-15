@@ -15,5 +15,14 @@ MonoBehaviour:
   linkedEventId: hauen_kanta
   answerCategory: 2
   responseText: Istuta paljon haukia
+  responseTextLocalized:
+    fi: Istuta paljon haukia
+    sw: "Plantera massor av g\xE4dda"
+    en: Stock a large number of pike
   outcomeText: "Hauet eiv\xE4t selvi\xE4, kilpailu kovenee ja osa kuolee"
+  outcomeTextLocalized:
+    fi: "Hauet eiv\xE4t selvi\xE4, kilpailu kovenee ja osa kuolee"
+    sw: "G\xE4ddorna kommer inte att \xF6verleva, konkurrensen kommer att \xF6ka
+      och vissa kommer att d\xF6"
+    en: The pike don't survive, competition intensifies, and some die.
   effects: []

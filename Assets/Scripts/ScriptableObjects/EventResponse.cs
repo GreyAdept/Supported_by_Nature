@@ -5,7 +5,9 @@ public class EventResponse : ScriptableObject
 {
     public string linkedEventId;
     public AnswerCategory answerCategory;
-    [TextArea(3, 6)] public string responseText;
-    [TextArea(3, 6)] public string outcomeText;
+    [TextArea(1, 3)] public string responseText;
+    public LocalizedText responseTextLocalized;
+    [TextArea(1, 3)] public string outcomeText;
+    public LocalizedText outcomeTextLocalized;
     public List<MetricEffect> effects;
 }

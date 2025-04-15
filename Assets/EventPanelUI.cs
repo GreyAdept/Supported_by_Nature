@@ -31,10 +31,32 @@ public class EventPanelUI : MonoBehaviour
     [SerializeField] private Sprite defaultButtonSprite;
     [SerializeField] private Sprite selectedButtonSprite;
     private AnswerCategory? selectedAnswer = null;
+    [SerializeField] private TMP_Text selectButtonText;
+    private Dictionary<Language, string> selectButtonTexts = new Dictionary<Language, string>
+    {
+        { Language.FI, "Valitse" },
+        { Language.EN, "Select" },
+        { Language.SW, "Välja" }
+    };
+    [SerializeField] private TMP_Text choiceButtonText;
+    private Dictionary<Language, string> choiceButtonTexts = new Dictionary<Language, string>
+    {
+        { Language.FI, "Mitä teet" },
+        { Language.EN, "Choose action" },
+        { Language.SW, "Vad gör du" }
+    };
 
 
     private void Start()
     {
+        foreach(var cText in choiceButtonTexts)
+        {
+            if(cText.Key == LanguageManager.Instance.currentLanguage) choiceButtonText.text = cText.Value;
+        }
+        foreach (var sText in selectButtonTexts)
+        {
+            if (sText.Key == LanguageManager.Instance.currentLanguage) selectButtonText.text = sText.Value;
+        }
         turnManager = TurnManager.Instance;
         soundManager = SoundManager.Instance;
         goodResponseButton.onClick.AddListener(() => SelectResponse(AnswerCategory.Good));
@@ -53,14 +75,16 @@ public class EventPanelUI : MonoBehaviour
     }
     private void SetupEventUI()
     {
-        eventNameText.text = currentEvent.eventName ?? string.Empty;
-        eventDescriptionText.text = currentEvent.eventDescription ?? string.Empty;
+        //eventNameText.text = currentEvent.eventName ?? string.Empty;
+        eventNameText.text = currentEvent.eventNameLocalized.GetText() ?? string.Empty;
+        //eventDescriptionText.text = currentEvent.eventDescription ?? string.Empty;
+        eventDescriptionText.text = currentEvent.eventDescriptionLocalized.GetText() ?? string.Empty;
         var goodResponse = currentEvent.GetResponseFromAnswer(AnswerCategory.Good);
-        goodResponseButtonText.text = goodResponse != null ? (goodResponse.responseText ?? string.Empty) : string.Empty;
+        goodResponseButtonText.text = goodResponse != null ? (goodResponse.responseTextLocalized.GetText() ?? string.Empty) : string.Empty;
         var neutralResponse = currentEvent.GetResponseFromAnswer(AnswerCategory.Neutral);
-        neutralResponseButtonText.text = neutralResponse != null ? (neutralResponse.responseText ?? string.Empty) : string.Empty;
+        neutralResponseButtonText.text = neutralResponse != null ? (neutralResponse.responseTextLocalized.GetText() ?? string.Empty) : string.Empty;
         var badResponse = currentEvent.GetResponseFromAnswer(AnswerCategory.Bad);
-        badResponseButtonText.text = badResponse != null ? (badResponse.responseText ?? string.Empty) : string.Empty;
+        badResponseButtonText.text = badResponse != null ? (badResponse.responseTextLocalized.GetText() ?? string.Empty) : string.Empty;
         ShuffleButtons();
         ShowEventUI();
     }
@@ -123,7 +147,7 @@ public class EventPanelUI : MonoBehaviour
         EventResponse selectedResponse = currentEvent.GetResponseFromAnswer(answer);
         outcomePopupPanel.transform.localScale = Vector3.zero;
         outcomePopupPanel.SetActive(true);
-        outcomeText.text = selectedResponse.outcomeText;
+        outcomeText.text = selectedResponse.outcomeTextLocalized.GetText();
         outcomePopupPanel.transform.DOScale(Vector3.one, 0.4f).SetUpdate(true);
     }
     private void CloseOutcomePanel()

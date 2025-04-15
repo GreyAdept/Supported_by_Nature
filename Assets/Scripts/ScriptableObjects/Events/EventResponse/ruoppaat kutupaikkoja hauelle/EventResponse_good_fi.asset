@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: ruoppaat_kutupaikkoja
   answerCategory: 0
   responseText: Ruoppaa useita kuoppia suojaisiin paikkoihin
+  responseTextLocalized:
+    fi: Ruoppaa useita kuoppia suojaisiin paikkoihin
+    sw: "Gr\xE4va flera gropar p\xE5 skyddade platser"
+    en: Dredge several pits in sheltered areas.
   outcomeText: "Hauet saavat lis\xE4\xE4ntymiseen sopivia alueita, kanta elpyy ja
     el\xE4imist\xF6 monipuolistuu ja vedenlaatu paranee"
+  outcomeTextLocalized:
+    fi: "Hauet saavat lis\xE4\xE4ntymiseen sopivia alueita, kanta elpyy ja el\xE4imist\xF6
+      monipuolistuu ja vedenlaatu paranee"
+    sw: "G\xE4dda f\xE5r omr\xE5den som \xE4r l\xE4mpliga f\xF6r reproduktion, populationen
+      \xE5terh\xE4mtar sig, faunan diversifieras och vattenkvaliteten f\xF6rb\xE4ttras"
+    en: Pike get suitable areas for spawning, the population recovers, biodiversity
+      increases, and water quality improves.
   effects: []

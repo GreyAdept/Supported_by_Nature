@@ -15,5 +15,15 @@ MonoBehaviour:
   linkedEventId: "maatalousvirhe_lis\xE4\xE4"
   answerCategory: 2
   responseText: "Sabotoi viljelij\xE4n peltoja"
+  responseTextLocalized:
+    fi: "Sabotoi viljelij\xE4n peltoja"
+    sw: "Sabotera bondens f\xE4lt"
+    en: "Sabotage the farmer\u2019s fields"
   outcomeText: "Viljelij\xE4 suuttuu ja jatkaa toimintaansa, kosteikko on kohta mennytt\xE4"
+  outcomeTextLocalized:
+    fi: "Viljelij\xE4 suuttuu ja jatkaa toimintaansa, kosteikko on kohta mennytt\xE4"
+    sw: " Lantbrukaren blir arg och forts\xE4tter med sina rutiner, v\xE5tmarken
+      \xE4r snart borta"
+    en: The farmer gets upset and continues their practices, and the wetland will
+      soon be lost.
   effects: []

@@ -15,5 +15,15 @@ MonoBehaviour:
   linkedEventId: hauen_kanta
   answerCategory: 0
   responseText: "Istuta lis\xE4\xE4 haukia ja lis\xE4\xE4 niille suojapaikkoja"
+  responseTextLocalized:
+    fi: "Istuta lis\xE4\xE4 haukia ja lis\xE4\xE4 niille suojapaikkoja"
+    sw: "Plantera fler g\xE4ddor och bygg fler skydd f\xF6r dem"
+    en: Stock more pike and provide them with additional shelter.
   outcomeText: Haukipopulaatio elpyy, vedenlaatu paranee ja kosteikon tasapaino vahvistuu
+  outcomeTextLocalized:
+    fi: Haukipopulaatio elpyy, vedenlaatu paranee ja kosteikon tasapaino vahvistuu
+    sw: "g\xE4ddbest\xE5ndet \xE5terh\xE4mtar sig, vattenkvaliteten f\xF6rb\xE4ttras
+      och balansen i v\xE5tmarken st\xE4rkas"
+    en: The pike population recovers, water quality improves, and the balance of
+      the wetland is strengthened.
   effects: []

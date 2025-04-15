@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: liikakalastus_uhkaa
   answerCategory: 2
   responseText: "K\xE4yt\xE4 kemikaaleja nopeuttamaan niitt\xE4mist\xE4"
+  responseTextLocalized:
+    fi: "K\xE4yt\xE4 kemikaaleja nopeuttamaan niitt\xE4mist\xE4"
+    sw: "Anv\xE4nd kemikalier f\xF6r att p\xE5skynda gr\xE4sklippningen"
+    en: Use chemicals to speed up the mowing process
   outcomeText: "Kasvit kuolevat nopeasti, mutta samalla k\xE4rsiv\xE4t kalat, linnut
     ja pohjaeli\xF6, koko ekosysteemi on vaarassa tuhoutua"
+  outcomeTextLocalized:
+    fi: "Kasvit kuolevat nopeasti, mutta samalla k\xE4rsiv\xE4t kalat, linnut ja
+      pohjaeli\xF6, koko ekosysteemi on vaarassa tuhoutua"
+    sw: "V\xE4xter d\xF6r snabbt, men fiskar, f\xE5glar och bottenlevande organismer
+      drabbas, hela ekosystemet riskerar att f\xF6rst\xF6ras."
+    en: The plants die quickly, but at the same time, fish, birds, and benthic organisms
+      suffer, and the entire ecosystem is at risk of destruction.
   effects: []

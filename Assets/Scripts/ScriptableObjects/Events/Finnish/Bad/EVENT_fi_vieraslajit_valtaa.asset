@@ -17,6 +17,21 @@ MonoBehaviour:
   eventDescription: "Vieraslajit levi\xE4v\xE4t kosteikkoon ja uhkaavat sen tasapainoa.
     Ne valtaavat tilaa alkuper\xE4isilt\xE4 kasveilta ja levi\xE4v\xE4t nopeasti.
     Miten torjut vieraslajien levi\xE4misen ja suojelet kosteikon monimuotoisuutta?"
+  eventNameLocalized:
+    fi: Vieraslajit valtaavat kosteikon
+    sw: "Invasiva arter sprider sig i v\xE5tmarken"
+    en: Invasive species are spreading into the wetland
+  eventDescriptionLocalized:
+    fi: "Vieraslajit levi\xE4v\xE4t kosteikkoon ja uhkaavat sen tasapainoa. Ne valtaavat
+      tilaa alkuper\xE4isilt\xE4 kasveilta ja levi\xE4v\xE4t nopeasti. Miten torjut
+      vieraslajien levi\xE4misen ja suojelet kosteikon monimuotoisuutta?"
+    sw: "Invasiva arter sprider sig i v\xE5tmarken och hotar dess balans. De tar
+      \xF6ver fr\xE5n inhemska v\xE4xter och sprider sig snabbt. Hur kan man bek\xE4mpa
+      spridningen av invasiva arter och skydda v\xE5tmarkens biologiska m\xE5ngfald?"
+    en: Invasive species are spreading into the wetland and threatening its ecological
+      balance. They are taking over space from native plants and spreading rapidly.
+      How can we prevent the spread of invasive species and protect the biodiversity
+      of the wetland?
   eventIcon: {fileID: 0}
   eventCategory: 1
   goodResponse: {fileID: 11400000, guid: ebcab1d059175b74fb320bb070886cb0, type: 2}

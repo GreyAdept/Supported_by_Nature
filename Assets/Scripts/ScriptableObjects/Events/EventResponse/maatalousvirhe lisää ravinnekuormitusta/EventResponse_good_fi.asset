@@ -16,6 +16,20 @@ MonoBehaviour:
   answerCategory: 0
   responseText: "Auta viljelij\xE4\xE4 ymm\xE4rt\xE4m\xE4\xE4n, miksi lannoitetta
     ei saa levitt\xE4\xE4 liian l\xE4helle kosteikkoa"
+  responseTextLocalized:
+    fi: "Auta viljelij\xE4\xE4 ymm\xE4rt\xE4m\xE4\xE4n, miksi lannoitetta ei saa
+      levitt\xE4\xE4 liian l\xE4helle kosteikkoa"
+    sw: "Hj\xE4lpa bonden att f\xF6rst\xE5 varf\xF6r g\xF6dningsmedel inte ska spridas
+      f\xF6r n\xE4ra v\xE5tmarken"
+    en: Help the farmer understand why fertilizer should not be applied too close
+      to the wetland.
   outcomeText: "Viljelij\xE4 muuttaa k\xE4yt\xE4nt\xF6\xE4\xE4n ja kosteikon vedenlaatu
     s\xE4ilyy hyv\xE4n\xE4"
+  outcomeTextLocalized:
+    fi: "Viljelij\xE4 muuttaa k\xE4yt\xE4nt\xF6\xE4\xE4n ja kosteikon vedenlaatu
+      s\xE4ilyy hyv\xE4n\xE4"
+    sw: "Lantbrukaren \xE4ndrar sina rutiner och v\xE5tmarkens vattenkvalitet f\xF6rblir
+      god"
+    en: The farmer changes their practices, and the water quality in the wetland
+      remains good.
   effects: []

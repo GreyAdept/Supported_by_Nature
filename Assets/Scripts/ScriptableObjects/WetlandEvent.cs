@@ -6,6 +6,8 @@ public class WetlandEvent : ScriptableObject
     public string eventId;
     public string eventName;
     [TextArea(3,6)] public string eventDescription;
+    public LocalizedText eventNameLocalized;
+    public LocalizedText eventDescriptionLocalized;
     public Sprite eventIcon;
     public EventCategory eventCategory;
 

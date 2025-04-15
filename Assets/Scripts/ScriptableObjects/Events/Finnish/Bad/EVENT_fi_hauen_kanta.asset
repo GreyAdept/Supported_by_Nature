@@ -17,6 +17,21 @@ MonoBehaviour:
   eventDescription: "Hauet ovat v\xE4hentyneet, ja kosteikon tasapaino horjuu. S\xE4rkilalat
     lis\xE4\xE4ntyv\xE4t, lev\xE4t runsastuvat ja vesi samentuu. Miten voit palauttaa
     haukikannan ja suojella kosteikon ekosysteemi\xE4?"
+  eventNameLocalized:
+    fi: Hauen kanta romahtaa
+    sw: "G\xE4ddbest\xE5ndet h\xE5ller p\xE5 att kollapsa"
+    en: Pike populations decline
+  eventDescriptionLocalized:
+    fi: "Hauet ovat v\xE4hentyneet, ja kosteikon tasapaino horjuu. S\xE4rkikalat
+      lis\xE4\xE4ntyv\xE4t, lev\xE4t runsastuvat ja vesi sameutuu. Miten voit palauttaa
+      haukikannan ja suojella kosteikon ekosysteemi\xE4?"
+    sw: "Antalet g\xE4ddor har minskat och v\xE5tmarkens balans h\xE5ller p\xE5 att
+      destabiliseras. Karpfiskarna \xF6kar, algerna breder ut sig och vattnet blir
+      grumligt. Hur kan du \xE5terst\xE4lla g\xE4ddbest\xE5ndet och skydda v\xE5tmarkens
+      ekosystem?"
+    en: Pike populations have declined, and the balance of the wetland is disrupted.
+      Cyprinid fish are increasing, algae are blooming, and the water is becoming
+      murky. How can you restore the pike population and protect the wetland ecosystem?
   eventIcon: {fileID: 0}
   eventCategory: 1
   goodResponse: {fileID: 11400000, guid: 5bd80f337af5b6e479ce5f2f27893673, type: 2}

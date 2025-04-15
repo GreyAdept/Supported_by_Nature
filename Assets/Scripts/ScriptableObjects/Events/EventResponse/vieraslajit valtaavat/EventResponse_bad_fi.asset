@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: vieraslajit_valtaavat
   answerCategory: 2
   responseText: Anna kasvien kasvaa
+  responseTextLocalized:
+    fi: Anna kasvien kasvaa
+    sw: "L\xE5t v\xE4xterna v\xE4xa"
+    en: Let the plants grow.
   outcomeText: "Kosteikon tila heikkenee ja pian vieraslajit ottavat vallan syrj\xE4ytt\xE4en
     alkuper\xE4isen kasvillisuuden"
+  outcomeTextLocalized:
+    fi: "Kosteikon tila heikkenee ja pian vieraslajit ottavat vallan syrj\xE4ytt\xE4en
+      alkuper\xE4isen kasvillisuuden"
+    sw: "v\xE5tmarkens tillst\xE5nd f\xF6rs\xE4mras och snart tar invasiva arter
+      \xF6ver och tr\xE4nger ut den inhemska vegetationen"
+    en: The condition of the wetland deteriorates, and soon invasive species take
+      over, displacing the native vegetation.
   effects: []

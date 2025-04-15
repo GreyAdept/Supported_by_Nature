@@ -17,6 +17,20 @@ MonoBehaviour:
   eventDescription: "Kosteikon kasvit eiv\xE4t ole tasapainossa. Mit\xE4 kasveja
     kannattaa istuttaa, jotta ne suodattavat ravinteita, tarjoavat suojan linnuille
     ja piilopaikkoja kaloille?"
+  eventNameLocalized:
+    fi: Kasvien istutus kosteikon tasapainon tueksi
+    sw: "Plantera v\xE4xter f\xF6r att st\xF6dja v\xE5tmarksbalansen"
+    en: Planting to support wetland balance
+  eventDescriptionLocalized:
+    fi: "Kosteikon kasvit eiv\xE4t ole tasapainossa. Mit\xE4 kasveja kannattaa istuttaa,
+      jotta ne suodattavat ravinteita, tarjoavat suojan linnuille ja piilopaikkoja
+      kaloille?"
+    sw: "V\xE4xterna i v\xE5tmarken \xE4r inte i balans. Vilka v\xE4xter b\xF6r planteras
+      f\xF6r att filtrera n\xE4rings\xE4mnen, ge skydd \xE5t f\xE5glar och g\xF6mst\xE4llen
+      \xE5t fiskar?"
+    en: The plants in the wetland are out of balance. Which plants should be planted
+      to filter nutrients, provide shelter for birds, and create hiding spots for
+      fish
   eventIcon: {fileID: 0}
   eventCategory: 3
   goodResponse: {fileID: 11400000, guid: 4b04b10c9b294774e9271a93b26a4397, type: 2}

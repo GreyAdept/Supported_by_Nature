@@ -16,6 +16,17 @@ MonoBehaviour:
   eventName: "Pitk\xE4 aurinkoinen jakso"
   eventDescription: "Pitk\xE4 aurinkoinen kes\xE4 on saapunut. Oikein ohjattuna aurinko
     voi olla kosteikon paras liittolainen, mutta miten aiot toteuttaa sen?"
+  eventNameLocalized:
+    fi: "Pitk\xE4 aurinkoinen jakso"
+    sw: "L\xE5ng solig period"
+    en: Long sunny period
+  eventDescriptionLocalized:
+    fi: "Pitk\xE4 aurinkoinen kes\xE4 on saapunut. Oikein ohjattuna aurinko voi olla
+      kosteikon paras liittolainen, mutta miten aiot toteuttaa sen?"
+    sw: "Den l\xE5nga soliga sommaren har anl\xE4nt. R\xE4tt hanterad kan solen vara
+      en v\xE5tmarks b\xE4sta allierade, men hur ska du f\xE5 det att h\xE4nda?"
+    en: A long sunny summer has arrived. Properly guided, the sun can be the wetland's
+      best ally, but how will you implement this?
   eventIcon: {fileID: 0}
   eventCategory: 3
   goodResponse: {fileID: 11400000, guid: deea2415ec384ad4c89d828e68d3d84f, type: 2}

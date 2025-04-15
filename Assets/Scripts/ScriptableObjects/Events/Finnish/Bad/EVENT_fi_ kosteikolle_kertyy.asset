@@ -17,6 +17,19 @@ MonoBehaviour:
   eventDescription: "Roskat t\xE4ytt\xE4v\xE4t kosteikon ja vaarantavat sen asukkaita.
     Aiotko puuttua tilanteeseen, vai pit\xE4isik\xF6 t\xE4m\xE4 n\xE4hd\xE4 normaalina
     osana kosteikon el\xE4m\xE4\xE4?"
+  eventNameLocalized:
+    fi: Kosteikolle kertyy roskaa
+    sw: "I v\xE5tmarken samlas sopor"
+    en: Trash piling up
+  eventDescriptionLocalized:
+    fi: "Roskat t\xE4ytt\xE4v\xE4t kosteikon ja vaarantavat sen asukkaita. Aiotko
+      puuttua tilanteeseen, vai pit\xE4isik\xF6 t\xE4m\xE4 n\xE4hd\xE4 normaalina
+      osana kosteikon el\xE4m\xE4\xE4?"
+    sw: "Skr\xE4p fyller v\xE5tmarken och \xE4ventyrar dess inv\xE5nare. T\xE4nker
+      du ingripa, eller ska detta ses som en normal del av livet i v\xE5tmarken?"
+    en: "Trash is filling the wetland and threatening its inhabitants. Will you address
+      the situation, or should this be seen as a normal part of the wetland\u2019s
+      life?"
   eventIcon: {fileID: 0}
   eventCategory: 1
   goodResponse: {fileID: 11400000, guid: 93c5368a200269c49abd10de813c57b2, type: 2}
