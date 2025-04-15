@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7993747321228236011}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -50,3 +50,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  startGame: {fileID: 0}
+  quitGame: {fileID: 0}
+  credits: {fileID: 0}
+  startGameText:
+    fi: Aloita Peli
+    sw: Starta Spelet
+    en: Start Game
+  quitGameText:
+    fi: Poistu
+    sw: "F\xE5 Ut"
+    en: Quit
+  creditsText:
+    fi: Kreditit
+    sw: Krediter
+    en: Credits
