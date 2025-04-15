@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/SCENE_MainMenu.unity
     guid: 4b02a8ab8c8fa7647b31b1f4ecd9335c
   - enabled: 1
-    path: Assets/Scenes/Game/SCENE_Game.unity
-    guid: 99cd02fbaa63697439ee22c39903755f
+    path: Assets/Scenes/Dev/Juho3.unity
+    guid: c975067ed6effbb48b1ccf8ac4c280dd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

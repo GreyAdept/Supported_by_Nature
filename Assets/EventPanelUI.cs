@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Collections;
 
 public class EventPanelUI : MonoBehaviour
 {
@@ -32,31 +33,15 @@ public class EventPanelUI : MonoBehaviour
     [SerializeField] private Sprite selectedButtonSprite;
     private AnswerCategory? selectedAnswer = null;
     [SerializeField] private TMP_Text selectButtonText;
-    private Dictionary<Language, string> selectButtonTexts = new Dictionary<Language, string>
-    {
-        { Language.FI, "Valitse" },
-        { Language.EN, "Select" },
-        { Language.SW, "Välja" }
-    };
     [SerializeField] private TMP_Text choiceButtonText;
-    private Dictionary<Language, string> choiceButtonTexts = new Dictionary<Language, string>
-    {
-        { Language.FI, "Mitä teet" },
-        { Language.EN, "Choose action" },
-        { Language.SW, "Vad gör du" }
-    };
+    [SerializeField] private LocalizedText selectButtonTextLocalized;
+    [SerializeField] private LocalizedText choiceButtonTextLocalized;
+    
 
 
     private void Start()
     {
-        foreach(var cText in choiceButtonTexts)
-        {
-            if(cText.Key == LanguageManager.Instance.currentLanguage) choiceButtonText.text = cText.Value;
-        }
-        foreach (var sText in selectButtonTexts)
-        {
-            if (sText.Key == LanguageManager.Instance.currentLanguage) selectButtonText.text = sText.Value;
-        }
+        
         turnManager = TurnManager.Instance;
         soundManager = SoundManager.Instance;
         goodResponseButton.onClick.AddListener(() => SelectResponse(AnswerCategory.Good));
@@ -65,6 +50,8 @@ public class EventPanelUI : MonoBehaviour
         okButton.onClick.AddListener(ConfirmSelection);
         closeOutcomePanelButton.onClick.AddListener(CloseOutcomePanel);
         okButton.interactable = false;
+        choiceButtonText.text = choiceButtonTextLocalized.GetText();
+        selectButtonText.text = selectButtonTextLocalized.GetText();
     }
     public void GetNewEvent()
     {

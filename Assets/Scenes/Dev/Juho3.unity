@@ -6128,6 +6128,30 @@ PrefabInstance:
       propertyPath: selectButtonText
       value: 
       objectReference: {fileID: 1180371323}
+    - target: {fileID: 222166964287693015, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: choiceButtonTextLocalized.en
+      value: Choose action
+      objectReference: {fileID: 0}
+    - target: {fileID: 222166964287693015, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: choiceButtonTextLocalized.fi
+      value: "Mit\xE4 teet"
+      objectReference: {fileID: 0}
+    - target: {fileID: 222166964287693015, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: choiceButtonTextLocalized.sw
+      value: "Vad g\xF6r du"
+      objectReference: {fileID: 0}
+    - target: {fileID: 222166964287693015, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: selectButtonTextLocalized.en
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 222166964287693015, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: selectButtonTextLocalized.fi
+      value: Valitse
+      objectReference: {fileID: 0}
+    - target: {fileID: 222166964287693015, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: selectButtonTextLocalized.sw
+      value: "V\xE4lja"
+      objectReference: {fileID: 0}
     - target: {fileID: 287154553841648557, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
