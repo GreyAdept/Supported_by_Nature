@@ -15,17 +15,6 @@ MonoBehaviour:
   linkedEventId: kasvien_istutus
   answerCategory: 1
   responseText: Istuta rantakasveja keskelle kosteikkoa
-  responseTextLocalized:
-    fi: Istuta rantakasveja keskelle kosteikkoa
-    sw: "plantera strandv\xE4xter mitt i v\xE5tmarken"
-    en: Plant shoreline vegetation in the middle of the wetland.
   outcomeText: "Kasvit eiv\xE4t v\xE4ltt\xE4m\xE4tt\xE4 tue vedenpuhdistusta tai
     tarjoa suojaa el\xE4imille. Ekosysteemin toiminta ei merkitt\xE4v\xE4sti parane"
-  outcomeTextLocalized:
-    fi: "Kasvit eiv\xE4t v\xE4ltt\xE4m\xE4tt\xE4 tue vedenpuhdistusta tai tarjoa
-      suojaa el\xE4imille. Ekosysteemin toiminta ei merkitt\xE4v\xE4sti parane"
-    sw: "V\xE4xterna kanske inte bidrar till vattenrening eller ger skydd \xE5t djur.
-      Ingen betydande f\xF6rb\xE4ttring av ekosystemets funktion"
-    en: "The plants may not effectively support water purification or provide shelter
-      for animals. The ecosystem's function doesn\u2019t significantly improve."
   effects: []

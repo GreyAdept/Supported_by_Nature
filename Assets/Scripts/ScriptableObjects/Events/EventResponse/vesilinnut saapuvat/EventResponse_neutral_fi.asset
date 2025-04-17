@@ -15,17 +15,6 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 1
   responseText: "Lis\xE4\xE4 rantakasvustoa"
-  responseTextLocalized:
-    fi: "Lis\xE4\xE4 rantakasvustoa"
-    sw: "\xD6ka strandvegetation"
-    en: Add shoreline vegetation.
   outcomeText: "Tarjoaa joillekin lajeille suojaa, mutta ei v\xE4ltt\xE4m\xE4tt\xE4
     riit\xE4 turvaamaan pesint\xE4\xE4 kaikille vesilinnuille."
-  outcomeTextLocalized:
-    fi: "Tarjoaa joillekin lajeille suojaa, mutta ei v\xE4ltt\xE4m\xE4tt\xE4 riit\xE4
-      turvaamaan pesint\xE4\xE4 kaikille vesilinnuille."
-    sw: "Ger skydd \xE5t vissa arter, men kanske inte tillr\xE4ckligt f\xF6r att
-      s\xE4kerst\xE4lla h\xE4ckning f\xF6r alla vattenf\xE5glar."
-    en: Provides shelter for some species, but may not be enough to secure nesting
-      for all waterfowl.
   effects: []

@@ -15,20 +15,7 @@ MonoBehaviour:
   linkedEventId: kosteikolle_saapuu
   answerCategory: 2
   responseText: "Anna lehmien laiduntaa vapaasti, jos lehm\xE4t niin haluavat tehd\xE4"
-  responseTextLocalized:
-    fi: "Anna lehmien laiduntaa vapaasti, jos lehm\xE4t niin haluavat tehd\xE4"
-    sw: "L\xE5t korna beta fritt om de vill g\xF6ra det."
-    en: Allow cows to graze freely.
   outcomeText: "Liiallinen laidunnus kuluttaa kasvillisuutta liikaa, sek\xE4 lehmien
     tallominen tiivist\xE4\xE4 maata. Seurauksena vesi imeytyy heikommin ja ravinteet
     p\xE4\xE4sev\xE4t veteen."
-  outcomeTextLocalized:
-    fi: "Liiallinen laidunnus kuluttaa kasvillisuutta liikaa, sek\xE4 lehmien tallominen
-      tiivist\xE4\xE4 maata. Seurauksena vesi imeytyy heikommin ja ravinteet p\xE4\xE4sev\xE4t
-      veteen."
-    sw: "\xD6verdrivet bete f\xF6rbrukar f\xF6r mycket vegetation, och trampande
-      kor komprimerar jorden. Detta leder till att vattenabsorptionen minskar och
-      n\xE4rings\xE4mnen sl\xE4pps ut i vattnet."
-    en: Excessive grazing depletes the vegetation, and cow trampling compacts the
-      soil. As a result, water absorption decreases, and nutrients enter the water.
   effects: []

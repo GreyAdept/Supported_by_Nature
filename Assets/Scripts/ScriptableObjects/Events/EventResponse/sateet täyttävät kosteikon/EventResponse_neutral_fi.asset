@@ -15,17 +15,6 @@ MonoBehaviour:
   linkedEventId: "sateet_t\xE4ytt\xE4v\xE4t"
   answerCategory: 1
   responseText: "Istuta lis\xE4\xE4 kasveja"
-  responseTextLocalized:
-    fi: "Istuta lis\xE4\xE4 kasveja"
-    sw: "Plantera fler v\xE4xter"
-    en: Plant more vegetation.
   outcomeText: "Kasvit eiv\xE4t juurru kunnolla ja osa kuolee. Hy\xF6ty on pieni,
     mutta vaikutus j\xE4\xE4 lyhytaikaiseksi"
-  outcomeTextLocalized:
-    fi: "Kasvit eiv\xE4t juurru kunnolla ja osa kuolee. Hy\xF6ty on pieni, mutta
-      vaikutus j\xE4\xE4 lyhytaikaiseksi"
-    sw: "V\xE4xterna rotar sig inte ordentligt och vissa d\xF6r. Nyttan \xE4r liten
-      men effekten \xE4r kortvarig"
-    en: ' Plants do not root properly, and some die. The benefit is small, and the
-      effect is short-lived.'
   effects: []

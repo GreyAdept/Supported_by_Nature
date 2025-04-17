@@ -15,17 +15,6 @@ MonoBehaviour:
   linkedEventId: kasvien_istutus
   answerCategory: 0
   responseText: "Et tee mit\xE4\xE4n"
-  responseTextLocalized:
-    fi: "Et tee mit\xE4\xE4n"
-    sw: "G\xF6r ingenting"
-    en: Do nothing.
   outcomeText: "Hauet liikkuvat alueittain vuodenaikojen ja olosuhteiden mukaan.
     Osa palaa, ja uusia yksil\xF6it\xE4 saapuu"
-  outcomeTextLocalized:
-    fi: "Hauet liikkuvat alueittain vuodenaikojen ja olosuhteiden mukaan. Osa palaa,
-      ja uusia yksil\xF6it\xE4 saapuu"
-    sw: "G\xE4ddorna flyttar fr\xE5n omr\xE5de till omr\xE5de beroende p\xE5 s\xE4song
-      och f\xF6rh\xE5llanden. Vissa \xE5terv\xE4nder och nya individer anl\xE4nder."
-    en: Pike move between areas depending on the seasons and conditions. Some return,
-      and new individuals arrive.
   effects: []

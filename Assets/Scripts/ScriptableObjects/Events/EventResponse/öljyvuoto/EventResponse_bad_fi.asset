@@ -15,13 +15,5 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 2
   responseText: "Istuta kasveja \xF6ljyn p\xE4\xE4lle"
-  responseTextLocalized:
-    fi: "Istuta kasveja \xF6ljyn p\xE4\xE4lle"
-    sw: "Plantera v\xE4xter ovanp\xE5 oljan"
-    en: Plant vegetation over the oil.
   outcomeText: "Kasvit kuolevat ja \xF6ljy tuhoaa kosteikon"
-  outcomeTextLocalized:
-    fi: "Kasvit kuolevat ja \xF6ljy tuhoaa kosteikon"
-    sw: "V\xE4xter d\xF6r och oljan f\xF6rst\xF6r v\xE5tmarken"
-    en: The plants die, and the oil destroys the wetland.
   effects: []

@@ -15,17 +15,6 @@ MonoBehaviour:
   linkedEventId: lajikanta_heikkenee
   answerCategory: 0
   responseText: "Lis\xE4\xE4 pesim\xE4paikkoja linnuille ja suojapaikkoja hauille"
-  responseTextLocalized:
-    fi: "Lis\xE4\xE4 pesim\xE4paikkoja linnuille ja suojapaikkoja hauille"
-    sw: "\xD6ka antalet h\xE4ckningsplatser f\xF6r f\xE5glar och skydd f\xF6r g\xE4ddor"
-    en: Add nesting sites for birds and provide shelter for pike.
   outcomeText: "Elinymp\xE4rist\xF6 monipuolistuu, kun eri lajit l\xF6yt\xE4v\xE4t
     paikkansa ja sen my\xF6t\xE4 ekosysteemi vahvistuu."
-  outcomeTextLocalized:
-    fi: "Elinymp\xE4rist\xF6 monipuolistuu, kun eri lajit l\xF6yt\xE4v\xE4t paikkansa
-      ja sen my\xF6t\xE4 ekosysteemi vahvistuu."
-    sw: "Livsmilj\xF6n blir mer varierad eftersom olika arter hittar sin plats och
-      ekosystemet st\xE4rks."
-    en: The habitat becomes more diverse as different species find their place, and
-      as a result, the ecosystem strengthens.
   effects: []

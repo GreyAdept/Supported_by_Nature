@@ -15,13 +15,5 @@ MonoBehaviour:
   linkedEventId: lajikanta_heikkenee
   answerCategory: 2
   responseText: "Niit\xE4 kasvillisuutta"
-  responseTextLocalized:
-    fi: "Niit\xE4 kasvillisuutta"
-    sw: "Ta bort v\xE4xtligheten"
-    en: Remove the vegetation
   outcomeText: "Pesim\xE4paikat katoavat ja lajien m\xE4\xE4r\xE4 laskee entisest\xE4\xE4n."
-  outcomeTextLocalized:
-    fi: "Pesim\xE4paikat katoavat ja lajien m\xE4\xE4r\xE4 laskee entisest\xE4\xE4n."
-    sw: "H\xE4ckningsplatser f\xF6rsvinner och antalet arter minskar \xE4nnu mer."
-    en: Nesting sites disappear, and the number of species decreases even further.
   effects: []

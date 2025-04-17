@@ -15,17 +15,6 @@ MonoBehaviour:
   linkedEventId: "maatalousvirhe_lis\xE4\xE4"
   answerCategory: 1
   responseText: "Pyyd\xE4 vierailijoita poistumaan"
-  responseTextLocalized:
-    fi: "Pyyd\xE4 vierailijoita poistumaan"
-    sw: "Be bes\xF6karna att l\xE4mna"
-    en: Ask the visitors to leave.
   outcomeText: "Vierailijat eiv\xE4t saaneet lis\xE4tty\xE4 tietoisuuttaan kosteikkojen
     t\xE4rkeydest\xE4, eik\xE4 n\xE4in tieto levi\xE4 niin helposti eteenp\xE4in."
-  outcomeTextLocalized:
-    fi: "Vierailijat eiv\xE4t saaneet lis\xE4tty\xE4 tietoisuuttaan kosteikkojen
-      t\xE4rkeydest\xE4, eik\xE4 n\xE4in tieto levi\xE4 niin helposti eteenp\xE4in."
-    sw: "Bes\xF6karna \xF6kade inte sin medvetenhet om vikten av v\xE5tmarker, s\xE5
-      det \xE4r mindre troligt att informationen sprids."
-    en: "Visitors didn\u2019t gain more awareness of the importance of wetlands,
-      and thus the knowledge doesn't spread easily."
   effects: []

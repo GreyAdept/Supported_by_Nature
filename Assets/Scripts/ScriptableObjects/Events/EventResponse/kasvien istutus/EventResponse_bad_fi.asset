@@ -15,15 +15,6 @@ MonoBehaviour:
   linkedEventId: kasvien_istutus
   answerCategory: 2
   responseText: Istuta vieraslajeja
-  responseTextLocalized:
-    fi: Istuta vieraslajeja
-    sw: plantera invasiva arter
-    en: Plant invasive species.
   outcomeText: "Alkuper\xE4islajit k\xE4rsiv\xE4t, biodiversiteetti laskee ja ekosysteemi
     h\xE4iriintyy"
-  outcomeTextLocalized:
-    fi: Istuta vieraslajeja
-    sw: "Inhemska arter p\xE5verkas, den biologiska m\xE5ngfalden minskar och ekosystemet
-      st\xF6rs"
-    en: Native species suffer, biodiversity decreases, and the ecosystem is disrupted
   effects: []

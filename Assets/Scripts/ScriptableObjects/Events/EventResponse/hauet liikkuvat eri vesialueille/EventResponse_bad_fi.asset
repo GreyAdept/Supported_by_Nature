@@ -15,20 +15,6 @@ MonoBehaviour:
   linkedEventId: kasvien_istutus
   answerCategory: 2
   responseText: "Est\xE4 haukien poistuminen kosteikosta aidalla"
-  responseTextLocalized:
-    fi: "Est\xE4 haukien poistuminen kosteikosta aidalla"
-    sw: "Hindra g\xE4ddorna fr\xE5n att l\xE4mna v\xE5tmarken med ett staket"
-    en: Prevent pike from leaving the wetland with a fence.
   outcomeText: "Est\xE4t luonnollisen vaelluksen. Hauet tarvitsevat liikkumatilaa
     eri elinvaiheissa, ja liikkumisen rajoittaminen voi heikent\xE4\xE4 niiden elinoloja"
-  outcomeTextLocalized:
-    fi: "Est\xE4t luonnollisen vaelluksen. Hauet tarvitsevat liikkumatilaa eri elinvaiheissa,
-      ja liikkumisen rajoittaminen voi heikent\xE4\xE4 niiden elinoloja"
-    sw: "Du \xF6rhindrar naturlig migration. G\xE4ddorna beh\xF6ver utrymme f\xF6r
-      att r\xF6ra sig under olika livsstadier och att begr\xE4nsa r\xF6rligheten
-      kan f\xF6rs\xE4mra deras levnadsvillkor"
-    en: 'You prevent natural migration. Pike need space to move during different
-      life stages, and restricting movement can degrade their habitat.
-
-'
   effects: []

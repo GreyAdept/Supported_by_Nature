@@ -15,13 +15,5 @@ MonoBehaviour:
   linkedEventId: ruoppaat_kutupaikkoja
   answerCategory: 0
   responseText: "Poista liejua ja lis\xE4\xE4 kasvillisuutta"
-  responseTextLocalized:
-    fi: "Poista liejua ja lis\xE4\xE4 kasvillisuutta"
-    sw: "Ta bort silt och l\xE4gg till v\xE4xtlighet"
-    en: Remove silt and add vegetation.
   outcomeText: "Kosteikon tasapaino paranee ja samalla ehk\xE4iset lev\xE4n kasvua"
-  outcomeTextLocalized:
-    fi: "Kosteikon tasapaino paranee ja samalla ehk\xE4iset lev\xE4n kasvua"
-    sw: "Du f\xF6rb\xE4ttrar balansen i v\xE5tmarken och f\xF6rhindrar algtillv\xE4xt"
-    en: The wetland's balance improves, and you also prevent algae growth.
   effects: []

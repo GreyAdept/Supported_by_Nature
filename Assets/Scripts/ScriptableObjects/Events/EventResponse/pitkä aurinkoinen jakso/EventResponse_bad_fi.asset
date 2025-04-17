@@ -15,17 +15,6 @@ MonoBehaviour:
   linkedEventId: ruoppaat_kutupaikkoja
   answerCategory: 2
   responseText: "Lis\xE4\xE4 lannoitetta nopeuttamaan kasvien kasvua"
-  responseTextLocalized:
-    fi: "Lis\xE4\xE4 lannoitetta nopeuttamaan kasvien kasvua"
-    sw: "Tills\xE4tt g\xF6dningsmedel f\xF6r att p\xE5skynda v\xE4xternas tillv\xE4xt"
-    en: Add fertilizer to speed up plant growth.
   outcomeText: "Ylim\xE4\xE4r\xE4iset ravinteet aiheuttavat erityisesti l\xE4mpim\xE4ss\xE4
     s\xE4\xE4ss\xE4 lev\xE4kasvua ja happikatoa. Veden laatu heikkenee nopeasti"
-  outcomeTextLocalized:
-    fi: "Ylim\xE4\xE4r\xE4iset ravinteet aiheuttavat erityisesti l\xE4mpim\xE4ss\xE4
-      s\xE4\xE4ss\xE4 lev\xE4kasvua ja happikatoa. Veden laatu heikkenee nopeasti"
-    sw: "\xD6verskott av n\xE4rings\xE4mnen orsakar algtillv\xE4xt och f\xF6rsurning,
-      s\xE4rskilt vid varmt v\xE4der. Vattenkvaliteten f\xF6rs\xE4mras snabbt."
-    en: Excess nutrients cause algae growth and oxygen depletion, especially in warm
-      weather. Water quality deteriorates quickly.
   effects: []

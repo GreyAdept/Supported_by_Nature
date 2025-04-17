@@ -15,16 +15,6 @@ MonoBehaviour:
   linkedEventId: "sateet_t\xE4ytt\xE4v\xE4t"
   answerCategory: 2
   responseText: "Niit\xE4 kasvillisuutta"
-  responseTextLocalized:
-    fi: "Niit\xE4 kasvillisuutta"
-    sw: "Sl\xE5 vegetation"
-    en: Remove the vegetation.
   outcomeText: "Kasvien poistaminen lis\xE4\xE4 tulvavahinkojen riski\xE4 ja heikent\xE4\xE4
     veden laatua"
-  outcomeTextLocalized:
-    fi: "Kasvien poistaminen lis\xE4\xE4 tulvavahinkojen riski\xE4 ja heikent\xE4\xE4
-      veden laatua"
-    sw: "Att ta bort v\xE4xter \xF6kar risken f\xF6r \xF6versv\xE4mningsskador och
-      f\xF6rs\xE4mrar vattenkvaliteten"
-    en: Removing plants increases the risk of flood damage and worsens water quality.
   effects: []

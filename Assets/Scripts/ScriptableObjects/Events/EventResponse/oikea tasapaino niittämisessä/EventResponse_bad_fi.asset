@@ -15,17 +15,6 @@ MonoBehaviour:
   linkedEventId: "maatalousvirhe_lis\xE4\xE4"
   answerCategory: 2
   responseText: "Niit\xE4 kaikki pois ja istuta tilalle uusia"
-  responseTextLocalized:
-    fi: "Niit\xE4 kaikki pois ja istuta tilalle uusia"
-    sw: "Ta bort dem alla och plantera nya i deras st\xE4lle"
-    en: Remove all plants and replace them with new ones.
   outcomeText: "Kosteikon toiminta h\xE4iriintyy, sill\xE4 ekosysteemin suojaava
     rakenne h\xE4vi\xE4\xE4 ja ravinteita voi vapautua vesist\xF6\xF6n."
-  outcomeTextLocalized:
-    fi: "Kosteikon toiminta h\xE4iriintyy, sill\xE4 ekosysteemin suojaava rakenne
-      h\xE4vi\xE4\xE4 ja ravinteita voi vapautua vesist\xF6\xF6n."
-    sw: "V\xE5tmarkens funktion st\xF6rs eftersom ekosystemets skyddande struktur
-      g\xE5r f\xF6rlorad och n\xE4rings\xE4mnen kan sl\xE4ppas ut i vattenmassan."
-    en: The wetland's function is disrupted, as the ecosystem's protective structure
-      is lost, and nutrients may be released into the water.
   effects: []
