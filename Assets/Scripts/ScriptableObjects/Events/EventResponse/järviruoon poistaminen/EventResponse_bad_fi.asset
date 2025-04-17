@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: kasvien_istutus
   answerCategory: 2
   responseText: "Poista koko j\xE4rviruokokasvillisuus"
+  responseTextLocalized:
+    fi: "Poista koko j\xE4rviruokokasvillisuus"
+    sw: "Ta bort all sj\xF6gr\xE4svegetation"
+    en: Remove all the reed vegetation.
   outcomeText: "Kosteikko altistuu eroosiolle ja ekosysteemi j\xE4rkkyy, kun suojaava
     kasvillisuus katoaa."
+  outcomeTextLocalized:
+    fi: "Kosteikko altistuu eroosiolle ja ekosysteemi j\xE4rkkyy, kun suojaava kasvillisuus
+      katoaa."
+    sw: "V\xE5tmarken uts\xE4tts f\xF6r erosion och ekosystemet st\xF6rs n\xE4r den
+      skyddande vegetationen f\xF6rsvinner."
+    en: The wetland is exposed to erosion, and the ecosystem is disrupted when the
+      protective vegetation disappears.
   effects: []

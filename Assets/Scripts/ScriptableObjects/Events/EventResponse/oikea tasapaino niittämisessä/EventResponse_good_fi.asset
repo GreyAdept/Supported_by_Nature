@@ -15,5 +15,13 @@ MonoBehaviour:
   linkedEventId: "maatalousvirhe_lis\xE4\xE4"
   answerCategory: 0
   responseText: "Poista vanhaa kasvustoa, mutta j\xE4t\xE4 t\xE4rke\xE4t kasvit paikalleen"
+  responseTextLocalized:
+    fi: "Poista vanhaa kasvustoa, mutta j\xE4t\xE4 t\xE4rke\xE4t kasvit paikalleen"
+    sw: "Ta bort gammal vegetation men l\xE5t viktiga v\xE4xter vara kvar"
+    en: Remove old vegetation, but leave the important plants in place.
   outcomeText: "Kosteikko pysyy toimintakykyisen\xE4 ja veden puhdistus tehostuu"
+  outcomeTextLocalized:
+    fi: "Kosteikko pysyy toimintakykyisen\xE4 ja veden puhdistus tehostuu"
+    sw: "V\xE5tmarken f\xF6rblir funktionell och vattenreningen f\xF6rb\xE4ttras"
+    en: The wetland remains functional, and water purification is enhanced.
   effects: []

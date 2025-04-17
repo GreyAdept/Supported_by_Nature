@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: kasvien_istutus
   answerCategory: 0
   responseText: Poista vain osa kasvustosta
+  responseTextLocalized:
+    fi: Poista vain osa kasvustosta
+    sw: Ta bort endast en del av vegetationen
+    en: Remove only part of the vegetation.
   outcomeText: "Parantaa veden kiertoa ja elinymp\xE4rist\xF6jen monimuotoisuutta.
     Ekosysteemi tasapainottuu"
+  outcomeTextLocalized:
+    fi: "Parantaa veden kiertoa ja elinymp\xE4rist\xF6jen monimuotoisuutta. Ekosysteemi
+      tasapainottuu"
+    sw: "F\xF6rb\xE4ttrar vattencirkulationen och m\xE5ngfalden av livsmilj\xF6er.
+      Ekosystemet \xE5terst\xE4lls"
+    en: Improves water circulation and habitat diversity. The ecosystem balances
+      itself.
   effects: []

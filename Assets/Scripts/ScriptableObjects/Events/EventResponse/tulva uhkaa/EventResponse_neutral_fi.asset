@@ -15,6 +15,14 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 1
   responseText: "Lis\xE4\xE4 kasvillisuutta kosteikon reunoille"
+  responseTextLocalized:
+    fi: "Lis\xE4\xE4 kasvillisuutta kosteikon reunoille"
+    sw: "L\xE4gg till v\xE4xtlighet i v\xE5tmarkens kanter"
+    en: Add vegetation along the edges of the wetland.
   outcomeText: "Vett\xE4 kertyy edelleen ja osa kosteikosta k\xE4rsii tulvaveden
     johdosta"
+  outcomeTextLocalized:
+    fi: "Vett\xE4 kertyy edelleen ja osa kosteikosta k\xE4rsii tulvaveden johdosta"
+    sw: "Vatten forts\xE4tter att ansamlas och en del av v\xE5tmarken skadas av \xF6versv\xE4mningsvattnet"
+    en: Water still accumulates, and some of the wetland suffers due to the floodwaters.
   effects: []

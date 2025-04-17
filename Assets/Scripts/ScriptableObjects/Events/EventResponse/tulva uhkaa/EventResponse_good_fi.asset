@@ -15,5 +15,13 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 0
   responseText: "Ohjaa vett\xE4 ja kaiva viivytysaltaita"
+  responseTextLocalized:
+    fi: "Ohjaa vett\xE4 ja kaiva viivytysaltaita"
+    sw: "avled vatten och gr\xE4v f\xF6rdr\xF6jningsdammar"
+    en: Guide the water and dig retention basins.
   outcomeText: "Tulvavesi hidastuu ja kosteikko s\xE4ilyy vahingoittumana"
+  outcomeTextLocalized:
+    fi: "Tulvavesi hidastuu ja kosteikko s\xE4ilyy vahingoittumana"
+    sw: "\xD6versv\xE4mningsvattnet saktar ner och v\xE5tmarken f\xF6rblir oskadad"
+    en: The floodwater slows down, and the wetland remains undamaged.
   effects: []
