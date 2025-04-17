@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
   m_Name: "EVENT_fi_j\xE4rviruoon_poistaminen"
   m_EditorClassIdentifier: 
-  eventId: "j\xE4rviruoon_poistaminen"
+  eventId: jarviruoon_poisto
   eventName: "J\xE4rviruo'on poistaminen"
   eventDescription: "J\xE4rviruoko on ottanut oman paikkansa, eik\xE4 oikein anna
     en\xE4\xE4 muiden kasvien l\xF6yt\xE4\xE4 omaa paikkaansa. Vesi kaipaa tilaa

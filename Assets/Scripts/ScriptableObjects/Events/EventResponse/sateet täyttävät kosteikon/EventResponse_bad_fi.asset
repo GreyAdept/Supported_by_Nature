@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6be4bec5bdfc5458332aaa9dcddb06, type: 3}
   m_Name: EventResponse_bad_fi
   m_EditorClassIdentifier: 
-  linkedEventId: "sateet_t\xE4ytt\xE4v\xE4t"
+  linkedEventId: sateet_tayttavat
   answerCategory: 2
   responseText: "Niit\xE4 kasvillisuutta"
   responseTextLocalized:

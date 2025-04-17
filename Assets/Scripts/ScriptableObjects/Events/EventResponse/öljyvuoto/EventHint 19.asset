@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e356c63ccf56f41ab041b3c2a71c73, type: 3}
+  m_Name: EventHint 19
+  m_EditorClassIdentifier: 
+  npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: 
+    sw: 
+    en: 
+  npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
+  dialogueText: "Hmm\u2026 aistin jotakin... Ilma on raskas ja meri kuiskailee varoituksia.
+    Jotain katastrofaalista on tapahtumassa\u2026 Jos et toimi nopeasti, musta myrkky
+    valtaa vedet, ja kosteikon henki hiipuu. Sinun on ryhdytt\xE4v\xE4 toimiin, suojelija!"
+  dialogueTextLocalized:
+    fi: "Hmm\u2026 aistin jotakin... Ilma on raskas ja meri kuiskailee varoituksia.
+      Jotain katastrofaalista on tapahtumassa\u2026 Jos et toimi nopeasti, musta
+      myrkky valtaa vedet, ja kosteikon henki hiipuu. Sinun on ryhdytt\xE4v\xE4 toimiin,
+      suojelija!"
+    sw: "Hmm... Jag k\xE4nner n\xE5got... Luften \xE4r tung och havet viskar varningar.
+      N\xE5got katastrofalt \xE4r p\xE5 v\xE4g att h\xE4nda. Om du inte agerar snabbt
+      kommer det svarta giftet att \xE5terta vattnet och v\xE5tmarkens ande kommer
+      att blekna. Du m\xE5ste agera, beskyddare!"
+    en: Hmm... I sense something... The air is heavy and the sea is whispering warnings.
+      Something catastrophical is about to happen. If you don't act quickly, the
+      black poison will reclaim the waters, and the spirit of the wetland will fade.
+      You must take action, guardian!
+  typeSpeed: 1
+  linkedEventId: oljyvuoto

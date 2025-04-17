@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e356c63ccf56f41ab041b3c2a71c73, type: 3}
+  m_Name: EventHint 5
+  m_EditorClassIdentifier: 
+  npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: 
+    sw: 
+    en: 
+  npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
+  dialogueText: "Katso, suojelija\u2026 Kosteikon reunalla liikkuu nyt lehmi\xE4.
+    Ne ovat tulleet laiduntamaan, eiv\xE4tk\xE4 ne tied\xE4, ett\xE4 niiden jokainen
+    askel voi muovata t\xE4t\xE4 paikkaa. Jos niit\xE4 on liian v\xE4h\xE4n, kasvillisuus
+    valtaa kosteikon ja tukahduttaa sen. Jos niit\xE4 on liikaa, maa paljastuu ja
+    vesi sameutuu."
+  dialogueTextLocalized:
+    fi: "Katso, suojelija\u2026 Kosteikon reunalla liikkuu nyt lehmi\xE4. Ne ovat
+      tulleet laiduntamaan, eiv\xE4tk\xE4 ne tied\xE4, ett\xE4 niiden jokainen askel
+      voi muovata t\xE4t\xE4 paikkaa. Jos niit\xE4 on liian v\xE4h\xE4n, kasvillisuus
+      valtaa kosteikon ja tukahduttaa sen. Jos niit\xE4 on liikaa, maa paljastuu
+      ja vesi sameutuu."
+    sw: "Titta, beskyddare ... Det finns nu kor i utkanten av v\xE5tmarken. De har
+      kommit f\xF6r att beta och \xE4r omedvetna om att varje steg de tar kan forma
+      den h\xE4r platsen.\nOm det finns f\xF6r f\xE5 av dem kommer vegetationen att
+      ta \xF6ver och kv\xE4va v\xE5tmarken.\nOm de \xE4r f\xF6r m\xE5nga blottl\xE4ggs
+      jorden och vattnet blir grumligt."
+    en: Look, guardian... There are now cows on the edge of the wetland. They have
+      come to graze, unaware that their every step can shape this place. If there
+      are too few of them, the vegetation will take over and choke the wetland. If
+      there are too many, the soil is exposed and the water becomes murky.
+  typeSpeed: 1
+  linkedEventId: kosteikolle_saapuu

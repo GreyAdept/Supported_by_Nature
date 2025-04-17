@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
   m_Name: "EVENT_fi_ sateet_t\xE4ytt\xE4v\xE4t"
   m_EditorClassIdentifier: 
-  eventId: "sateet_t\xE4ytt\xE4v\xE4t"
+  eventId: sateet_tayttavat
   eventName: "Sateet t\xE4ytt\xE4v\xE4t kosteikon"
   eventDescription: "Sade voi tuoda el\xE4m\xE4\xE4 kosteikolle, mutta hallitsematon
     virtaus vie ravinteet mukanaan. Miten varmistat, ett\xE4 vesi pysyy hallinnassa

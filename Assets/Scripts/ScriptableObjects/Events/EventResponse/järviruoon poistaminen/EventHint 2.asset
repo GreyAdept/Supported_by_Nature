@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e356c63ccf56f41ab041b3c2a71c73, type: 3}
+  m_Name: EventHint 2
+  m_EditorClassIdentifier: 
+  npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: 
+    sw: 
+    en: 
+  npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
+  dialogueText: "Katso ymp\xE4rillesi. J\xE4rviruoko on ottanut oman paikkansa, eik\xE4
+    oikein anna en\xE4\xE4 muiden kasvien l\xF6yt\xE4\xE4 omaa paikkaansa. Vesi kaipaa
+    tilaa virrata, kasvit tarvitsevat valoa kasvaakseen, ja el\xE4imet tarvitsevat
+    monimuotoisen elinymp\xE4rist\xF6n."
+  dialogueTextLocalized:
+    fi: "Katso ymp\xE4rillesi. J\xE4rviruoko on ottanut oman paikkansa, eik\xE4 oikein
+      anna en\xE4\xE4 muiden kasvien l\xF6yt\xE4\xE4 omaa paikkaansa. Vesi kaipaa
+      tilaa virrata, kasvit tarvitsevat valoa kasvaakseen, ja el\xE4imet tarvitsevat
+      monimuotoisen elinymp\xE4rist\xF6n."
+    sw: "Titta dig omkring. Vassen har tagit sin plats och l\xE5ter inte riktigt
+      andra v\xE4xter hitta sin egen plats l\xE4ngre. Vatten beh\xF6ver utrymme f\xF6r
+      att fl\xF6da, v\xE4xter beh\xF6ver ljus f\xF6r att v\xE4xa och djur beh\xF6ver
+      en varierad livsmilj\xF6."
+    en: Look around you. Reed has taken its place, and is no longer letting other
+      plants find their own place. Water needs room to flow, plants need light to
+      grow, and animals need a diverse habitat.
+  typeSpeed: 1
+  linkedEventId: jarviruoon_poisto

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
   m_Name: "EVENT_fi_pitk\xE4_aurinkoinen_jakso"
   m_EditorClassIdentifier: 
-  eventId: "pitk\xE4_aurinkoinen"
+  eventId: pitka_aurinko
   eventName: "Pitk\xE4 aurinkoinen jakso"
   eventDescription: "Pitk\xE4 aurinkoinen kes\xE4 on saapunut. Oikein ohjattuna aurinko
     voi olla kosteikon paras liittolainen, mutta miten aiot toteuttaa sen?"

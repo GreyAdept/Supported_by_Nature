@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a8d7fc9a8b99e4197ad30bd7608395, type: 3}
   m_Name: "EVENT_fi_ maatalousvirhe_lis\xE4\xE4"
   m_EditorClassIdentifier: 
-  eventId: "maatalousvirhe_lis\xE4\xE4"
+  eventId: maatalousvirhe_lisaa
   eventName: "Maatalousvirhe lis\xE4\xE4 ravinnekuormitusta"
   eventDescription: "Viljelij\xE4 on levitt\xE4nyt lannoitetta liian l\xE4helle kosteikkoa,
     ja sade huuhtoo ravinteet sinne. Miten est\xE4t veden rehev\xF6itymisen ja suojelet

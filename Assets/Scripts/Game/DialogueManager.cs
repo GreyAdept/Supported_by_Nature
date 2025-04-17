@@ -126,11 +126,13 @@ public class DialogueManager : MonoBehaviour
     {
         if(hasGivenHintThisTurn)
         {
+            Debug.Log("somehow has given hint already");
             ShowRandomDialogue();
             return;
         }
+        Debug.Log("giving hint");
         WetlandEvent nextEvent = randomEventSystem.CheckNextEvent();
-        Debug.Log(nextEvent.eventCategory.ToString());
+        //Debug.Log(nextEvent.eventCategory.ToString());
         if(nextEvent != null)
         {
             EventHintDialogue hint = dialogueDB.GetHintForEvent(nextEvent);
@@ -197,7 +199,6 @@ public class DialogueManager : MonoBehaviour
     }
     public void InteractWithNPC()
     {
-        hasGivenHintThisTurn = true;
         if(isDialogueRunning)
         {
             if(typeWriterEffectCoroutine != null)

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e356c63ccf56f41ab041b3c2a71c73, type: 3}
+  m_Name: EventHint 6
+  m_EditorClassIdentifier: 
+  npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: 
+    sw: 
+    en: 
+  npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
+  dialogueText: "Linnut, jotka kerran laskeutuivat t\xE4nne, ovat siirtyneet muualle.
+    Hauki odottaa saalistaan, mutta vesi on hiljaisempi kuin ennen. Kosteikon syd\xE4n
+    sykkii heikommin, sill\xE4 sen monimuotoisuus on katoamassa. Mik\xE4 on muuttunut?
+    Sinun on l\xF6ydett\xE4v\xE4 vastaus"
+  dialogueTextLocalized:
+    fi: "Linnut, jotka kerran laskeutuivat t\xE4nne, ovat siirtyneet muualle. Hauki
+      odottaa saalistaan, mutta vesi on hiljaisempi kuin ennen. Kosteikon syd\xE4n
+      sykkii heikommin, sill\xE4 sen monimuotoisuus on katoamassa. Mik\xE4 on muuttunut?
+      Sinun on l\xF6ydett\xE4v\xE4 vastaus."
+    sw: "F\xE5glar som en g\xE5ng landade h\xE4r har flyttat n\xE5gon annanstans.
+      G\xE4ddorna v\xE4ntar p\xE5 sitt byte, men vattnet \xE4r tystare \xE4n tidigare.
+      V\xE5tmarkens hj\xE4rta sl\xE5r allt svagare i takt med att m\xE5ngfalden f\xF6rsvinner.
+      Vad \xE4r det som har f\xF6r\xE4ndrats? Du m\xE5ste hitta svaret"
+    en: Birds that once landed here have moved elsewhere. The pike is waiting for
+      its prey, but the water is quieter than before. The heart of the wetland is
+      beating less strongly as its diversity is disappearing. What has changed? You
+      must find the answer
+  typeSpeed: 1
+  linkedEventId: lajikanta_heikkenee

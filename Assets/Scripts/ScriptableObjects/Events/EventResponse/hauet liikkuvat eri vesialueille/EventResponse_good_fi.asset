@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6be4bec5bdfc5458332aaa9dcddb06, type: 3}
   m_Name: EventResponse_good_fi
   m_EditorClassIdentifier: 
-  linkedEventId: kasvien_istutus
+  linkedEventId: hauet_liikkuvat
   answerCategory: 0
   responseText: "Et tee mit\xE4\xE4n"
   responseTextLocalized:

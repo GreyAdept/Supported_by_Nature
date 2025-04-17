@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6be4bec5bdfc5458332aaa9dcddb06, type: 3}
   m_Name: EventResponse_good_fi
   m_EditorClassIdentifier: 
-  linkedEventId: "maatalousvirhe_lis\xE4\xE4"
+  linkedEventId: oikea_tasapaino
   answerCategory: 0
   responseText: "Poista vanhaa kasvustoa, mutta j\xE4t\xE4 t\xE4rke\xE4t kasvit paikalleen"
   responseTextLocalized:

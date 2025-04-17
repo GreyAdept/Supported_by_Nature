@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e356c63ccf56f41ab041b3c2a71c73, type: 3}
+  m_Name: EventHint 10
+  m_EditorClassIdentifier: 
+  npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: 
+    sw: 
+    en: 
+  npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
+  dialogueText: "Suojelija, kosteikon kasvusto kasvaa ja uusiutuu, mutta jos annat
+    kasvillisuuden kasvaa valtoimenaan, vesi menett\xE4\xE4 voimansa. Oikea tasapaino
+    on avain kaikkeen. Mutta kuinka aiot l\xF6yt\xE4\xE4 sen?"
+  dialogueTextLocalized:
+    fi: "Suojelija, kosteikon kasvusto kasvaa ja uusiutuu, mutta jos annat kasvillisuuden
+      kasvaa valtoimenaan, vesi menett\xE4\xE4 voimansa. Oikea tasapaino on avain
+      kaikkeen. Mutta kuinka aiot l\xF6yt\xE4\xE4 sen?"
+    sw: "Beskyddare, v\xE5tmarksvegetation v\xE4xer och \xE5terh\xE4mtar sig, men
+      om du l\xE5ter den ta \xF6ver f\xF6rlorar vattnet sin kraft. R\xE4tt balans
+      \xE4r nyckeln till allt. Men hur ska du hitta den?"
+    en: Guardian, the wetland vegetation grows and regenerates, but if you let it
+      take over, the water loses its power. The right balance is the key to everything.
+      But how are you going to find it?
+  typeSpeed: 1
+  linkedEventId: oikea_tasapaino

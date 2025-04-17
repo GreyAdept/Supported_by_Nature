@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e356c63ccf56f41ab041b3c2a71c73, type: 3}
+  m_Name: EventHint
+  m_EditorClassIdentifier: 
+  npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: 
+    sw: 
+    en: 
+  npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
+  dialogueText: "Suojelija, katso veden pintaan. Se on liian tyyni, liian hiljainen.
+    Hauet ovat v\xE4henem\xE4ss\xE4, ja ilman petokaloja kosteikko ei en\xE4\xE4
+    ole tasapainossa. S\xE4rkikalat lis\xE4\xE4ntyv\xE4t vapaasti, lev\xE4t saavat
+    ravinteita ja vesi muuttuu sameaksi."
+  dialogueTextLocalized:
+    fi: "Suojelija, katso veden pintaan. Se on liian tyyni, liian hiljainen. Hauet
+      ovat v\xE4henem\xE4ss\xE4, ja ilman petokaloja kosteikko ei en\xE4\xE4 ole
+      tasapainossa. S\xE4rkikalat lis\xE4\xE4ntyv\xE4t vapaasti, lev\xE4t saavat
+      ravinteita ja vesi muuttuu sameaksi."
+    sw: "Beskyddare, titta p\xE5 vattenytan. Det \xE4r f\xF6r lugnt, f\xF6r tyst.
+      G\xE4ddorna minskar, och utan rovfiskar \xE4r v\xE5tmarken inte l\xE4ngre i
+      balans. St\xF6rarna f\xF6r\xF6kar sig fritt, algerna f\xE5r n\xE4ring och vattnet
+      blir grumligt."
+    en: Guardian, look at the surface of the water. It's too calm, too quiet. The
+      pikes are declining, and without predatory fish, the wetland is no longer in
+      balance. Sturgeons breed freely, the algae get nutrients and the water becomes
+      cloudy.
+  typeSpeed: 1
+  linkedEventId: hauen_kanta

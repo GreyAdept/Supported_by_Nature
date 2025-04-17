@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6be4bec5bdfc5458332aaa9dcddb06, type: 3}
   m_Name: EventResponse_neutral_fi
   m_EditorClassIdentifier: 
-  linkedEventId: vieraslajit_valtaavat
+  linkedEventId: viilea_kesa
   answerCategory: 1
   responseText: Istuta paljon uusia kasveja
   responseTextLocalized:

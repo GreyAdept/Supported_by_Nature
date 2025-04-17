@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e356c63ccf56f41ab041b3c2a71c73, type: 3}
+  m_Name: EventHint 3
+  m_EditorClassIdentifier: 
+  npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: 
+    sw: 
+    en: 
+  npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
+  dialogueText: "Katso kosteikkoa tarkkaan. Se on el\xE4v\xE4 paikka, mutta sen v\xE4rit
+    eiv\xE4t ole niin kirkkaita kuin voisivat olla. Osa kasveista hallitsee liikaa
+    ja toiset ovat kadonneet. Vesi kaipaa kasveja, jotka suodattavat ravinteita,
+    linnut tarvitsevat suojaa pesiins\xE4, ja kalat etsiv\xE4t paikkoja, joissa piileskell\xE4.
+    Mutta sin\xE4 voit auttaa, suojelija."
+  dialogueTextLocalized:
+    fi: "Katso kosteikkoa tarkkaan. Se on el\xE4v\xE4 paikka, mutta sen v\xE4rit
+      eiv\xE4t ole niin kirkkaita kuin voisivat olla. Osa kasveista hallitsee liikaa
+      ja toiset ovat kadonneet. Vesi kaipaa kasveja, jotka suodattavat ravinteita,
+      linnut tarvitsevat suojaa pesiins\xE4, ja kalat etsiv\xE4t paikkoja, joissa
+      piileskell\xE4. Mutta sin\xE4 voit auttaa, suojelija."
+    sw: "Ta en n\xE4rmare titt p\xE5 v\xE5tmarken. Det \xE4r en levande plats, men
+      f\xE4rgerna \xE4r inte s\xE5 klara som de skulle kunna vara. Vissa v\xE4xter
+      dominerar f\xF6r mycket och andra har f\xF6rsvunnit. Vatten beh\xF6ver v\xE4xter
+      f\xF6r att filtrera n\xE4rings\xE4mnen, f\xE5glar beh\xF6ver skydd f\xF6r sina
+      bon och fiskar letar efter platser att g\xF6mma sig p\xE5. Men du kan hj\xE4lpa
+      till, beskyddare."
+    en: Take a close look at the wetland. It is a living place, but its colours are
+      not as bright as they could be. Some plants dominate too much and others have
+      disappeared. Water needs plants to filter nutrients, birds need shelter for
+      their nests, and fish are looking for places to hide. But you can help, guardian.
+  typeSpeed: 1
+  linkedEventId: kasvien_istutus

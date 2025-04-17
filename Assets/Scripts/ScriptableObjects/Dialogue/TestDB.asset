@@ -12,15 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedd377f1f6e2e046be146668574c019, type: 3}
   m_Name: TestDB
   m_EditorClassIdentifier: 
+  dbLanguage: 0
   tutorialSequence: []
   catastrophicEventHints:
-  - {fileID: 11400000, guid: cec26b0fd2df7dc4f86ec5efcd450c9c, type: 2}
+  - {fileID: 11400000, guid: ea1129c817ad16b42834928c64e9c6f8, type: 2}
+  - {fileID: 11400000, guid: c9e19b86f9ffbad4caff9595cdeff4c5, type: 2}
   badEventHints:
-  - {fileID: 11400000, guid: a1f3eacaa6b340248b12bdf8090d4f4a, type: 2}
+  - {fileID: 11400000, guid: 94f37d32f663fdf4cb152973787bef24, type: 2}
+  - {fileID: 11400000, guid: 68b88d2254c0b9045b03ebc535eb9ea2, type: 2}
+  - {fileID: 11400000, guid: 929598a2f293f024cb148f297a16b36b, type: 2}
+  - {fileID: 11400000, guid: 991d36c400e47b04cbfa2336b34fb3ef, type: 2}
+  - {fileID: 11400000, guid: 66a23506d7a3b534e9b7b3488a8a7cb0, type: 2}
+  - {fileID: 11400000, guid: 3ed3582933743cf489a70eec3a46b38e, type: 2}
   neutralEventHints:
-  - {fileID: 11400000, guid: 0bfe06b41cdaa354fae6b09241c70012, type: 2}
+  - {fileID: 11400000, guid: bdb268dc95c1b4b4a9282902bf46c565, type: 2}
+  - {fileID: 11400000, guid: 90eed421480ee044e975de53d3d16311, type: 2}
+  - {fileID: 11400000, guid: b295fdaee75abf1418b3f2d56cbc1b20, type: 2}
+  - {fileID: 11400000, guid: 24503b98a36099b4d8be99f05a781acb, type: 2}
+  - {fileID: 11400000, guid: 9e21a9b3f737ef547b0bb7a1ede26581, type: 2}
   goodEventHints:
-  - {fileID: 11400000, guid: 03489af9129ed4b41b852c07f23184d1, type: 2}
+  - {fileID: 11400000, guid: d70a0a5ed6445fd44bb310f675e89b7c, type: 2}
+  - {fileID: 11400000, guid: ecbeed1aa1c45da47be9627dd18dfdff, type: 2}
+  - {fileID: 11400000, guid: 7f603fb83edaeb54ab87b94cc6c56ed0, type: 2}
+  - {fileID: 11400000, guid: 259339c2cfacf4949ab35a3d04034434, type: 2}
+  - {fileID: 11400000, guid: f67bd75aff7b76f48bc4dd245088c33f, type: 2}
+  - {fileID: 11400000, guid: 9721d5aa8d44ada47984bda8967691d9, type: 2}
   randomDialogues:
   - {fileID: 11400000, guid: 226143ef0e41ab94497e7d42c6a065fd, type: 2}
   jokeDialogues:

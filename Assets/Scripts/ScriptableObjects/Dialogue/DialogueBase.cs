@@ -8,6 +8,6 @@ public abstract class DialogueBase : ScriptableObject
     public Sprite npcImage;
     [Header("Main Dialogue")]
     [TextArea(4, 8)] public string dialogueText;
-    [TextArea(1, 3)] public LocalizedText dialogueTextLocalized;
+    public LocalizedText dialogueTextLocalized;
     public int typeSpeed;
 }
