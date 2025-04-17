@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: kasvien_istutus
   answerCategory: 1
   responseText: "Istuta lis\xE4\xE4 haukia"
+  responseTextLocalized:
+    fi: "Istuta lis\xE4\xE4 haukia"
+    sw: "Plantera fler g\xE4ddor"
+    en: Introduce more pike.
   outcomeText: "Vaikuttaa hetkellisesti tasapainoon, mutta saattaa aiheuttaa liikaa
     kilpailua ja h\xE4iri\xF6t\xE4, kun uudet yksil\xF6t saapuvat"
+  outcomeTextLocalized:
+    fi: "Vaikuttaa hetkellisesti tasapainoon, mutta saattaa aiheuttaa liikaa kilpailua
+      ja h\xE4iri\xF6t\xE4, kun uudet yksil\xF6t saapuvat"
+    sw: "P\xE5verkar balansen tillf\xE4lligt, men kan orsaka f\xF6r mycket konkurrens
+      och st\xF6rningar n\xE4r nya individer anl\xE4nder."
+    en: It temporarily affects the balance, but may cause too much competition and
+      disturbance when new individuals arrive.
   effects: []

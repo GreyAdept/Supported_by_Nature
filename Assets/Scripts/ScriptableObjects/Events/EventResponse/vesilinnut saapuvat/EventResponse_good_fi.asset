@@ -15,6 +15,16 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 0
   responseText: "Lis\xE4\xE4 kelluvia pesim\xE4paikkoja"
+  responseTextLocalized:
+    fi: "Lis\xE4\xE4 kelluvia pesim\xE4paikkoja"
+    sw: "Fler flytande h\xE4ckningsplatser"
+    en: Add floating nesting sites.
   outcomeText: "Linnut l\xF6yt\xE4v\xE4t turvallisen paikan pesimiseen ja kosteikon
     monimuotoisuus rikastuu"
+  outcomeTextLocalized:
+    fi: "Linnut l\xF6yt\xE4v\xE4t turvallisen paikan pesimiseen ja kosteikon monimuotoisuus
+      rikastuu"
+    sw: "F\xE5glar hittar en s\xE4ker plats att h\xE4cka p\xE5 och v\xE5tmarkens
+      biologiska m\xE5ngfald berikas"
+    en: Birds find a safe place to nest, and the wetland's biodiversity is enriched.
   effects: []

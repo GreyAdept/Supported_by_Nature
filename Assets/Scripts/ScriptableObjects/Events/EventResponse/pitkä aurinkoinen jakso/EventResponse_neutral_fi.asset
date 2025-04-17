@@ -15,6 +15,18 @@ MonoBehaviour:
   linkedEventId: ruoppaat_kutupaikkoja
   answerCategory: 1
   responseText: Kastelet kuivia alueita
+  responseTextLocalized:
+    fi: Kastelet kuivia alueita
+    sw: "Vattna torra omr\xE5den"
+    en: Water dry areas.
   outcomeText: "Lyhyell\xE4 aikav\xE4lill\xE4 est\xE4t kuivumista, mutta veden lis\xE4\xE4minen
     ilman muuta hallintaa ei poista pohjaravinteita eik\xE4 est\xE4 rehev\xF6itymist\xE4"
+  outcomeTextLocalized:
+    fi: "Lyhyell\xE4 aikav\xE4lill\xE4 est\xE4t kuivumista, mutta veden lis\xE4\xE4minen
+      ilman muuta hallintaa ei poista pohjaravinteita eik\xE4 est\xE4 rehev\xF6itymist\xE4"
+    sw: "P\xE5 kort sikt f\xF6rhindrar du uttorkning, men om du tillf\xF6r vatten
+      utan andra kontroller kommer du inte att avl\xE4gsna n\xE4rings\xE4mnen fr\xE5n
+      botten och inte f\xF6rhindra \xF6verg\xF6dning"
+    en: "In the short term, you prevent drying, but adding water without proper management
+      doesn\u2019t remove bottom nutrients or prevent eutrophication."
   effects: []

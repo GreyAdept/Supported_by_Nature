@@ -15,6 +15,14 @@ MonoBehaviour:
   linkedEventId: kasvien_istutus
   answerCategory: 1
   responseText: "Niit\xE4 j\xE4rviruokoa lyhyemm\xE4ksi"
+  responseTextLocalized:
+    fi: "Niit\xE4 j\xE4rviruokoa lyhyemm\xE4ksi"
+    sw: "Korta av dem kortare \xE4n sj\xF6gr\xE4set"
+    en: Cut back the common reed to a shorter height.
   outcomeText: "N\xE4ytt\xE4\xE4 siistilt\xE4 hetken, mutta ruoko kasvaa nopeasti
     takaisin"
+  outcomeTextLocalized:
+    fi: "N\xE4ytt\xE4\xE4 siistilt\xE4 hetken, mutta ruoko kasvaa nopeasti takaisin"
+    sw: "Ser ordentligt ut ett tag, men vassen v\xE4xer snabbt tillbaka"
+    en: It looks tidy for a while, but the reed grows back quickly.
   effects: []

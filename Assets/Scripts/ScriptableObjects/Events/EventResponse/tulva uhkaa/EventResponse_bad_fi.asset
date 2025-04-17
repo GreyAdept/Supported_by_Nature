@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 2
   responseText: "Kaiva oja kosteikon l\xE4pi"
+  responseTextLocalized:
+    fi: "Kaiva oja kosteikon l\xE4pi"
+    sw: "Gr\xE4v ett dike genom v\xE5tmarken"
+    en: Dig a ditch through the wetland.
   outcomeText: Vesi virtaa liian nopeasti ulos, ravinteet huuhtoutuvat pois ja kosteikko
     vahingoittuu
+  outcomeTextLocalized:
+    fi: Vesi virtaa liian nopeasti ulos, ravinteet huuhtoutuvat pois ja kosteikko
+      vahingoittuu
+    sw: "Vattnet rinner ut f\xF6r snabbt, n\xE4rings\xE4mnen sk\xF6ljs bort och v\xE5tmarken
+      skadas"
+    en: The water flows out too quickly, nutrients are washed away, and the wetland
+      is damaged
   effects: []

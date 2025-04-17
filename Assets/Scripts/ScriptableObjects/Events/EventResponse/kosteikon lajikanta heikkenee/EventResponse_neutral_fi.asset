@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: lajikanta_heikkenee
   answerCategory: 1
   responseText: Huolehdi kasvillisuuden monimuotoisuudesta
+  responseTextLocalized:
+    fi: Huolehdi kasvillisuuden monimuotoisuudesta
+    sw: "Bevara m\xE5ngfalden i v\xE4xtligheten"
+    en: Take care of the plant diversity.
   outcomeText: "Linnut ja kalat viihtyv\xE4t hetken, mutta voivat l\xE4hte\xE4 ilman
     suojaisaa kotia."
+  outcomeTextLocalized:
+    fi: "Linnut ja kalat viihtyv\xE4t hetken, mutta voivat l\xE4hte\xE4 ilman suojaisaa
+      kotia."
+    sw: "F\xE5glar och fiskar trivs ett tag, men kan f\xF6rsvinna utan ett skyddat
+      hem."
+    en: Birds and fish thrive for a while, but they may leave without a sheltered
+      home.
   effects: []
