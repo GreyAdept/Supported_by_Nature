@@ -9,6 +9,13 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private CanvasGroup fadeCG;
     [SerializeField] private float fadeDuration;
     [SerializeField] private Button[] menuButtons;
+    [SerializeField] private GameObject mainPanel;
+    [SerializeField] private GameObject creditsPanel;
+    [SerializeField] private RectTransform creditsScroll;
+    [SerializeField] private float creditsTopPos;
+    [SerializeField] private float scrollSpeed;
+    private Vector3 creditsStartPos;
+    private Coroutine creditsCoroutine;
     private void Start()
     {
         if (fadeCG != null)
@@ -17,6 +24,43 @@ public class MenuManager : MonoBehaviour
             fadeCG.alpha = 0;
         }
         ToggleButtons(true);
+        creditsStartPos = creditsScroll.localPosition;
+    }
+    public void EnableMain()
+    {
+        StopCreditScroll();
+        creditsPanel.SetActive(false);
+        mainPanel.SetActive(true);
+    }
+    public void EnableCredits()
+    {
+        mainPanel.SetActive(false);
+        creditsPanel.SetActive(true);
+        StartCreditScroll();
+    }
+    private void StartCreditScroll()
+    {
+        creditsScroll.localPosition = creditsStartPos;
+        creditsCoroutine = StartCoroutine(ScrollCredits());
+    }
+    private void StopCreditScroll()
+    {
+        if(creditsCoroutine != null)
+        {
+            StopCoroutine(creditsCoroutine);
+            creditsCoroutine = null;
+        }
+        creditsScroll.localPosition = creditsStartPos;
+    }
+    private IEnumerator ScrollCredits()
+    {
+        while(creditsScroll.localPosition.y < creditsTopPos)
+        {
+            creditsScroll.localPosition += new Vector3(0, scrollSpeed * Time.deltaTime, 0);
+            yield return null;
+        }
+        yield return new WaitForSeconds(2f);
+        EnableMain();
     }
     public void StartGame(int sceneNumber)
     {
