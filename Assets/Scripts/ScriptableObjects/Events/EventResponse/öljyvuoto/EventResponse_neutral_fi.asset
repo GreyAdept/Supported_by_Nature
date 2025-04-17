@@ -15,5 +15,14 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 1
   responseText: "Odota, ett\xE4 sade laimentaa \xF6ljyn ja tuuli vie \xF6ljyn pois"
+  responseTextLocalized:
+    fi: "Odota, ett\xE4 sade laimentaa \xF6ljyn ja tuuli vie \xF6ljyn pois"
+    sw: "V\xE4nta p\xE5 att regnet ska sp\xE4da ut oljan och att vinden ska f\xF6ra
+      bort den"
+    en: Wait for the rain to dilute the oil, and hope the wind carries it away.
   outcomeText: Sade ei pese kaikkea pois, mutta tilanne ei ole katastrofaalinen
+  outcomeTextLocalized:
+    fi: Sade ei pese kaikkea pois, mutta tilanne ei ole katastrofaalinen
+    sw: "Regnet sk\xF6ljer inte bort allt, men situationen \xE4r inte katastrofal"
+    en: The rain won't wash everything away, but the situation isn't catastrophic.
   effects: []

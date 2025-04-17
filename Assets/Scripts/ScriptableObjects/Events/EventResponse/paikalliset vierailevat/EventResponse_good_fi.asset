@@ -16,6 +16,19 @@ MonoBehaviour:
   answerCategory: 0
   responseText: "Rakenna polku ohjaamaan heid\xE4n kulkuansa ja lis\xE4\xE4 infotauluja
     kosteikosta"
+  responseTextLocalized:
+    fi: "Rakenna polku ohjaamaan heid\xE4n kulkuansa ja lis\xE4\xE4 infotauluja kosteikosta"
+    sw: "Bygg en stig f\xF6r att v\xE4gleda dem och s\xE4tt upp informationstavlor
+      om v\xE5tmarken"
+    en: Build a path to guide their movement and add informational signs about the
+      wetland.
   outcomeText: "Luontopolut suojelevat herkki\xE4 alueita, ja tieto lis\xE4\xE4 k\xE4vij\xF6iden
     ymm\xE4rryst\xE4"
+  outcomeTextLocalized:
+    fi: "Luontopolut suojelevat herkki\xE4 alueita, ja tieto lis\xE4\xE4 k\xE4vij\xF6iden
+      ymm\xE4rryst\xE4"
+    sw: "Naturstigar skyddar k\xE4nsliga omr\xE5den och information \xF6kar bes\xF6karnas
+      f\xF6rst\xE5else"
+    en: Nature trails protect sensitive areas, and information increases visitors'
+      understanding.
   effects: []

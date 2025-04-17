@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 0
   responseText: "Aitaa \xF6ljyinen alue \xF6ljypuomeilla"
+  responseTextLocalized:
+    fi: "Aitaa \xF6ljyinen alue \xF6ljypuomeilla"
+    sw: "St\xE4ngsla in det oljiga omr\xE5det med oljel\xE4nser"
+    en: Contain the oily area with oil booms.
   outcomeText: "Puomit est\xE4v\xE4t \xF6ljyn levi\xE4misen ja saat lis\xE4aikaa
     alueen puhdistamiseen"
+  outcomeTextLocalized:
+    fi: "Puomit est\xE4v\xE4t \xF6ljyn levi\xE4misen ja saat lis\xE4aikaa alueen
+      puhdistamiseen"
+    sw: "L\xE4nsar hindrar oljan fr\xE5n att spridas och ger dig mer tid att st\xE4da
+      upp omr\xE5det"
+    en: The booms prevent the oil from spreading and give you more time to clean
+      the area.
   effects: []

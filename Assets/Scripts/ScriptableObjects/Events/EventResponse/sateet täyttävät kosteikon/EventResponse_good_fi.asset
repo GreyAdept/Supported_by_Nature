@@ -16,6 +16,18 @@ MonoBehaviour:
   answerCategory: 0
   responseText: Tarkista tulvauomat ja hallitse virtausta tarvittaessa kaivamalla
     viivytysaltaita
+  responseTextLocalized:
+    fi: Tarkista tulvauomat ja hallitse virtausta tarvittaessa kaivamalla viivytysaltaita
+    sw: "Kontrollera \xF6versv\xE4mningsomr\xE5den och kontrollera fl\xF6det genom
+      att gr\xE4va f\xF6rdr\xF6jningsdammar vid behov"
+    en: Check flood channels and manage the flow by digging retention basins if needed.
   outcomeText: "Vesi viipyy pidemp\xE4\xE4n kosteikossa, ravinteet imeytyy kasveihin
     ja mahdolliset tulvavahingot estet\xE4\xE4n."
+  outcomeTextLocalized:
+    fi: "Vesi viipyy pidemp\xE4\xE4n kosteikossa, ravinteet imeytyy kasveihin ja
+      mahdolliset tulvavahingot estet\xE4\xE4n."
+    sw: "Vattnet stannar l\xE4ngre i v\xE5tmarken, n\xE4rings\xE4mnena tas upp av
+      v\xE4xterna och potentiella \xF6versv\xE4mningsskador f\xF6rhindras."
+    en: Water stays longer in the wetland, nutrients are absorbed by plants, and
+      potential flood damage is prevented.
   effects: []

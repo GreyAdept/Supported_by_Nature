@@ -15,6 +15,15 @@ MonoBehaviour:
   linkedEventId: vesilinnut_saapuvat
   answerCategory: 2
   responseText: "Niit\xE4 kasvillisuutta"
+  responseTextLocalized:
+    fi: "Niit\xE4 kasvillisuutta"
+    sw: "Sl\xE5 vegetation"
+    en: Remove the vegetation.
   outcomeText: "Kasvillisuuden poistaminen altistaa pesim\xE4linnut pedoille ja muulle
     h\xE4iri\xF6lle"
+  outcomeTextLocalized:
+    fi: "Kasvillisuuden poistaminen altistaa pesim\xE4linnut pedoille ja muulle h\xE4iri\xF6lle"
+    sw: "Borttagning av vegetation uts\xE4tter h\xE4ckande f\xE5glar f\xF6r rovdjur
+      och andra st\xF6rningar"
+    en: Removing vegetation exposes nesting birds to predators and other disturbances.
   effects: []

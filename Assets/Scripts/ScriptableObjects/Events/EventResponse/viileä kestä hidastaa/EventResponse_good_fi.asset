@@ -15,5 +15,13 @@ MonoBehaviour:
   linkedEventId: vieraslajit_valtaavat
   answerCategory: 0
   responseText: "Seuraa kosteikon tilaa ja varmista, ett\xE4 se pysyy tasapainossa"
+  responseTextLocalized:
+    fi: "Seuraa kosteikon tilaa ja varmista, ett\xE4 se pysyy tasapainossa"
+    sw: "\xD6vervaka v\xE5tmarken och se till att den f\xF6rblir i balans"
+    en: Monitor the condition of the wetland and ensure it remains balanced.
   outcomeText: Voit reagoida ajoissa mahdollisiin ongelmiin.
+  outcomeTextLocalized:
+    fi: Voit reagoida ajoissa mahdollisiin ongelmiin.
+    sw: "Du kan reagera i tid p\xE5 potentiella problem"
+    en: You can respond in time to potential issues.
   effects: []

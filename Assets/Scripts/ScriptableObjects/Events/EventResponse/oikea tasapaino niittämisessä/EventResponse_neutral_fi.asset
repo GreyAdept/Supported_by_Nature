@@ -15,7 +15,19 @@ MonoBehaviour:
   linkedEventId: "maatalousvirhe_lis\xE4\xE4"
   answerCategory: 1
   responseText: "Istuta lis\xE4\xE4 kasveja"
+  responseTextLocalized:
+    fi: "Istuta lis\xE4\xE4 kasveja"
+    sw: "Plantera fler v\xE4xter"
+    en: Plant more vegetation.
   outcomeText: "Kasvillisuus monipuolistuu, mutta jos vanhaa kasvustoa ei poista
     ensin, uudet kasvit eiv\xE4t saa tilaa ja kosteikon kasvillisuudesta tulee liian
     tihe\xE4\xE4."
+  outcomeTextLocalized:
+    fi: "Kasvillisuus monipuolistuu, mutta jos vanhaa kasvustoa ei poista ensin,
+      uudet kasvit eiv\xE4t saa tilaa ja kosteikon kasvillisuudesta tulee liian tihe\xE4\xE4."
+    sw: "V\xE4xtligheten blir mer varierad, men om den gamla v\xE4xtligheten inte
+      tas bort f\xF6rst kommer nya v\xE4xter inte att f\xE5 plats och v\xE5tmarkens
+      v\xE4xtlighet blir f\xF6r t\xE4t."
+    en: The vegetation becomes more diverse, but if old growth isn't removed first,
+      new plants won't have space, and the wetland's vegetation becomes too dense.
   effects: []

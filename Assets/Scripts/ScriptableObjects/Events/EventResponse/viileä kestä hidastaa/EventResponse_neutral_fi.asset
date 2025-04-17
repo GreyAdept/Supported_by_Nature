@@ -15,6 +15,17 @@ MonoBehaviour:
   linkedEventId: vieraslajit_valtaavat
   answerCategory: 1
   responseText: Istuta paljon uusia kasveja
+  responseTextLocalized:
+    fi: Istuta paljon uusia kasveja
+    sw: "Plantera massor av nya v\xE4xter"
+    en: Plant many new plants.
   outcomeText: "Kasvit eiv\xE4t juurru kunnolla kylm\xE4ss\xE4 s\xE4\xE4ss\xE4. Osa
     kuolee ja ty\xF6 menee osittain hukkaan."
+  outcomeTextLocalized:
+    fi: "Kasvit eiv\xE4t juurru kunnolla kylm\xE4ss\xE4 s\xE4\xE4ss\xE4. Osa kuolee
+      ja ty\xF6 menee osittain hukkaan."
+    sw: "V\xE4xter rotar sig inte ordentligt i kallt v\xE4der. En del d\xF6r och
+      en del av arbetet \xE4r bortkastat."
+    en: The plants do not root properly in cold weather. Some die, and the effort
+      is partially wasted.
   effects: []

@@ -15,5 +15,13 @@ MonoBehaviour:
   linkedEventId: "maatalousvirhe_lis\xE4\xE4"
   answerCategory: 2
   responseText: Anna vierailijoiden kulkea vapaasti kosteikolla
+  responseTextLocalized:
+    fi: Anna vierailijoiden kulkea vapaasti kosteikolla
+    sw: "L\xE5t bes\xF6karna g\xE5 fritt i v\xE5tmarken"
+    en: Let visitors roam freely in the wetland.
   outcomeText: "El\xE4imet katoavat, kasvillisuus vaurioituu ja alue k\xE4rsii"
+  outcomeTextLocalized:
+    fi: "El\xE4imet katoavat, kasvillisuus vaurioituu ja alue k\xE4rsii"
+    sw: "Djur f\xF6rsvinner, vegetationen skadas och omr\xE5det blir lidande."
+    en: Animals disappear, vegetation is damaged, and the area suffers.
   effects: []
