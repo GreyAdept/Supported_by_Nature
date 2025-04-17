@@ -18,6 +18,7 @@ public class EventPanelUI : MonoBehaviour
     [SerializeField] private TMP_Text neutralResponseButtonText;
     [SerializeField] private TMP_Text badResponseButtonText;
     [SerializeField] private TMP_Text outcomeText;
+    [SerializeField] private TMP_Text bonusAPIndicatorText;
     private WetlandEvent currentEvent;
     private TurnManager turnManager;
     private SoundManager soundManager;
@@ -135,6 +136,22 @@ public class EventPanelUI : MonoBehaviour
         outcomePopupPanel.transform.localScale = Vector3.zero;
         outcomePopupPanel.SetActive(true);
         outcomeText.text = selectedResponse.outcomeTextLocalized.GetText();
+
+        int bonusAP = 0;
+        switch(answer)
+        {
+            case AnswerCategory.Good:
+                bonusAP = 3;
+                break;
+            case AnswerCategory.Neutral:
+                bonusAP = 2;
+                break;
+            case AnswerCategory.Bad:
+                bonusAP = 1;
+                break;
+        }
+        if (bonusAPIndicatorText != null) bonusAPIndicatorText.text = $"+{bonusAP} AP";
+
         outcomePopupPanel.transform.DOScale(Vector3.one, 0.4f).SetUpdate(true);
     }
     private void CloseOutcomePanel()

@@ -3,10 +3,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
+using NUnit.Framework.Constraints;
 
 public class GameState : MonoBehaviour
 {
     public int currentActionPoints = 4;
+    private int nextTurnBonusActionPoints;
     public Dictionary<MetricType, float> metrics;
     public List<OngoingEffect> activeEffects;
     private List<MetricEffect> pendingEffects;
@@ -81,6 +83,18 @@ public class GameState : MonoBehaviour
     public void HandleRandomEvent(AnswerCategory answer)
     {
         Debug.Log($"selected {answer.ToString()} response");
+        switch(answer)
+        {
+            case AnswerCategory.Good:
+                nextTurnBonusActionPoints += 3;
+                break;
+            case AnswerCategory.Neutral:
+                nextTurnBonusActionPoints += 2;
+                break;
+            case AnswerCategory.Bad:
+                nextTurnBonusActionPoints += 1;
+                break;
+        }
         onEventChoiceMade?.Invoke();
     }
     private void HandleSaveGame()
@@ -89,7 +103,8 @@ public class GameState : MonoBehaviour
     }
     private void ResetActionPoints()
     {
-        currentActionPoints = 4;
+        currentActionPoints = 4 + nextTurnBonusActionPoints;
+        nextTurnBonusActionPoints = 0;
     }
     //add action effects to list so they can be applied at end turn
     public void QueueMetricEffect(MetricEffect effect)
