@@ -91,9 +91,15 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
     public void OnPointerUp(PointerEventData pointerEventData)
     {
         Debug.Log("Pointer up!");
+        if (tm.selectedTile != null)
+        {
+            action.affectTile(tm.selectedTile);
+            Debug.Log("clicked!" + TurnManager.Instance.gameState.currentActionPoints);
+        }
         selected = false;
         tm.toolBeingUsed = false;
         rect.anchoredPosition = originalPosition;
+        
     }
     
     /*

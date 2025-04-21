@@ -3287,7 +3287,7 @@
     "m_Title": "Water Foam",
     "m_Position": {
         "x": -1015.0,
-        "y": 585.0000610351563
+        "y": 585.0
     }
 }
 
@@ -3947,7 +3947,7 @@
     "m_ObjectId": "ed7c0c5c839340afa81246e6385e5e95",
     "m_Title": "Water Color",
     "m_Position": {
-        "x": 53.99993896484375,
+        "x": 54.0,
         "y": -408.0
     }
 }

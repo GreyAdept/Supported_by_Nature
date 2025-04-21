@@ -7,7 +7,7 @@ public class mouseRaycaster : MonoBehaviour
 {
 
     [SerializeField] private Vector2 mousePos;
-    [SerializeField] private Vector3 worldPos;
+    public Vector3 worldPos;
     [SerializeField] private Vector3 projectedPos;
     public Camera cam;
     public GameObject tileHoverOver;
