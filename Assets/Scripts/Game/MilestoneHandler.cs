@@ -28,6 +28,10 @@ public class MilestoneHandler : MonoBehaviour
     [SerializeField] private int maxBiodiversity;
 
     [SerializeField] private int tileCount;
+    [SerializeField] private Sprite milestoneLockedSprite;
+    [SerializeField] private Sprite milestoneOneAvailable;
+    [SerializeField] private Sprite milestoneTwoAvailable;
+    [SerializeField] private Sprite milestoneThreeAvailable;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,7 +39,9 @@ public class MilestoneHandler : MonoBehaviour
         currentBiodiversity = 0;
         totalMilestoneProgress = 0;
         TurnManager.Instance.onTurnChanged.AddListener(ResetBiodiversity);
-        
+        milestone1Button.image.sprite = milestoneLockedSprite;
+        milestone2Button.image.sprite = milestoneLockedSprite;
+        milestone3Button.image.sprite = milestoneLockedSprite;
         milestone1Button.interactable = false;
         milestone2Button.interactable = false;
         milestone3Button.interactable = false;
@@ -61,16 +67,19 @@ public class MilestoneHandler : MonoBehaviour
         if (currentBiodiversity > maxBiodiversity * 0.25)
         {
             milestone1Button.interactable = true;
+            milestone1Button.image.sprite = milestoneOneAvailable;
         }
 
         if (currentBiodiversity > maxBiodiversity * 0.50)
         {
             milestone2Button.interactable = true;
+            milestone2Button.image.sprite = milestoneTwoAvailable;
         }
 
         if (currentBiodiversity > maxBiodiversity * 0.90)
         {
             milestone3Button.interactable = true;
+            milestone3Button.image.sprite = milestoneThreeAvailable;
         }
     }
 
@@ -91,7 +100,7 @@ public class MilestoneHandler : MonoBehaviour
                             {
                                 milestone1.isOn = true;
                                 milestone1Button.interactable = false;
-                                milestone1Button.gameObject.SetActive(false);
+                                //milestone1Button.gameObject.SetActive(false);
                                 RandomEventSystem.instance.ForceNextEvent("kosteikolle_saapuu");
                                 
                             }
@@ -113,7 +122,7 @@ public class MilestoneHandler : MonoBehaviour
                             {
                                 milestone2.isOn = true;
                                 milestone2Button.interactable = false;
-                                milestone2Button.gameObject.SetActive(false);
+                                //milestone2Button.gameObject.SetActive(false);
                                 RandomEventSystem.instance.ForceNextEvent("vesilinnut_saapuvat");
                                 
                             }
@@ -134,7 +143,7 @@ public class MilestoneHandler : MonoBehaviour
                             {
                                 milestone3.isOn = true;
                                 milestone3Button.interactable = false;
-                                milestone3Button.gameObject.SetActive(false);
+                                //milestone3Button.gameObject.SetActive(false);
                                 
                                 Debug.Log("you're winner");
                             }

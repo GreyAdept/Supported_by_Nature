@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
   npcNameLocalized:
-    fi: 
-    sw: 
-    en: 
+    fi: Costeicco Guru
+    sw: Costeicco Guru
+    en: Costeicco Guru
   npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
   dialogueText: "Havaitsen, ett\xE4 kosteikkoon on saapunut tunkeilijoita, jotka
     eiv\xE4t t\xE4nne kuulu. Vieraslajit eiv\xE4t saapuneet kutsuttuina, mutta ne

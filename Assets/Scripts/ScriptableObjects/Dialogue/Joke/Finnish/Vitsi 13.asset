@@ -13,8 +13,17 @@ MonoBehaviour:
   m_Name: Vitsi 13
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: Costeicco Guru
+    sw: Costeicco Guru
+    en: Costeicco Guru
   npcImage: {fileID: 21300000, guid: 539b1fb467eadee4e8bbea246fabc30b, type: 3}
   dialogueText: "Mik\xE4 on hauen inhokki veli?\n\u2013 Virveli."
+  dialogueTextLocalized:
+    fi: "Mik\xE4 on hauen inhokki veli?\n\u2013 Virveli."
+    sw: "\"Ingen budget f\xF6r att \xF6vers\xE4tta sk\xE4mt :(\""
+    en: "Pike, perch, and roach walked into a bar.\L\"We'd like some frosty ones,\"
+      said the pike.\L\"We don\u2019t serve dinner,\" said the bartender."
   typeSpeed: 1
   isJoke: 1
   isEducational: 0

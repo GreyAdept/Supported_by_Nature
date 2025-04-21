@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
   npcNameLocalized:
-    fi: 
-    sw: 
-    en: 
+    fi: Costeicco Guru
+    sw: Costeicco Guru
+    en: Costeicco Guru
   npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
   dialogueText: "Tunsin sen jo tuulessa\u2026 vesi nousee, se etsii tiet\xE4\xE4n,
     eik\xE4 se tunne rajoja\u2026 \_Suojelija \u2013 vesi on yst\xE4v\xE4si, mutta

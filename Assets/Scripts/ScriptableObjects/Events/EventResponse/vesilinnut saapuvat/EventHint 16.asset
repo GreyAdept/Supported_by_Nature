@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
   npcNameLocalized:
-    fi: 
-    sw: 
-    en: 
+    fi: Costeicco Guru
+    sw: Costeicco Guru
+    en: Costeicco Guru
   npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
   dialogueText: "Sorsat kulkevat veden pinnalla, joutsenet tarkkailevat ymp\xE4rist\xF6\xE4
     \u2013 ne etsiv\xE4t paikkaa, jossa aloittaa uuden el\xE4m\xE4n. Kosteikko on

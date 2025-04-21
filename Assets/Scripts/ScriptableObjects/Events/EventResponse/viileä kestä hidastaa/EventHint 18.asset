@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
   npcNameLocalized:
-    fi: 
-    sw: 
-    en: 
+    fi: Costeicco Guru
+    sw: Costeicco Guru
+    en: Costeicco Guru
   npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
   dialogueText: "Tunnetko sen? Kes\xE4n voima on heikompi t\xE4n\xE4 vuonna, ja kosteikon
     kasvit eiv\xE4t nouse yht\xE4 nopeasti. Linnut viipyv\xE4t hetken, mutta jatkavat

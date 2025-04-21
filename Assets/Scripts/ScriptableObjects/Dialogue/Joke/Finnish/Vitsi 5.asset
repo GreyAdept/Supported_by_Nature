@@ -13,9 +13,18 @@ MonoBehaviour:
   m_Name: Vitsi 5
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: Costeicco Guru
+    sw: Costeicco Guru
+    en: Costeicco Guru
   npcImage: {fileID: 21300000, guid: 539b1fb467eadee4e8bbea246fabc30b, type: 3}
   dialogueText: "Guru meni psykiatrille. \"Mik\xE4 vaivaa kysyi psykiatri? Aloittakaa
     ihan alusta.\" Alussa min\xE4 loin suon ja maan, vastasi guru."
+  dialogueTextLocalized:
+    fi: "Guru meni psykiatrille. \"Mik\xE4 vaivaa kysyi psykiatri? Aloittakaa ihan
+      alusta.\" Alussa min\xE4 loin suon ja maan, vastasi guru."
+    sw: "\"Ingen budget f\xF6r att \xF6vers\xE4tta sk\xE4mt :(\""
+    en: "Why did the forest break up with the city?\LIt needed more space to grow!"
   typeSpeed: 1
   isJoke: 1
   isEducational: 0

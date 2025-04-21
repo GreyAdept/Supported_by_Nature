@@ -13,9 +13,20 @@ MonoBehaviour:
   m_Name: Vitsi 8
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: Costeicco Guru
+    sw: Costeicco Guru
+    en: Costeicco Guru
   npcImage: {fileID: 21300000, guid: 539b1fb467eadee4e8bbea246fabc30b, type: 3}
   dialogueText: "Tied\xE4tk\xF6, kuinka paljon kuusi painaa?\n\u2013 Min\xE4 en,
     mutta ainakin se murtaa j\xE4\xE4n."
+  dialogueTextLocalized:
+    fi: "Tied\xE4tk\xF6, kuinka paljon kuusi painaa?\n\u2013 Min\xE4 en, mutta ainakin
+      se murtaa j\xE4\xE4n."
+    sw: "\"Ingen budget f\xF6r att \xF6vers\xE4tta sk\xE4mt :(\""
+    en: "Two men were fishing. One caught a giant pike, but threw it back into the
+      sea.\L\"Why did you do that?\" asked the other.\L\"I can\u2019t afford to eat
+      pike!\" he replied"
   typeSpeed: 1
   isJoke: 1
   isEducational: 0

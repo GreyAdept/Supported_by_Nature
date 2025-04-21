@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: Vitsi 11
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: Costeicco Guru
+    sw: Costeicco Guru
+    en: Costeicco Guru
   npcImage: {fileID: 21300000, guid: 539b1fb467eadee4e8bbea246fabc30b, type: 3}
   dialogueText: "Miss\xE4 kalat nukkuvat?\n\u2013 Vesis\xE4ngyss\xE4!"
+  dialogueTextLocalized:
+    fi: "Miss\xE4 kalat nukkuvat?\n\u2013 Vesis\xE4ngyss\xE4!"
+    sw: "\"Ingen budget f\xF6r att \xF6vers\xE4tta sk\xE4mt :(\""
+    en: "Where do fish sleep?\L\u2013 In a waterbed!"
   typeSpeed: 1
   isJoke: 1
   isEducational: 0

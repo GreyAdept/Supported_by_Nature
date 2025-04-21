@@ -1876,6 +1876,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2456e55ee59c4d4ea5b82a6c4ba0487, type: 3}
+--- !u!114 &249131093 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 851188414664394561, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+  m_PrefabInstance: {fileID: 1160520424}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &288624059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6006,10 +6017,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 119159621726904655, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 212909088317145790, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1206503449}
+    - target: {fileID: 222166964287693015, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: closeButtonText
+      value: 
+      objectReference: {fileID: 249131093}
+    - target: {fileID: 222166964287693015, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: closeButtonTextLocalized.en
+      value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 222166964287693015, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: closeButtonTextLocalized.fi
+      value: Jatka
+      objectReference: {fileID: 0}
+    - target: {fileID: 222166964287693015, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: closeButtonTextLocalized.sw
+      value: "Forts\xE4tt"
+      objectReference: {fileID: 0}
     - target: {fileID: 287154553841648557, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6028,7 +6059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3050897033742178904, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -13.040009
+      value: -13.040024
       objectReference: {fileID: 0}
     - target: {fileID: 5152066133374073454, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -6058,6 +6089,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2032861148}
+    - target: {fileID: 8458126795884919680, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5382defce848b8f44b41a8d16a671b08, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -12527,7 +12562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4526592340046353514, guid: 693ab258d30c74f479a13bbda500fbcd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.2188873
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4526592340046353514, guid: 693ab258d30c74f479a13bbda500fbcd, type: 3}
       propertyPath: m_LocalRotation.w

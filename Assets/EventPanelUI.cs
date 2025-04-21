@@ -18,6 +18,7 @@ public class EventPanelUI : MonoBehaviour
     [SerializeField] private TMP_Text neutralResponseButtonText;
     [SerializeField] private TMP_Text badResponseButtonText;
     [SerializeField] private TMP_Text outcomeText;
+    [SerializeField] private TMP_Text closeButtonText;
     [SerializeField] private TMP_Text bonusAPIndicatorText;
     private WetlandEvent currentEvent;
     private TurnManager turnManager;
@@ -37,6 +38,7 @@ public class EventPanelUI : MonoBehaviour
     [SerializeField] private TMP_Text choiceButtonText;
     [SerializeField] private LocalizedText selectButtonTextLocalized;
     [SerializeField] private LocalizedText choiceButtonTextLocalized;
+    [SerializeField] private LocalizedText closeButtonTextLocalized;
     
 
 
@@ -53,6 +55,7 @@ public class EventPanelUI : MonoBehaviour
         okButton.interactable = false;
         choiceButtonText.text = choiceButtonTextLocalized.GetText();
         selectButtonText.text = selectButtonTextLocalized.GetText();
+        closeButtonText.text = closeButtonTextLocalized.GetText();
     }
     public void GetNewEvent()
     {

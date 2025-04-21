@@ -138,6 +138,13 @@ MonoBehaviour:
   onTutorialCompleted:
     m_PersistentCalls:
       m_Calls: []
+  soundIDs:
+  - guru01
+  - guru02
+  - guru03
+  - guru04
+  - guru05
+  - guru06
 --- !u!114 &2143141251308145067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +190,7 @@ MonoBehaviour:
   projectedPos: {x: 0, y: 0, z: 0}
   cam: {fileID: 0}
   tileHoverOver: {fileID: 0}
+  isTouching: 0
   touchPosition: {x: 0, y: 0}
 --- !u!1 &8862060209999857035
 GameObject:

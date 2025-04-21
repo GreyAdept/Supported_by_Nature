@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
   npcNameLocalized:
-    fi: 
-    sw: 
-    en: 
+    fi: Costeicco Guru
+    sw: Costeicco Guru
+    en: Costeicco Guru
   npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
   dialogueText: "Katso veteen, n\xE4etk\xF6 sen? Hauet ovat l\xE4hteneet liikkeelle.
     Ne eiv\xE4t ole kadonneet \u2013 ne etsiv\xE4t vain uusia vesi\xE4, uusia saalispaikkoja."

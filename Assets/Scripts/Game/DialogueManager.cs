@@ -24,6 +24,8 @@ public class DialogueManager : MonoBehaviour
     public UnityEvent<string> onTaskAssigned;
     public UnityEvent<string> onTaskCompleted;
     public UnityEvent onTutorialCompleted;
+    [Header("Sound")]
+    [SerializeField] private string[] soundIDs;
 
     private int currentTutorialIndex = 0;
     private bool tutorialActive = true;
@@ -140,6 +142,7 @@ public class DialogueManager : MonoBehaviour
             {
                 ShowDialogue(hint);
                 hasGivenHintThisTurn = true;
+                RandomDialogueSoundEffectPlayer();
             }
         }
     }
@@ -148,6 +151,14 @@ public class DialogueManager : MonoBehaviour
         RandomDialogue randomDialogue = dialogueDB.GetRandomDialogue(turnManager.CurrentTurn);
         if(randomDialogue != null)
         {
+            if(randomDialogue.isJoke)
+            {
+                SoundManager.Instance.PlayGameSound("joke01");
+            }
+            else
+            {
+                RandomDialogueSoundEffectPlayer();
+            }
             ShowDialogue(randomDialogue);
         }
     }
@@ -225,6 +236,11 @@ public class DialogueManager : MonoBehaviour
         {
             ShowRandomDialogue();
         }
+    }
+    public void RandomDialogueSoundEffectPlayer()
+    {
+        int i = Random.Range(0, soundIDs.Length);
+        SoundManager.Instance.PlayGameSound(soundIDs[i]);
     }
     private void TemporaryQuestManager()
     {
