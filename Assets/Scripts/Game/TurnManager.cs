@@ -32,6 +32,7 @@ public class TurnManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("duplicate turnmanager");
             Destroy(gameObject);
         }
     }

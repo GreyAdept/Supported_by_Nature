@@ -85,10 +85,12 @@ public class mouseRaycaster : MonoBehaviour
         {
             return hit.collider.gameObject;
         }
-        else
+        else if(hit.collider.CompareTag("NPC"))
         {
+            DialogueManager.instance.InteractWithNPC();
             return selectedTile;
         }
+        return selectedTile;
     }
 
     void OnDrawGizmos()

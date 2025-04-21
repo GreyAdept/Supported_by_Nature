@@ -16,6 +16,7 @@ public class LanguageManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("duplicate languagemanager");
             Destroy(gameObject);
             return;
         }

@@ -173,6 +173,10 @@ MonoBehaviour:
   currentBiodiversity: 0
   maxBiodiversity: 0
   tileCount: 0
+  milestoneLockedSprite: {fileID: 21300000, guid: da8cd2493229bc145ba4c9b0708a15cb, type: 3}
+  milestoneOneAvailable: {fileID: 21300000, guid: a6f6c42785931e241aaf3384c20c82d0, type: 3}
+  milestoneTwoAvailable: {fileID: 21300000, guid: e8e0e25585a042d499a34fa086356fd6, type: 3}
+  milestoneThreeAvailable: {fileID: 21300000, guid: fb3abcc692798524da6e03a76b40835d, type: 3}
 --- !u!114 &7575522274464705757
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager instance;
     [Header("References")]
     [SerializeField] private DialogueDatabase dialogueDB;
     [SerializeField] private GameObject dialoguePanel;
@@ -36,6 +37,11 @@ public class DialogueManager : MonoBehaviour
     private string finalText;
     public bool IsDialogueActive => dialoguePanel.activeInHierarchy;
 
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+    }
     private void Start()
     {
         randomEventSystem = RandomEventSystem.instance;
