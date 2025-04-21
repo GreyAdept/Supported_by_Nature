@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.LowLevel;
 
 public class mouseRaycaster : MonoBehaviour
 {
@@ -36,7 +35,12 @@ public class mouseRaycaster : MonoBehaviour
     {
         inputActions = new InputSystem_Actions();
         inputActions.Enable();
-        inputActions.Touch.Touch.performed += ctx => touchPosition = ctx.ReadValue<Vector2>();
+        inputActions.Touch.Touch.performed += ctx =>
+        {
+            touchPosition = ctx.ReadValue<Vector2>();
+            CheckForNPCHit();
+        };
+
         //inputActions.Touch.Touch.canceled += ctz => isTouching = false;
     }
 
@@ -70,9 +74,21 @@ public class mouseRaycaster : MonoBehaviour
 
         selectedTile = newSelectedTile;
        
-    }   
+    }
 
-    
+    public void CheckForNPCHit()
+    {
+        Ray ray = cam.ScreenPointToRay(touchPosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider != null && hit.collider.CompareTag("NPC"))
+            {
+                DialogueManager.instance.InteractWithNPC();
+            }
+        }
+    }
 
 
     public GameObject CheckTileHitting()
@@ -84,11 +100,6 @@ public class mouseRaycaster : MonoBehaviour
         if (hit.collider != null && hit.collider.CompareTag("Tile")) //check if ray hits a tile
         {
             return hit.collider.gameObject;
-        }
-        else if(hit.collider.CompareTag("NPC"))
-        {
-            DialogueManager.instance.InteractWithNPC();
-            return selectedTile;
         }
         return selectedTile;
     }

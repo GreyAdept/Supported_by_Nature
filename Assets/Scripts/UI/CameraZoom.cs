@@ -1,10 +1,8 @@
 using System;
 using System.Collections;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.Utilities;
-using UnityEngine.Windows.WebCam;
 
 public class CameraZoom : MonoBehaviour
 {

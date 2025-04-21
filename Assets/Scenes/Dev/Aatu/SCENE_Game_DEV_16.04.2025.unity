@@ -6122,6 +6122,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1206503449}
+    - target: {fileID: 360294144444318792, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 360294144444318792, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2082854623214543952, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
       propertyPath: m_Name
       value: UICanvas
@@ -14445,9 +14453,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773477bafb8d3984a94cf87f23eb801a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomSensitivity: 10
+  panSensitivity: 10
   touchPosition1: {x: 0, y: 0}
   touchPosition2: {x: 0, y: 0}
-  zoomFactor: 0
+  touchCount: 0
+  zoom: 0
+  zoomValue: 0
+  prevDistance: 0
+  currentDistance: 0
 --- !u!222 &6888523955795472266
 CanvasRenderer:
   m_ObjectHideFlags: 0
