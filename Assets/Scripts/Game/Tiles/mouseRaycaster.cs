@@ -7,7 +7,7 @@ public class mouseRaycaster : MonoBehaviour
 {
 
     [SerializeField] private Vector2 mousePos;
-    [SerializeField] private Vector3 worldPos;
+    public Vector3 worldPos;
     [SerializeField] private Vector3 projectedPos;
     public Camera cam;
     public GameObject tileHoverOver;
@@ -36,66 +36,31 @@ public class mouseRaycaster : MonoBehaviour
     {
         inputActions = new InputSystem_Actions();
         inputActions.Enable();
-        inputActions.Touch.Touch.performed += ctx =>
-        {
-            touchPosition = ctx.ReadValue<Vector2>();
-            isTouching = true;
-        };
-        inputActions.Touch.Touch.canceled += ctz => isTouching = false;
+        inputActions.Touch.Touch.performed += ctx => touchPosition = ctx.ReadValue<Vector2>();
+        //inputActions.Touch.Touch.canceled += ctz => isTouching = false;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        // mobile fix
-        Vector2 inputPos;
-        if(Touchscreen.current != null && isTouching)
+    {   
+        if (Touchscreen.current == null)
         {
-            inputPos = touchPosition;
+            touchPosition = Mouse.current.position.ReadValue();
         }
-        else inputPos = Mouse.current.position.ReadValue();
-        mousePos = inputPos;
+        else
+        {
+            mousePos = touchPosition;
+        }
         Plane plane = new Plane(Vector3.up, Vector3.zero);
-        Ray ray = cam.ScreenPointToRay(inputPos);
-        if(plane.Raycast(ray, out float distance))
-        {
-            worldPos = ray.GetPoint(distance);
-            projectedPos = worldPos;
-        }
-        var newSelectedTile = CheckTileHitting();
-        if ((selectedTile != null && newSelectedTile != selectedTile))
-        {
-            newSelectedTile.GetComponent<gameTile>().StartHover();
-            tm.selectedTile = newSelectedTile.GetComponent<gameTile>();
-            selectedTile.GetComponent<gameTile>().ClearHover();
-        }
-        selectedTile = newSelectedTile;
-        /*
-        mousePos = Mouse.current.position.ReadValue(); //read mouse position
-        /* // this is the old raycast script (for top down camera)
-        worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Vector3.Distance(GameObject.Find("TerrainGrid").transform.position, cam.transform.position))); //convert mouse position into world position
-        projectedPos = Vector3.ProjectOnPlane(worldPos, new Vector3(0, 1, 0)); //account for camera rotation
-        //projectedPos = worldPos;
-        */
-        /*
-        Plane plane = new Plane(Vector3.up, Vector3.zero);
-        Ray ray = new Ray();
-        if (useTouch) ray = cam.ScreenPointToRay(touchPosition);
-        else cam.ScreenPointToRay(mousePos);
+        Ray ray = cam.ScreenPointToRay(mousePos);
         if (plane.Raycast(ray, out float distance))
         {
             worldPos = ray.GetPoint(distance);
             projectedPos = worldPos;
         }
         
-        var newSelectedTile = CheckTileHitting();*/
-        /*
-        if (tm.toolBeingUsed)
-        {   
-            var newSelectedTile = CheckTileHitting();
-        }
-        */
-        /*
+        var newSelectedTile = CheckTileHitting();
+        
         if (selectedTile != null && newSelectedTile != selectedTile)
         {
             newSelectedTile.GetComponent<gameTile>().StartHover();
@@ -103,9 +68,11 @@ public class mouseRaycaster : MonoBehaviour
             selectedTile.GetComponent<gameTile>().ClearHover();
         }
 
-        selectedTile = newSelectedTile;*/
-
+        selectedTile = newSelectedTile;
+       
     }   
+
+    
 
 
     public GameObject CheckTileHitting()

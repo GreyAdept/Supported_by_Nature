@@ -8,31 +8,27 @@ using UnityEngine.InputSystem;
 public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
     public tileAction action;
+    private TurnManager turnManager;
     private tileManager tm;
     public TextMeshProUGUI buttonText;
-    private bool selected = false;
+    [SerializeField]private bool selected = false;
     private Vector3 originalPosition;
     private mouseRaycaster mouseRaycaster;
+    private RectTransform rect;
+
 
     void Start()
     {
-        originalPosition = GetComponent<RectTransform>().anchoredPosition;
+        rect = GetComponent<RectTransform>();
+        originalPosition = rect.anchoredPosition;
         tm = tileManager.Instance;
-        mouseRaycaster = tm.gameObject.GetComponent<mouseRaycaster>();
-        /*
-        if (action != null)
-        {
-            buttonText.text = action.actionName;
-        }
-        else
-        {
-            buttonText.text = "Placeholder Action";
-        }
-        */
+        turnManager = TurnManager.Instance;
+        mouseRaycaster = turnManager.gameObject.GetComponent<mouseRaycaster>();
     }
 
     void Update()
     {
+        /* broken code, drag doesn't work?
         if (selected)
         {
             Vector2 inputPos;
@@ -44,9 +40,27 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
             {
                 inputPos = Mouse.current.position.ReadValue();
             }
+
+
+        }
+        */
+        if (selected)
+        {   
+            if (Touchscreen.current == null)
+            {
+                var mousePos = Mouse.current.position.ReadValue();
+                transform.position = mousePos;
+                Debug.Log("touch screen null");
+            }
+            else
+            {
+                transform.position = mouseRaycaster.touchPosition;
+            }
             
             
         }
+        
+        
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -60,7 +74,7 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
     
     public void OnPointerClick (PointerEventData eventData)
     {   
-       if (tm.selectedTile != null)
+        if (tm.selectedTile != null)
         {
             action.affectTile(tm.selectedTile);
             Debug.Log("clicked!" + TurnManager.Instance.gameState.currentActionPoints);
@@ -76,13 +90,16 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerUp(PointerEventData pointerEventData)
     {
-        if(selected && tm.selectedTile != null)
+        Debug.Log("Pointer up!");
+        if (tm.selectedTile != null)
         {
             action.affectTile(tm.selectedTile);
+            Debug.Log("clicked!" + TurnManager.Instance.gameState.currentActionPoints);
         }
         selected = false;
         tm.toolBeingUsed = false;
-        GetComponent<RectTransform>().anchoredPosition = originalPosition;
+        rect.anchoredPosition = originalPosition;
+        
     }
     
     /*
