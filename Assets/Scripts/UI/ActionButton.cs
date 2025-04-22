@@ -44,6 +44,7 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
 
         }
         */
+        /*
         if (selected)
         {   
             if (Touchscreen.current == null)
@@ -58,6 +59,11 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
             }
             
             
+        }
+        */
+        if (selected)
+        {
+            transform.position = mouseRaycaster.touchPosition;
         }
         
         
