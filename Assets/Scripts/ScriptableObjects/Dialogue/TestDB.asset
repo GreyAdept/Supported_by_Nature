@@ -39,10 +39,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9721d5aa8d44ada47984bda8967691d9, type: 2}
   randomDialogues:
   - {fileID: 11400000, guid: 226143ef0e41ab94497e7d42c6a065fd, type: 2}
-  - {fileID: 11400000, guid: 9f672747a8df3f94b8c8073768e1e1bc, type: 2}
-  - {fileID: 11400000, guid: ae1830a7cd13ac94ba86779da4444829, type: 2}
-  - {fileID: 11400000, guid: b6ff263afac5fb64ab3f0eefa98bd04a, type: 2}
-  - {fileID: 11400000, guid: a1ff0f7ce8d8fb046a2c94638045a2ef, type: 2}
   jokeDialogues:
   - {fileID: 11400000, guid: 4f85678ffc803834abd3780c89f486b9, type: 2}
   - {fileID: 11400000, guid: ca75a27740e035847ab4ead9e5152e0a, type: 2}
@@ -59,10 +55,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 94493f0aa1d435a49afa2e7203bea47d, type: 2}
   educationalDialogues:
   - {fileID: 11400000, guid: c1b4b5c4ed6b20643a629b6c00ef8086, type: 2}
-  - {fileID: 11400000, guid: 23c5e61ba08043046b8cf8ae7d7571ac, type: 2}
-  - {fileID: 11400000, guid: 1838f0a9fe68d9a44b532918ab9a7f1a, type: 2}
-  - {fileID: 11400000, guid: 89e7f8fc7fdd2bb4e84cbd3d78f5f074, type: 2}
-  - {fileID: 11400000, guid: 5fe4690ba54deb24bbaf7378a5323947, type: 2}
-  - {fileID: 11400000, guid: 700af2accf434ad499790fd4f201de10, type: 2}
-  - {fileID: 11400000, guid: ed98e6ff88ea619439374a47eb37bf0c, type: 2}
-  - {fileID: 11400000, guid: babfbb71c9f87c64bb99f7fa73c66f32, type: 2}

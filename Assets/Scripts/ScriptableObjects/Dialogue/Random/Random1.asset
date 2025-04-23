@@ -12,17 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8947af4132cbea44bc0a974bdfab9f7, type: 3}
   m_Name: Random1
   m_EditorClassIdentifier: 
-  npcName: Costeicco Guru
-  npcNameLocalized:
-    fi: Costeicco Guru
-    sw: Costeicco Guru
-    en: Costeicco Guru
+  npcName: Costeicco guru
   npcImage: {fileID: 21300000, guid: f003c18d0ce99c5488b9dfa623c6e577, type: 3}
   dialogueText: "Mihink\xF6h\xE4n j\xE4tin saappaani..."
-  dialogueTextLocalized:
-    fi: "Mihink\xF6h\xE4n j\xE4tin saappaani..."
-    sw: "Var l\xE4mnade jag mina st\xF6vlar nu..."
-    en: Now where did I leave my boots...
   typeSpeed: 1
   isJoke: 0
   isEducational: 0
