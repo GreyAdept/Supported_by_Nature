@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8947af4132cbea44bc0a974bdfab9f7, type: 3}
-  m_Name: Educational1
+  m_Name: Educational1 6
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
   npcNameLocalized:
@@ -18,15 +18,15 @@ MonoBehaviour:
     sw: Costeicco Guru
     en: Costeicco Guru
   npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
-  dialogueText: "Tiesitk\xF6, ett\xE4 huonomuistinen orava istuttaa vahingossa metsi\xE4
-    unohtamillaan p\xE4hkin\xF6ill\xE4 ja terhoilla?"
+  dialogueText: "Tiesitk\xF6, ett\xE4 sammakon muodonmuutos on t\xE4ydellinen remontti
+    \u2013 jalat kasvavat, h\xE4nt\xE4 katoaa ja sisuskalutkin menev\xE4t uusiksi?"
   dialogueTextLocalized:
-    fi: "Tiesitk\xF6, ett\xE4 huonomuistinen orava istuttaa vahingossa metsi\xE4
-      unohtamillaan p\xE4hkin\xF6ill\xE4 ja terhoilla?"
-    sw: "Visste du att gl\xF6mska ekorrar planterar skogar av misstag med n\xF6tter
-      och ollon de gl\xF6mt bort?"
-    en: Did you know that forgetful squirrels accidentally reforest areas with the
-      nuts and acorns they forget?
+    fi: "Tiesitk\xF6, ett\xE4 sammakon muodonmuutos on t\xE4ydellinen remontti \u2013
+      jalat kasvavat, h\xE4nt\xE4 katoaa ja sisuskalutkin menev\xE4t uusiksi?"
+    sw: "Visste du att grodans f\xF6rvandling \xE4r en totalrenovering \u2013 benen
+      v\xE4xer ut, svansen f\xF6rsvinner och \xE4ven in\xE4lvorna f\xF6rnyas?"
+    en: "Did you know that a frog\u2019s metamorphosis is a total renovation \u2013
+      legs grow, the tail disappears, and even the guts get an upgrade?"
   typeSpeed: 1
   isJoke: 0
   isEducational: 1

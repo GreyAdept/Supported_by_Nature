@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8947af4132cbea44bc0a974bdfab9f7, type: 3}
-  m_Name: Random1
+  m_Name: Random1 4
   m_EditorClassIdentifier: 
   npcName: Costeicco Guru
   npcNameLocalized:
@@ -18,11 +18,13 @@ MonoBehaviour:
     sw: Costeicco Guru
     en: Costeicco Guru
   npcImage: {fileID: 21300000, guid: f003c18d0ce99c5488b9dfa623c6e577, type: 3}
-  dialogueText: "Mihink\xF6h\xE4n j\xE4tin saappaani..."
+  dialogueText: "Luonto siivoaa omat sotkunsa. Ihmisen j\xE4ljet, ne eiv\xE4t katoa
+    itsest\xE4\xE4n."
   dialogueTextLocalized:
-    fi: "Mihink\xF6h\xE4n j\xE4tin saappaani..."
-    sw: "Var l\xE4mnade jag mina st\xF6vlar nu..."
-    en: Now where did I leave my boots...
+    fi: "Luonto siivoaa omat sotkunsa. Ihmisen j\xE4ljet, ne eiv\xE4t katoa itsest\xE4\xE4n."
+    sw: "Naturen st\xE4dar upp sina egna r\xF6ror. M\xE4nskliga sp\xE5r, de f\xF6rsvinner
+      inte av sig sj\xE4lva."
+    en: Nature cleans up its own messes. Human traces, they don't disappear by themselves.
   typeSpeed: 1
   isJoke: 0
   isEducational: 0
