@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8947af4132cbea44bc0a974bdfab9f7, type: 3}
+  m_Name: Educational1 2
+  m_EditorClassIdentifier: 
+  npcName: Costeicco Guru
+  npcNameLocalized:
+    fi: Costeicco Guru
+    sw: Costeicco Guru
+    en: Costeicco Guru
+  npcImage: {fileID: 21300000, guid: 13062ce599809b74db8286a76d7b2edd, type: 3}
+  dialogueText: "Tiesitk\xF6, ett\xE4 sammakko \"juo\" takapuolensa ja vatsanahkansa
+    kautta \u2013 se kirjaimellisesti istuu juomansa p\xE4\xE4ll\xE4? \xC4l\xE4 tarjoa
+    sille pilli\xE4."
+  dialogueTextLocalized:
+    fi: "Tiesitk\xF6, ett\xE4 sammakko \"juo\" takapuolensa ja vatsanahkansa kautta
+      \u2013 se kirjaimellisesti istuu juomansa p\xE4\xE4ll\xE4? \xC4l\xE4 tarjoa
+      sille pilli\xE4."
+    sw: "Visste du att grodor \"dricker\" genom baken och maghuden \u2013 de sitter
+      bokstavligen p\xE5 sin dryck? Erbjud inte ett sugr\xF6r."
+    en: "Did you know that a frog \"drinks\" through its butt and belly skin \u2013
+      it literally sits on its own drink? Don\u2019t offer it a straw."
+  typeSpeed: 1
+  isJoke: 0
+  isEducational: 1
+  hasTurnRequirement: 0
+  minTurn: 0
+  maxTurn: 0

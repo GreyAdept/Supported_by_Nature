@@ -32,6 +32,7 @@ public class MilestoneHandler : MonoBehaviour
     [SerializeField] private Sprite milestoneOneAvailable;
     [SerializeField] private Sprite milestoneTwoAvailable;
     [SerializeField] private Sprite milestoneThreeAvailable;
+    [SerializeField] private GameObject cowCollection;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -102,7 +103,7 @@ public class MilestoneHandler : MonoBehaviour
                                 milestone1Button.interactable = false;
                                 //milestone1Button.gameObject.SetActive(false);
                                 RandomEventSystem.instance.ForceNextEvent("kosteikolle_saapuu");
-                                
+                                cowCollection.SetActive(true);
                             }
                         }
                             
