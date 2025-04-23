@@ -3,7 +3,12 @@ guid: 443d4dbf029f92144a7851d330fe059d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nests_mat
+    second: {fileID: 2100000, guid: 7827745e5b7498b4fa53345f84527eea, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

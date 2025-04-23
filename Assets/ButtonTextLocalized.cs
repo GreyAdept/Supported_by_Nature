@@ -8,6 +8,7 @@ public class ButtonTextLocalized : MonoBehaviour
     private void Start()
     {
         buttonTextObject = GetComponent<TMP_Text>();
+        LanguageManager.Instance.onLanguageChanged.AddListener(SetText);
         SetText();
     }
     private void SetText()

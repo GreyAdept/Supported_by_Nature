@@ -84,9 +84,9 @@ public class CameraZoom : MonoBehaviour
             
             float FOVchange = -27 + cam.fieldOfView;
             
-            camPos.x = Mathf.Clamp(cam.transform.position.x, -27f+FOVchange, -27-FOVchange);
+            camPos.x = Mathf.Clamp(cam.transform.position.x, -30f+FOVchange, -30-FOVchange);
             camPos.y = cam.transform.position.y;
-            camPos.z = Mathf.Clamp(cam.transform.position.z, 16f + FOVchange, 16f - FOVchange);
+            camPos.z = Mathf.Clamp(cam.transform.position.z, 14f + FOVchange, 14f - FOVchange);
             
             cam.transform.position = camPos;
             

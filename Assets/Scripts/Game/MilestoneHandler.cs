@@ -32,6 +32,9 @@ public class MilestoneHandler : MonoBehaviour
     [SerializeField] private Sprite milestoneOneAvailable;
     [SerializeField] private Sprite milestoneTwoAvailable;
     [SerializeField] private Sprite milestoneThreeAvailable;
+
+    private bool milestone1reward = false;
+    [SerializeField] private GameObject cowCollection;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,6 +42,7 @@ public class MilestoneHandler : MonoBehaviour
         currentBiodiversity = 0;
         totalMilestoneProgress = 0;
         TurnManager.Instance.onTurnChanged.AddListener(ResetBiodiversity);
+        TurnManager.Instance.onTurnChanged.AddListener(SpawnMilestoneReward);
         milestone1Button.image.sprite = milestoneLockedSprite;
         milestone2Button.image.sprite = milestoneLockedSprite;
         milestone3Button.image.sprite = milestoneLockedSprite;
@@ -49,17 +53,21 @@ public class MilestoneHandler : MonoBehaviour
         tileCount = GameObject.FindGameObjectsWithTag("Tile").Length - 1;
 
         maxBiodiversity = tileCount * 6;
-
     }
     
-    
-
     // Update is called once per frame
     void Update()
     {
         
     }
-
+    private void SpawnMilestoneReward(int turnNum)
+    {
+        if(milestone1reward)
+        {
+            milestone1reward = false;
+            cowCollection.SetActive(true);
+        }
+    }
     private void UpdateSlider()
     {
         milestoneSlider.value = currentBiodiversity;
@@ -102,6 +110,7 @@ public class MilestoneHandler : MonoBehaviour
                                 milestone1Button.interactable = false;
                                 //milestone1Button.gameObject.SetActive(false);
                                 RandomEventSystem.instance.ForceNextEvent("kosteikolle_saapuu");
+                                milestone1reward = true;
                                 
                             }
                         }
