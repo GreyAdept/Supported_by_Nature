@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     public UnityEvent<string> onTaskAssigned;
     public UnityEvent<string> onTaskCompleted;
     public UnityEvent onTutorialCompleted;
+    public UnityEvent onDialogueClosed;
     [Header("Sound")]
     [SerializeField] private string[] soundIDs;
 
@@ -204,6 +205,7 @@ public class DialogueManager : MonoBehaviour
         }
         typeWriterEffectCoroutine = null;
     }
+    //bool just for popuphandler which was temporary
     public void HideDialogue()
     {
         if(isDialogueRunning && typeWriterEffectCoroutine != null)
@@ -212,7 +214,8 @@ public class DialogueManager : MonoBehaviour
             isDialogueRunning = false;
         }
         isDialogueRunning = false;
-        dialoguePanel.SetActive(false); 
+        dialoguePanel.SetActive(false);
+
     }
     public void InteractWithNPC()
     {
@@ -226,6 +229,7 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
+                onDialogueClosed?.Invoke();
                 HideDialogue();
             }
             return;
