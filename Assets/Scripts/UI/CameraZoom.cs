@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.InputSystem.Utilities;
 
 public class CameraZoom : MonoBehaviour
@@ -19,8 +21,15 @@ public class CameraZoom : MonoBehaviour
     [SerializeField] private float currentDistance;
     private ReadOnlyArray<TouchControl> touches;
     private mouseRaycaster mr;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private void Awake()
+    {
+        EnhancedTouchSupport.Enable();
+    }
+    private void OnDisable()
+    {
+        EnhancedTouchSupport.Disable();
+    }
     void Start()
     {
         cam = this.GetComponent<Camera>();
