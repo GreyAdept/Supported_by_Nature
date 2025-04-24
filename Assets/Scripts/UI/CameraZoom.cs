@@ -1,10 +1,10 @@
 using System;
 using System.Collections;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.InputSystem.Utilities;
-using UnityEngine.Windows.WebCam;
+
 
 public class CameraZoom : MonoBehaviour
 {
@@ -23,8 +23,12 @@ public class CameraZoom : MonoBehaviour
     private mouseRaycaster mr;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+   
+    
     void Start()
-    {
+    {   
+        EnhancedTouchSupport.Enable();
         cam = this.GetComponent<Camera>();
         StartCoroutine(FrameWait());
         mr = TurnManager.Instance.gameObject.GetComponent<mouseRaycaster>();

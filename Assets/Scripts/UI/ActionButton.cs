@@ -44,14 +44,13 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
 
         }
         */
-        /*
+        
         if (selected)
         {   
             if (Touchscreen.current == null)
             {
                 var mousePos = Mouse.current.position.ReadValue();
                 transform.position = mousePos;
-                Debug.Log("touch screen null");
             }
             else
             {
@@ -60,11 +59,7 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
             
             
         }
-        */
-        if (selected)
-        {
-            transform.position = mouseRaycaster.touchPosition;
-        }
+        
         
         
     }

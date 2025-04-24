@@ -45,7 +45,7 @@ public class mouseRaycaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        /*
+        
         if (Touchscreen.current == null)
         {
             touchPosition = Mouse.current.position.ReadValue();
@@ -54,8 +54,7 @@ public class mouseRaycaster : MonoBehaviour
         {
             mousePos = touchPosition;
         }
-        */
-        mousePos = Mouse.current.position.ReadValue();
+        
         Plane plane = new Plane(Vector3.up, Vector3.zero);
         Ray ray = cam.ScreenPointToRay(mousePos);
         if (plane.Raycast(ray, out float distance))

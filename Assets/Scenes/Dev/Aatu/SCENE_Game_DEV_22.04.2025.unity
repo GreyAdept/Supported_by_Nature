@@ -5597,7 +5597,7 @@ PrefabInstance:
       objectReference: {fileID: 2143141250245362099}
     - target: {fileID: 3050897033742178904, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -13.040039
+      value: -13.039978
       objectReference: {fileID: 0}
     - target: {fileID: 4283304965222875394, guid: 5bcb08f2b1df83442898c8bffcc2816a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -14027,6 +14027,7 @@ GameObject:
   - component: {fileID: 2169830995416065133}
   - component: {fileID: 6650404046057647038}
   - component: {fileID: 6650404046057647039}
+  - component: {fileID: 6650404046057647040}
   m_Layer: 0
   m_Name: Camera.001
   m_TagString: Untagged
@@ -14059,6 +14060,27 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 8df5e28f48da5c141b501883161992a9, type: 2}
+--- !u!114 &6650404046057647040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6650404046057647037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773477bafb8d3984a94cf87f23eb801a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomSensitivity: 60
+  panSensitivity: 0.3
+  touchPosition1: {x: 0, y: 0}
+  touchPosition2: {x: 0, y: 0}
+  touchCount: 0
+  zoom: 0
+  zoomValue: 0
+  prevDistance: 0
+  currentDistance: 0
 --- !u!33 &6966434990456289111
 MeshFilter:
   m_ObjectHideFlags: 0
