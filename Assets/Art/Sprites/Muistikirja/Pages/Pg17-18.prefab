@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4463716189223608589}
   - component: {fileID: 8630813438380843746}
   - component: {fileID: 3672585401738819244}
+  - component: {fileID: 8266996618614948166}
   m_Layer: 5
   m_Name: Text A
   m_TagString: Untagged
@@ -145,6 +146,60 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8266996618614948166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680277126811690134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "<align=center><b>Kasvit</b></align>\n\nKosteikoilla kasvaa monenlaisia kasveja.
+      \n\nKosteikoille on tyypillist\xE4 rannansuuntainen vy\xF6hykkeisyys eli rannan
+      ja vesist\xF6n eri alueilla on yleens\xE4 yksi vallitseva laji. \n\nPullosara
+      on yleinen kasvi niityn vetisiss\xE4 osissa ja sit\xE4 esiintyykin kaikkialla
+      Suomessa. \n\nMatalilla vesialueilla yleinen kasvi on j\xE4rviruoko, jota kasvaakin
+      melkein jokaisessa osassa. J\xE4rviruoko on Suomen suurin hein\xE4 ja se voi
+      kasvaa 1-4m pituiseksi. \n\nSiirtyess\xE4 syvempiin vesialueisiin voi kosteikolla
+      esiinty\xE4 uistinvitaa, joka kelluu vedess\xE4. \n\nKosteikoilla voi my\xF6s
+      esiinty\xE4 monia muita kasveja, kuten osmank\xE4\xE4mi\xE4, pikkulimaskaa
+      ja eri puulajeja.\u200B\r\n\u200B"
+    sw: "<align=center><b>V\xE4xter</b></align>\nI v\xE5tmarker v\xE4xer m\xE5nga
+      olika v\xE4xter.\nTypiskt f\xF6r v\xE5tmarker \xE4r strandparallell zonering,
+      vilket betyder att olika omr\xE5den av stranden och vattendraget vanligtvis
+      har en dominerande art.\nFlaskstarr \xE4r en vanlig v\xE4xt i de v\xE5ta delarna
+      av \xE4ngar och f\xF6rekommer \xF6ver hela Finland.\nI grunda vattenomr\xE5den
+      \xE4r vass en vanlig v\xE4xt, som v\xE4xer i n\xE4stan varje sektion. Vass
+      \xE4r Finlands st\xF6rsta gr\xE4s och kan v\xE4xa till 1-4m i h\xF6jd.\nN\xE4r
+      man r\xF6r sig mot djupare vattenomr\xE5den kan g\xE4ddnate f\xF6rekomma i
+      v\xE5tmarken, flytande p\xE5 vattnet.\nV\xE5tmarker kan ocks\xE5 hysa m\xE5nga
+      andra v\xE4xter, som kaveldun, andmat och olika tr\xE4darter."
+    en: '<align=center><b>Plants</b></align>
+
+      Many kinds of plants grow in
+      wetlands.
+
+      Wetlands typically have shore-parallel zonation, meaning different
+      areas of the shore and water body usually have one dominant species.
+
+      Bottle
+      sedge is a common plant in the wet parts of meadows and it occurs throughout
+      Finland.
+
+      Common reed is a prevalent plant in shallow water areas, growing
+      in almost every section. Common reed is Finland''s largest grass and can grow
+      to 1-4m in height.
+
+      Moving to deeper water areas, floating pondweed may
+      occur in the wetland, floating on the water.
+
+      Wetlands may also feature
+      many other plants, such as cattail, common duckweed, and various tree species.'
 --- !u!1 &1967441730839845199
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4463716189223608589}
   - component: {fileID: 8630813438380843746}
   - component: {fileID: 3672585401738819244}
+  - component: {fileID: 504191233448732148}
   m_Layer: 5
   m_Name: Text A
   m_TagString: Untagged
@@ -139,6 +140,48 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &504191233448732148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680277126811690134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "Hei! \n\nT\xE4ss\xE4 on kosteikkovihkosi, jonka\r\nannan sinulle nyt kun
+      siirryt\r\nhoitamaan kosteikkoa. \n\nVihkosta l\xF6yd\xE4t tietoa kosteikoista
+      ja siihen\r\nvaikuttavista asioista. \n\nTietoa l\xF6ytyy\r\nesimerkiksi kosteikon
+      eri el\xE4imist\xE4 ja\r\nveden laadusta. \n"
+    sw: "Hej!\nH\xE4r \xE4r din v\xE5tmarkshandbok, som\njag ger dig nu n\xE4r du
+      g\xE5r vidare\ntill att f\xF6rvalta v\xE5tmarken.\nI handboken hittar du information
+      om v\xE5tmarker och\nfaktorer som p\xE5verkar dem.\nDu hittar information\ntill
+      exempel om olika djur i v\xE5tmarken och\nvattenkvalitet."
+    en: 'Hi!
+
+      Here is your wetland handbook, which
+
+      I''m giving to you
+      now as you move on
+
+      to manage the wetland.
+
+      In the handbook, you''ll
+      find information about wetlands and the
+
+      factors affecting them.
+
+      There
+      is information
+
+      for example about different animals in the wetland and
+
+      water
+      quality.'
 --- !u!1 &1967441730839845199
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +368,7 @@ GameObject:
   - component: {fileID: 8917685424953469543}
   - component: {fileID: 5188029298047065234}
   - component: {fileID: 3927925753585208204}
+  - component: {fileID: 6545325673006440767}
   m_Layer: 5
   m_Name: Text B
   m_TagString: Untagged
@@ -452,6 +496,41 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6545325673006440767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3752300061302600148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "\n\nLukemalla vihkoa\r\npystyt selvi\xE4m\xE4\xE4n paremmin\r\nkosteikon
+      tapahtumista, olivat ne\r\nsitten negatiivisia tai positiivisia ja\r\nsaat
+      yleisesti t\xE4rke\xE4\xE4 tietoa\r\nkosteikoista.\u200B\n"
+    sw: "\n\nGenom att l\xE4sa handboken\nkan du b\xE4ttre hantera\nh\xE4ndelser
+      i v\xE5tmarken, oavsett om de \xE4r\nnegativa eller positiva och\ndu f\xE5r
+      allm\xE4nt viktig information\nom v\xE5tmarker."
+    en: '
+
+
+      By reading the handbook
+
+      you can better navigate
+
+      wetland
+      events, whether they are
+
+      negative or positive and
+
+      you''ll generally
+      get important information
+
+      about wetlands.'
 --- !u!1 &3754958998092947573
 GameObject:
   m_ObjectHideFlags: 0

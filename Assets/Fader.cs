@@ -1,11 +1,13 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Fader : MonoBehaviour
 {
     [SerializeField] private CanvasGroup fadeCG;
     [SerializeField] private float fadeDuration = 0.5f;
+    public UnityEvent onFaded;
     private void Start()
     {
         if (fadeCG != null)
@@ -28,6 +30,7 @@ public class Fader : MonoBehaviour
             fadeCG.alpha = Mathf.Clamp01(elapsedTime / fadeDuration);
             yield return null;
         }
-        fadeCG.alpha = 0f;
+        fadeCG.alpha = 1f;
+        onFaded?.Invoke();
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4463716189223608589}
   - component: {fileID: 8630813438380843746}
   - component: {fileID: 3672585401738819244}
+  - component: {fileID: 5564237656026896742}
   m_Layer: 5
   m_Name: Text A
   m_TagString: Untagged
@@ -141,6 +142,46 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5564237656026896742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680277126811690134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "<align=center><b>Linnut</b></align>\n\n\nNokikana\u200B\r\n\r\nNokikana
+      on kokomusta rantakanojen heimoon kuuluva vesilintu, jolla on valkoinen nokka
+      ja otsakilpi. \r\n\r\nNokikana on noin 36-42cm pitk\xE4, se painaa 0,6-1,2kg
+      ja sen siipien k\xE4rkiv\xE4li on 70-80cm. \r\n\r\nNokikana munii huhtikuun
+      loppupuolella 4-12 munaa ja sen pes\xE4 sijaitsee osmank\xE4\xE4mi- tai ruokokasvustossa
+      tai n\xE4kyv\xE4sti m\xE4tt\xE4ill\xE4. \u200B"
+    sw: "<align=center><b>F\xE5glar</b></align>\nSoth\xF6na\nSoth\xF6nan \xE4r en
+      helsvart vattenf\xE5gel tillh\xF6rande rallidae-familjen, med vit n\xE4bb och
+      pannpl\xE5t.\nSoth\xF6nan \xE4r ungef\xE4r 36-42cm l\xE5ng, v\xE4ger 0,6-1,2kg
+      och har ett vingspann p\xE5 70-80cm.\nSoth\xF6nan l\xE4gger 4-12 \xE4gg i slutet
+      av april, och dess bo finns i kaveldun- eller vassvegetation eller synligt
+      p\xE5 tuvor.\nBoth translations maintain a similar structure and length as
+      your original Finnish text, which should work well for your game localization."
+    en: '<align=center><b>Birds</b></align>
+
+      Eurasian Coot
+
+      The Eurasian
+      Coot is an all-black waterbird belonging to the rail family, with a white beak
+      and frontal shield.
+
+      The Eurasian Coot is about 36-42cm long, weighs
+      0.6-1.2kg, and has a wingspan of 70-80cm.
+
+      The Eurasian Coot lays 4-12
+      eggs in late April, and its nest is located in cattail or reed vegetation or
+      visibly on tussocks.'
 --- !u!1 &1967441730839845199
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +370,7 @@ GameObject:
   - component: {fileID: 8917685424953469543}
   - component: {fileID: 5188029298047065234}
   - component: {fileID: 3927925753585208204}
+  - component: {fileID: 2403719360293668566}
   m_Layer: 5
   m_Name: Text B
   m_TagString: Untagged
@@ -458,6 +500,38 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2403719360293668566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3752300061302600148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "\nPunajalkaviklo\u200B\r\n\r\nPunajalkaviklo on kurppien heimoon kuuluva
+      kahlaaja. Se on selk\xE4puolelta ruskeankirjava ja sen siiven takareuna on
+      valkoinen. Jalat ovat punaiset tai nuoremmalla linnulla keltaiset.\n\r\nPunajalkaviklo
+      on 24-27cm pitk\xE4, sen siipien k\xE4rkiv\xE4li on 47-53cm ja paino 92-127g.
+      Se pesii kosteilla sis\xE4maan niityill\xE4 tai merenrannikon niityill\xE4."
+    sw: "R\xF6dbena\nR\xF6dbenan \xE4r en vadare som tillh\xF6r sn\xE4ppfamiljen.
+      Den har brokigt brun ovansida och vit bakkant p\xE5 vingarna. Benen \xE4r r\xF6da
+      eller gula hos yngre f\xE5glar.\nR\xF6dbenan \xE4r 24-27cm l\xE5ng, har ett
+      vingspann p\xE5 47-53cm och v\xE4ger 92-127g. Den h\xE4ckar p\xE5 fuktiga inlands\xE4ngar
+      eller kust\xE4ngar."
+    en: 'Common Redshank
+
+      The Common Redshank is a wader belonging to the sandpiper
+      family. Its back is mottled brown and the trailing edge of its wing is white.
+      The legs are red, or yellow in younger birds.
+
+      The Common Redshank is
+      24-27cm long, has a wingspan of 47-53cm, and weighs 92-127g. It nests on wet
+      inland meadows or coastal meadows.'
 --- !u!1 &3754958998092947573
 GameObject:
   m_ObjectHideFlags: 0

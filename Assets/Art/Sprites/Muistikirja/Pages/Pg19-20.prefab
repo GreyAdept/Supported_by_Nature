@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4463716189223608589}
   - component: {fileID: 8630813438380843746}
   - component: {fileID: 3672585401738819244}
+  - component: {fileID: 5637783416209134482}
   m_Layer: 5
   m_Name: Text A
   m_TagString: Untagged
@@ -138,6 +139,38 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5637783416209134482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680277126811690134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "<align=center><b>Kalat</b></align>\n\nKosteikoilla esiintyy my\xF6s muita\r\nkaloja
+      kuin haukea. \n\nEsimerkiksi\r\ns\xE4rki\xE4, lahnoja ja kymenpiikki\xE4 voi\r\nel\xE4\xE4
+      kosteikolla.\u200B"
+    sw: "<align=center><b>Fiskar</b></align>\nI v\xE5tmarker f\xF6rekommer ocks\xE5
+      andra\nfiskarter \xE4n g\xE4dda.\nTill exempel\nm\xF6rt, braxen och sm\xE5spigg
+      kan\nleva i v\xE5tmarken."
+    en: '<align=center><b>Fish</b></align>
+
+      Wetlands are also home to fish
+
+      species
+      other than pike.
+
+      For example,
+
+      roach, bream, and nine-spined stickleback
+      may
+
+      live in the wetland.'
 --- !u!1 &1967441730839845199
 GameObject:
   m_ObjectHideFlags: 0

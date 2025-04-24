@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4463716189223608589}
   - component: {fileID: 8630813438380843746}
   - component: {fileID: 3672585401738819244}
+  - component: {fileID: 1813580316879522442}
   m_Layer: 5
   m_Name: Text A
   m_TagString: Untagged
@@ -141,6 +142,51 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1813580316879522442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680277126811690134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "<align=center><b>Sudenkorennot\u200B ja muut hy\xF6nteiset</b></align>\n\nKosteikoilla
+      el\xE4\xE4 monenlaisia\r\nhy\xF6nteisi\xE4. \n\nSudenkorennot ovat\r\nyleisi\xE4
+      kosteikon asukkaita, sill\xE4 ne\r\npystyv\xE4t lis\xE4\xE4ntym\xE4\xE4n hyvin
+      kosteikon vesiymp\xE4rist\xF6ss\xE4 ja el\xE4v\xE4t rehevien vesialueiden\r\nl\xE4hell\xE4.
+      \n\nKosteikolla voi t\xF6rm\xE4t\xE4 esimerkiksi hoikkatyt\xF6nkorentoon, v\xE4lkekorentoon,
+      id\xE4nkirsikorentoon,\r\nkarvaukonkorentoon ja ruskohukankorentoon.\u200B"
+    sw: "<align=center><b>Trollsl\xE4ndor och andra insekter</b></align>\nV\xE5tmarker
+      \xE4r hem f\xF6r m\xE5nga olika\ninsekter.\nTrollsl\xE4ndor \xE4r\nvanliga
+      v\xE5tmarksinv\xE5nare, eftersom de\nkan f\xF6r\xF6ka sig v\xE4l i v\xE5tmarkens
+      vattenmilj\xF6 och lever n\xE4ra frodiga vattenomr\xE5den.\nI v\xE5tmarken
+      kan du st\xF6ta p\xE5 arter som ljus lyrflicksl\xE4nda, guldtrollsl\xE4nda,
+      nordisk k\xE4rrtrollsl\xE4nda,\ntidig mosaiksl\xE4nda och brun mosaiksl\xE4nda."
+    en: '<align=center><b>Dragonflies and Other Insects</b></align>
+
+      Wetlands
+      are home to many kinds of
+
+      insects.
+
+      Dragonflies are
+
+      common
+      wetland residents, as they
+
+      can reproduce well in the wetland''s aquatic
+      environment and live near lush water areas.
+
+      In wetlands, you might encounter
+      species such as the Azure Bluet, Brilliant Emerald, Yellow-spotted Whiteface,
+
+      Hairy
+      Dragonfly, and Brown Hawker.'
 --- !u!1 &1967441730839845199
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +377,7 @@ GameObject:
   - component: {fileID: 8917685424953469543}
   - component: {fileID: 5188029298047065234}
   - component: {fileID: 3927925753585208204}
+  - component: {fileID: 1274326168303862403}
   m_Layer: 5
   m_Name: Text B
   m_TagString: Untagged
@@ -456,6 +503,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1274326168303862403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3752300061302600148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: Sudenkorentoja
+    sw: "Trollsl\xE4ndor"
+    en: Dragonflies
 --- !u!1 &3754958998092947573
 GameObject:
   m_ObjectHideFlags: 0

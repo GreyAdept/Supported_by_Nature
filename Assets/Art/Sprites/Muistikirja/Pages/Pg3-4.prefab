@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4463716189223608589}
   - component: {fileID: 8630813438380843746}
   - component: {fileID: 3672585401738819244}
+  - component: {fileID: 4104976289268413310}
   m_Layer: 5
   m_Name: Text A
   m_TagString: Untagged
@@ -142,6 +143,50 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4104976289268413310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680277126811690134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "<b>Tietoa hauesta\u200B</b>\r\n\r\nHauki on petokala, lonka pituus on 40-120cm
+      ja sen paino noin 0,5-15kg. \n\nHauella on suuri kita ja ter\xE4v\xE4t hampaat,
+      joista sen tunnistaa helposti.\n\r\nHauen kyljet ovat vihre\xE4t, vatsa vaalea,
+      selk\xE4 musta ja sen kyljiss\xE4 on t\xE4pli\xE4, jotka yhdistyv\xE4t raidoiksi.\n\r\nHauet
+      kutevat varhain kev\xE4\xE4ll\xE4 ja ne vaeltavat heti j\xE4iden l\xE4hd\xF6n
+      \xE4lkeen joukolla mataliin ruokoisiin lahtiin tai tulvaniityille.\n\r\nMerialueilla
+      kutu tapahtuu v\xE4h\xE4n my\xF6hemmin. \u200B"
+    sw: "<b>Om g\xE4ddan</b>\nG\xE4ddan \xE4r en rovfisk, med en l\xE4ngd p\xE5 40-120cm
+      och vikt p\xE5 cirka 0,5-15kg.\nG\xE4ddan har en stor mun och vassa t\xE4nder,
+      vilket g\xF6r den l\xE4tt att k\xE4nna igen.\nG\xE4ddans sidor \xE4r gr\xF6na,
+      buken ljus, ryggen svart och dess sidor har fl\xE4ckar som g\xE5r ihop till
+      r\xE4nder.\nG\xE4ddor leker tidigt p\xE5 v\xE5ren och de vandrar i grupper
+      till grunda vassbevuxna vikar eller \xF6versv\xE4mmade \xE4ngar direkt efter
+      islossningen.\nI havsomr\xE5den sker leken n\xE5got senare."
+    en: '<b>About the Pike</b>
+
+      Pike is a predatory fish, with a length of
+      40-120cm and weight of about 0.5-15kg.
+
+      The pike has a large mouth and
+      sharp teeth, making it easily recognizable.
+
+      The pike''s sides are green,
+      belly light, back black and its sides have spots that merge into stripes.
+
+      Pike
+      spawn early in spring and they migrate in groups to shallow reedy bays or flood
+      meadows right after the ice melts.
+
+      In coastal areas, spawning occurs
+      a bit later.'
 --- !u!1 &1825210740685912784
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +198,7 @@ GameObject:
   - component: {fileID: 6834892817447134002}
   - component: {fileID: 5132828688061121394}
   - component: {fileID: 4130024229700348044}
+  - component: {fileID: 7291191253320391220}
   m_Layer: 5
   m_Name: Text A (1)
   m_TagString: Untagged
@@ -281,6 +327,33 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7291191253320391220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825210740685912784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "Hauet ovat t\xE4rke\xE4ss\xE4 asemassa muiden kalakantojen, kuten s\xE4rkien
+      hillitsemisess\xE4, sill\xE4 ne saalistavat monia kalalajeja.\n\nNyky\xE4\xE4n
+      hauen kanta on laskussa, koska monia hauelle t\xE4rkeit\xE4 elinymp\xE4rist\xF6j\xE4
+      ja kutupaikkoja on tuhottu ihmisten toimesta.\u200B"
+    sw: "G\xE4ddor spelar en viktig roll f\xF6r att kontrollera andra fiskbest\xE5nd,
+      som m\xF6rt, eftersom de jagar m\xE5nga fiskarter.\nNuf\xF6rtiden minskar g\xE4ddbest\xE5ndet
+      eftersom m\xE5nga viktiga livsmilj\xF6er och lekplatser f\xF6r g\xE4dda har
+      f\xF6rst\xF6rts av m\xE4nsklig aktivitet."
+    en: 'Pike play an important role in controlling other fish populations, such
+      as roach, as they prey on many fish species.
+
+      Nowadays, pike populations
+      are declining because many important habitats and spawning grounds for pike
+      have been destroyed by human activities.'
 --- !u!1 &1967441730839845199
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +617,7 @@ GameObject:
   - component: {fileID: 8917685424953469543}
   - component: {fileID: 5188029298047065234}
   - component: {fileID: 3927925753585208204}
+  - component: {fileID: 4880385652128889183}
   m_Layer: 5
   m_Name: Text B
   m_TagString: Untagged
@@ -674,6 +748,47 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4880385652128889183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3752300061302600148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "<b>Hauki ja kosteikko\u200B</b>\n\nKosteikko on hyv\xE4 kutemisymp\xE4rist\xF6
+      hauille, sill\xE4 kosteikot ovat matalia ja niiss\xE4 kasvaa ruokoja ja muita
+      kasveja\r\nmelko tihe\xE4sti. \n\nKosteikko luo my\xF6s hyv\xE4n elinymp\xE4rist\xF6n
+      hauen poikasille kasvaa. \n\nKosteikkoja kunnollistamalla pystyt\xE4\xE4nkin
+      nostamaan mahdollisesti\r\nhaukikantoja, sill\xE4 kosteikot tarjoavat hyv\xE4n
+      lis\xE4\xE4ntymis- ja kasvuymp\xE4rist\xF6n hauille."
+    sw: "<b>G\xE4ddan och v\xE5tmarken</b>\n\nV\xE5tmarker \xE4r bra lekmilj\xF6er
+      f\xF6r g\xE4ddor, eftersom v\xE5tmarker \xE4r grunda och vass och andra v\xE4xter
+      v\xE4xer\nganska t\xE4tt d\xE4r.\nV\xE5tmarker skapar ocks\xE5 en bra livsmilj\xF6
+      f\xF6r g\xE4ddyngel att v\xE4xa i.\nGenom att \xE5terst\xE4lla v\xE5tmarker
+      kan man potentiellt \xF6ka\ng\xE4ddbest\xE5nden, eftersom v\xE5tmarker erbjuder
+      en bra reproduktions- och tillv\xE4xtmilj\xF6 f\xF6r g\xE4ddor."
+    en: '<b>Pike and Wetlands</b>
+
+
+      Wetlands are good spawning environments
+      for pike, as wetlands are shallow and reeds and other plants grow
+
+      quite
+      densely there.
+
+      Wetlands also create a good habitat for pike fry to grow.
+
+      By
+      restoring wetlands, it may be possible to increase
+
+      pike populations,
+      as wetlands provide a good reproduction and growth environment for pike.'
 --- !u!1 &3754958998092947573
 GameObject:
   m_ObjectHideFlags: 0

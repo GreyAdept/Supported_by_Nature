@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4463716189223608589}
   - component: {fileID: 8630813438380843746}
   - component: {fileID: 3672585401738819244}
+  - component: {fileID: 1567761216900341066}
   m_Layer: 5
   m_Name: Text A
   m_TagString: Untagged
@@ -141,6 +142,45 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1567761216900341066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680277126811690134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "<b><align=center>Vesi</align></b>\n\nKosteikko tarvitsee vuosittain hoitoa
+      ja seurantaa, jotta kosteikko pysyy hyv\xE4ss\xE4 kunnossa, ja siit\xE4 on
+      hy\xF6ty\xE4 ravinnekuormituksen pid\xE4tt\xE4misess\xE4, tulvien hallinnassa,
+      sek\xE4 biodiversiteetin yll\xE4pidossa.  \n\nHoitotoimenpiteisiin kuuluu muun
+      muassa vesikasvillisuuden hallintaa, sek\xE4 kosteikon tilan s\xE4\xE4nn\xF6llist\xE4
+      seurantaa, joka mahdollistaa kosteikossa havaittuihin ongelmiin puuttumisen
+      ajoissa.\u200B\r\n\u200B"
+    sw: "<b><align=center>Vatten</align></b>\n\nEn v\xE5tmark beh\xF6ver \xE5rligt
+      underh\xE5ll och \xF6vervakning f\xF6r att bibeh\xE5lla gott skick, och f\xF6r
+      att vara till nytta f\xF6r n\xE4rings\xE4mnesretention, \xF6versv\xE4mningskontroll
+      och bevarande av biologisk m\xE5ngfald.\n\nUnderh\xE5lls\xE5tg\xE4rder inkluderar
+      bland annat hantering av vattenv\xE4xter och regelbunden \xF6vervakning av
+      v\xE5tmarkens tillst\xE5nd, vilket m\xF6jligg\xF6r tidig hantering av problem
+      som uppt\xE4cks i v\xE5tmarken."
+    en: '<b><align=center>Water</align></b>
+
+
+      A wetland needs annual maintenance
+      and monitoring to stay in good condition, and to be beneficial for nutrient
+      load retention, flood control, and biodiversity maintenance.
+
+
+      Maintenance
+      measures include, among other things, managing aquatic vegetation and regular
+      monitoring of the wetland''s condition, which allows for timely intervention
+      in problems observed in the wetland.'
 --- !u!1 &1967441730839845199
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +368,7 @@ GameObject:
   - component: {fileID: 8917685424953469543}
   - component: {fileID: 5188029298047065234}
   - component: {fileID: 3927925753585208204}
+  - component: {fileID: 4322813634179258816}
   m_Layer: 5
   m_Name: Text B
   m_TagString: Untagged
@@ -460,6 +501,58 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4322813634179258816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3752300061302600148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "Hyvinvoiva kosteikko parantaa vedenlaatua pid\xE4tt\xE4m\xE4ll\xE4 valuma-alueelta
+      tulevaa ravinne- ja kiintoainekuormitusta. \n\nKun kosteikko pys\xE4ytt\xE4\xE4
+      ravinteet, l\xE4hivesist\xF6n veden laatu paranee. \n\nKosteikko auttaa l\xE4hivesist\xF6\xE4
+      pysym\xE4\xE4n kirkkaana, sek\xE4 hillitsem\xE4\xE4n rehev\xF6itymist\xE4.\u200B\r\n\r\nKosteikko
+      auttaa my\xF6s tulvien hallinnassa.\n\r\nKosteikot pid\xE4tt\xE4v\xE4t tulvavesi\xE4,
+      ja tasoittavat tulvapiikkej\xE4, mik\xE4 v\xE4hent\xE4\xE4 tulvien aiheuttamia
+      vahinkoja. Sen lis\xE4ksi kosteikot ovat tehokkaita hiilinieluja ja edist\xE4v\xE4t
+      luonnon monimuotoisuutta tarjoamalla elinymp\xE4rist\xF6n monille kasvi- ja
+      el\xE4inlajeille.\u200B"
+    sw: "En v\xE4lm\xE5ende v\xE5tmark f\xF6rb\xE4ttrar vattenkvaliteten genom att
+      h\xE5lla kvar n\xE4rings\xE4mnen och suspenderat material fr\xE5n avrinningsomr\xE5det.\n\nN\xE4r
+      v\xE5tmarken stoppar n\xE4rings\xE4mnen, f\xF6rb\xE4ttras vattenkvaliteten
+      i n\xE4rliggande vattendrag.\n\nV\xE5tmarken hj\xE4lper n\xE4rliggande vattendrag
+      att f\xF6rbli klara och begr\xE4nsar \xF6verg\xF6dning.\n\nV\xE5tmarken hj\xE4lper
+      ocks\xE5 till med \xF6versv\xE4mningskontroll.\n\nV\xE5tmarker h\xE5ller kvar
+      \xF6versv\xE4mningsvatten och j\xE4mnar ut fl\xF6destoppar, vilket minskar
+      skador orsakade av \xF6versv\xE4mningar. Dessutom \xE4r v\xE5tmarker effektiva
+      kols\xE4nkor och fr\xE4mjar biologisk m\xE5ngfald genom att erbjuda livsmilj\xF6
+      f\xF6r m\xE5nga v\xE4xt- och djurarter."
+    en: 'A thriving wetland improves water quality by retaining nutrient and solid
+      matter loads from the catchment area.
+
+
+      When the wetland stops nutrients,
+      the water quality of nearby waters improves.
+
+
+      The wetland helps keep
+      nearby waters clear and curbs eutrophication.
+
+
+      The wetland also helps
+      with flood control.
+
+
+      Wetlands retain flood waters and even out flood
+      peaks, which reduces damage caused by flooding. Additionally, wetlands are
+      effective carbon sinks and promote biodiversity by providing habitat for many
+      plant and animal species.'
 --- !u!1 &3754958998092947573
 GameObject:
   m_ObjectHideFlags: 0

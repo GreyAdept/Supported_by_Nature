@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4463716189223608589}
   - component: {fileID: 8630813438380843746}
   - component: {fileID: 3672585401738819244}
+  - component: {fileID: 3834914386011329912}
   m_Layer: 5
   m_Name: Text A
   m_TagString: Untagged
@@ -142,6 +143,46 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3834914386011329912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680277126811690134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "Viiksitimali\n\nViiksitimali on pieni pitk\xE4pyrst\xF6inen lintu. Sen selk\xE4
+      on punaruskea ja siivet punaruskea-, musta- ja valkokirjavat. Koiraan tunnistaa
+      helposti viiksijuovasta.\r\n\r\nSen pituus on 14-15,5cm ja paino 11-21g. Viiksitimali
+      rakentaa pes\xE4ns\xE4 j\xE4rviruokojen varaan ja munii 3-11 munaa huhti- toukokuussa.\r\n\r\nToinen
+      ja kolmaskin poikue saman vuoden aikana ovat mahdollisia. Se on yhdyskuntapesij\xE4
+      eli pes\xE4t sijaitsevat l\xE4hell\xE4 toisiaan.\u200B\r\n\u200Bv\xE4sti m\xE4tt\xE4ill\xE4.
+      \u200B"
+    sw: "Sk\xE4ggmes\nSk\xE4ggmesen \xE4r en liten f\xE5gel med l\xE5ng stj\xE4rt.
+      Dess rygg \xE4r r\xF6dbrun och vingarna \xE4r spr\xE4ckliga i r\xF6dbrunt,
+      svart och vitt. Hanen k\xE4nns l\xE4tt igen p\xE5 sitt mustaschstreck.\nDess
+      l\xE4ngd \xE4r 14-15,5cm och vikt 11-21g. Sk\xE4ggmesen bygger sitt bo med
+      st\xF6d av vass och l\xE4gger 3-11 \xE4gg i april-maj.\nEn andra och till och
+      med tredje kull under samma \xE5r \xE4r m\xF6jlig. Den \xE4r en kolonibyggare,
+      vilket betyder att bona ligger n\xE4ra varandra."
+    en: 'Bearded Reedling
+
+      The Bearded Reedling is a small, long-tailed bird.
+      Its back is reddish-brown and its wings are mottled with reddish-brown, black,
+      and white. The male is easily recognized by its mustache stripe.
+
+      Its
+      length is 14-15.5cm and weight 11-21g. The Bearded Reedling builds its nest
+      supported by common reeds and lays 3-11 eggs in April-May.
+
+      A second
+      and even third brood during the same year are possible. It is a colonial nester,
+      meaning the nests are located close to each other.'
 --- !u!1 &1967441730839845199
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +371,7 @@ GameObject:
   - component: {fileID: 8917685424953469543}
   - component: {fileID: 5188029298047065234}
   - component: {fileID: 3927925753585208204}
+  - component: {fileID: 6331772247778886345}
   m_Layer: 5
   m_Name: Text B
   m_TagString: Untagged
@@ -461,6 +503,45 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6331772247778886345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3752300061302600148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36422ed2236b4ef4d88887b861d3bdcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText:
+    fi: "\n\rSilkkiuikku \u200B\n\r\nSilkkiuikku on pitk\xE4kaulainen uikkulintu.
+      Silkkiuikun tunnistaa t\xF6yhd\xF6st\xE4 sen p\xE4\xE4ss\xE4, joka kuitenkin
+      puuttuu talvella. \n\nKaulan etuosa ja vatsa ovat valkoiset ja kaulan takaosa
+      ja selk\xE4 ovat tummanruskeat. \n\nSilkkiuikku on 46\u201351 cm pitk\xE4,
+      sen siipien k\xE4rkiv\xE4li on 59\u201373 cm ja paino 1,3\u20132 kg. Silkkiuikun
+      pes\xE4 on kuolleista kasveista rakennettu lautta, joka on kiinnitetty vesikasveihin
+      ja se munii 3-6 munaa.\u200B\r\n"
+    sw: "Sk\xE4ggdopping\nSk\xE4ggdoppingen \xE4r en l\xE5nghalsad dopping. Sk\xE4ggdoppingen
+      k\xE4nns igen p\xE5 sin tofs p\xE5 huvudet, som dock saknas p\xE5 vintern.\nFramsidan
+      av halsen och buken \xE4r vita, och baksidan av halsen och ryggen \xE4r m\xF6rkbruna.\nSk\xE4ggdoppingen
+      \xE4r 46-51 cm l\xE5ng, har ett vingspann p\xE5 59-73 cm och v\xE4ger 1,3-2
+      kg. Sk\xE4ggdoppingens bo \xE4r en flotte byggd av d\xF6da v\xE4xter, f\xE4st
+      vid vattenv\xE4xter, och den l\xE4gger 3-6 \xE4gg."
+    en: 'Great Crested Grebe
+
+      The Great Crested Grebe is a long-necked grebe.
+      The Great Crested Grebe can be identified by the crest on its head, which is
+      absent in winter.
+
+      The front of the neck and belly are white, and the
+      back of the neck and back are dark brown.
+
+      The Great Crested Grebe is
+      46-51 cm long, has a wingspan of 59-73 cm, and weighs 1.3-2 kg. The Great Crested
+      Grebe''s nest is a raft built of dead plants, attached to aquatic vegetation,
+      and it lays 3-6 eggs.'
 --- !u!1 &3754958998092947573
 GameObject:
   m_ObjectHideFlags: 0

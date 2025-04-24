@@ -35,6 +35,8 @@ public class MilestoneHandler : MonoBehaviour
 
     private bool milestone1reward = false;
     [SerializeField] private GameObject cowCollection;
+    [SerializeField] private GameObject fadeObject;
+    [SerializeField] private GameObject endScreen;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -151,7 +153,7 @@ public class MilestoneHandler : MonoBehaviour
                                 milestone3.isOn = true;
                                 milestone3Button.interactable = false;
                                 //milestone3Button.gameObject.SetActive(false);
-                                
+                                StartEndSequence();
                                 Debug.Log("you're winner");
                             }
                         }
@@ -175,9 +177,21 @@ public class MilestoneHandler : MonoBehaviour
         Invoke("UpdateSlider", 0.6f);
     }
 
-  
-    
-    
+    //very shitty made at 3am
+    private void StartEndSequence()
+    {
+        fadeObject.GetComponent<Fader>().FadeScreen();
+    }
+    public void EnableEndScreen()
+    {
+        endScreen.SetActive(true);
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+    //
+
     public void IncrementBiodiversity(int amount)
     {
         currentBiodiversity += amount;
