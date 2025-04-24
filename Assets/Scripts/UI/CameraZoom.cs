@@ -5,10 +5,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.InputSystem.Utilities;
-<<<<<<< HEAD
-=======
-
->>>>>>> aatu-2
 
 public class CameraZoom : MonoBehaviour
 {
@@ -25,7 +21,6 @@ public class CameraZoom : MonoBehaviour
     [SerializeField] private float currentDistance;
     private ReadOnlyArray<TouchControl> touches;
     private mouseRaycaster mr;
-<<<<<<< HEAD
 
     private void Awake()
     {
@@ -35,16 +30,8 @@ public class CameraZoom : MonoBehaviour
     {
         EnhancedTouchSupport.Disable();
     }
-=======
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-   
-    
->>>>>>> aatu-2
     void Start()
     {   
-        EnhancedTouchSupport.Enable();
         cam = this.GetComponent<Camera>();
         StartCoroutine(FrameWait());
         mr = TurnManager.Instance.gameObject.GetComponent<mouseRaycaster>();
