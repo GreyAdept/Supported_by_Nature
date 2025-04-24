@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Main Camera.prefab.meta
 guid: 7f098ee1670cafd4b8cf47e73e112545
 PrefabImporter:
+========
+guid: 7aa1a7bf3aad18047b4a0622abffc86f
+DefaultImporter:
+>>>>>>>> aatu-2:Assets/Scenes/Dev/Aatu/SCENE_Game_DEV_22.04.2025.unity.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

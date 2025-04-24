@@ -25,7 +25,7 @@ public class MilestoneHandler : MonoBehaviour
     public int highestMilestoneReached;
 
     public int currentBiodiversity;
-    [SerializeField] private int maxBiodiversity;
+    public int maxBiodiversity;
 
     [SerializeField] private int tileCount;
     [SerializeField] private Sprite milestoneLockedSprite;
@@ -114,8 +114,6 @@ public class MilestoneHandler : MonoBehaviour
                                 
                             }
                         }
-                            
-                        
                     }
                     
                     break;

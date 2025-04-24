@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/UI/Fade.prefab.meta
 guid: bbfbc2c75ad07304a8e3ecd06d214f46
+========
+guid: fc928ae9de25c4d4e88234886bfda335
+>>>>>>>> aatu-2:Assets/Prefabs/UI/Notebook UI.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

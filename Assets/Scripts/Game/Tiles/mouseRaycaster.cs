@@ -1,6 +1,12 @@
 using System.Collections;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+<<<<<<< HEAD
+=======
+using UnityEngine.InputSystem.LowLevel;
+using Debug = UnityEngine.Debug;
+>>>>>>> aatu-2
 
 public class mouseRaycaster : MonoBehaviour
 {
@@ -12,7 +18,7 @@ public class mouseRaycaster : MonoBehaviour
     public GameObject tileHoverOver;
 
     private tileManager tm;
-    private GameObject selectedTile;
+    [SerializeField] private GameObject selectedTile;
 
     private InputSystem_Actions inputActions;
 
@@ -47,6 +53,7 @@ public class mouseRaycaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        
         if (Touchscreen.current == null)
         {
             touchPosition = Mouse.current.position.ReadValue();
@@ -55,6 +62,7 @@ public class mouseRaycaster : MonoBehaviour
         {
             mousePos = touchPosition;
         }
+        
         Plane plane = new Plane(Vector3.up, Vector3.zero);
         Ray ray = cam.ScreenPointToRay(mousePos);
         if (plane.Raycast(ray, out float distance))
@@ -96,11 +104,22 @@ public class mouseRaycaster : MonoBehaviour
         RaycastHit hit;
         
         Physics.Raycast(new Vector3(projectedPos.x, projectedPos.y+1, projectedPos.z), new Vector3(0, projectedPos.y-1, 0).normalized, out hit); //fire ray directly above tilemap
-  
+        Debug.DrawLine(new Vector3(projectedPos.x, projectedPos.y + 1, projectedPos.z), worldPos);
+        
         if (hit.collider != null && hit.collider.CompareTag("Tile")) //check if ray hits a tile
-        {
+        {   
             return hit.collider.gameObject;
         }
+<<<<<<< HEAD
+=======
+        /*
+        else if(hit.collider.CompareTag("NPC"))
+        {
+            DialogueManager.instance.InteractWithNPC();
+            return selectedTile;
+        }
+        */
+>>>>>>> aatu-2
         return selectedTile;
     }
 

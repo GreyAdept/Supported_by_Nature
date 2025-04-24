@@ -9,10 +9,13 @@ public class NotebookPageHandler : MonoBehaviour
     public GameObject[] bookPages;
     [SerializeField] private List<GameObject> newPages = new List<GameObject>();
     [SerializeField] private int currentPage;
+
+    private AudioSource audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentPage = 0;
+        audio = GetComponent<AudioSource>();
         GeneratePages();
         JumpToPage(currentPage);
     }
@@ -69,6 +72,12 @@ public class NotebookPageHandler : MonoBehaviour
         {
             pg.SetActive(false);
         }
+
+        if (!audio.isPlaying)
+        {
+            audio.Play();
+        }
+        
         newPages[page].gameObject.SetActive(true);
         currentPage = page;
     }
