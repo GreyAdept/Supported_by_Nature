@@ -6810,6 +6810,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3884878789450409062, guid: cae5c2f42b48ff849b71ff5f61fa165c, type: 3}
+      propertyPath: soundEffects.Array.data[2].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884878789450409062, guid: cae5c2f42b48ff849b71ff5f61fa165c, type: 3}
+      propertyPath: soundEffects.Array.data[3].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884878789450409062, guid: cae5c2f42b48ff849b71ff5f61fa165c, type: 3}
+      propertyPath: soundEffects.Array.data[4].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884878789450409062, guid: cae5c2f42b48ff849b71ff5f61fa165c, type: 3}
+      propertyPath: soundEffects.Array.data[5].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884878789450409062, guid: cae5c2f42b48ff849b71ff5f61fa165c, type: 3}
+      propertyPath: soundEffects.Array.data[6].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884878789450409062, guid: cae5c2f42b48ff849b71ff5f61fa165c, type: 3}
+      propertyPath: soundEffects.Array.data[7].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884878789450409062, guid: cae5c2f42b48ff849b71ff5f61fa165c, type: 3}
+      propertyPath: soundEffects.Array.data[8].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884878789450409062, guid: cae5c2f42b48ff849b71ff5f61fa165c, type: 3}
+      propertyPath: soundEffects.Array.data[9].volume
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 5125356347465595729, guid: cae5c2f42b48ff849b71ff5f61fa165c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
