@@ -139,13 +139,16 @@ MonoBehaviour:
   buttonText:
     fi: "TEKIJ\xC4T\n\nNiilo Korte\n\nEevi L\xE4hde\n\nAatu Lepp\xE4\n\nJuho-Emil
       Lauren\n\nJoni Samanen\n\nKatariina Willgren\n\nSamueli Ikonen\n\nKiia Marttila\n\nNiklas
-      Haapanen\n\n\n\xC4\xC4NET\n\nxxx\n\nXXX\n\nxxx\n\n\n\n\n"
+      Haapanen\n\n\n\xC4\xC4NET\n\nFreesound.org - CC0\n\nKuvat\n\nNokikana - https://commons.wikimedia.org/w/index.php?curid=3870833\nTeippi
+      - Freepik"
     sw: "SKAPAD AV\n\nNiilo Korte\n\nEevi L\xE4hde\n\nAatu Lepp\xE4\n\nJuho-Emil
       Lauren\n\nJoni Samanen\n\nKatariina Willgren\n\nSamueli Ikonen\n\nKiia Marttila\n\nNiklas
-      Haapanen\n\n\nL\xC5TER AV\n\nxxx\n\nXXX\n\nxxx\n\n\n\n\n"
+      Haapanen\n\n\nL\xC5TER AV\n\nFreesound.org - CC0\n\nBilder\n\nSoth\xF6na -
+      https://commons.wikimedia.org/w/index.php?curid=3870833\nTejpa - Freepik"
     en: "CREATED BY\n\nNiilo Korte\n\nEevi L\xE4hde\n\nAatu Lepp\xE4\n\nJuho-Emil
       Lauren\n\nJoni Samanen\n\nKatariina Willgren\n\nSamueli Ikonen\n\nKiia Marttila\n\nNiklas
-      Haapanen\n\n\nSOUNDS BY\n\nxxx\n\nXXX\n\nxxx\n\n\n\n\n"
+      Haapanen\n\n\nSOUNDS BY\n\nFreesound.org - CC0\n\nImages\n\nEurasian Coot -
+      https://commons.wikimedia.org/w/index.php?curid=3870833\nTape - Freepik"
 --- !u!1 &187234123 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1598924327887405374, guid: 18b0718b4a0102347b8b0a94c419b112, type: 3}
