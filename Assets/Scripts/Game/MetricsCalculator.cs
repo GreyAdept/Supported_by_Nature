@@ -28,20 +28,20 @@ public class MetricsCalculator : MonoBehaviour
         {
             switch (tile.grownPlant.plantGrowStage)
             {
-                case 1:
+                case 0:
                     diversity++;
                     break;
-                case 2:
+                case 1:
                     diversity += 2;
+                    break;
+                case 2:
+                    diversity += 3;
                     break;
                 case 3:
                     diversity += 3;
                     break;
-                case 4:
-                    diversity += 4;
-                    break;
-                case 5:
-                    diversity += 5;
+                default:
+                    diversity++;
                     break;
             }
             
@@ -55,10 +55,12 @@ public class MetricsCalculator : MonoBehaviour
             case 3:
                 diversity -= 1;
                 break;
+            default:
+                break;
         }
 
         tileBiodiversity = diversity;
-        TurnManager.Instance.milestoneHandler.IncrementBiodiversity(tileBiodiversity);
+        TurnManager.Instance.milestoneHandler.IncrementBiodiversity(diversity);
 
 
     }

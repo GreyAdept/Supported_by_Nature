@@ -54,7 +54,7 @@ public class MilestoneHandler : MonoBehaviour
 
         tileCount = GameObject.FindGameObjectsWithTag("Tile").Length - 1;
 
-        maxBiodiversity = tileCount * 6;
+        maxBiodiversity = tileCount * 4;
     }
     
     // Update is called once per frame
@@ -86,7 +86,7 @@ public class MilestoneHandler : MonoBehaviour
             milestone2Button.image.sprite = milestoneTwoAvailable;
         }
 
-        if (currentBiodiversity > maxBiodiversity * 0.90)
+        if (currentBiodiversity > maxBiodiversity * 0.80)
         {
             milestone3Button.interactable = true;
             milestone3Button.image.sprite = milestoneThreeAvailable;

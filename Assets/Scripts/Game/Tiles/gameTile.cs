@@ -26,6 +26,7 @@ public class gameTile : MonoBehaviour
     public int overgrownState; // how much have the reeds grown
     public Plant grownPlant; //plant that the player can place
     public GameObject plantPrefab;
+    [SerializeField] private int plantGrowStage;
     
 
     
@@ -74,7 +75,11 @@ public class gameTile : MonoBehaviour
     
     void Update()
     {
-
+        if (grownPlant)
+        {
+            plantGrowStage = grownPlant.plantGrowStage;
+        }
+        
     }
     
     public string ReturnTileData()
@@ -115,15 +120,16 @@ public class gameTile : MonoBehaviour
             switch (grownPlant.plantGrowStage)
             {
                 case 0:
-                    Debug.Log(plantPrefab.name);
                     plantPrefab = Instantiate(grownPlant.organismPrefab, this.transform.position, plantPrefab.transform.rotation);
                     break;
-                
                 case 1:
+                    plantPrefab = Instantiate(grownPlant.organismPrefab, this.transform.position, plantPrefab.transform.rotation);
+                    break;
+                case 2:
                     Destroy(plantPrefab);
                     plantPrefab = Instantiate(grownPlant.plantGrowStagePrefab2, this.transform.position, plantPrefab.transform.rotation);
                     break;
-                case 2:
+                case 3:
                     Destroy(plantPrefab);
                     plantPrefab = Instantiate(grownPlant.plantGrowStagePrefab3, this.transform.position, plantPrefab.transform.rotation);
                     break;
