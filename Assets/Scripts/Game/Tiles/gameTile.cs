@@ -94,13 +94,13 @@ public class gameTile : MonoBehaviour
 
     public void ClearHover()
     {
-        effectHandler.StopParticle();
+        //effectHandler.StopParticle();
         isHovered = false;
     }
 
     public void StartHover()
     {
-        effectHandler.PlayParticle();
+        //effectHandler.PlayParticle(); it was replaced by tile selector sprite
     }
 
     public void IncrementPlantGrowStage(int random)

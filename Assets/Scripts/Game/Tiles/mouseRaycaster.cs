@@ -22,13 +22,17 @@ public class mouseRaycaster : MonoBehaviour
     public bool isTouching;
     public Vector2 touchPosition;
 
+    //tile indicator 
+    public GameObject tileIndicator;
+    public Grid grid;
+    
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         tm = tileManager.Instance;
-        
     }
 
 
@@ -51,7 +55,7 @@ public class mouseRaycaster : MonoBehaviour
         
         if (Touchscreen.current == null)
         {
-            touchPosition = Mouse.current.position.ReadValue();
+            mousePos = Mouse.current.position.ReadValue();
         }
         else
         {
@@ -70,13 +74,26 @@ public class mouseRaycaster : MonoBehaviour
         
         if (selectedTile != null && newSelectedTile != selectedTile)
         {
+           
             newSelectedTile.GetComponent<gameTile>().StartHover();
             tm.selectedTile = newSelectedTile.GetComponent<gameTile>(); //send selected tile to tilemanager instnace
             selectedTile.GetComponent<gameTile>().ClearHover();
         }
 
         selectedTile = newSelectedTile;
-       
+
+        if (tm.toolBeingUsed)
+        {
+            ToggleIndicatorVisibility(1);
+        }
+        else
+        {
+            ToggleIndicatorVisibility(0);
+        }
+
+        SnapToGrid();
+
+
     }
 
     public void CheckForNPCHit()
@@ -102,10 +119,15 @@ public class mouseRaycaster : MonoBehaviour
         UnityEngine.Debug.DrawLine(new Vector3(projectedPos.x, projectedPos.y + 1, projectedPos.z), worldPos);
         
         if (hit.collider != null && hit.collider.CompareTag("Tile")) //check if ray hits a tile
-        {   
+        {
+           
             return hit.collider.gameObject;
+
         }
+        
         return selectedTile;
+
+        
     }
 
     void OnDrawGizmos()
@@ -115,8 +137,28 @@ public class mouseRaycaster : MonoBehaviour
         Gizmos.DrawSphere(worldPos, 0.5f);
     }
 
-    private IEnumerator ClearHoverHelper()
-    {
-        yield return new WaitForSeconds(1);
+ 
+
+    private void SnapToGrid()
+    {   
+        //allign tile indicator to selected tile on the grid
+
+        if(tm.selectedTile != null && tm)
+        {
+            tileIndicator.transform.position = new Vector3(tm.selectedTile.gameObject.transform.position.x, 0.32f, tm.selectedTile.gameObject.transform.position.z);
+        }
+       
+    }
+
+    public void ToggleIndicatorVisibility(int toggle)
+    {   
+       if (toggle == 0)
+        {
+            tileIndicator.gameObject.SetActive(false);
+        }
+       else if (toggle == 1)
+        {
+            tileIndicator.gameObject.SetActive(true);
+        }
     }
 }

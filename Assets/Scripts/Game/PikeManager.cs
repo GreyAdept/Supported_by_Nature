@@ -36,7 +36,7 @@ public class PikeManager : MonoBehaviour
 
     private void UpdatePikes(int random)
     {   
-        Debug.Log("run");
+        Debug.Log("Updating pikes");
         
         if (pikeCount > 0)
         {

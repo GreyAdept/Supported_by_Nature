@@ -75,12 +75,14 @@ public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
     
     public void OnPointerClick (PointerEventData eventData)
     {   
+        //this was triggering plant action multiple times
+        /*
         if (tm.selectedTile != null)
         {
             action.affectTile(tm.selectedTile);
             Debug.Log("clicked!" + TurnManager.Instance.gameState.currentActionPoints);
         }
-        
+        */
     }
     
     public void OnPointerDown(PointerEventData pointerEventData)

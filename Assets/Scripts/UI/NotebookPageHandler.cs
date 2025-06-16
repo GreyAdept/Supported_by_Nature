@@ -20,11 +20,7 @@ public class NotebookPageHandler : MonoBehaviour
         JumpToPage(currentPage);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     private void GeneratePages()
     {
