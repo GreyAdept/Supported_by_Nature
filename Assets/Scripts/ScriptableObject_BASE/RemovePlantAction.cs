@@ -13,20 +13,7 @@ public class RemovePlantAction : tileAction
         tile.plants.Clear();
         */
 
-        if (TurnManager.Instance.gameState.currentActionPoints >= 1)
-        {
-            TurnManager.Instance.gameState.currentActionPoints -= 1;
-            TurnManager.Instance.onActionPointsChanged?.Invoke(TurnManager.Instance.gameState.currentActionPoints);
-
-            var weedScript = tile.GetComponent<tileWeedsGrowth>();
-            weedScript.growStage = 1;
-            weedScript.UpdateWeedObject();
-            //Debug.Log("effect trigger!");
-        }
-        else
-        {
-            Debug.Log("Not enough AP");
-        }
+        
 
         
 

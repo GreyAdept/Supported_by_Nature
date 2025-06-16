@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class mouseRaycaster : MonoBehaviour
 {
 
-    [SerializeField] private Vector2 mousePos;
     public Vector3 worldPos;
     [SerializeField] private Vector3 projectedPos;
     public Camera cam;
@@ -15,12 +14,13 @@ public class mouseRaycaster : MonoBehaviour
     private tileManager tm;
     [SerializeField] private GameObject selectedTile;
 
-    private InputSystem_Actions inputActions;
+
+    private InputManager inputManager;
 
     //touch screen input
-    private bool useTouch = true;
+   
     public bool isTouching;
-    public Vector2 touchPosition;
+    
 
     //tile indicator 
     public GameObject tileIndicator;
@@ -33,37 +33,20 @@ public class mouseRaycaster : MonoBehaviour
     void Start()
     {
         tm = tileManager.Instance;
+        inputManager = InputManager.Instance;
     }
 
 
-    void Awake()
-    {
-        inputActions = new InputSystem_Actions();
-        inputActions.Enable();
-        inputActions.Touch.Touch.performed += ctx =>
-        {
-            touchPosition = ctx.ReadValue<Vector2>();
-            CheckForNPCHit();
-        };
-
-        //inputActions.Touch.Touch.canceled += ctz => isTouching = false;
-    }
+    
 
     // Update is called once per frame
     void Update()
-    {   
-        
-        if (Touchscreen.current == null)
-        {
-            mousePos = Mouse.current.position.ReadValue();
-        }
-        else
-        {
-            mousePos = touchPosition;
-        }
-        
+    {
+
+        //CheckForNPCHit();
+
         Plane plane = new Plane(Vector3.up, Vector3.zero);
-        Ray ray = cam.ScreenPointToRay(mousePos);
+        Ray ray = cam.ScreenPointToRay(inputManager.pointerPosition);
         if (plane.Raycast(ray, out float distance))
         {
             worldPos = ray.GetPoint(distance);
@@ -98,7 +81,7 @@ public class mouseRaycaster : MonoBehaviour
 
     public void CheckForNPCHit()
     {
-        Ray ray = cam.ScreenPointToRay(touchPosition);
+        Ray ray = cam.ScreenPointToRay(inputManager.pointerPosition);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))

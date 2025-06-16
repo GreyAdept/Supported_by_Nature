@@ -3,117 +3,53 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
-
-public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
+public class ActionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public tileAction action;
-    private TurnManager turnManager;
+    
     private tileManager tm;
-    public TextMeshProUGUI buttonText;
+    private InputManager inputManager;
     [SerializeField]private bool selected = false;
     private Vector3 originalPosition;
-    private mouseRaycaster mouseRaycaster;
     private RectTransform rect;
-
+    public ButtonType buttonType;
 
     void Start()
     {
+        inputManager = InputManager.Instance;
         rect = GetComponent<RectTransform>();
         originalPosition = rect.anchoredPosition;
         tm = tileManager.Instance;
-        turnManager = TurnManager.Instance;
-        mouseRaycaster = turnManager.gameObject.GetComponent<mouseRaycaster>();
+       
+       
     }
 
     void Update()
     {
-        /* broken code, drag doesn't work?
         if (selected)
         {
-            Vector2 inputPos;
-            if (Touchscreen.current != null && mouseRaycaster.isTouching)
-            {
-                inputPos = mouseRaycaster.touchPosition;
-            }
-            else
-            {
-                inputPos = Mouse.current.position.ReadValue();
-            }
-
-
+           transform.position = inputManager.pointerPosition;
         }
-        */
-        
-        if (selected)
-        {   
-            if (Touchscreen.current == null)
-            {
-                var mousePos = Mouse.current.position.ReadValue();
-                transform.position = mousePos;
-            }
-            else
-            {
-                transform.position = mouseRaycaster.touchPosition;
-            }
-            
-            
-        }
-        
-        
-        
-    }
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        //Debug.Log("Mouse enter");
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        //Debug.Log("Mouse exit");
-    }
-    
-    public void OnPointerClick (PointerEventData eventData)
-    {   
-        //this was triggering plant action multiple times
-        /*
-        if (tm.selectedTile != null)
-        {
-            action.affectTile(tm.selectedTile);
-            Debug.Log("clicked!" + TurnManager.Instance.gameState.currentActionPoints);
-        }
-        */
     }
     
     public void OnPointerDown(PointerEventData pointerEventData)
-    {
+    {   
         selected = true;
         tm.toolBeingUsed = true;
+        inputManager.currentPlayerState = InputManager.PlayerState.placement;
+        inputManager.currentButton = buttonType;
     }
 
     public void OnPointerUp(PointerEventData pointerEventData)
     {
-        Debug.Log("Pointer up!");
-        if (tm.selectedTile != null)
-        {
-            action.affectTile(tm.selectedTile);
-            Debug.Log("clicked!" + TurnManager.Instance.gameState.currentActionPoints);
-        }
         selected = false;
         tm.toolBeingUsed = false;
+        inputManager.currentPlayerState = InputManager.PlayerState.normal;
         rect.anchoredPosition = originalPosition;
-        
     }
+
     
-    /*
-    public void ClickButton()
-    {
-        if (tm.selectedTile != null && action != null)
-        {
-            action.affectTile(tm.selectedTile);
-        }
-        
-    }
-    */
-    
+
+
 }
