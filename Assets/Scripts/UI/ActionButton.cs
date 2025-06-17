@@ -19,6 +19,9 @@ public class ActionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public ButtonType buttonType; //type of action the button performs, currently planting or cutting
 
+    public static event System.Action<ButtonType> OnButtonSelectionChanged;
+    public static event System.Action<InputManager.PlayerState> OnPlayerStateChanged;
+
     void Start()
     {
         inputManager = InputManager.Instance;
@@ -41,16 +44,20 @@ public class ActionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {   
         selected = true;
         tm.toolBeingUsed = true;
-        inputManager.currentPlayerState = InputManager.PlayerState.placement;
-        inputManager.currentButton = buttonType;
+        
+        OnButtonSelectionChanged?.Invoke(buttonType);
+        OnPlayerStateChanged?.Invoke(InputManager.PlayerState.placement);
     }
 
     public void OnPointerUp(PointerEventData pointerEventData)
     {
         selected = false;
         tm.toolBeingUsed = false;
-        inputManager.currentPlayerState = InputManager.PlayerState.normal;
+        
         rect.anchoredPosition = originalPosition; //reset the button to its original spot 
+
+        OnPlayerStateChanged?.Invoke(InputManager.PlayerState.normal);
+
     }
 
     

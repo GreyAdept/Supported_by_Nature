@@ -7,7 +7,9 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
 
     private InputSystem_Actions inputActions;
     public Vector2 pointerPosition;
-    public UnityEvent onPointerReleased = new UnityEvent(); 
+
+    public static event System.Action OnPointerReleased;
+    
 
     public enum PlayerState 
     {   
@@ -26,6 +28,10 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
     {   
         currentPlayerState = PlayerState.normal;
 
+        ActionButton.OnButtonSelectionChanged += (ButtonType ctx) => currentButton = ctx;
+
+        ActionButton.OnPlayerStateChanged += (PlayerState ctx) => currentPlayerState = ctx;
+
         inputActions = new InputSystem_Actions(); 
         inputActions.Enable();
 
@@ -34,7 +40,7 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
         {
             if (currentPlayerState == PlayerState.placement)
             {
-                onPointerReleased.Invoke(); //invoke the created event to fire the action in other class
+                OnPointerReleased?.Invoke(); //invoke the created event to fire the action in other class
             }
         };
 

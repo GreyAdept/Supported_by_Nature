@@ -14,7 +14,7 @@ public class PlacementSystem : MonoBehaviour
     {
         tm = tileManager.Instance;
         inputManager = InputManager.Instance;
-        inputManager.onPointerReleased.AddListener(ExecuteAction);
+        InputManager.OnPointerReleased += ExecuteAction;
     }
 
 
