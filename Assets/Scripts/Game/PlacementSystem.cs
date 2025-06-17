@@ -25,7 +25,7 @@ public class PlacementSystem : MonoBehaviour
 
     public void ExecuteAction()
     {
-        switch(inputManager.currentButton)
+        switch(inputManager.currentButton) //fire the correct action based on currently selected action button
         {
             case ButtonType.plant:
                 PlacePlant();
@@ -41,38 +41,32 @@ public class PlacementSystem : MonoBehaviour
 
         gameTile tile = tm.selectedTile;
 
-        if (TurnManager.Instance.gameState.currentActionPoints >= 1)
-        {
-            if (tile.grownPlant == null)
-            {
-                if (tile.overgrownState < 3)
-                {
-                    TurnManager.Instance.gameState.currentActionPoints -= 1;
-                    TurnManager.Instance.onActionPointsChanged?.Invoke(TurnManager.Instance.gameState.currentActionPoints);
-                    int randomIndex = Random.Range(0, plants.Length - 1);
-                    tile.grownPlant = plants[randomIndex];
-                    tile.grownPlant.plantGrowStage = 0;
-                    tile.plantPrefab = plants[randomIndex].organismPrefab;
-                    tile.UpdatePlant();
-
-                }
-                else
-                {
-                    TurnManager.Instance.warningMessages.ShowWarningOvergrown();
-
-                }
-
-            }
-            else
-            {
-                TurnManager.Instance.warningMessages.ShowWarningExistingPlant();
-            }
-
-        }
-        else
+        if (TurnManager.Instance.gameState.currentActionPoints < 1)
         {
             TurnManager.Instance.warningMessages.ShowWarningAP();
+            return;
         }
+       
+        if (tile.grownPlant != null)
+        {
+            TurnManager.Instance.warningMessages.ShowWarningExistingPlant();
+            return;
+        }
+        
+        if (tile.overgrownState >= 3)
+        {
+            TurnManager.Instance.warningMessages.ShowWarningOvergrown();
+            return;
+        }
+                            
+        TurnManager.Instance.gameState.currentActionPoints -= 1; 
+        TurnManager.Instance.onActionPointsChanged?.Invoke(TurnManager.Instance.gameState.currentActionPoints); //fire event when action points change
+        int randomIndex = Random.Range(0, plants.Length - 1); 
+        tile.grownPlant = plants[randomIndex]; 
+        tile.grownPlant.plantGrowStage = 0; 
+        tile.plantPrefab = plants[randomIndex].organismPrefab;
+        tile.UpdatePlant(); 
+                            
     }
 
     private void CutPlant()
@@ -87,7 +81,7 @@ public class PlacementSystem : MonoBehaviour
             var weedScript = tile.GetComponent<tileWeedsGrowth>();
             weedScript.growStage = 1;
             weedScript.UpdateWeedObject();
-            //Debug.Log("effect trigger!");
+            
         }
         else
         {

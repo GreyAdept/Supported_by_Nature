@@ -38,7 +38,7 @@ public class MilestoneHandler : MonoBehaviour
     [SerializeField] private GameObject fadeObject;
     [SerializeField] private GameObject endScreen;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         currentBiodiversity = 0;
@@ -57,11 +57,7 @@ public class MilestoneHandler : MonoBehaviour
         maxBiodiversity = tileCount * 4;
     }
     
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     private void SpawnMilestoneReward(int turnNum)
     {
         if(milestone1reward)
@@ -93,7 +89,7 @@ public class MilestoneHandler : MonoBehaviour
         }
     }
 
-    public void ProgressMilestone(int milestone)
+    public void ProgressMilestone(int milestone) //This method is a 5-star spaghetti dinner
     {   
         
             switch (milestone)

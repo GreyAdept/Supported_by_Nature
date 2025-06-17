@@ -2,7 +2,9 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "RemovePlantAction", menuName = "RemovePlantAction")]
 public class RemovePlantAction : tileAction
-{
+{   
+
+    //Moved this functionality to the "PlacementSystem" class 
     public override void affectTile(gameTile tile)
     {
         /*

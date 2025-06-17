@@ -29,22 +29,17 @@ public class mouseRaycaster : MonoBehaviour
 
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    
+    private void Start()
     {
         tm = tileManager.Instance;
         inputManager = InputManager.Instance;
     }
 
-
-    
-
-    // Update is called once per frame
-    void Update()
+ 
+    private void Update()
     {
-
-        //CheckForNPCHit();
-
+      
         Plane plane = new Plane(Vector3.up, Vector3.zero);
         Ray ray = cam.ScreenPointToRay(inputManager.pointerPosition);
         if (plane.Raycast(ray, out float distance))
@@ -78,21 +73,7 @@ public class mouseRaycaster : MonoBehaviour
 
 
     }
-
-    public void CheckForNPCHit()
-    {
-        Ray ray = cam.ScreenPointToRay(inputManager.pointerPosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (hit.collider != null && hit.collider.CompareTag("NPC"))
-            {
-                DialogueManager.instance.InteractWithNPC();
-            }
-        }
-    }
-
+    
 
     public GameObject CheckTileHitting()
     {
@@ -105,7 +86,11 @@ public class mouseRaycaster : MonoBehaviour
         {
            
             return hit.collider.gameObject;
-
+        }
+        else if (hit.collider != null && hit.collider.CompareTag("NPC"))
+        {
+            DialogueManager.instance.InteractWithNPC();
+            return selectedTile;
         }
         
         return selectedTile;
