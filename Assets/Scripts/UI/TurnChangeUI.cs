@@ -3,15 +3,19 @@ using UnityEngine;
 
 public class TurnChangeUI : MonoBehaviour
 {
-    private TurnManager turnManager;
     [SerializeField] private TMP_Text turnCounterText;
+    private void Awake()
+    {   
+        TurnManager.OnTurnChanged += () => UpdateTurnCounterUI();
+    }
+
     private void Start()
     {
-        turnManager = TurnManager.Instance;
-        turnManager.onTurnChanged.AddListener(UpdateTurnCounterUI);
+        turnCounterText.text = GameMaster.Instance.gameState.currentTurn.ToString();
     }
-    private void UpdateTurnCounterUI(int currentTurn)
+    private void UpdateTurnCounterUI()
     {
-        turnCounterText.text = currentTurn.ToString();
+        Debug.Log("end turn", this);
+        turnCounterText.text = GameMaster.Instance.gameState.currentTurn.ToString();
     }
 }

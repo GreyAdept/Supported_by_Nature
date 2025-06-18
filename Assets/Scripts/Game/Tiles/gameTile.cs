@@ -15,14 +15,11 @@ public class gameTile : MonoBehaviour
     public bool isHovered = false;
 
     //components
-    private tileManager tileManager;
     private Renderer rend;
     
-    //tile materials
-    private tileSelectedEffect effectHandler;
+    
     
     // tile data
-    public tileManager.TileType tileType;
     public bool isNextToLand;
    
     //plant related
@@ -39,19 +36,13 @@ public class gameTile : MonoBehaviour
     {   
         isNextToLand = false;
         grownPlant = null;
-        tileManager = tileManager.Instance;
         
         
-        TurnManager.Instance.onTurnChanged.AddListener(IncrementPlantGrowStage);
+        
+        //TurnManager.Instance.onTurnChanged.AddListener(IncrementPlantGrowStage);
          
 
-        foreach (GameObject t in adjacentTiles) //<-- check if tile is next to land
-        {
-            if (t.GetComponent<gameTile>().tileType == tileManager.TileType.Wetland)
-            {
-                isNextToLand = true;
-            }
-        }
+    
     }
 
 

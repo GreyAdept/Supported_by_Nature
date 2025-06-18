@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class TileStatUI : MonoBehaviour
 {
-    private tileManager tm;
+    
     public TextMeshProUGUI text;
     
     
     void Start()
     {
-        tm = tileManager.Instance;
+        
     }
 
     void Update()

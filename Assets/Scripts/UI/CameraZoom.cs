@@ -20,7 +20,7 @@ public class CameraZoom : MonoBehaviour
     [SerializeField] private float prevDistance;
     [SerializeField] private float currentDistance;
     private ReadOnlyArray<TouchControl> touches;
-    private mouseRaycaster mr;
+    private PointerRaycaster mr;
 
     private void Awake()
     {
@@ -30,11 +30,12 @@ public class CameraZoom : MonoBehaviour
     {
         EnhancedTouchSupport.Disable();
     }
+    /*
     void Start()
     {   
         cam = this.GetComponent<Camera>();
         StartCoroutine(FrameWait());
-        mr = TurnManager.Instance.gameObject.GetComponent<mouseRaycaster>();
+        mr = TurnManager.Instance.gameObject.GetComponent<PointerRaycaster>();
     }
 
     // Update is called once per frame
@@ -79,7 +80,7 @@ public class CameraZoom : MonoBehaviour
                 prevDistance = currentDistance;
                 
             }
-            else if (touchCount == 1 && tileManager.Instance.toolBeingUsed == false)
+            else if (touchCount == 1) //&& GameManager.Instance.toolBeingUsed == false)
             {
                 Vector3 touchDelta = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.delta.ReadValue();
                 touchDelta *= 0.01f;
@@ -101,4 +102,5 @@ public class CameraZoom : MonoBehaviour
             
         }
     }
+    */
 }

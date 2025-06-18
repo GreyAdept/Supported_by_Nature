@@ -11,13 +11,14 @@ public class PikeManager : MonoBehaviour
     public GameObject[] pikes;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
-    {   
-        
+    {
+        TurnManager.OnTurnChanged += () => UpdatePikes();
     }
 
     void Start()
-    {   
-        TurnManager.Instance.onTurnChanged.AddListener(UpdatePikes);
+    {
+        
+
         foreach (GameObject pike in pikes)
         {   
             pike.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
@@ -34,7 +35,7 @@ public class PikeManager : MonoBehaviour
         
     }
 
-    private void UpdatePikes(int random)
+    private void UpdatePikes()
     {   
         Debug.Log("Updating pikes");
         

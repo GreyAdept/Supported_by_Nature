@@ -45,8 +45,8 @@ public class EventPanelUI : MonoBehaviour
     private void Start()
     {
         
-        turnManager = TurnManager.Instance;
-        soundManager = SoundManager.Instance;
+        //turnManager = TurnManager.Instance;
+        //soundManager = SoundManager.Instance;
         goodResponseButton.onClick.AddListener(() => SelectResponse(AnswerCategory.Good));
         neutralResponseButton.onClick.AddListener(() => SelectResponse(AnswerCategory.Neutral));
         badResponseButton.onClick.AddListener(() => SelectResponse(AnswerCategory.Bad));
@@ -59,7 +59,7 @@ public class EventPanelUI : MonoBehaviour
     }
     public void GetNewEvent()
     {
-        currentEvent = turnManager.gameState.CurrentEvent;
+        //currentEvent = turnManager.gameState.CurrentEvent;
         Debug.Log(currentEvent.name);
         SetupEventUI();
         ResetSelectionState();
@@ -128,7 +128,7 @@ public class EventPanelUI : MonoBehaviour
     {
         if(selectedAnswer.HasValue)
         {
-            turnManager.gameState.HandleRandomEvent(selectedAnswer.Value);
+            //turnManager.gameState.HandleRandomEvent(selectedAnswer.Value);
             DisplayEventOutcome(selectedAnswer.Value);
             ResetSelectionState();
         }

@@ -10,7 +10,7 @@ public class MetricsCalculator : MonoBehaviour
     public int tileBiodiversity;
     void Start()
     {   
-        TurnManager.Instance.onTurnChanged.AddListener(DelayedCalculateBiodiversity);
+        //TurnManager.Instance.onTurnChanged.AddListener(DelayedCalculateBiodiversity);
         tile = GetComponent<gameTile>();
         tileWeeds = GetComponent<tileWeedsGrowth>();
     }
@@ -60,7 +60,7 @@ public class MetricsCalculator : MonoBehaviour
         }
 
         tileBiodiversity = diversity;
-        TurnManager.Instance.milestoneHandler.IncrementBiodiversity(diversity);
+        //TurnManager.Instance.milestoneHandler.IncrementBiodiversity(diversity);
 
 
     }

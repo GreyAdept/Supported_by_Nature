@@ -10,8 +10,8 @@ public class MetricsUI : MonoBehaviour
     [SerializeField] private Slider biodiversityLevelSlider;
     private void Start()
     {
-        turnManager = TurnManager.Instance;
-        turnManager.onMetricsUpdated.AddListener(UpdateMetricsUI);
+        //turnManager = TurnManager.Instance;
+        //turnManager.onMetricsUpdated.AddListener(UpdateMetricsUI);
     }
     private void UpdateMetricsUI(Dictionary<MetricType, float> metrics)
     {

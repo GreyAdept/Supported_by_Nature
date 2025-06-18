@@ -7,8 +7,11 @@ using NUnit.Framework.Constraints;
 
 public class GameState : MonoBehaviour
 {
-    public int currentActionPoints = 4;
-    private int currentTurnBonusPoints;
+    public int currentActionPoints { get; private set; }
+    public int currentTurn { get; private set; }
+    public int currentTurnBonusPoints { get; private set; }
+
+
     public Dictionary<MetricType, float> metrics;
     public List<OngoingEffect> activeEffects;
     private List<MetricEffect> pendingEffects;
@@ -20,11 +23,35 @@ public class GameState : MonoBehaviour
     public WetlandEvent CurrentEvent => currentEvent;
     private WetlandEvent currentEvent;
 
+
+    private void Awake()
+    {
+        TurnManager.OnTurnChanged += () => AddToTurnCount();
+        GameMaster.OnActionPointsChanged += (int ctx) => GainActionPoints(ctx);
+        currentTurn = 0;
+        currentActionPoints = 3;
+    }
+
+    private void AddToTurnCount()
+    {
+        currentTurn++;
+        Debug.Log(currentTurn, this);
+    }
+
+    private void GainActionPoints(int pointGain)
+    {
+        currentActionPoints += pointGain;
+    }
+
     private void Start()
     {
         InitializeStats();
         randomEventSystem = RandomEventSystem.instance;
     }
+
+
+
+    #region random dump
     //create list and assign level start metrics
     private void InitializeStats()
     {
@@ -95,8 +122,8 @@ public class GameState : MonoBehaviour
                 currentTurnBonusPoints += 1;
                 break;
         }
-        currentActionPoints += currentTurnBonusPoints;
-        TurnManager.Instance.onActionPointsChanged?.Invoke(currentActionPoints);
+        //currentActionPoints += currentTurnBonusPoints;
+        //TurnManager.Instance.onActionPointsChanged?.Invoke(currentActionPoints);
         onEventChoiceMade?.Invoke();
     }
     private void HandleSaveGame()
@@ -124,4 +151,7 @@ public class GameState : MonoBehaviour
     {
         activeEffects.Add(effect);
     }
+    #endregion
+
+    
 }

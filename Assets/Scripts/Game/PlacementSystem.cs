@@ -2,19 +2,13 @@ using UnityEngine;
 
 public class PlacementSystem : MonoBehaviour
 {
-
-    private tileManager tm;
     public Plant[] plants;
     private InputManager inputManager;
     
-    
-
-
     void Start()
     {
-        tm = tileManager.Instance;
-        inputManager = InputManager.Instance;
-        InputManager.OnPointerReleased += ExecuteAction;
+        //inputManager = InputManager.Instance;
+        //InputManager.OnPointerReleased += ExecuteAction;
     }
 
 
@@ -28,18 +22,18 @@ public class PlacementSystem : MonoBehaviour
         switch(inputManager.currentButton) //fire the correct action based on currently selected action button
         {
             case ButtonType.plant:
-                PlacePlant();
+                //PlacePlant();
                 break;
             case ButtonType.cut:
-                CutPlant();
+                //CutPlant();
                 break;
         }
     }
-
+    /*
     private void PlacePlant()
     {
 
-        gameTile tile = tm.selectedTile;
+        gameTile tile = null;
 
         if (TurnManager.Instance.gameState.currentActionPoints < 1)
         {
@@ -71,7 +65,7 @@ public class PlacementSystem : MonoBehaviour
 
     private void CutPlant()
     {
-        gameTile tile = tm.selectedTile;
+        gameTile tile = null;
 
         if (TurnManager.Instance.gameState.currentActionPoints >= 1)
         {
@@ -88,4 +82,6 @@ public class PlacementSystem : MonoBehaviour
             Debug.Log("Not enough AP");
         }
     }
+    */
 }
+    

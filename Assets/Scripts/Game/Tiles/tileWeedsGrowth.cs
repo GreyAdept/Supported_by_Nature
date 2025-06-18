@@ -12,13 +12,13 @@ public class tileWeedsGrowth : MonoBehaviour
     public GameObject growStage2;
     public GameObject growStage3;
 
-    private TurnManager tm;
+    //private TurnManager tm;
     
     
     void Start()
     {
-        tm = TurnManager.Instance;
-        tm.onTurnChanged.AddListener(SpreadPlants);
+        //tm = TurnManager.Instance;
+        //tm.onTurnChanged.AddListener(SpreadPlants);
         tile = transform.GetComponent<gameTile>();
         growStage = 1;
         UpdateWeedObject();
@@ -33,40 +33,7 @@ public class tileWeedsGrowth : MonoBehaviour
     {
         if (this.gameObject.activeSelf == true)
         {
-            float randomValue = Random.Range(0.0f, 1.0f);
-
-            switch (tile.tileType) // <-- use different random values for water / wet areas (this feature was discarded)
-            {
-                case tileManager.TileType.Water:
-
-                    if (randomValue > 2f)
-                    {
-                        if (growStage < 3)
-                        {
-                            growStage++;
-                            UpdateWeedObject();
-                        }
-                    }
-
-                    break;
-
-
-                case tileManager.TileType.Wetland:
-                    if (randomValue > 0.96f)
-                    {
-                        if (growStage < 3)
-                        {
-                            growStage++;
-                            UpdateWeedObject();
-                        }
-                    }
-
-                    break;
-
-
-                case tileManager.TileType.Forest:
-                    break;
-            }
+            float randomValue = Random.Range(0.0f, 1.0f);    
         }
     }
 

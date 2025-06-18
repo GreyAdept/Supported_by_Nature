@@ -46,8 +46,8 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         randomEventSystem = RandomEventSystem.instance;
-        turnManager = TurnManager.Instance;
-        turnManager.onTurnChanged.AddListener(OnTurnChanged);
+        //turnManager = TurnManager.Instance;
+        //turnManager.onTurnChanged.AddListener(OnTurnChanged);
         HideDialogue();
         HideTask();
         if(tutorialActive)
@@ -153,9 +153,11 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
+    
+    
     public void ShowRandomDialogue()
     {
-        RandomDialogue randomDialogue = dialogueDB.GetRandomDialogue(turnManager.CurrentTurn);
+        RandomDialogue randomDialogue = dialogueDB.GetRandomDialogue(GameMaster.Instance.gameState.currentTurn);
         if(randomDialogue != null)
         {
             if(randomDialogue.isJoke)
@@ -169,6 +171,7 @@ public class DialogueManager : MonoBehaviour
             ShowDialogue(randomDialogue);
         }
     }
+    
     public void ShowDialogue(DialogueBase dialogue)
     {
         dialoguePanel.SetActive(true);
@@ -257,4 +260,5 @@ public class DialogueManager : MonoBehaviour
         /*if (Input.GetKeyDown(KeyCode.Alpha1)) CompleteTask("task_one");
         if (Input.GetKeyDown(KeyCode.Alpha2)) CompleteTask("task_two");*/
     }
+
 }

@@ -7,8 +7,7 @@ public class ActionPointUI : MonoBehaviour
     [SerializeField] private TMP_Text apValueText;
     private void Start()
     {
-        turnManager = TurnManager.Instance;
-        turnManager.onActionPointsChanged.AddListener(UpdateActionPointsUI);
+        
     }
     private void UpdateActionPointsUI(int actionPoints)
     {

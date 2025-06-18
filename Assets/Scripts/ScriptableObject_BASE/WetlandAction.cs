@@ -40,6 +40,6 @@ public class WetlandAction : ScriptableObject
                 remainingTurns = ongoingEffectDuration
             });
         }
-        gameState.currentActionPoints -= apCost;
+        //gameState.currentActionPoints -= apCost;
     }
 }

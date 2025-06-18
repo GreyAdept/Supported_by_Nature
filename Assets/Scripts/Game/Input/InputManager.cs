@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Utils;
 
-public class InputManager : SingletonMonoBehaviour<InputManager>
+public class InputManager : MonoBehaviour
 {
 
     private InputSystem_Actions inputActions;
@@ -10,13 +10,6 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
 
     public static event System.Action OnPointerReleased;
     
-    public enum PlayerState 
-    {   
-        paused,
-        normal,
-        placement
-    }
-
     public PlayerState currentPlayerState;
     public ButtonType currentButton; //what button is selected from the UI actions menu
     
@@ -25,9 +18,15 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
     {   
         currentPlayerState = PlayerState.normal;
 
+        /*
         ActionButton.OnButtonSelectionChanged += (ButtonType ctx) => currentButton = ctx;
 
         ActionButton.OnPlayerStateChanged += (PlayerState ctx) => currentPlayerState = ctx;
+        */
+
+        GameMaster.OnToolButtonChanged += (ButtonType context) => currentButton = context;
+        GameMaster.OnPlayerStateChanged += (PlayerState context) => currentPlayerState = context;
+
 
         inputActions = new InputSystem_Actions(); 
         inputActions.Enable();

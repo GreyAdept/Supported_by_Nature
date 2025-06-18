@@ -43,8 +43,8 @@ public class MilestoneHandler : MonoBehaviour
     {
         currentBiodiversity = 0;
         totalMilestoneProgress = 0;
-        TurnManager.Instance.onTurnChanged.AddListener(ResetBiodiversity);
-        TurnManager.Instance.onTurnChanged.AddListener(SpawnMilestoneReward);
+        //TurnManager.Instance.onTurnChanged.AddListener(ResetBiodiversity);
+        //TurnManager.Instance.onTurnChanged.AddListener(SpawnMilestoneReward);
         milestone1Button.image.sprite = milestoneLockedSprite;
         milestone2Button.image.sprite = milestoneLockedSprite;
         milestone3Button.image.sprite = milestoneLockedSprite;
@@ -91,7 +91,7 @@ public class MilestoneHandler : MonoBehaviour
 
     public void ProgressMilestone(int milestone) //This method is a 5-star spaghetti dinner
     {   
-        
+            /*   
             switch (milestone)
             {
                 case 1:
@@ -161,7 +161,7 @@ public class MilestoneHandler : MonoBehaviour
             TurnManager.Instance.onActionPointsChanged.Invoke(TurnManager.Instance.gameState.currentActionPoints);
             //totalMilestoneProgress += 1;
             UpdateSlider();
-            
+            */
         
         
     }
