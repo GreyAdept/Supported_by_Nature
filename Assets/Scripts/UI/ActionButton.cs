@@ -3,117 +3,65 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
-
-public class ActionButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
-{
-    public tileAction action;
-    private TurnManager turnManager;
+public class ActionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+{   
+    //manager classes
     private tileManager tm;
-    public TextMeshProUGUI buttonText;
-    [SerializeField]private bool selected = false;
+    private InputManager inputManager;
+    //
+    
+    [SerializeField]private bool selected = false; 
+
     private Vector3 originalPosition;
-    private mouseRaycaster mouseRaycaster;
     private RectTransform rect;
 
+    public ButtonType buttonType; //type of action the button performs, currently planting or cutting
+
+    public static event System.Action<ButtonType> OnButtonSelectionChanged;
+    public static event System.Action<InputManager.PlayerState> OnPlayerStateChanged;
 
     void Start()
     {
+        inputManager = InputManager.Instance;
         rect = GetComponent<RectTransform>();
         originalPosition = rect.anchoredPosition;
         tm = tileManager.Instance;
-        turnManager = TurnManager.Instance;
-        mouseRaycaster = turnManager.gameObject.GetComponent<mouseRaycaster>();
+       
+       
     }
 
     void Update()
     {
-        /* broken code, drag doesn't work?
         if (selected)
         {
-            Vector2 inputPos;
-            if (Touchscreen.current != null && mouseRaycaster.isTouching)
-            {
-                inputPos = mouseRaycaster.touchPosition;
-            }
-            else
-            {
-                inputPos = Mouse.current.position.ReadValue();
-            }
-
-
+           transform.position = inputManager.pointerPosition; 
         }
-        */
-        
-        if (selected)
-        {   
-            if (Touchscreen.current == null)
-            {
-                var mousePos = Mouse.current.position.ReadValue();
-                transform.position = mousePos;
-            }
-            else
-            {
-                transform.position = mouseRaycaster.touchPosition;
-            }
-            
-            
-        }
-        
-        
-        
-    }
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        //Debug.Log("Mouse enter");
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        //Debug.Log("Mouse exit");
     }
     
-    public void OnPointerClick (PointerEventData eventData)
+    public void OnPointerDown(PointerEventData pointerEventData) //on pointer down, set the button state as selected and send the button type of input manager
     {   
-        //this was triggering plant action multiple times
-        /*
-        if (tm.selectedTile != null)
-        {
-            action.affectTile(tm.selectedTile);
-            Debug.Log("clicked!" + TurnManager.Instance.gameState.currentActionPoints);
-        }
-        */
-    }
-    
-    public void OnPointerDown(PointerEventData pointerEventData)
-    {
         selected = true;
         tm.toolBeingUsed = true;
+        
+        OnButtonSelectionChanged?.Invoke(buttonType);
+        OnPlayerStateChanged?.Invoke(InputManager.PlayerState.placement);
     }
 
     public void OnPointerUp(PointerEventData pointerEventData)
     {
-        Debug.Log("Pointer up!");
-        if (tm.selectedTile != null)
-        {
-            action.affectTile(tm.selectedTile);
-            Debug.Log("clicked!" + TurnManager.Instance.gameState.currentActionPoints);
-        }
         selected = false;
         tm.toolBeingUsed = false;
-        rect.anchoredPosition = originalPosition;
         
+        rect.anchoredPosition = originalPosition; //reset the button to its original spot 
+
+        OnPlayerStateChanged?.Invoke(InputManager.PlayerState.normal);
+
     }
     
-    /*
-    public void ClickButton()
-    {
-        if (tm.selectedTile != null && action != null)
-        {
-            action.affectTile(tm.selectedTile);
-        }
-        
-    }
-    */
-    
+  
+
+
+
 }

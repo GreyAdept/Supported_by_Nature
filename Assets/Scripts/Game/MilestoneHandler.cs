@@ -1,12 +1,14 @@
+using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class MilestoneHandler : MonoBehaviour
 {
-    public Button milestoneButton;
+    #region UI references -> todo: remove hardcoded references
+    
     public Slider milestoneSlider;
 
     public Toggle milestone1;
@@ -16,11 +18,13 @@ public class MilestoneHandler : MonoBehaviour
     public Button milestone1Button;
     public Button milestone2Button;
     public Button milestone3Button;
-    
+    #endregion
+
+
     public int milestone1Progress;
     public int milestone2Progress;
     public int milestone3Progress;
-    
+
     public int totalMilestoneProgress;
     public int highestMilestoneReached;
 
@@ -28,26 +32,42 @@ public class MilestoneHandler : MonoBehaviour
     public int maxBiodiversity;
 
     [SerializeField] private int tileCount;
-    [SerializeField] private Sprite milestoneLockedSprite;
-    [SerializeField] private Sprite milestoneOneAvailable;
-    [SerializeField] private Sprite milestoneTwoAvailable;
-    [SerializeField] private Sprite milestoneThreeAvailable;
+    public Sprite milestoneLockedSprite;
+    public Sprite milestoneOneAvailable;
+    public Sprite milestoneTwoAvailable;
+    public Sprite milestoneThreeAvailable;
 
     private bool milestone1reward = false;
     [SerializeField] private GameObject cowCollection;
-    [SerializeField] private GameObject fadeObject;
+    public GameObject fadeObject;
     [SerializeField] private GameObject endScreen;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private List<MetricsCalculator> gameTileMetrics = new List<MetricsCalculator>();
+
+    public static event System.Action<int> onBiodiversityChanged;
+    public static event System.Action onFirstMilestoneTriggered;
+    public static event System.Action onTutorialDone;
+    private bool tutorialTrigger = false;
+
+
+    private void Awake()
+    {
+        Fader.onFaded += () => EnableEndScreen();
+    }
+
     void Start()
     {
         currentBiodiversity = 0;
         totalMilestoneProgress = 0;
-        TurnManager.Instance.onTurnChanged.AddListener(ResetBiodiversity);
+
+        //TurnManager.Instance.onTurnChanged.AddListener(ResetBiodiversity);
         TurnManager.Instance.onTurnChanged.AddListener(SpawnMilestoneReward);
+        TurnManager.Instance.onTurnChanged.AddListener(UpdateBiodiversityFromTiles);
+
         milestone1Button.image.sprite = milestoneLockedSprite;
         milestone2Button.image.sprite = milestoneLockedSprite;
         milestone3Button.image.sprite = milestoneLockedSprite;
+
         milestone1Button.interactable = false;
         milestone2Button.interactable = false;
         milestone3Button.interactable = false;
@@ -55,13 +75,14 @@ public class MilestoneHandler : MonoBehaviour
         tileCount = GameObject.FindGameObjectsWithTag("Tile").Length - 1;
 
         maxBiodiversity = tileCount * 4;
+
+        foreach (var tile in GameObject.FindGameObjectsWithTag("Tile"))
+        {
+            gameTileMetrics.Add(tile.GetComponent<MetricsCalculator>());
+        }
     }
     
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     private void SpawnMilestoneReward(int turnNum)
     {
         if(milestone1reward)
@@ -72,28 +93,34 @@ public class MilestoneHandler : MonoBehaviour
     }
     private void UpdateSlider()
     {
-        milestoneSlider.value = currentBiodiversity;
+        //milestoneSlider.value = currentBiodiversity;
 
-        if (currentBiodiversity > maxBiodiversity * 0.25)
+        if (currentBiodiversity >= 97)
         {
             milestone1Button.interactable = true;
             milestone1Button.image.sprite = milestoneOneAvailable;
+            if (!tutorialTrigger)
+            {
+                onFirstMilestoneTriggered?.Invoke();
+            }
+            tutorialTrigger = true;
+            
         }
 
-        if (currentBiodiversity > maxBiodiversity * 0.50)
+        if (currentBiodiversity >= 194)
         {
             milestone2Button.interactable = true;
             milestone2Button.image.sprite = milestoneTwoAvailable;
         }
 
-        if (currentBiodiversity > maxBiodiversity * 0.80)
+        if (currentBiodiversity >= 250)
         {
             milestone3Button.interactable = true;
             milestone3Button.image.sprite = milestoneThreeAvailable;
         }
     }
 
-    public void ProgressMilestone(int milestone)
+    public void ProgressMilestone(int milestone) //This method is a 5-star spaghetti dinner
     {   
         
             switch (milestone)
@@ -103,6 +130,7 @@ public class MilestoneHandler : MonoBehaviour
                     {
                         if (TurnManager.Instance.gameState.currentActionPoints >= 1)
                         {
+                            onTutorialDone?.Invoke();
                             TurnManager.Instance.gameState.currentActionPoints -= 1;
                             milestone1Progress++;
                             milestone1Button.GetComponentInChildren<TextMeshProUGUI>().text = milestone1Progress + "/3 (AP)";
@@ -163,19 +191,9 @@ public class MilestoneHandler : MonoBehaviour
                     break;
             }
             TurnManager.Instance.onActionPointsChanged.Invoke(TurnManager.Instance.gameState.currentActionPoints);
-            //totalMilestoneProgress += 1;
-            UpdateSlider();
-            
-        
-        
+  
     }
 
-
-    private void ResetBiodiversity(int random)
-    {
-        currentBiodiversity = 0;
-        Invoke("UpdateSlider", 0.6f);
-    }
 
     //very shitty made at 3am
     private void StartEndSequence()
@@ -190,12 +208,41 @@ public class MilestoneHandler : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     //
 
     public void IncrementBiodiversity(int amount)
     {
         currentBiodiversity += amount;
     }
+
+    private void UpdateBiodiversityFromTiles(int random)
+    {
+        currentBiodiversity = 0;
+        BroadcastMessage("UpdateCurrentBiodiversity");
+        Invoke("DelayedBiodiversityCalculation", 0.5f);
+     
+    }
+
+    private void DelayedBiodiversityCalculation()
+    {   
+        foreach(var metric in gameTileMetrics)
+        {
+            IncrementBiodiversity(metric.tileBiodiversity);
+        }
+        onBiodiversityChanged?.Invoke(currentBiodiversity);
+        UpdateSlider();
+
+
+    }
+
+
+
+   
 
  
 }

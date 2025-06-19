@@ -19,12 +19,10 @@ public class TerrainGridHandler : MonoBehaviour
 
     private float prefabScale;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+   
     void Start()
     {  
-        DontDestroyOnLoad(this);
-        //generateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, 1); //use inversetransformpoint to convert from global to local position
-        //calculateNeighbors();
+        
     }
 
     
@@ -32,8 +30,8 @@ public class TerrainGridHandler : MonoBehaviour
     [ContextMenu("Generate map")]private void EditorMapGen()
     {   
         prefabScale = debugMarker.transform.localScale.x;
-        generateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, prefabScale);
-        calculateNeighbors();
+        GenerateGrid(transform.InverseTransformPoint(transform.position), cellsVertical, cellsHorizontal, prefabScale);
+        CalculateNeighbors();
     }
     
     
@@ -49,7 +47,7 @@ public class TerrainGridHandler : MonoBehaviour
     
     
     //generate grid and spawn tiles
-    private void generateGrid(Vector3 origin, int countVertical, int countHorizontal, float cellGap)
+    private void GenerateGrid(Vector3 origin, int countVertical, int countHorizontal, float cellGap)
     {
         for (int i = Vector2Int.RoundToInt(origin).x; i < countVertical; i++) // use vector2int for accurate grid coordinates (no decimals)
         {
@@ -72,12 +70,12 @@ public class TerrainGridHandler : MonoBehaviour
 
    
     
-    private void calculateNeighbors()
+    private void CalculateNeighbors()
     {
         for (int i = 0; i < mapTiles.Count; i++) //loop over every tile in the dictionary
         {
             var dictElement = mapTiles.ElementAt(i); //get key-value pair element from the index
-            //Debug.Log(dictElement.ToString());
+            
 
             Vector2Int tilePos = dictElement.Key;
 

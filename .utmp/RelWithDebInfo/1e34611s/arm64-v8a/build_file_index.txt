@@ -1,0 +1,2 @@
+C:\Users\leppa.aatu\Documents\Unity Projects\Pike Game\PikeGame\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\leppa.aatu\Documents\Unity Projects\Pike Game\PikeGame\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

@@ -36,22 +36,4 @@ public class tileManager : SingletonMonoBehaviour<tileManager>
         Instantiate(materialWater);
         Instantiate(materialForest);
     }
-    void Update()
-    {   
-        /*
-        if (Input.GetMouseButtonDown(0) && selectedTile != null)
-        {
-            tileAction.affectTile(selectedTile);
-        }
-        if (Input.GetMouseButtonDown(1) && selectedTile != null)
-        {
-            removePlantAction.affectTile(selectedTile);
-        }
-        */
-    }
-
-   
-    
-
-
 }

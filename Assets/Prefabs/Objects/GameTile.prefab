@@ -189,6 +189,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantPrefab: {fileID: 0}
   plantGrowStage: 0
+  placementIndicator: {fileID: 2166434206712845361, guid: 47e8e2f337a14b24484d4534acb84e46, type: 3}
 --- !u!114 &957869917931837165
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,12 +6,15 @@ using Debug = UnityEngine.Debug;
 
 public class gameTile : MonoBehaviour
 {
-   
+    //grid related
     public List<GameObject> adjacentTiles = new List<GameObject>();
     public Vector2Int gridPosition;
+
+    //tile status
     public bool isSelected = false;
     public bool isHovered = false;
 
+    //components
     private tileManager tileManager;
     private Renderer rend;
     
@@ -22,23 +25,44 @@ public class gameTile : MonoBehaviour
     public tileManager.TileType tileType;
     public bool isNextToLand;
    
-    //plant related data
+    //plant related
     public int overgrownState; // how much have the reeds grown
     public Plant grownPlant; //plant that the player can place
     public GameObject plantPrefab;
     [SerializeField] private int plantGrowStage;
-    
 
-    
+    //placement indicator
+    public GameObject placementIndicatorPrefab;
+    private GameObject indicator;
+
+
+    private void Awake()
+    {
+        ActionButton.OnPlayerStateChanged += (InputManager.PlayerState context) =>
+        {
+            if (context == InputManager.PlayerState.placement)
+            {
+                SetIndicatorOn();
+            }
+            else
+            {
+                SetIndicatorOff();
+            }
+
+        };
+    }
 
 
     void Start()
     {   
         isNextToLand = false;
         grownPlant = null;
+        placementIndicatorPrefab = InputManager.Instance.placementIndicator;
+        indicator = Instantiate(placementIndicatorPrefab, new Vector3(transform.position.x, 0.32f, transform.position.z), placementIndicatorPrefab.transform.rotation);
+        indicator.gameObject.SetActive(false);
         tileManager = tileManager.Instance;
-        rend = GetComponent<Renderer>();
-        effectHandler = GetComponent<tileSelectedEffect>();
+        
+        
         TurnManager.Instance.onTurnChanged.AddListener(IncrementPlantGrowStage);
          
 
@@ -49,26 +73,6 @@ public class gameTile : MonoBehaviour
                 isNextToLand = true;
             }
         }
-
-
-        switch (tileType) //<-- assign materials based on tiletype and move slightly for terrain height
-        {
-            case tileManager.TileType.Forest:
-                rend.material = tileManager.materialForest;
-                transform.Translate(Vector3.up*0.1f, Space.Self);
-                break;
-            case tileManager.TileType.Water:
-                rend.material = tileManager.materialWater;
-                transform.Translate(Vector3.down*0.1f, Space.Self);
-                break;
-            case tileManager.TileType.Wetland:
-                rend.material = tileManager.materialWetland;
-                break;
-            default:
-                rend.material.color = Color.white;
-                break;
-        }
-        
     }
 
 
@@ -77,9 +81,19 @@ public class gameTile : MonoBehaviour
     {
         if (grownPlant)
         {
-            plantGrowStage = grownPlant.plantGrowStage;
+            plantGrowStage = grownPlant.plantGrowStage; //might not need to update this every frame
         }
-        
+
+    }
+
+    private void SetIndicatorOn()
+    {
+        indicator.gameObject.SetActive(true);
+    }
+
+    private void SetIndicatorOff()
+    {
+        indicator.gameObject.SetActive(false);
     }
     
     public string ReturnTileData()
@@ -87,10 +101,6 @@ public class gameTile : MonoBehaviour
         return gridPosition.ToString();
     }
 
-    public void ClearHoverHelper()
-    {   
-        Invoke("ClearHover", 0.5f);
-    }
 
     public void ClearHover()
     {
@@ -113,7 +123,7 @@ public class gameTile : MonoBehaviour
         UpdatePlant();
     }
 
-    public void UpdatePlant()
+    public void UpdatePlant() //Update the plant object accordingly with a different model as it grows bigger
     {   
         if (grownPlant)
         {

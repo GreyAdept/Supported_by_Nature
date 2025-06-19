@@ -47,19 +47,7 @@ public class RandomEventSystem : MonoBehaviour
             GenerateNewEvent();
         }
     }
-    private void Update()
-    {   
-        if(Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            for(int i = 0; i < 100f;  i++)
-                GenerateNewEvent();
-        }
-        /*if(Input.GetKeyDown(KeyCode.Space))
-        {
-            //ForceNextEvent("kosteikolle_saapuu");
-            GenerateNewEvent();
-        }*/
-    }
+    
     private void InitializeWeights()
     {
         baseWeights[EventCategory.Catastrophic] = catastrophicWeight;
