@@ -22,7 +22,6 @@ public class TerrainGridHandler : MonoBehaviour
    
     void Start()
     {  
-        DontDestroyOnLoad(this);
         
     }
 

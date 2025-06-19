@@ -35,6 +35,7 @@ public class tileWeedsGrowth : MonoBehaviour
         {
             float randomValue = Random.Range(0.0f, 1.0f);
 
+
             switch (tile.tileType) // <-- use different random values for water / wet areas (this feature was discarded)
             {
                 case tileManager.TileType.Water:

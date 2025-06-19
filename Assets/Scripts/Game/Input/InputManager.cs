@@ -19,6 +19,8 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
 
     public PlayerState currentPlayerState;
     public ButtonType currentButton; //what button is selected from the UI actions menu
+
+    public GameObject placementIndicator;
     
    
     void Start()

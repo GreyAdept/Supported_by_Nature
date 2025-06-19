@@ -7,7 +7,7 @@ public class Fader : MonoBehaviour
 {
     [SerializeField] private CanvasGroup fadeCG;
     [SerializeField] private float fadeDuration = 0.5f;
-    public UnityEvent onFaded;
+    public static event System.Action onFaded;
     private void Start()
     {
         if (fadeCG != null)

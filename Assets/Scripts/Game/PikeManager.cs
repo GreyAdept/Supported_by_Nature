@@ -7,7 +7,7 @@ public class PikeManager : MonoBehaviour
     [SerializeField] private int pikeCount;
     [SerializeField] float pikeScore;
     
-    [SerializeField] private MilestoneHandler mh;
+    public MilestoneHandler mh;
     public GameObject[] pikes;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -22,7 +22,7 @@ public class PikeManager : MonoBehaviour
         {   
             pike.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
         }
-        mh = GetComponent<MilestoneHandler>();
+        
         pikeCount = 0;
     }
 

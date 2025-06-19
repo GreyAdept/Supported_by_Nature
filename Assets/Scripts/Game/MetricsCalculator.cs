@@ -8,9 +8,11 @@ public class MetricsCalculator : MonoBehaviour
     public tileWeedsGrowth tileWeeds;
 
     public int tileBiodiversity;
+
+
     void Start()
     {   
-        TurnManager.Instance.onTurnChanged.AddListener(DelayedCalculateBiodiversity);
+        //TurnManager.Instance.onTurnChanged.AddListener(DelayedCalculateBiodiversity);
         tile = GetComponent<gameTile>();
         tileWeeds = GetComponent<tileWeedsGrowth>();
     }
@@ -22,26 +24,26 @@ public class MetricsCalculator : MonoBehaviour
     
     public void CalculateBiodiversity()
     {
-        int diversity = 1;
+        int diversity = 0;
 
         if (tile.grownPlant != null)
         {
             switch (tile.grownPlant.plantGrowStage)
             {
                 case 0:
-                    diversity++;
+                    diversity = 1;
                     break;
                 case 1:
-                    diversity += 2;
+                    diversity = 2;
                     break;
                 case 2:
-                    diversity += 3;
+                    diversity = 3;
                     break;
                 case 3:
-                    diversity += 3;
+                    diversity = 4;
                     break;
                 default:
-                    diversity++;
+                    diversity = 0;
                     break;
             }
             
@@ -60,9 +62,15 @@ public class MetricsCalculator : MonoBehaviour
         }
 
         tileBiodiversity = diversity;
-        TurnManager.Instance.milestoneHandler.IncrementBiodiversity(diversity);
+        //TurnManager.Instance.milestoneHandler.IncrementBiodiversity(diversity);
 
 
+    }
+
+    public void UpdateCurrentBiodiversity() //this is called by a broadcasted message
+    {
+        CalculateBiodiversity();
+        //Debug.Log("Message received", this);
     }
 }
 

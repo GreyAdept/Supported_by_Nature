@@ -30,15 +30,36 @@ public class gameTile : MonoBehaviour
     public Plant grownPlant; //plant that the player can place
     public GameObject plantPrefab;
     [SerializeField] private int plantGrowStage;
-    
 
-    
+    //placement indicator
+    public GameObject placementIndicatorPrefab;
+    private GameObject indicator;
+
+
+    private void Awake()
+    {
+        ActionButton.OnPlayerStateChanged += (InputManager.PlayerState context) =>
+        {
+            if (context == InputManager.PlayerState.placement)
+            {
+                SetIndicatorOn();
+            }
+            else
+            {
+                SetIndicatorOff();
+            }
+
+        };
+    }
 
 
     void Start()
     {   
         isNextToLand = false;
         grownPlant = null;
+        placementIndicatorPrefab = InputManager.Instance.placementIndicator;
+        indicator = Instantiate(placementIndicatorPrefab, new Vector3(transform.position.x, 0.32f, transform.position.z), placementIndicatorPrefab.transform.rotation);
+        indicator.gameObject.SetActive(false);
         tileManager = tileManager.Instance;
         
         
@@ -62,7 +83,17 @@ public class gameTile : MonoBehaviour
         {
             plantGrowStage = grownPlant.plantGrowStage; //might not need to update this every frame
         }
-        
+
+    }
+
+    private void SetIndicatorOn()
+    {
+        indicator.gameObject.SetActive(true);
+    }
+
+    private void SetIndicatorOff()
+    {
+        indicator.gameObject.SetActive(false);
     }
     
     public string ReturnTileData()

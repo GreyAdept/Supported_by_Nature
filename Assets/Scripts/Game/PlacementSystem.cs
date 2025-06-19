@@ -6,8 +6,11 @@ public class PlacementSystem : MonoBehaviour
     private tileManager tm;
     public Plant[] plants;
     private InputManager inputManager;
-    
-    
+
+    public static event System.Action onAPWarning;
+    public static event System.Action onExistingPlantWarning;
+    public static event System.Action onOvergrownWarning;
+    public static event System.Action onCutNothing;
 
 
     void Start()
@@ -43,25 +46,25 @@ public class PlacementSystem : MonoBehaviour
 
         if (TurnManager.Instance.gameState.currentActionPoints < 1)
         {
-            TurnManager.Instance.warningMessages.ShowWarningAP();
+            onAPWarning?.Invoke();
             return;
         }
        
         if (tile.grownPlant != null)
         {
-            TurnManager.Instance.warningMessages.ShowWarningExistingPlant();
+            onExistingPlantWarning?.Invoke();
             return;
         }
         
         if (tile.overgrownState >= 3)
         {
-            TurnManager.Instance.warningMessages.ShowWarningOvergrown();
+            onOvergrownWarning?.Invoke();
             return;
         }
                             
         TurnManager.Instance.gameState.currentActionPoints -= 1; 
         TurnManager.Instance.onActionPointsChanged?.Invoke(TurnManager.Instance.gameState.currentActionPoints); //fire event when action points change
-        int randomIndex = Random.Range(0, plants.Length - 1); 
+        int randomIndex = Random.Range(0, 2); 
         tile.grownPlant = plants[randomIndex]; 
         tile.grownPlant.plantGrowStage = 0; 
         tile.plantPrefab = plants[randomIndex].organismPrefab;
@@ -70,22 +73,26 @@ public class PlacementSystem : MonoBehaviour
     }
 
     private void CutPlant()
-    {
+    {   
+
         gameTile tile = tm.selectedTile;
+        var weedScript = tile.GetComponent<tileWeedsGrowth>();
 
-        if (TurnManager.Instance.gameState.currentActionPoints >= 1)
+        if (weedScript.growStage <= 1)
         {
-            TurnManager.Instance.gameState.currentActionPoints -= 1;
-            TurnManager.Instance.onActionPointsChanged?.Invoke(TurnManager.Instance.gameState.currentActionPoints);
+            onCutNothing?.Invoke();
+            return;
+        }
 
-            var weedScript = tile.GetComponent<tileWeedsGrowth>();
-            weedScript.growStage = 1;
-            weedScript.UpdateWeedObject();
-            
-        }
-        else
+        if (TurnManager.Instance.gameState.currentActionPoints < 1)
         {
-            Debug.Log("Not enough AP");
+            onAPWarning?.Invoke();
+            return;
         }
+
+        TurnManager.Instance.gameState.currentActionPoints -= 1;
+        TurnManager.Instance.onActionPointsChanged?.Invoke(TurnManager.Instance.gameState.currentActionPoints);
+        weedScript.growStage = 1;
+        weedScript.UpdateWeedObject();
     }
 }
