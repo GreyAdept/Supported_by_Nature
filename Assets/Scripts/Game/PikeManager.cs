@@ -29,7 +29,7 @@ public class PikeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pikeScore = (float)mh.currentBiodiversity / (float)mh.maxBiodiversity * 10;
+        pikeScore = (float)mh.currentBiodiversity / 250 * 10;
         pikeCount = Mathf.RoundToInt(pikeScore / 2);
         
     }

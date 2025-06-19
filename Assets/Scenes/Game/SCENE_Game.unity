@@ -8265,6 +8265,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a2456e55ee59c4d4ea5b82a6c4ba0487, type: 3}
   m_PrefabInstance: {fileID: 1221937585}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1519112876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6107881253505222798, guid: fcd9b14280ad7ea48aa5486e5322a374, type: 3}
+  m_PrefabInstance: {fileID: 1449190335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1520064321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a2456e55ee59c4d4ea5b82a6c4ba0487, type: 3}
@@ -9730,7 +9735,7 @@ MonoBehaviour:
   milestoneOneAvailable: {fileID: 21300000, guid: a6f6c42785931e241aaf3384c20c82d0, type: 3}
   milestoneTwoAvailable: {fileID: 21300000, guid: e8e0e25585a042d499a34fa086356fd6, type: 3}
   milestoneThreeAvailable: {fileID: 21300000, guid: fb3abcc692798524da6e03a76b40835d, type: 3}
-  cowCollection: {fileID: 0}
+  cowCollection: {fileID: 1519112876}
   fadeObject: {fileID: 8916683535879850632}
   endScreen: {fileID: 900227365275949339}
 --- !u!4 &1752149372 stripped
