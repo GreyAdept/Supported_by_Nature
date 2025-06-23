@@ -82,7 +82,7 @@ public class GameState : MonoBehaviour
     }
     public void HandleRandomEvent(AnswerCategory answer)
     {
-        Debug.Log($"selected {answer.ToString()} response");
+        //Debug.Log($"selected {answer.ToString()} response");
         switch(answer)
         {
             case AnswerCategory.Good:

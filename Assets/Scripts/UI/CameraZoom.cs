@@ -20,7 +20,7 @@ public class CameraZoom : MonoBehaviour
     [SerializeField] private float prevDistance;
     [SerializeField] private float currentDistance;
     private ReadOnlyArray<TouchControl> touches;
-    private mouseRaycaster mr;
+    private MouseRaycaster mr;
 
     private void Awake()
     {
@@ -34,7 +34,7 @@ public class CameraZoom : MonoBehaviour
     {   
         cam = this.GetComponent<Camera>();
         StartCoroutine(FrameWait());
-        mr = TurnManager.Instance.gameObject.GetComponent<mouseRaycaster>();
+        mr = TurnManager.Instance.gameObject.GetComponent<MouseRaycaster>();
     }
 
     // Update is called once per frame

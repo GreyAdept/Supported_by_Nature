@@ -20,12 +20,6 @@ public class PlacementSystem : MonoBehaviour
         InputManager.OnPointerReleased += ExecuteAction;
     }
 
-
-    void Update()
-    {
-        
-    }
-
     public void ExecuteAction()
     {
         switch(inputManager.currentButton) //fire the correct action based on currently selected action button
@@ -64,10 +58,11 @@ public class PlacementSystem : MonoBehaviour
                             
         TurnManager.Instance.gameState.currentActionPoints -= 1; 
         TurnManager.Instance.onActionPointsChanged?.Invoke(TurnManager.Instance.gameState.currentActionPoints); //fire event when action points change
-        int randomIndex = Random.Range(0, 2); 
+        int randomIndex = Random.Range(0, 2);
+        //Debug.Log(randomIndex, this);
         tile.grownPlant = plants[randomIndex]; 
         tile.grownPlant.plantGrowStage = 0; 
-        tile.plantPrefab = plants[randomIndex].organismPrefab;
+        //tile.plantPrefab = plants[randomIndex].organismPrefab;
         tile.UpdatePlant(); 
                             
     }

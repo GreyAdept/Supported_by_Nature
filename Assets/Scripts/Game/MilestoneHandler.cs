@@ -43,6 +43,7 @@ public class MilestoneHandler : MonoBehaviour
     [SerializeField] private GameObject endScreen;
 
     private List<MetricsCalculator> gameTileMetrics = new List<MetricsCalculator>();
+    private List<GameObject> gameTiles  = new List<GameObject>();
 
     public static event System.Action<int> onBiodiversityChanged;
     public static event System.Action onFirstMilestoneTriggered;
@@ -53,6 +54,7 @@ public class MilestoneHandler : MonoBehaviour
     private void Awake()
     {
         Fader.onFaded += () => EnableEndScreen();
+        TurnManager.OnTurnChanged += () => UpdateBiodiversityFromTiles();
     }
 
     void Start()
@@ -62,7 +64,8 @@ public class MilestoneHandler : MonoBehaviour
 
         //TurnManager.Instance.onTurnChanged.AddListener(ResetBiodiversity);
         TurnManager.Instance.onTurnChanged.AddListener(SpawnMilestoneReward);
-        TurnManager.Instance.onTurnChanged.AddListener(UpdateBiodiversityFromTiles);
+        //TurnManager.Instance.onTurnChanged.AddListener(UpdateBiodiversityFromTiles);
+        
 
         milestone1Button.image.sprite = milestoneLockedSprite;
         milestone2Button.image.sprite = milestoneLockedSprite;
@@ -78,7 +81,7 @@ public class MilestoneHandler : MonoBehaviour
 
         foreach (var tile in GameObject.FindGameObjectsWithTag("Tile"))
         {
-            gameTileMetrics.Add(tile.GetComponent<MetricsCalculator>());
+            gameTiles.Add(tile);
         }
     }
     
@@ -91,7 +94,7 @@ public class MilestoneHandler : MonoBehaviour
             cowCollection.SetActive(true);
         }
     }
-    private void UpdateSlider()
+    private void UpdateUI()
     {
         //milestoneSlider.value = currentBiodiversity;
 
@@ -120,7 +123,7 @@ public class MilestoneHandler : MonoBehaviour
         }
     }
 
-    public void ProgressMilestone(int milestone) //This method is a 5-star spaghetti dinner
+    public void ProgressMilestone(int milestone) //This method is a 5-star spaghetti dinner, fix to be done
     {   
         
             switch (milestone)
@@ -138,7 +141,6 @@ public class MilestoneHandler : MonoBehaviour
                             {
                                 milestone1.isOn = true;
                                 milestone1Button.interactable = false;
-                                //milestone1Button.gameObject.SetActive(false);
                                 RandomEventSystem.instance.ForceNextEvent("kosteikolle_saapuu");
                                 milestone1reward = true;
                                 
@@ -159,7 +161,6 @@ public class MilestoneHandler : MonoBehaviour
                             {
                                 milestone2.isOn = true;
                                 milestone2Button.interactable = false;
-                                //milestone2Button.gameObject.SetActive(false);
                                 RandomEventSystem.instance.ForceNextEvent("vesilinnut_saapuvat");
                                 
                             }
@@ -180,7 +181,6 @@ public class MilestoneHandler : MonoBehaviour
                             {
                                 milestone3.isOn = true;
                                 milestone3Button.interactable = false;
-                                //milestone3Button.gameObject.SetActive(false);
                                 StartEndSequence();
                                 Debug.Log("you're winner");
                             }
@@ -220,27 +220,50 @@ public class MilestoneHandler : MonoBehaviour
         currentBiodiversity += amount;
     }
 
-    private void UpdateBiodiversityFromTiles(int random)
+    private void UpdateBiodiversityFromTiles()
     {
-        currentBiodiversity = 0;
-        BroadcastMessage("UpdateCurrentBiodiversity");
-        Invoke("DelayedBiodiversityCalculation", 0.5f);
-     
+        FixedScoreCalculator();
+        onBiodiversityChanged.Invoke(currentBiodiversity);
+        UpdateUI();
+
     }
 
-    private void DelayedBiodiversityCalculation()
-    {   
-        foreach(var metric in gameTileMetrics)
+    private void FixedScoreCalculator()
+    {
+        int currentScore = 0;
+        foreach (var tile in gameTiles)
         {
-            IncrementBiodiversity(metric.tileBiodiversity);
+
+            int tileScore = 0;
+
+            var gameTile = tile.GetComponent<gameTile>();
+            var tileWeed = tile.GetComponent<tileWeedsGrowth>();
+
+            if (gameTile.grownPlant)
+            {
+                tileScore = (gameTile.grownPlant.plantGrowStage + 1);
+            }
+            else
+            {
+                tileScore = 0;
+            }
+            
+            if (tileWeed.growStage >= 3)
+            {
+                tileScore -= 1;
+            }
+            Debug.Log(tileScore);
+            currentScore += tileScore;
         }
-        onBiodiversityChanged?.Invoke(currentBiodiversity);
-        UpdateSlider();
 
-
+        currentBiodiversity = currentScore;
     }
 
-
+    [ContextMenu("Dev Win Game Cheat")] void DevWinGame()
+    {
+        milestone3Progress = 3;
+        milestone3.isOn = true;
+    }
 
    
 

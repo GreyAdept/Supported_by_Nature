@@ -17,9 +17,12 @@ public class gameTile : MonoBehaviour
     //components
     private tileManager tileManager;
     private Renderer rend;
+    private SpriteRenderer sRend;
+    private Color defaultColor;
     
     //tile materials
     private tileSelectedEffect effectHandler;
+    
     
     // tile data
     public tileManager.TileType tileType;
@@ -28,7 +31,7 @@ public class gameTile : MonoBehaviour
     //plant related
     public int overgrownState; // how much have the reeds grown
     public Plant grownPlant; //plant that the player can place
-    public GameObject plantPrefab;
+    private GameObject plantPrefab;
     [SerializeField] private int plantGrowStage;
 
     //placement indicator
@@ -42,27 +45,35 @@ public class gameTile : MonoBehaviour
         {
             if (context == InputManager.PlayerState.placement)
             {
+                SetIndicatorColor();
                 SetIndicatorOn();
             }
             else
             {
+                SetIndicatorColor();
                 SetIndicatorOff();
             }
 
         };
+
+        TurnManager.OnTurnChanged += () => SetIndicatorColor();
+
+
+
     }
 
 
     void Start()
-    {   
+    {
         isNextToLand = false;
         grownPlant = null;
         placementIndicatorPrefab = InputManager.Instance.placementIndicator;
         indicator = Instantiate(placementIndicatorPrefab, new Vector3(transform.position.x, 0.32f, transform.position.z), placementIndicatorPrefab.transform.rotation);
         indicator.gameObject.SetActive(false);
         tileManager = tileManager.Instance;
-        
-        
+        sRend = indicator.GetComponent<SpriteRenderer>();
+        defaultColor = sRend.color;
+
         TurnManager.Instance.onTurnChanged.AddListener(IncrementPlantGrowStage);
          
 
@@ -94,6 +105,21 @@ public class gameTile : MonoBehaviour
     private void SetIndicatorOff()
     {
         indicator.gameObject.SetActive(false);
+    }
+
+    private void SetIndicatorToYellow()
+    {
+        sRend.color = Color.yellow;
+    }
+
+    private void SetIndicatorToWhite()
+    {
+        sRend.color = defaultColor;
+    }
+
+    private void SetIndicatorToRed()
+    {
+        sRend.color = Color.red;
     }
     
     public string ReturnTileData()
@@ -130,21 +156,38 @@ public class gameTile : MonoBehaviour
             switch (grownPlant.plantGrowStage)
             {
                 case 0:
-                    plantPrefab = Instantiate(grownPlant.organismPrefab, this.transform.position, plantPrefab.transform.rotation);
+                    plantPrefab = Instantiate(grownPlant.organismPrefab, this.transform.position, grownPlant.organismPrefab.transform.rotation);
                     break;
                 case 1:
-                    plantPrefab = Instantiate(grownPlant.organismPrefab, this.transform.position, plantPrefab.transform.rotation);
+                    Destroy(plantPrefab);
+                    plantPrefab = Instantiate(grownPlant.organismPrefab, this.transform.position, grownPlant.organismPrefab.transform.rotation);
                     break;
                 case 2:
                     Destroy(plantPrefab);
-                    plantPrefab = Instantiate(grownPlant.plantGrowStagePrefab2, this.transform.position, plantPrefab.transform.rotation);
+                    plantPrefab = Instantiate(grownPlant.plantGrowStagePrefab2, this.transform.position, grownPlant.organismPrefab.transform.rotation);
                     break;
                 case 3:
                     Destroy(plantPrefab);
-                    plantPrefab = Instantiate(grownPlant.plantGrowStagePrefab3, this.transform.position, plantPrefab.transform.rotation);
+                    plantPrefab = Instantiate(grownPlant.plantGrowStagePrefab3, this.transform.position, grownPlant.organismPrefab.transform.rotation);
                     break;
                
             }
+        }
+    }
+
+    private void SetIndicatorColor()
+    {
+        if (GetComponent<tileWeedsGrowth>().growStage == 2)
+        {   
+            SetIndicatorToYellow();
+        }
+        else if (GetComponent<tileWeedsGrowth>().growStage >= 3)
+        {
+            SetIndicatorToRed();
+        }
+        else
+        {
+            SetIndicatorToWhite();
         }
     }
 

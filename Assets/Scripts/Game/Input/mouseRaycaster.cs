@@ -3,7 +3,7 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class mouseRaycaster : MonoBehaviour
+public class MouseRaycaster : MonoBehaviour
 {
 
     public Vector3 worldPos;

@@ -13,8 +13,12 @@ public class tileWeedsGrowth : MonoBehaviour
     public GameObject growStage3;
 
     private TurnManager tm;
-    
-    
+
+    private void Awake()
+    {
+        
+    }
+
     void Start()
     {
         tm = TurnManager.Instance;
