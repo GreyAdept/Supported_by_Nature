@@ -10,6 +10,7 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
 
     public static event System.Action OnPointerReleased;
     
+    
     public enum PlayerState 
     {   
         paused,

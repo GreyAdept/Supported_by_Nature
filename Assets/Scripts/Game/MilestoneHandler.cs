@@ -54,7 +54,48 @@ public class MilestoneHandler : MonoBehaviour
     private void Awake()
     {
         Fader.onFaded += () => EnableEndScreen();
-        TurnManager.OnTurnChanged += () => UpdateBiodiversityFromTiles();
+        //TurnManager.OnTurnChanged += () => UpdateBiodiversityFromTiles();
+        PlacementSystem.onActionDone += () => UpdateUI();
+
+        PlacementSystem.onPlantPlaced += () =>
+        {
+            //currentBiodiversity += 5;
+            ChangeScore(5);
+            //onBiodiversityChanged?.Invoke(currentBiodiversity);
+        };
+
+        tileWeedsGrowth.OnGrowStage3Complete += () =>
+        {
+            //currentBiodiversity -= 10;
+            ChangeScore(-10);
+            //onBiodiversityChanged?.Invoke(currentBiodiversity);
+        };
+
+        PlacementSystem.onBigWeedCut += () =>
+        {
+            ChangeScore(10);
+        };
+
+        GameState.OnEventChoiceMade += (AnswerCategory ctx) =>
+        {
+            switch (ctx)
+            {
+                case AnswerCategory.Good:
+                    currentBiodiversity += 20;
+                    break;
+                case AnswerCategory.Bad:
+                    currentBiodiversity -= 20;
+                    break;
+                case AnswerCategory.Neutral:
+                    currentBiodiversity += 10;
+                    break;
+            }
+            UpdateUI();
+            ClampScore();
+            onBiodiversityChanged.Invoke(currentBiodiversity);
+        };
+
+        
     }
 
     void Start()
@@ -85,6 +126,39 @@ public class MilestoneHandler : MonoBehaviour
         }
     }
     
+    private void ChangeScore(int score)
+    {
+        currentBiodiversity += score;
+        ClampScore();
+        onBiodiversityChanged?.Invoke(currentBiodiversity);
+        UpdateUI();
+    }
+
+
+    private void ClampScore()
+    {
+        int lowerClamp = 0;
+        
+        if (milestone1.isOn)
+        {
+            lowerClamp = 97;
+        }
+        if (milestone2.isOn)
+        {
+            lowerClamp = 194;
+        }
+        if (milestone3.isOn)
+        {
+            lowerClamp = 250;
+        }
+
+        if (currentBiodiversity < lowerClamp)
+        {
+            currentBiodiversity = lowerClamp;
+        }
+
+    }
+
    
     private void SpawnMilestoneReward(int turnNum)
     {
@@ -222,12 +296,12 @@ public class MilestoneHandler : MonoBehaviour
 
     private void UpdateBiodiversityFromTiles()
     {
-        FixedScoreCalculator();
-        onBiodiversityChanged.Invoke(currentBiodiversity);
+        //FixedScoreCalculator();
+        //onBiodiversityChanged.Invoke(currentBiodiversity);
         UpdateUI();
 
     }
-
+    /*
     private void FixedScoreCalculator()
     {
         int currentScore = 0;
@@ -252,12 +326,13 @@ public class MilestoneHandler : MonoBehaviour
             {
                 tileScore -= 1;
             }
-            Debug.Log(tileScore);
+            //Debug.Log(tileScore);
             currentScore += tileScore;
         }
 
         currentBiodiversity = currentScore;
     }
+    */
 
     [ContextMenu("Dev Win Game Cheat")] void DevWinGame()
     {

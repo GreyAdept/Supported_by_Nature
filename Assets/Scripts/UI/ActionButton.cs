@@ -47,6 +47,7 @@ public class ActionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         
         OnButtonSelectionChanged?.Invoke(buttonType);
         OnPlayerStateChanged?.Invoke(InputManager.PlayerState.placement);
+        GameMaster.Instance.paused = true;
     }
 
     public void OnPointerUp(PointerEventData pointerEventData)
@@ -57,6 +58,7 @@ public class ActionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         rect.anchoredPosition = originalPosition; //reset the button to its original spot 
 
         OnPlayerStateChanged?.Invoke(InputManager.PlayerState.normal);
+        GameMaster.Instance.paused = false;
 
     }
     

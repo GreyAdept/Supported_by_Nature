@@ -12,6 +12,10 @@ public class PlacementSystem : MonoBehaviour
     public static event System.Action onOvergrownWarning;
     public static event System.Action onCutNothing;
 
+    public static event System.Action onActionDone;
+    public static event System.Action onBigWeedCut;
+    public static event System.Action onPlantPlaced;
+
 
     void Start()
     {
@@ -61,8 +65,9 @@ public class PlacementSystem : MonoBehaviour
         int randomIndex = Random.Range(0, 2);
         //Debug.Log(randomIndex, this);
         tile.grownPlant = plants[randomIndex]; 
-        tile.grownPlant.plantGrowStage = 0; 
+        tile.grownPlant.plantGrowStage = 0;
         //tile.plantPrefab = plants[randomIndex].organismPrefab;
+        onPlantPlaced?.Invoke();
         tile.UpdatePlant(); 
                             
     }
@@ -87,7 +92,12 @@ public class PlacementSystem : MonoBehaviour
 
         TurnManager.Instance.gameState.currentActionPoints -= 1;
         TurnManager.Instance.onActionPointsChanged?.Invoke(TurnManager.Instance.gameState.currentActionPoints);
+        if (weedScript.growStage == 3)
+        {
+            onBigWeedCut?.Invoke();
+        }
         weedScript.growStage = 1;
+        onActionDone?.Invoke();
         weedScript.UpdateWeedObject();
     }
 }

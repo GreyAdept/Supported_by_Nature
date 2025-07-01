@@ -16,6 +16,7 @@ public class GameState : MonoBehaviour
     [SerializeField] private Vector2 valueRange = new Vector2(0,100);
 
     public UnityEvent onEventChoiceMade;
+    public static event System.Action<AnswerCategory> OnEventChoiceMade;
     public UnityEvent onNewEvent;
     public WetlandEvent CurrentEvent => currentEvent;
     private WetlandEvent currentEvent;
@@ -39,6 +40,7 @@ public class GameState : MonoBehaviour
     }
     public void EndTurn()
     {
+        GameMaster.Instance.paused = true;
         HandleOngoingEffects();
         ApplyPendingEffects();
         GetRandomEvent();
@@ -97,7 +99,10 @@ public class GameState : MonoBehaviour
         }
         currentActionPoints += currentTurnBonusPoints;
         TurnManager.Instance.onActionPointsChanged?.Invoke(currentActionPoints);
+        GameMaster.Instance.paused = false;
         onEventChoiceMade?.Invoke();
+        OnEventChoiceMade?.Invoke(answer);
+        
     }
     private void HandleSaveGame()
     {

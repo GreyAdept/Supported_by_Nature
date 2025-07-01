@@ -39,7 +39,12 @@ public class EventPanelUI : MonoBehaviour
     [SerializeField] private LocalizedText selectButtonTextLocalized;
     [SerializeField] private LocalizedText choiceButtonTextLocalized;
     [SerializeField] private LocalizedText closeButtonTextLocalized;
-    
+
+
+    private void Awake()
+    {
+        GameState.OnEventChoiceMade += (AnswerCategory ctx) => { HideEventUI(); };        
+    }
 
 
     private void Start()

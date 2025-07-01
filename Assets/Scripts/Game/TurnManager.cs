@@ -18,7 +18,8 @@ public class TurnManager : MonoBehaviour
     public UnityEvent<int> onActionPointsChanged;
     public UnityEvent<Dictionary<MetricType, float>> onMetricsUpdated;
     [SerializeField] private Button endTurnButton;
-    //and more...
+
+    private float tickTimer;
 
 
     //create global instance so we can access this easily
@@ -36,6 +37,16 @@ public class TurnManager : MonoBehaviour
             Debug.Log("duplicate turnmanager");
             Destroy(gameObject);
         }
+
+        ClockScript.OnSecondsChanged += (int context) =>
+        {
+            tickTimer += 1;
+            if (tickTimer > 20)
+            {
+                tickTimer = 0;
+                EndTurn();
+            }
+        };
     }
     private void Start()
     {

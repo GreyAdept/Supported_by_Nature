@@ -42,6 +42,7 @@ public class PopupHandler : MonoBehaviour
         dialogueButton.interactable = false;
         nextTurnButton.interactable = false;
         bookPopupButton.interactable = false;
+        GameMaster.Instance.paused = true;
     }
     //dialogueManager closedialogue also triggers this, others from close button
     public void ClosePopup()
@@ -50,5 +51,6 @@ public class PopupHandler : MonoBehaviour
         nextTurnButton.interactable = true;
         bookPopupButton.interactable = true;
         isAnyPopupOpen = false;
+        GameMaster.Instance.paused = false;
     }
 }

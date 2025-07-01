@@ -14,17 +14,39 @@ public class tileWeedsGrowth : MonoBehaviour
 
     private TurnManager tm;
 
+    private float currentTime;
+    [SerializeField] private int growingProgress;
+
+    public static event System.Action OnGrowStage3Complete;
+
     private void Awake()
     {
-        
+        /*
+        GameMaster.OnSessionTimeChanged += (float ctx) => 
+        {
+            growingProgress += 1;
+        };
+        */
+
+        ClockScript.OnSecondsChanged += (int context) =>
+        {
+            growingProgress += 1;
+            if (growingProgress > 10)
+            {
+                growingProgress = 0;
+                GrowWeeds();
+                //UpdateWeedObject();
+            }
+        };
+
     }
 
     void Start()
     {
         tm = TurnManager.Instance;
-        tm.onTurnChanged.AddListener(SpreadPlants);
+        //tm.onTurnChanged.AddListener(SpreadPlants);
         tile = transform.GetComponent<gameTile>();
-        growStage = 1;
+        //growStage = 1;
         UpdateWeedObject();
 
         if (this.gameObject.activeSelf == false)
@@ -33,7 +55,7 @@ public class tileWeedsGrowth : MonoBehaviour
         }
     }
     
-    private void GrowWeeds(int random)
+    private void GrowWeeds()
     {
         if (this.gameObject.activeSelf == true)
         {
@@ -42,22 +64,8 @@ public class tileWeedsGrowth : MonoBehaviour
 
             switch (tile.tileType) // <-- use different random values for water / wet areas (this feature was discarded)
             {
-                case tileManager.TileType.Water:
-
-                    if (randomValue > 2f)
-                    {
-                        if (growStage < 3)
-                        {
-                            growStage++;
-                            UpdateWeedObject();
-                        }
-                    }
-
-                    break;
-
-
                 case tileManager.TileType.Wetland:
-                    if (randomValue > 0.96f)
+                    if (randomValue > 0.90f)
                     {
                         if (growStage < 3)
                         {
@@ -66,10 +74,6 @@ public class tileWeedsGrowth : MonoBehaviour
                         }
                     }
 
-                    break;
-
-
-                case tileManager.TileType.Forest:
                     break;
             }
         }
@@ -88,11 +92,12 @@ public class tileWeedsGrowth : MonoBehaviour
                 break;
             case 2:
                 Destroy(currentGrowth);
-                currentGrowth = Instantiate(growStage2, tile.transform.position, growStage2.transform.rotation * Quaternion.Euler(0, 0, Random.Range(0f, 180f)));
+                currentGrowth = Instantiate(growStage2, tile.transform.position, growStage2.transform.rotation * Quaternion.Euler(0, 0, Random.Range(0f, 180f)));    
                 break;
             case 3:
                 Destroy(currentGrowth);
                 currentGrowth = Instantiate(growStage3, tile.transform.position, growStage3.transform.rotation * Quaternion.Euler(0, 0, Random.Range(0f, 180f)));
+                OnGrowStage3Complete?.Invoke();
                 break;
         }
 
@@ -114,7 +119,7 @@ public class tileWeedsGrowth : MonoBehaviour
             var adjacents = tile.adjacentTiles;
             int randomChoice = Random.Range(0, adjacents.Count - 1);
             var chosenTile = adjacents[randomChoice];
-            chosenTile.GetComponent<tileWeedsGrowth>().GrowWeeds(0);
+            chosenTile.GetComponent<tileWeedsGrowth>().GrowWeeds();
         }  
     }
         
