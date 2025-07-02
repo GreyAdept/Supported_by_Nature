@@ -8,13 +8,13 @@ using UnityEngine.SceneManagement;
 public class MilestoneHandler : MonoBehaviour
 {
     #region UI references -> todo: remove hardcoded references
-    
+
     public Slider milestoneSlider;
 
     public Toggle milestone1;
     public Toggle milestone2;
     public Toggle milestone3;
-    
+
     public Button milestone1Button;
     public Button milestone2Button;
     public Button milestone3Button;
@@ -43,24 +43,45 @@ public class MilestoneHandler : MonoBehaviour
     [SerializeField] private GameObject endScreen;
 
     private List<MetricsCalculator> gameTileMetrics = new List<MetricsCalculator>();
-    private List<GameObject> gameTiles  = new List<GameObject>();
+    private List<GameObject> gameTiles = new List<GameObject>();
 
     public static event System.Action<int> onBiodiversityChanged;
     public static event System.Action onFirstMilestoneTriggered;
     public static event System.Action onTutorialDone;
     private bool tutorialTrigger = false;
 
+    public static event System.Action<int> OnActionPointIncomeChanged;
 
+    private int baseApGain = 1;
+    [SerializeField] private int _apGain;
+    private int tickTimer;
+    public int ApGain
+    {
+        get { return _apGain; }
+        set
+        {
+            OnActionPointIncomeChanged?.Invoke(value);
+            _apGain = value;
+        }
+    }
+
+   
     private void Awake()
     {
         Fader.onFaded += () => EnableEndScreen();
         //TurnManager.OnTurnChanged += () => UpdateBiodiversityFromTiles();
-        PlacementSystem.onActionDone += () => UpdateUI();
+        PlacementSystem.onActionDone += () =>
+        {
+            UpdateUI();
+            CalculateAPIncome();
+        };
+        
 
         PlacementSystem.onPlantPlaced += () =>
         {
             //currentBiodiversity += 5;
             ChangeScore(5);
+            CalculateAPIncome();
             //onBiodiversityChanged?.Invoke(currentBiodiversity);
         };
 
@@ -68,12 +89,25 @@ public class MilestoneHandler : MonoBehaviour
         {
             //currentBiodiversity -= 10;
             ChangeScore(-10);
+            CalculateAPIncome();
             //onBiodiversityChanged?.Invoke(currentBiodiversity);
         };
 
         PlacementSystem.onBigWeedCut += () =>
         {
             ChangeScore(10);
+            CalculateAPIncome();
+        };
+
+        ClockScript.OnSecondsChanged += (int ctx) =>
+        {
+            tickTimer++;
+            if (tickTimer > 10)
+            {
+                tickTimer = 0;
+                AddAP();        
+            }
+            
         };
 
         GameState.OnEventChoiceMade += (AnswerCategory ctx) =>
@@ -92,6 +126,7 @@ public class MilestoneHandler : MonoBehaviour
             }
             UpdateUI();
             ClampScore();
+            CalculateAPIncome();
             onBiodiversityChanged.Invoke(currentBiodiversity);
         };
 
@@ -266,6 +301,35 @@ public class MilestoneHandler : MonoBehaviour
             }
             TurnManager.Instance.onActionPointsChanged.Invoke(TurnManager.Instance.gameState.currentActionPoints);
   
+    }
+
+    private void CalculateAPIncome()
+    {
+        int tempIncome = 0;
+
+        foreach (var tile in gameTiles)
+        {
+            Debug.Log("tile found");
+
+            var tileScript = tile.GetComponent<gameTile>();
+
+            if (tileScript.grownPlant == null) continue;
+
+            if (tileScript.plantGrowStage >= 3)
+            {
+                tempIncome++;
+            }
+        }
+
+        ApGain = baseApGain + tempIncome;
+
+    }
+
+    private void AddAP()
+    {
+        TurnManager.Instance.gameState.currentActionPoints += ApGain;
+        TurnManager.Instance.onActionPointsChanged.Invoke(TurnManager.Instance.gameState.currentActionPoints);
+
     }
 
 

@@ -41,7 +41,9 @@ public class ActionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     }
     
     public void OnPointerDown(PointerEventData pointerEventData) //on pointer down, set the button state as selected and send the button type of input manager
-    {   
+    {
+        if (GameMaster.Instance.paused == true) return;
+
         selected = true;
         tm.toolBeingUsed = true;
         
@@ -52,6 +54,8 @@ public class ActionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnPointerUp(PointerEventData pointerEventData)
     {
+        if (!selected) return;
+
         selected = false;
         tm.toolBeingUsed = false;
         

@@ -7,8 +7,9 @@ using NUnit.Framework.Constraints;
 
 public class GameState : MonoBehaviour
 {
-    public int currentActionPoints = 4;
+    public int currentActionPoints = 2;
     private int currentTurnBonusPoints;
+ 
     public Dictionary<MetricType, float> metrics;
     public List<OngoingEffect> activeEffects;
     private List<MetricEffect> pendingEffects;
@@ -17,9 +18,12 @@ public class GameState : MonoBehaviour
 
     public UnityEvent onEventChoiceMade;
     public static event System.Action<AnswerCategory> OnEventChoiceMade;
+
     public UnityEvent onNewEvent;
     public WetlandEvent CurrentEvent => currentEvent;
     private WetlandEvent currentEvent;
+
+    public CanvasGroup mainElements;
 
     private void Start()
     {
@@ -39,8 +43,9 @@ public class GameState : MonoBehaviour
         };
     }
     public void EndTurn()
-    {
-        GameMaster.Instance.paused = true;
+    {   
+        if (GameMaster.Instance.sessionStarted) GameMaster.Instance.paused = true;
+        mainElements.interactable = false;
         HandleOngoingEffects();
         ApplyPendingEffects();
         GetRandomEvent();
@@ -100,6 +105,7 @@ public class GameState : MonoBehaviour
         currentActionPoints += currentTurnBonusPoints;
         TurnManager.Instance.onActionPointsChanged?.Invoke(currentActionPoints);
         GameMaster.Instance.paused = false;
+        mainElements.interactable = true;
         onEventChoiceMade?.Invoke();
         OnEventChoiceMade?.Invoke(answer);
         
@@ -110,7 +116,7 @@ public class GameState : MonoBehaviour
     }
     private void ResetActionPoints()
     {
-        currentActionPoints = 4;
+        //currentActionPoints = 4;
         currentTurnBonusPoints = 0;
     }
     //add action effects to list so they can be applied at end turn

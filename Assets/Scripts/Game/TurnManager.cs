@@ -20,6 +20,7 @@ public class TurnManager : MonoBehaviour
     [SerializeField] private Button endTurnButton;
 
     private float tickTimer;
+   
 
 
     //create global instance so we can access this easily

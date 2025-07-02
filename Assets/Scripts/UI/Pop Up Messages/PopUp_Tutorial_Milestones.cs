@@ -34,9 +34,11 @@ public class PopUp_Tutorial_Milestones : MonoBehaviour
     public void ClosePopUp()
     {
         this.gameObject.SetActive(false);
+        GameMaster.Instance.paused = false;
     }
     public void OpenPopUp()
     {
+        GameMaster.Instance.paused = true;
         this.gameObject.SetActive(true);
         Invoke("ClosePopUp", 5f);
     }

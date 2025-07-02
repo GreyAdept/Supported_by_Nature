@@ -38,5 +38,6 @@ public class ButtonCloseGame : MonoBehaviour
         mainElements.alpha = 0;
         mainElements.interactable = false;
         closeGameMenu.SetActive(true);
+        GameMaster.Instance.paused = true;
     }
 }

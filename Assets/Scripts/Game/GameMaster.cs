@@ -27,13 +27,15 @@ public class GameMaster : MonoBehaviour
 
     private void Start()
     {
-        paused = false;
-        ResetRession();
+        paused = true;
+        //ResetRession();
     }
 
     public void ResetRession()
     {
         sessionTime = 0;
+        paused = false;
+        sessionStarted = true;
         OnSessionStarted?.Invoke();
     }
 

@@ -32,7 +32,7 @@ public class gameTile : MonoBehaviour
     public int overgrownState; // how much have the reeds grown
     public Plant grownPlant; //plant that the player can place
     private GameObject plantPrefab;
-    [SerializeField] private int plantGrowStage;
+    public int plantGrowStage;
 
     //placement indicator
     public GameObject placementIndicatorPrefab;
