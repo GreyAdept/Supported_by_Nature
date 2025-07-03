@@ -13,6 +13,12 @@ public class MetricsUI : MonoBehaviour
         turnManager = TurnManager.Instance;
         turnManager.onMetricsUpdated.AddListener(UpdateMetricsUI);
     }
+
+    private void OnDisable()
+    {
+        turnManager.onMetricsUpdated.RemoveListener(UpdateMetricsUI);
+    }
+
     private void UpdateMetricsUI(Dictionary<MetricType, float> metrics)
     {
         foreach(var metric in metrics)

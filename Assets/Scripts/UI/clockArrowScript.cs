@@ -3,25 +3,45 @@ using DG.Tweening;
 
 public class clockArrowScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    private DG.Tweening.Tween rotationTween;
+
+
+    private void Awake()
     {
-        var tween = this.transform.DOLocalRotate(new Vector3(0, 0, -360f), 20f, RotateMode.FastBeyond360);
-        tween.SetEase(Ease.Linear);
-        tween.onComplete += () => { Rotate(); };
-        tween.Pause();
+        rotationTween = this.transform.DOLocalRotate(new Vector3(0, 0, -360f), 20f, RotateMode.FastBeyond360);
+        rotationTween.SetEase(Ease.Linear);
+
+        rotationTween.onComplete += Restart;
+        GameMaster.OnPaused += OnPause;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void Start()
     {
-        
+        rotationTween.Pause();
     }
 
-    void Rotate()
+    private void Restart()
     {
+        rotationTween?.Restart();
+    }
 
-        
-        
+    private void OnPause(bool ctx)
+    {
+        if (ctx)
+        {
+            rotationTween.Pause();
+        }
+        else
+        {
+            rotationTween.Play();
+        }
+    }
+
+    private void OnDisable()
+    {
+        rotationTween.onComplete -= Restart;
+        GameMaster.OnPaused -= OnPause;
     }
 }

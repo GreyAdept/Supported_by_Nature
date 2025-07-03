@@ -5,23 +5,25 @@ public class LanguageManager : MonoBehaviour
 {
     public static LanguageManager Instance;
     public Language currentLanguage = Language.FI;
-    public UnityEvent onLanguageChanged;
+    public static event System.Action onLanguageChanged;
     [SerializeField] private DialogueDatabase[] dialogueDatabases;
 
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        else
-        {
-            Debug.Log("duplicate languagemanager");
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);
     }
+
+
+
+    private void OnDisable()
+    {
+        
+    }
+
     public void SwitchLanguage(string language)
     {
 

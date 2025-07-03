@@ -21,13 +21,13 @@ public class ProgressBarController : MonoBehaviour
 
     void Awake()
     {
-        MilestoneHandler.onBiodiversityChanged += (int context) =>
-        {
-            Debug.Log("progress set", this);
-            SetProgress((float)context);
-        };
+        MilestoneHandler.onBiodiversityChanged += SetProgress;
     }
 
+    private void OnDisable()
+    {
+        MilestoneHandler.onBiodiversityChanged -= SetProgress;
+    }
 
     void Start()
     {
@@ -44,7 +44,7 @@ public class ProgressBarController : MonoBehaviour
         fillImage.color = currentBaseColor;
     }
 
-    public void SetProgress(float newValue)
+    public void SetProgress(int newValue)
     {
         //newValue = Mathf.Clamp01(newValue);
 

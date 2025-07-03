@@ -28,6 +28,7 @@ public class tileWeedsGrowth : MonoBehaviour
         };
         */
 
+        /*
         ClockScript.OnSecondsChanged += (int context) =>
         {
             growingProgress += 1;
@@ -38,6 +39,8 @@ public class tileWeedsGrowth : MonoBehaviour
                 //UpdateWeedObject();
             }
         };
+        */
+        ClockScript.OnSecondsChanged += GrowEventHandler;
 
     }
 
@@ -49,12 +52,29 @@ public class tileWeedsGrowth : MonoBehaviour
         //growStage = 1;
         UpdateWeedObject();
 
-        if (this.gameObject.activeSelf == false)
+        if (gameObject.activeSelf == false)
         {
-            this.enabled = false;
+            enabled = false;
         }
     }
     
+
+    private void GrowEventHandler(int context)
+    {
+        growingProgress += 1;
+        if (growingProgress > 10)
+        {
+            growingProgress = 0;
+            GrowWeeds();
+            //UpdateWeedObject();
+        }
+    }
+
+    private void OnDisable()
+    {
+        ClockScript.OnSecondsChanged -= GrowEventHandler;
+    }
+
     private void GrowWeeds()
     {
         if (this.gameObject.activeSelf == true)

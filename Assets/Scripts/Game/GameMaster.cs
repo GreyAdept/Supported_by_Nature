@@ -9,8 +9,20 @@ public class GameMaster : MonoBehaviour
 
     public static event System.Action OnSessionStarted;
     public static event System.Action<float> OnSessionTimeChanged;
+    public static event System.Action<bool> OnPaused;
+    public static event System.Action OnSessionFinished;
 
-    public bool paused;
+
+    private bool _paused;
+    public bool paused
+    {
+        get { return _paused; }
+        set
+        {
+            OnPaused?.Invoke(value);
+            _paused = value;
+        }
+    }
 
 
     private void Awake()
@@ -23,6 +35,9 @@ public class GameMaster : MonoBehaviour
         {
             Destroy(this);
         }
+
+        ClockScript.OnTimerFinished += EndSession;
+
     }
 
     private void Start()
@@ -30,6 +45,12 @@ public class GameMaster : MonoBehaviour
         paused = true;
         //ResetRession();
     }
+
+    private void OnDisable()
+    {
+        ClockScript.OnTimerFinished -= EndSession;
+    }
+
 
     public void ResetRession()
     {
@@ -48,5 +69,12 @@ public class GameMaster : MonoBehaviour
             OnSessionTimeChanged?.Invoke(sessionTime);
         }
         
+    }
+
+    private void EndSession()
+    {
+        sessionStarted = false;
+        paused = true;
+        OnSessionFinished?.Invoke();
     }
 }

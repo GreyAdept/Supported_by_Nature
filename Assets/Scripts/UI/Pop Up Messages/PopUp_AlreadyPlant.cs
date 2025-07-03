@@ -8,7 +8,12 @@ public class PopUp_AlreadyPlant : MonoBehaviour
 
     void Awake()
     {
-        PlacementSystem.onExistingPlantWarning += () => OpenPopUp();
+        PlacementSystem.onExistingPlantWarning += OpenPopUp;
+    }
+
+    private void OnDisable()
+    {
+        PlacementSystem.onExistingPlantWarning -= OpenPopUp;
     }
 
     void Start()

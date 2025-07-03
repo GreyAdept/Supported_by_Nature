@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using Utils;
 
 public class InputManager : SingletonMonoBehaviour<InputManager>
@@ -9,7 +10,7 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
     public Vector2 pointerPosition;
 
     public static event System.Action OnPointerReleased;
-    
+
     
     public enum PlayerState 
     {   
@@ -28,28 +29,51 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
     {   
         currentPlayerState = PlayerState.normal;
 
-        ActionButton.OnButtonSelectionChanged += (ButtonType ctx) => currentButton = ctx;
+        ActionButton.OnButtonSelectionChanged += ChangeButton;
 
-        ActionButton.OnPlayerStateChanged += (PlayerState ctx) => currentPlayerState = ctx;
+        ActionButton.OnPlayerStateChanged += UpdatePlayerState;
 
         inputActions = new InputSystem_Actions(); 
         inputActions.Enable();
 
-         
-        inputActions.Default.TileAction.canceled += context => 
-        {
-            if (currentPlayerState == PlayerState.placement)
-            {
-                OnPointerReleased?.Invoke(); 
-            }
-        };
+        inputActions.Default.TileAction.canceled += PointerReleased;
 
-        inputActions.Default.Point.performed += context => 
-        {
-            pointerPosition = context.ReadValue<Vector2>();
-        };
-  
+        inputActions.Default.Point.performed += UpdateMouseValue;
+        
     }
 
-    
+    private void PointerReleased(InputAction.CallbackContext ctx)
+    {
+        if (currentPlayerState == PlayerState.placement)
+        {
+            OnPointerReleased?.Invoke();
+        }
+    }
+
+
+    private void UpdatePlayerState(PlayerState ctx)
+    {
+        currentPlayerState = ctx;
+    }
+
+
+    private void UpdateMouseValue(InputAction.CallbackContext ctx)
+    {
+        pointerPosition = ctx.ReadValue<Vector2>();
+    }
+
+    private void ChangeButton(ButtonType ctx)
+    {
+        currentButton = ctx;
+    }
+
+
+    private void OnDisable()
+    {
+        inputActions.Default.Point.performed -= UpdateMouseValue;
+        ActionButton.OnButtonSelectionChanged -= ChangeButton;
+        ActionButton.OnPlayerStateChanged -= UpdatePlayerState;
+        inputActions.Default.TileAction.canceled -= PointerReleased;
+        inputActions.Disable();
+    }
 }

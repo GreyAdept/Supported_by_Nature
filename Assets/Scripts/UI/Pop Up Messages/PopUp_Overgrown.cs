@@ -8,7 +8,12 @@ public class PopUp_Overgrown : MonoBehaviour
 
     void Awake()
     {
-        PlacementSystem.onOvergrownWarning += () => OpenPopUp();
+        PlacementSystem.onOvergrownWarning += OpenPopUp;
+    }
+
+    private void OnDisable()
+    {
+        PlacementSystem.onOvergrownWarning -= OpenPopUp;
     }
 
     void Start()

@@ -11,7 +11,12 @@ public class ActionPointUI : MonoBehaviour
 
     private void Awake()
     {
-        MilestoneHandler.OnActionPointIncomeChanged += (int ctx) => apGain = ctx;
+        MilestoneHandler.OnActionPointIncomeChanged += ApGain;
+    }
+
+    private void ApGain(int ctx)
+    {
+        apGain = ctx;
     }
 
     private void Start()
@@ -28,5 +33,11 @@ public class ActionPointUI : MonoBehaviour
     private void PlayGainAPAnimation()
     {
         apValueText.transform.DOShakeScale(0.5f, 0.2f);
+    }
+
+    private void OnDisable()
+    {
+        MilestoneHandler.OnActionPointIncomeChanged -= ApGain;
+        turnManager.onActionPointsChanged.RemoveListener(UpdateActionPointsUI);
     }
 }

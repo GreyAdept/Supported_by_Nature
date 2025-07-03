@@ -62,6 +62,12 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
+
+    private void OnDisable()
+    {
+        turnManager.onTurnChanged.RemoveListener(OnTurnChanged);
+    }
+
     private void Update()
     {
         //if (Input.GetKeyDown(KeyCode.A)) InteractWithNPC();

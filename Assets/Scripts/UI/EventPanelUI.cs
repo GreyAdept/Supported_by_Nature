@@ -43,7 +43,12 @@ public class EventPanelUI : MonoBehaviour
 
     private void Awake()
     {
-        GameState.OnEventChoiceMade += (AnswerCategory ctx) => { HideEventUI(); };        
+        GameState.OnEventChoiceMade += HideEventUI;
+    }
+
+    private void OnDisable()
+    {
+        GameState.OnEventChoiceMade -= HideEventUI;
     }
 
 
@@ -91,7 +96,7 @@ public class EventPanelUI : MonoBehaviour
         eventPopupPanel.transform.DOScale(Vector3.one, 0.4f).SetUpdate(true);
         if (soundManager != null) soundManager.PlayUISound("eventPopup");
     }
-    public void HideEventUI()
+    public void HideEventUI(AnswerCategory ctx)
     {
         eventPopupPanel.transform.DOScale(Vector3.zero, 0.2f).SetUpdate(true).OnComplete(() => eventPopupPanel.SetActive(false));
         //eventPopupPanel.SetActive(false);

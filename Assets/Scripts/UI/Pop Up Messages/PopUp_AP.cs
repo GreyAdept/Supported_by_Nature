@@ -9,7 +9,12 @@ public class PopUp_AP : MonoBehaviour
     
     void Awake()
     {
-        PlacementSystem.onAPWarning += () => OpenPopUp();
+        PlacementSystem.onAPWarning += OpenPopUp;
+    }
+
+    private void OnDisable()
+    {
+        PlacementSystem.onAPWarning -= OpenPopUp;
     }
 
     void Start()

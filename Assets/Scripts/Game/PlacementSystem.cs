@@ -24,6 +24,11 @@ public class PlacementSystem : MonoBehaviour
         InputManager.OnPointerReleased += ExecuteAction;
     }
 
+    private void OnDisable()
+    {
+        InputManager.OnPointerReleased -= ExecuteAction;
+    }
+
     public void ExecuteAction()
     {
         switch(inputManager.currentButton) //fire the correct action based on currently selected action button

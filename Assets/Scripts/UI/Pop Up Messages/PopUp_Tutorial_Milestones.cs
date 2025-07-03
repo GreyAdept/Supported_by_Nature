@@ -8,9 +8,16 @@ public class PopUp_Tutorial_Milestones : MonoBehaviour
 
     void Awake()
     {
-        MilestoneHandler.onFirstMilestoneTriggered += () => OpenWithDelay();
-        MilestoneHandler.onTutorialDone += () => ClosePopUp();
+        MilestoneHandler.onFirstMilestoneTriggered += OpenWithDelay;
+        MilestoneHandler.onTutorialDone += ClosePopUp;
     }
+
+    private void OnDisable()
+    {
+        MilestoneHandler.onFirstMilestoneTriggered -= OpenWithDelay;
+        MilestoneHandler.onTutorialDone -= ClosePopUp;
+    }
+
 
     void Start()
     {

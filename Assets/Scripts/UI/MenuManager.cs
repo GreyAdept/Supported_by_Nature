@@ -23,7 +23,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private float scrollSpeed;
     private Vector3 creditsStartPos;
     private Coroutine creditsCoroutine;
-    private void Start()
+    private void Awake()
     {
         if (fadeCG != null)
         {
@@ -32,8 +32,14 @@ public class MenuManager : MonoBehaviour
         }
         ToggleButtons(true);
         UpdateText();
-        LanguageManager.Instance.onLanguageChanged.AddListener(UpdateText);
+        LanguageManager.onLanguageChanged += UpdateText;
     }
+
+    private void OnDisable()
+    {
+        LanguageManager.onLanguageChanged -= UpdateText;
+    }
+
     public void EnableMain()
     {
         StopCreditScroll();

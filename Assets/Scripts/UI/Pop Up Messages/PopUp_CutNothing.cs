@@ -8,7 +8,12 @@ public class PopUp_CutNothing : MonoBehaviour
 
     void Awake()
     {
-        PlacementSystem.onCutNothing += () => OpenPopUp();
+        PlacementSystem.onCutNothing += OpenPopUp;
+    }
+
+    private void OnDisable()
+    {
+        PlacementSystem.onCutNothing -= OpenPopUp;
     }
 
     void Start()

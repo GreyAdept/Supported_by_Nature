@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static Unity.VisualScripting.Icons;
 
 
@@ -45,7 +46,7 @@ public class CloseGameMenu : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("Quit the game");
-        Application.Quit();
+        SceneManager.LoadScene(0);
 
     }
 

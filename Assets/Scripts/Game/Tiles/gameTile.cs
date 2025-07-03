@@ -41,6 +41,7 @@ public class gameTile : MonoBehaviour
 
     private void Awake()
     {
+        /*
         ActionButton.OnPlayerStateChanged += (InputManager.PlayerState context) =>
         {
             if (context == InputManager.PlayerState.placement)
@@ -55,8 +56,13 @@ public class gameTile : MonoBehaviour
             }
 
         };
+        */
 
-        TurnManager.OnTurnChanged += () => SetIndicatorColor();
+        ActionButton.OnPlayerStateChanged += PlayerStateStateChangedHandler;
+
+        //TurnManager.OnTurnChanged += () => SetIndicatorColor();
+
+        TurnManager.OnTurnChanged += TurnChangedHandler;
 
 
 
@@ -87,7 +93,34 @@ public class gameTile : MonoBehaviour
     }
 
 
-    
+    private void PlayerStateStateChangedHandler(InputManager.PlayerState context)
+    {
+        if (context == InputManager.PlayerState.placement)
+        {
+            SetIndicatorColor();
+            SetIndicatorOn();
+        }
+        else
+        {
+            SetIndicatorColor();
+            SetIndicatorOff();
+        }
+    }
+
+    private void TurnChangedHandler()
+    {
+        SetIndicatorColor();
+    }
+
+
+    private void OnDisable()
+    {
+        TurnManager.OnTurnChanged -= TurnChangedHandler;
+        ActionButton.OnPlayerStateChanged -= PlayerStateStateChangedHandler;
+
+    }
+
+
     void Update()
     {
         if (grownPlant)

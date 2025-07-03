@@ -10,6 +10,12 @@ public class TurnChangeUI : MonoBehaviour
         turnManager = TurnManager.Instance;
         turnManager.onTurnChanged.AddListener(UpdateTurnCounterUI);
     }
+
+    private void OnDisable()
+    {
+        turnManager.onTurnChanged.RemoveListener(UpdateTurnCounterUI);
+    }
+
     private void UpdateTurnCounterUI(int currentTurn)
     {
         turnCounterText.text = currentTurn.ToString();

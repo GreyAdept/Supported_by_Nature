@@ -41,6 +41,7 @@ public class MilestoneHandler : MonoBehaviour
     [SerializeField] private GameObject cowCollection;
     public GameObject fadeObject;
     [SerializeField] private GameObject endScreen;
+    public GameObject endScreenNotVictory;
 
     private List<MetricsCalculator> gameTileMetrics = new List<MetricsCalculator>();
     private List<GameObject> gameTiles = new List<GameObject>();
@@ -68,70 +69,116 @@ public class MilestoneHandler : MonoBehaviour
    
     private void Awake()
     {
-        Fader.onFaded += () => EnableEndScreen();
+        Fader.onFaded += OnFadedHandler;
+        Fader.onFadedNotVictory += OnFadedNotVictoryHandler;
         //TurnManager.OnTurnChanged += () => UpdateBiodiversityFromTiles();
-        PlacementSystem.onActionDone += () =>
-        {
-            UpdateUI();
-            CalculateAPIncome();
-        };
-        
+        PlacementSystem.onActionDone += OnActionDoneHandler;
 
-        PlacementSystem.onPlantPlaced += () =>
-        {
-            //currentBiodiversity += 5;
-            ChangeScore(5);
-            CalculateAPIncome();
-            //onBiodiversityChanged?.Invoke(currentBiodiversity);
-        };
+        PlacementSystem.onPlantPlaced += OnPlantPlacedHandler;
 
-        tileWeedsGrowth.OnGrowStage3Complete += () =>
-        {
-            //currentBiodiversity -= 10;
-            ChangeScore(-10);
-            CalculateAPIncome();
-            //onBiodiversityChanged?.Invoke(currentBiodiversity);
-        };
+        tileWeedsGrowth.OnGrowStage3Complete += OnGrowStage3CompleteHandler;
 
-        PlacementSystem.onBigWeedCut += () =>
-        {
-            ChangeScore(10);
-            CalculateAPIncome();
-        };
+        PlacementSystem.onBigWeedCut += OnBigWeedCutHandler;
 
-        ClockScript.OnSecondsChanged += (int ctx) =>
-        {
-            tickTimer++;
-            if (tickTimer > 10)
-            {
-                tickTimer = 0;
-                AddAP();        
-            }
-            
-        };
+        ClockScript.OnSecondsChanged += OnSecondsChangedHandler;
 
-        GameState.OnEventChoiceMade += (AnswerCategory ctx) =>
-        {
-            switch (ctx)
-            {
-                case AnswerCategory.Good:
-                    currentBiodiversity += 20;
-                    break;
-                case AnswerCategory.Bad:
-                    currentBiodiversity -= 20;
-                    break;
-                case AnswerCategory.Neutral:
-                    currentBiodiversity += 10;
-                    break;
-            }
-            UpdateUI();
-            ClampScore();
-            CalculateAPIncome();
-            onBiodiversityChanged.Invoke(currentBiodiversity);
-        };
+        GameState.OnEventChoiceMade += OnEventChoiceMadeHandler;
 
+        GameMaster.OnSessionFinished += OnSessionFinishedHandler;
+       
         
     }
+
+    private void OnFadedHandler()
+    {
+        EnableEndScreen();
+    }
+
+
+    private void OnFadedNotVictoryHandler()
+    {
+        EnableEndScreenNotVictory();
+    }
+
+
+    private void OnActionDoneHandler()
+    {
+        UpdateUI();
+        CalculateAPIncome();
+    }
+
+
+    private void OnPlantPlacedHandler()
+    {
+        ChangeScore(5);
+        CalculateAPIncome();
+    }
+
+    private void OnGrowStage3CompleteHandler()
+    {
+        ChangeScore(-10);
+        CalculateAPIncome();
+    }
+
+
+    private void OnBigWeedCutHandler()
+    {
+        ChangeScore(10);
+        CalculateAPIncome();
+    }
+
+
+    private void OnSecondsChangedHandler(int ctx)
+    {
+        tickTimer++;
+        if (tickTimer > 10)
+        {
+            tickTimer = 0;
+            AddAP();
+        }
+    }
+
+
+    private void OnEventChoiceMadeHandler(AnswerCategory ctx)
+    {
+        switch (ctx)
+        {
+            case AnswerCategory.Good:
+                currentBiodiversity += 20;
+                break;
+            case AnswerCategory.Bad:
+                currentBiodiversity -= 20;
+                break;
+            case AnswerCategory.Neutral:
+                currentBiodiversity += 10;
+                break;
+        }
+        UpdateUI();
+        ClampScore();
+        CalculateAPIncome();
+        onBiodiversityChanged.Invoke(currentBiodiversity);
+    }
+
+
+    private void OnSessionFinishedHandler()
+    {
+        StartNotVictorySequence();
+    }
+
+    private void OnDisable()
+    {
+        GameMaster.OnSessionFinished -= OnSessionFinishedHandler;
+        GameState.OnEventChoiceMade -= OnEventChoiceMadeHandler;
+        ClockScript.OnSecondsChanged -= OnSecondsChangedHandler;
+        PlacementSystem.onBigWeedCut -= OnBigWeedCutHandler;
+        tileWeedsGrowth.OnGrowStage3Complete -= OnGrowStage3CompleteHandler;
+        PlacementSystem.onPlantPlaced -= OnPlantPlacedHandler;
+        PlacementSystem.onActionDone -= OnActionDoneHandler;
+        Fader.onFadedNotVictory -= OnFadedNotVictoryHandler;
+        Fader.onFaded -= OnFadedHandler;
+    }
+
+
 
     void Start()
     {
@@ -338,9 +385,20 @@ public class MilestoneHandler : MonoBehaviour
     {
         fadeObject.GetComponent<Fader>().FadeScreen();
     }
+
+    private void StartNotVictorySequence()
+    {
+        fadeObject.GetComponent<Fader>().FadeScreenNotVictory();
+    }
+
     public void EnableEndScreen()
     {
         endScreen.SetActive(true);
+    }
+
+    public void EnableEndScreenNotVictory()
+    {
+        endScreenNotVictory.SetActive(true);
     }
     public void Quit()
     {

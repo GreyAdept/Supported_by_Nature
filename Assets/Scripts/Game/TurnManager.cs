@@ -39,16 +39,37 @@ public class TurnManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        ClockScript.OnSecondsChanged += (int context) =>
+        /*
+        ClockScript.OnSecondsChanged += (int context) => //ducktape-level workaround for enabling real-time gameplay. 
         {
             tickTimer += 1;
-            if (tickTimer > 20)
+            if (tickTimer >= 20)
             {
                 tickTimer = 0;
                 EndTurn();
             }
         };
+        */
+        ClockScript.OnSecondsChanged += TurnEnderEventHandler;
     }
+
+
+    private void TurnEnderEventHandler(int seconds)
+    {
+        tickTimer += 1;
+        if (tickTimer >= 20)
+        {
+            tickTimer = 0;
+            EndTurn();
+        }
+    }
+
+    private void OnDisable()
+    {
+        ClockScript.OnSecondsChanged -= TurnEnderEventHandler;
+    }
+
+
     private void Start()
     {
         StartCoroutine(DelayedInitialize());
