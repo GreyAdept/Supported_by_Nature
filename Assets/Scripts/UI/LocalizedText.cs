@@ -3,9 +3,9 @@ using UnityEngine;
 [System.Serializable]
 public class LocalizedText
 {
-    [TextArea(1, 3)] public string fi;
-    [TextArea(1, 3)] public string sw;
-    [TextArea(1, 3)] public string en;
+    [TextArea(1, 10)] public string fi;
+    [TextArea(1, 10)] public string sw;
+    [TextArea(1, 10)] public string en;
     public string GetText()
     {
         if (LanguageManager.Instance == null) return fi;

@@ -107,7 +107,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -52.6
+  m_lineSpacing: -45
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -155,20 +155,22 @@ MonoBehaviour:
     fi: "<align=center><b>Kalat</b></align>\n\nKosteikoilla esiintyy my\xF6s muita\r\nkaloja
       kuin haukea. \n\nEsimerkiksi\r\ns\xE4rki\xE4, lahnoja ja kymenpiikki\xE4 voi\r\nel\xE4\xE4
       kosteikolla.\u200B"
-    sw: "<align=center><b>Fiskar</b></align>\nI v\xE5tmarker f\xF6rekommer ocks\xE5
-      andra\nfiskarter \xE4n g\xE4dda.\nTill exempel\nm\xF6rt, braxen och sm\xE5spigg
+    sw: "<align=center><b>Fiskar</b></align>\n\nI v\xE5tmarker f\xF6rekommer ocks\xE5
+      andra\nfiskarter \xE4n g\xE4dda.\n\nTill exempel\nm\xF6rt, braxen och sm\xE5spigg
       kan\nleva i v\xE5tmarken."
     en: '<align=center><b>Fish</b></align>
+
 
       Wetlands are also home to fish
 
       species
       other than pike.
 
+
       For example,
 
-      roach, bream, and nine-spined stickleback
-      may
+      roach, bream, and nine-spined
+      stickleback may
 
       live in the wetland.'
 --- !u!1 &1967441730839845199

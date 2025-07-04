@@ -50,7 +50,7 @@ public class ClockScript : MonoBehaviour
     public static event System.Action<int> OnSecondsChanged;
     public static event System.Action OnTimerFinished;
 
-    private int countdownTime = 60; 
+    private int countdownTime = 480; 
     private int countdownSeconds;
     private int countdownMinutes;
    

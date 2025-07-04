@@ -111,7 +111,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -52.6
+  m_lineSpacing: -48
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -163,22 +163,25 @@ MonoBehaviour:
       ja kolmaskin poikue saman vuoden aikana ovat mahdollisia. Se on yhdyskuntapesij\xE4
       eli pes\xE4t sijaitsevat l\xE4hell\xE4 toisiaan.\u200B\r\n\u200Bv\xE4sti m\xE4tt\xE4ill\xE4.
       \u200B"
-    sw: "Sk\xE4ggmes\nSk\xE4ggmesen \xE4r en liten f\xE5gel med l\xE5ng stj\xE4rt.
+    sw: "Sk\xE4ggmes\n\nSk\xE4ggmesen \xE4r en liten f\xE5gel med l\xE5ng stj\xE4rt.
       Dess rygg \xE4r r\xF6dbrun och vingarna \xE4r spr\xE4ckliga i r\xF6dbrunt,
-      svart och vitt. Hanen k\xE4nns l\xE4tt igen p\xE5 sitt mustaschstreck.\nDess
+      svart och vitt. Hanen k\xE4nns l\xE4tt igen p\xE5 sitt mustaschstreck.\n\nDess
       l\xE4ngd \xE4r 14-15,5cm och vikt 11-21g. Sk\xE4ggmesen bygger sitt bo med
-      st\xF6d av vass och l\xE4gger 3-11 \xE4gg i april-maj.\nEn andra och till och
-      med tredje kull under samma \xE5r \xE4r m\xF6jlig. Den \xE4r en kolonibyggare,
+      st\xF6d av vass och l\xE4gger 3-11 \xE4gg i april-maj.\n\nEn andra och till
+      och med tredje kull under samma \xE5r \xE4r m\xF6jlig. Den \xE4r en kolonibyggare,
       vilket betyder att bona ligger n\xE4ra varandra."
     en: 'Bearded Reedling
+
 
       The Bearded Reedling is a small, long-tailed bird.
       Its back is reddish-brown and its wings are mottled with reddish-brown, black,
       and white. The male is easily recognized by its mustache stripe.
 
+
       Its
       length is 14-15.5cm and weight 11-21g. The Bearded Reedling builds its nest
       supported by common reeds and lays 3-11 eggs in April-May.
+
 
       A second
       and even third brood during the same year are possible. It is a colonial nester,
@@ -471,7 +474,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -52.6
+  m_lineSpacing: -48
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -523,13 +526,14 @@ MonoBehaviour:
       sen siipien k\xE4rkiv\xE4li on 59\u201373 cm ja paino 1,3\u20132 kg. Silkkiuikun
       pes\xE4 on kuolleista kasveista rakennettu lautta, joka on kiinnitetty vesikasveihin
       ja se munii 3-6 munaa.\u200B\r\n"
-    sw: "Sk\xE4ggdopping\nSk\xE4ggdoppingen \xE4r en l\xE5nghalsad dopping. Sk\xE4ggdoppingen
-      k\xE4nns igen p\xE5 sin tofs p\xE5 huvudet, som dock saknas p\xE5 vintern.\nFramsidan
-      av halsen och buken \xE4r vita, och baksidan av halsen och ryggen \xE4r m\xF6rkbruna.\nSk\xE4ggdoppingen
+    sw: "Sk\xE4ggdopping\n\nSk\xE4ggdoppingen \xE4r en l\xE5nghalsad dopping. Sk\xE4ggdoppingen
+      k\xE4nns igen p\xE5 sin tofs p\xE5 huvudet, som dock saknas p\xE5 vintern.\n\nFramsidan
+      av halsen och buken \xE4r vita, och baksidan av halsen och ryggen \xE4r m\xF6rkbruna.\n\nSk\xE4ggdoppingen
       \xE4r 46-51 cm l\xE5ng, har ett vingspann p\xE5 59-73 cm och v\xE4ger 1,3-2
       kg. Sk\xE4ggdoppingens bo \xE4r en flotte byggd av d\xF6da v\xE4xter, f\xE4st
       vid vattenv\xE4xter, och den l\xE4gger 3-6 \xE4gg."
     en: 'Great Crested Grebe
+
 
       The Great Crested Grebe is a long-necked grebe.
       The Great Crested Grebe can be identified by the crest on its head, which is
@@ -537,6 +541,7 @@ MonoBehaviour:
 
       The front of the neck and belly are white, and the
       back of the neck and back are dark brown.
+
 
       The Great Crested Grebe is
       46-51 cm long, has a wingspan of 59-73 cm, and weighs 1.3-2 kg. The Great Crested
@@ -712,7 +717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.13}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176.7, y: -95.5}
+  m_AnchoredPosition: {x: 185.4, y: -101.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3391095853079027237
@@ -743,7 +748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4776050283b9f174cb17e4e32fcb01f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d660d833dadf5ef4cb745a7c4b84737e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -818,7 +823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9eb3ccd294ce6fa4eaa2e5f6fd134358, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4830749923bc3f6458a437c84f9a666a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

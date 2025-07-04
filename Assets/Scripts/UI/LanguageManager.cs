@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,23 +11,32 @@ public class LanguageManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
+        if (Instance == null && Instance != this)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        LanguageButton.OnLanguageButtonHit += SwitchLanguage;
+
     }
 
 
 
     private void OnDisable()
     {
-        
+        LanguageButton.OnLanguageButtonHit -= SwitchLanguage;
     }
 
-    public void SwitchLanguage(string language)
+    public void SwitchLanguage(Language language)
     {
 
+        currentLanguage = language;
+        /*
         switch (language)
         {
             case "fi":
@@ -39,6 +49,7 @@ public class LanguageManager : MonoBehaviour
                 currentLanguage = Language.EN;
                 break;
         }
+        */
         onLanguageChanged?.Invoke();
     }
 }

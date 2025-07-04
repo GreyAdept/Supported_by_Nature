@@ -111,7 +111,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -52.6
+  m_lineSpacing: -50.99
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -163,14 +163,15 @@ MonoBehaviour:
       kutevat varhain kev\xE4\xE4ll\xE4 ja ne vaeltavat heti j\xE4iden l\xE4hd\xF6n
       \xE4lkeen joukolla mataliin ruokoisiin lahtiin tai tulvaniityille.\n\r\nMerialueilla
       kutu tapahtuu v\xE4h\xE4n my\xF6hemmin. \u200B"
-    sw: "<b>Om g\xE4ddan</b>\nG\xE4ddan \xE4r en rovfisk, med en l\xE4ngd p\xE5 40-120cm
-      och vikt p\xE5 cirka 0,5-15kg.\nG\xE4ddan har en stor mun och vassa t\xE4nder,
-      vilket g\xF6r den l\xE4tt att k\xE4nna igen.\nG\xE4ddans sidor \xE4r gr\xF6na,
-      buken ljus, ryggen svart och dess sidor har fl\xE4ckar som g\xE5r ihop till
-      r\xE4nder.\nG\xE4ddor leker tidigt p\xE5 v\xE5ren och de vandrar i grupper
-      till grunda vassbevuxna vikar eller \xF6versv\xE4mmade \xE4ngar direkt efter
-      islossningen.\nI havsomr\xE5den sker leken n\xE5got senare."
+    sw: "<b>Om g\xE4ddan</b>\n\nG\xE4ddan \xE4r en rovfisk, med en l\xE4ngd p\xE5
+      40-120cm och vikt p\xE5 cirka 0,5-15kg.\nG\xE4ddan har en stor mun och vassa
+      t\xE4nder, vilket g\xF6r den l\xE4tt att k\xE4nna igen.\nG\xE4ddans sidor \xE4r
+      gr\xF6na, buken ljus, ryggen svart och dess sidor har fl\xE4ckar som g\xE5r
+      ihop till r\xE4nder.\n\nG\xE4ddor leker tidigt p\xE5 v\xE5ren och de vandrar
+      i grupper till grunda vassbevuxna vikar eller \xF6versv\xE4mmade \xE4ngar direkt
+      efter islossningen.\nI havsomr\xE5den sker leken n\xE5got senare."
     en: '<b>About the Pike</b>
+
 
       Pike is a predatory fish, with a length of
       40-120cm and weight of about 0.5-15kg.
@@ -180,6 +181,7 @@ MonoBehaviour:
 
       The pike''s sides are green,
       belly light, back black and its sides have spots that merge into stripes.
+
 
       Pike
       spawn early in spring and they migrate in groups to shallow reedy bays or flood
@@ -716,7 +718,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -52.6
+  m_lineSpacing: -50.99
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -769,8 +771,8 @@ MonoBehaviour:
       lis\xE4\xE4ntymis- ja kasvuymp\xE4rist\xF6n hauille."
     sw: "<b>G\xE4ddan och v\xE5tmarken</b>\n\nV\xE5tmarker \xE4r bra lekmilj\xF6er
       f\xF6r g\xE4ddor, eftersom v\xE5tmarker \xE4r grunda och vass och andra v\xE4xter
-      v\xE4xer\nganska t\xE4tt d\xE4r.\nV\xE5tmarker skapar ocks\xE5 en bra livsmilj\xF6
-      f\xF6r g\xE4ddyngel att v\xE4xa i.\nGenom att \xE5terst\xE4lla v\xE5tmarker
+      v\xE4xer\nganska t\xE4tt d\xE4r.\n\nV\xE5tmarker skapar ocks\xE5 en bra livsmilj\xF6
+      f\xF6r g\xE4ddyngel att v\xE4xa i.\n\nGenom att \xE5terst\xE4lla v\xE5tmarker
       kan man potentiellt \xF6ka\ng\xE4ddbest\xE5nden, eftersom v\xE5tmarker erbjuder
       en bra reproduktions- och tillv\xE4xtmilj\xF6 f\xF6r g\xE4ddor."
     en: '<b>Pike and Wetlands</b>
@@ -782,13 +784,16 @@ MonoBehaviour:
       quite
       densely there.
 
-      Wetlands also create a good habitat for pike fry to grow.
 
-      By
-      restoring wetlands, it may be possible to increase
+      Wetlands also create a good habitat for pike fry to
+      grow.
 
-      pike populations,
-      as wetlands provide a good reproduction and growth environment for pike.'
+
+      By restoring wetlands, it may be possible to increase
+
+      pike
+      populations, as wetlands provide a good reproduction and growth environment
+      for pike.'
 --- !u!1 &3754958998092947573
 GameObject:
   m_ObjectHideFlags: 0

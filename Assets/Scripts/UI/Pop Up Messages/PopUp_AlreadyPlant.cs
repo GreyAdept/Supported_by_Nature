@@ -13,6 +13,11 @@ public class PopUp_AlreadyPlant : MonoBehaviour
 
     private void OnDisable()
     {
+        
+    }
+
+    private void OnDestroy()
+    {
         PlacementSystem.onExistingPlantWarning -= OpenPopUp;
     }
 

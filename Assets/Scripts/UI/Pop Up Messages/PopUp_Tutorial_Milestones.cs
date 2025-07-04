@@ -12,7 +12,7 @@ public class PopUp_Tutorial_Milestones : MonoBehaviour
         MilestoneHandler.onTutorialDone += ClosePopUp;
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         MilestoneHandler.onFirstMilestoneTriggered -= OpenWithDelay;
         MilestoneHandler.onTutorialDone -= ClosePopUp;

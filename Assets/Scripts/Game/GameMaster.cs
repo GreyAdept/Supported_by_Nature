@@ -19,8 +19,9 @@ public class GameMaster : MonoBehaviour
         get { return _paused; }
         set
         {
-            OnPaused?.Invoke(value);
             _paused = value;
+            OnPaused?.Invoke(value);
+            
         }
     }
 
@@ -36,14 +37,20 @@ public class GameMaster : MonoBehaviour
             Destroy(this);
         }
 
+        paused = true;
         ClockScript.OnTimerFinished += EndSession;
 
     }
 
-    private void Start()
+
+    private void LatePause()
     {
         paused = true;
-        //ResetRession();
+    }
+
+    private void Start()
+    { 
+        Invoke("LatePause", 0.1f);
     }
 
     private void OnDisable()

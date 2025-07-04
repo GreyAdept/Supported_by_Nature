@@ -107,7 +107,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -52.6
+  m_lineSpacing: -49
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -155,10 +155,11 @@ MonoBehaviour:
     fi: "<align=center><b>Muut</b></align>\n\nKosteikoilla el\xE4\xE4 my\xF6s kaikenlaisia
       muita hy\xF6nteisi\xE4 ja nilvi\xE4isi\xE4. Kosteikoilla esiintyy monenlaisia
       kuoriaisia, juotikkaita, perhosia, simpukoita, kotiloita ja h\xE4m\xE4h\xE4kkej\xE4."
-    sw: "<align=center><b>\xD6vriga</b></align>\nV\xE5tmarker \xE4r ocks\xE5 hem
+    sw: "<align=center><b>\xD6vriga</b></align>\n\nV\xE5tmarker \xE4r ocks\xE5 hem
       f\xF6r alla m\xF6jliga andra insekter och bl\xF6tdjur. I v\xE5tmarker f\xF6rekommer
       m\xE5nga olika skalbaggar, iglar, fj\xE4rilar, musslor, sn\xE4ckor och spindlar."
     en: '<align=center><b>Others</b></align>
+
 
       Wetlands are also home to all
       kinds of other insects and mollusks. Wetlands host many types of beetles, leeches,
@@ -228,7 +229,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5986fffe3bcfb9642998c593f8f271bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aba7a36d939a37a42913bfa334cde745, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -755,7 +756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4f0e8595c70102438070105d3c0d47f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aba7a36d939a37a42913bfa334cde745, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -830,7 +831,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 28d78042dd2f36f4cb9e41147db9a16a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aba7a36d939a37a42913bfa334cde745, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -905,7 +906,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 229a3158887d57b4b8b668a074f0277c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aba7a36d939a37a42913bfa334cde745, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -980,7 +981,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 464d5ca8232a0ed48bd7a0d48e66e998, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aba7a36d939a37a42913bfa334cde745, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

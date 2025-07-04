@@ -114,7 +114,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -52.6
+  m_lineSpacing: -49
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -169,11 +169,11 @@ MonoBehaviour:
       esiinty\xE4 uistinvitaa, joka kelluu vedess\xE4. \n\nKosteikoilla voi my\xF6s
       esiinty\xE4 monia muita kasveja, kuten osmank\xE4\xE4mi\xE4, pikkulimaskaa
       ja eri puulajeja.\u200B\r\n\u200B"
-    sw: "<align=center><b>V\xE4xter</b></align>\nI v\xE5tmarker v\xE4xer m\xE5nga
-      olika v\xE4xter.\nTypiskt f\xF6r v\xE5tmarker \xE4r strandparallell zonering,
+    sw: "<align=center><b>V\xE4xter</b></align>\n\nI v\xE5tmarker v\xE4xer m\xE5nga
+      olika v\xE4xter.\n\nTypiskt f\xF6r v\xE5tmarker \xE4r strandparallell zonering,
       vilket betyder att olika omr\xE5den av stranden och vattendraget vanligtvis
       har en dominerande art.\nFlaskstarr \xE4r en vanlig v\xE4xt i de v\xE5ta delarna
-      av \xE4ngar och f\xF6rekommer \xF6ver hela Finland.\nI grunda vattenomr\xE5den
+      av \xE4ngar och f\xF6rekommer \xF6ver hela Finland.\n\nI grunda vattenomr\xE5den
       \xE4r vass en vanlig v\xE4xt, som v\xE4xer i n\xE4stan varje sektion. Vass
       \xE4r Finlands st\xF6rsta gr\xE4s och kan v\xE4xa till 1-4m i h\xF6jd.\nN\xE4r
       man r\xF6r sig mot djupare vattenomr\xE5den kan g\xE4ddnate f\xF6rekomma i
@@ -181,22 +181,26 @@ MonoBehaviour:
       andra v\xE4xter, som kaveldun, andmat och olika tr\xE4darter."
     en: '<align=center><b>Plants</b></align>
 
+
       Many kinds of plants grow in
       wetlands.
 
-      Wetlands typically have shore-parallel zonation, meaning different
-      areas of the shore and water body usually have one dominant species.
+
+      Wetlands typically have shore-parallel zonation, meaning
+      different areas of the shore and water body usually have one dominant species.
 
       Bottle
       sedge is a common plant in the wet parts of meadows and it occurs throughout
       Finland.
 
+
       Common reed is a prevalent plant in shallow water areas, growing
       in almost every section. Common reed is Finland''s largest grass and can grow
       to 1-4m in height.
 
-      Moving to deeper water areas, floating pondweed may
-      occur in the wetland, floating on the water.
+
+      Moving to deeper water areas, floating pondweed
+      may occur in the wetland, floating on the water.
 
       Wetlands may also feature
       many other plants, such as cattail, common duckweed, and various tree species.'
@@ -789,7 +793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a6ad7a94fb3777249b3ed6e708ca8f92, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da2b2bb821373da46b91da98965fbd23, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

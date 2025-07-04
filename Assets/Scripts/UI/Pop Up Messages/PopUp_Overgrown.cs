@@ -13,6 +13,11 @@ public class PopUp_Overgrown : MonoBehaviour
 
     private void OnDisable()
     {
+       
+    }
+
+    private void OnDestroy()
+    {
         PlacementSystem.onOvergrownWarning -= OpenPopUp;
     }
 

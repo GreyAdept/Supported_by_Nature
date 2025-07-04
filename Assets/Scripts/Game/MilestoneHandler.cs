@@ -292,7 +292,7 @@ public class MilestoneHandler : MonoBehaviour
                             onTutorialDone?.Invoke();
                             TurnManager.Instance.gameState.currentActionPoints -= 1;
                             milestone1Progress++;
-                            milestone1Button.GetComponentInChildren<TextMeshProUGUI>().text = milestone1Progress + "/3 (AP)";
+                            milestone1Button.GetComponentInChildren<TextMeshProUGUI>().text = milestone1Progress + "/3 (E)";
                             if (milestone1Progress >= 3)
                             {
                                 milestone1.isOn = true;
@@ -306,14 +306,14 @@ public class MilestoneHandler : MonoBehaviour
                     
                     break;
                 case 2:
-                    if (milestone2Progress < 3 && milestone2.isOn == false)
+                    if (milestone2Progress < 6 && milestone2.isOn == false)
                     {
                         if (TurnManager.Instance.gameState.currentActionPoints >= 1)
                         {
                             TurnManager.Instance.gameState.currentActionPoints -= 1;
                             milestone2Progress++;
-                            milestone2Button.GetComponentInChildren<TextMeshProUGUI>().text = milestone2Progress + "/3 (AP)";
-                            if (milestone2Progress >= 3)
+                            milestone2Button.GetComponentInChildren<TextMeshProUGUI>().text = milestone2Progress + "/6 (E)";
+                            if (milestone2Progress >= 6)
                             {
                                 milestone2.isOn = true;
                                 milestone2Button.interactable = false;
@@ -326,14 +326,14 @@ public class MilestoneHandler : MonoBehaviour
                     }
                     break;
                 case 3:
-                    if (milestone3Progress < 3 && milestone3.isOn == false)
+                    if (milestone3Progress < 12 && milestone3.isOn == false)
                     {
                         if (TurnManager.Instance.gameState.currentActionPoints >= 1)
                         {
                             TurnManager.Instance.gameState.currentActionPoints -= 1;
                             milestone3Progress++;
-                            milestone3Button.GetComponentInChildren<TextMeshProUGUI>().text = milestone3Progress + "/3 (AP)";
-                            if (milestone3Progress >= 3)
+                            milestone3Button.GetComponentInChildren<TextMeshProUGUI>().text = milestone3Progress + "/12 (E)";
+                            if (milestone3Progress >= 12)
                             {
                                 milestone3.isOn = true;
                                 milestone3Button.interactable = false;
@@ -352,7 +352,7 @@ public class MilestoneHandler : MonoBehaviour
 
     private void CalculateAPIncome()
     {
-        int tempIncome = 0;
+        float tempIncome = 0;
 
         foreach (var tile in gameTiles)
         {
@@ -364,11 +364,13 @@ public class MilestoneHandler : MonoBehaviour
 
             if (tileScript.plantGrowStage >= 3)
             {
-                tempIncome++;
+                tempIncome += 0.25f;
             }
         }
 
-        ApGain = baseApGain + tempIncome;
+        Debug.Log("Temp income is "+ tempIncome, this);
+
+        ApGain = baseApGain + Mathf.RoundToInt(tempIncome);
 
     }
 

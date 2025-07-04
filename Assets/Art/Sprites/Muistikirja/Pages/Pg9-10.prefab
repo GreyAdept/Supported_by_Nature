@@ -110,7 +110,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -52.6
+  m_lineSpacing: -49
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -161,23 +161,26 @@ MonoBehaviour:
       ja sen siipien k\xE4rkiv\xE4li on 70-80cm. \r\n\r\nNokikana munii huhtikuun
       loppupuolella 4-12 munaa ja sen pes\xE4 sijaitsee osmank\xE4\xE4mi- tai ruokokasvustossa
       tai n\xE4kyv\xE4sti m\xE4tt\xE4ill\xE4. \u200B"
-    sw: "<align=center><b>F\xE5glar</b></align>\nSoth\xF6na\nSoth\xF6nan \xE4r en
-      helsvart vattenf\xE5gel tillh\xF6rande rallidae-familjen, med vit n\xE4bb och
-      pannpl\xE5t.\nSoth\xF6nan \xE4r ungef\xE4r 36-42cm l\xE5ng, v\xE4ger 0,6-1,2kg
-      och har ett vingspann p\xE5 70-80cm.\nSoth\xF6nan l\xE4gger 4-12 \xE4gg i slutet
-      av april, och dess bo finns i kaveldun- eller vassvegetation eller synligt
-      p\xE5 tuvor.\nBoth translations maintain a similar structure and length as
-      your original Finnish text, which should work well for your game localization."
+    sw: "<align=center><b>F\xE5glar</b></align>\n\nSoth\xF6na\n\nSoth\xF6nan \xE4r
+      en helsvart vattenf\xE5gel tillh\xF6rande rallidae-familjen, med vit n\xE4bb
+      och pannpl\xE5t.\nSoth\xF6nan \xE4r ungef\xE4r 36-42cm l\xE5ng, v\xE4ger 0,6-1,2kg
+      och har ett vingspann p\xE5 70-80cm.\n\nSoth\xF6nan l\xE4gger 4-12 \xE4gg i
+      slutet av april, och dess bo finns i kaveldun- eller vassvegetation eller synligt
+      p\xE5 tuvor."
     en: '<align=center><b>Birds</b></align>
 
+
       Eurasian Coot
+
 
       The Eurasian
       Coot is an all-black waterbird belonging to the rail family, with a white beak
       and frontal shield.
 
+
       The Eurasian Coot is about 36-42cm long, weighs
       0.6-1.2kg, and has a wingspan of 70-80cm.
+
 
       The Eurasian Coot lays 4-12
       eggs in late April, and its nest is located in cattail or reed vegetation or
@@ -468,7 +471,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -52.6
+  m_lineSpacing: -49
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -518,20 +521,22 @@ MonoBehaviour:
       valkoinen. Jalat ovat punaiset tai nuoremmalla linnulla keltaiset.\n\r\nPunajalkaviklo
       on 24-27cm pitk\xE4, sen siipien k\xE4rkiv\xE4li on 47-53cm ja paino 92-127g.
       Se pesii kosteilla sis\xE4maan niityill\xE4 tai merenrannikon niityill\xE4."
-    sw: "R\xF6dbena\nR\xF6dbenan \xE4r en vadare som tillh\xF6r sn\xE4ppfamiljen.
+    sw: "R\xF6dbena\n\nR\xF6dbenan \xE4r en vadare som tillh\xF6r sn\xE4ppfamiljen.
       Den har brokigt brun ovansida och vit bakkant p\xE5 vingarna. Benen \xE4r r\xF6da
-      eller gula hos yngre f\xE5glar.\nR\xF6dbenan \xE4r 24-27cm l\xE5ng, har ett
+      eller gula hos yngre f\xE5glar.\n\nR\xF6dbenan \xE4r 24-27cm l\xE5ng, har ett
       vingspann p\xE5 47-53cm och v\xE4ger 92-127g. Den h\xE4ckar p\xE5 fuktiga inlands\xE4ngar
       eller kust\xE4ngar."
     en: 'Common Redshank
 
-      The Common Redshank is a wader belonging to the sandpiper
-      family. Its back is mottled brown and the trailing edge of its wing is white.
-      The legs are red, or yellow in younger birds.
 
-      The Common Redshank is
-      24-27cm long, has a wingspan of 47-53cm, and weighs 92-127g. It nests on wet
-      inland meadows or coastal meadows.'
+      The Common Redshank is a wader belonging to the
+      sandpiper family. Its back is mottled brown and the trailing edge of its wing
+      is white. The legs are red, or yellow in younger birds.
+
+
+      The Common
+      Redshank is 24-27cm long, has a wingspan of 47-53cm, and weighs 92-127g. It
+      nests on wet inland meadows or coastal meadows.'
 --- !u!1 &3754958998092947573
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,7 +738,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 839e84ecb2a42564fb104456039fa95f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05957a0209e696c4d9820bbffe417df5, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

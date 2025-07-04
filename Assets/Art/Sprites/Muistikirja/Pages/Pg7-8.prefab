@@ -322,19 +322,22 @@ MonoBehaviour:
       vakautta ja vakaat eli\xF6yhteis\xF6t palautuvat paremmin h\xE4iri\xF6ist\xE4
       esimerkiksi myrskyist\xE4 tai tulipaloista. \n\nT\xE4m\xE4n takia monimuotoisia
       ymp\xE4rist\xF6j\xE4 pit\xE4isikin suojella ja luoda lis\xE4\xE4.\u200B\r\n\r\n\u200B\r\n"
-    sw: "<b><align=center>Biologisk m\xE5ngfald</align></b>\nBiologisk m\xE5ngfald
-      avser naturens diversitet.\nVanligtvis m\xE4ts biologisk m\xE5ngfald genom
-      antalet arter. Biologisk m\xE5ngfald \xE4r viktigt f\xF6r planetens v\xE4lbefinnande.\nOm
+    sw: "<b><align=center>Biologisk m\xE5ngfald</align></b>\n\nBiologisk m\xE5ngfald
+      avser naturens diversitet.\n\nVanligtvis m\xE4ts biologisk m\xE5ngfald genom
+      antalet arter. Biologisk m\xE5ngfald \xE4r viktigt f\xF6r planetens v\xE4lbefinnande.\n\nOm
       en art d\xF6r ut kan konsekvenserna vara mycket stora. Ett stort antal arter
       i en milj\xF6 skapar stabilitet och stabila ekosystem \xE5terh\xE4mtar sig
       b\xE4ttre fr\xE5n st\xF6rningar som stormar eller br\xE4nder."
     en: '<b><align=center>Biodiversity</align></b>
 
+
       Biodiversity refers to
       the diversity of nature.
 
+
       Usually biodiversity is measured by the number
       of species. Biodiversity is important for the well-being of the planet.
+
 
       If
       a species dies out, the consequences can be truly significant. A large number
@@ -751,20 +754,20 @@ MonoBehaviour:
   buttonText:
     fi: "\nKosteikot ovat yksi monimuotoisimmista elinymp\xE4rist\xF6ist\xE4. \n\nKosteikot
       luovat elinymp\xE4rist\xF6n, jossa sek\xE4 vesilajit ja maalajit p\xE4rj\xE4\xE4v\xE4t,
-      sill\xE4 kosteikossa yhdistyy niin vesi kuin maa.\n Kosteikkoymp\xE4rist\xF6ss\xE4
+      sill\xE4 kosteikossa yhdistyy niin vesi kuin maa.\n\nKosteikkoymp\xE4rist\xF6ss\xE4
       el\xE4\xE4 my\xF6s tiettyj\xE4 lajeja, jotka ovat erikoistuneet el\xE4m\xE4\xE4n
       kosteikoissa. \u200B"
-    sw: "V\xE5tmarker \xE4r en av de mest artrika livsmilj\xF6erna.\nV\xE5tmarker
+    sw: "V\xE5tmarker \xE4r en av de mest artrika livsmilj\xF6erna.\n\nV\xE5tmarker
       skapar en milj\xF6 d\xE4r b\xE5de vattenlevande och landlevande arter trivs,
-      eftersom v\xE5tmarker kombinerar b\xE5de vatten och land.\nI v\xE5tmarksmilj\xF6n
-      lever ocks\xE5 vissa arter som har specialiserat sig p\xE5 att leva i v\xE5tmarker.\nBoth
-      translations maintain a similar length and structure as your original Finnish
-      text, making them suitable for your game localization."
+      eftersom v\xE5tmarker kombinerar b\xE5de vatten och land.\n\nI v\xE5tmarksmilj\xF6n
+      lever ocks\xE5 vissa arter som har specialiserat sig p\xE5 att leva i v\xE5tmarker."
     en: 'Wetlands are one of the most diverse habitats.
+
 
       Wetlands create an
       environment where both aquatic and terrestrial species thrive, as wetlands
       combine both water and land.
+
 
       The wetland environment is also home to
       certain species that have specialized in living in wetlands.'

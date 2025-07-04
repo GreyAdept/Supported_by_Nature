@@ -13,6 +13,11 @@ public class PopUp_CutNothing : MonoBehaviour
 
     private void OnDisable()
     {
+        
+    }
+
+    private void OnDestroy()
+    {
         PlacementSystem.onCutNothing -= OpenPopUp;
     }
 

@@ -49,18 +49,21 @@ public class PlacementSystem : MonoBehaviour
 
         if (TurnManager.Instance.gameState.currentActionPoints < 1)
         {
+            Debug.Log("Warn AP");
             onAPWarning?.Invoke();
             return;
         }
        
         if (tile.grownPlant != null)
         {
+            Debug.Log("Warn plant");
             onExistingPlantWarning?.Invoke();
             return;
         }
         
         if (tile.overgrownState >= 3)
         {
+            Debug.Log("Warn growth");
             onOvergrownWarning?.Invoke();
             return;
         }
@@ -85,12 +88,14 @@ public class PlacementSystem : MonoBehaviour
 
         if (weedScript.growStage <= 1)
         {
+            Debug.Log("Warn cut");
             onCutNothing?.Invoke();
             return;
         }
 
         if (TurnManager.Instance.gameState.currentActionPoints < 1)
         {
+            Debug.Log("Warn AP");
             onAPWarning?.Invoke();
             return;
         }

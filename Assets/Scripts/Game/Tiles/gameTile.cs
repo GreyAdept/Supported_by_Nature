@@ -120,16 +120,6 @@ public class gameTile : MonoBehaviour
 
     }
 
-
-    void Update()
-    {
-        if (grownPlant)
-        {
-            plantGrowStage = grownPlant.plantGrowStage; //might not need to update this every frame
-        }
-
-    }
-
     private void SetIndicatorOn()
     {
         indicator.gameObject.SetActive(true);
@@ -205,6 +195,9 @@ public class gameTile : MonoBehaviour
                     break;
                
             }
+
+            plantGrowStage = grownPlant.plantGrowStage;
+
         }
     }
 

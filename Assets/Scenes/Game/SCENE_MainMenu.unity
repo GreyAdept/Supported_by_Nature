@@ -474,6 +474,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae590a4f74e38424b8d683f82ae44ba2, type: 3}
   m_PrefabInstance: {fileID: 622872503}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &440801621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6283165608426620906, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+  m_PrefabInstance: {fileID: 2386223603923453980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &440801626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440801621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cfa5884ad6cf24a80f26b675d4569b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  language: 1
 --- !u!114 &464329275 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 419839629160001697, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
@@ -617,6 +635,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae590a4f74e38424b8d683f82ae44ba2, type: 3}
+--- !u!1 &669059604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2416859878204175914, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+  m_PrefabInstance: {fileID: 2386223603923453980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &669059609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669059604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cfa5884ad6cf24a80f26b675d4569b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  language: 0
 --- !u!4 &766821276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6673812409524093309, guid: f022ce325532f7f40883165475d4af56, type: 3}
@@ -1487,6 +1523,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2685936646601341336, guid: f022ce325532f7f40883165475d4af56, type: 3}
   m_PrefabInstance: {fileID: 8819274580612037949}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1293628668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 301955813889015404, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+  m_PrefabInstance: {fileID: 2386223603923453980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1293628673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293628668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cfa5884ad6cf24a80f26b675d4569b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  language: 2
 --- !u!1 &1333881218 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 18b0718b4a0102347b8b0a94c419b112, type: 3}
@@ -2085,9 +2139,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1401599189}
     - target: {fileID: 499656475630364713, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 499656475630364713, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1829560580781607286}
+      objectReference: {fileID: 1293628673}
+    - target: {fileID: 499656475630364713, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLanguage
+      objectReference: {fileID: 0}
+    - target: {fileID: 499656475630364713, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LanguageButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 749081372052029616, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2253,13 +2319,37 @@ PrefabInstance:
       value: 0.7987421
       objectReference: {fileID: 0}
     - target: {fileID: 7138597670482969460, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138597670482969460, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1829560580781607286}
+      objectReference: {fileID: 669059609}
+    - target: {fileID: 7138597670482969460, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLanguage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138597670482969460, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LanguageButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259999036728300626, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7259999036728300626, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1829560580781607286}
+      objectReference: {fileID: 440801626}
+    - target: {fileID: 7259999036728300626, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLanguage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259999036728300626, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LanguageButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7915314865523803749, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
       propertyPath: m_Type
       value: 0
@@ -2452,7 +2542,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7005471583531348026, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
       insertIndex: 0
       addedObject: {fileID: 903335018}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2416859878204175914, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 669059609}
+    - targetCorrespondingSourceObject: {fileID: 6283165608426620906, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 440801626}
+    - targetCorrespondingSourceObject: {fileID: 301955813889015404, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1293628673}
   m_SourcePrefab: {fileID: 100100000, guid: b28e1dfc4cbac964483746140c591b50, type: 3}
 --- !u!224 &2386223603923453981 stripped
 RectTransform:

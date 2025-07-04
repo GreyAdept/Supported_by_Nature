@@ -14,6 +14,11 @@ public class PopUp_AP : MonoBehaviour
 
     private void OnDisable()
     {
+        
+    }
+
+    private void OnDestroy()
+    {
         PlacementSystem.onAPWarning -= OpenPopUp;
     }
 
