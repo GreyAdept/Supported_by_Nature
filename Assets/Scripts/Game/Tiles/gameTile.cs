@@ -38,6 +38,9 @@ public class gameTile : MonoBehaviour
     public GameObject placementIndicatorPrefab;
     private GameObject indicator;
 
+    //particle effect
+    public GameObject particleSystemPrefab;
+
 
     private void Awake()
     {
@@ -79,7 +82,8 @@ public class gameTile : MonoBehaviour
         tileManager = tileManager.Instance;
         sRend = indicator.GetComponent<SpriteRenderer>();
         defaultColor = sRend.color;
-
+        var particleSystem = Instantiate(particleSystemPrefab, particleSystemPrefab.transform.position, Quaternion.identity);
+        particleSystem.transform.SetParent(this.transform, false);
         TurnManager.Instance.onTurnChanged.AddListener(IncrementPlantGrowStage);
          
 

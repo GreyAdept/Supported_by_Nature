@@ -2722,6 +2722,14 @@ PrefabInstance:
       value: "Tekij\xE4t"
       objectReference: {fileID: 0}
     - target: {fileID: 4620988514180195633, guid: 58b782aec42cd2941af5d8dc80511bd0, type: 3}
+      propertyPath: creditsText.sw
+      value: Skapare
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620988514180195633, guid: 58b782aec42cd2941af5d8dc80511bd0, type: 3}
+      propertyPath: quitGameText.sw
+      value: Avsluta
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620988514180195633, guid: 58b782aec42cd2941af5d8dc80511bd0, type: 3}
       propertyPath: 'menuButtons.Array.data[0]'
       value: 
       objectReference: {fileID: 1233226768}

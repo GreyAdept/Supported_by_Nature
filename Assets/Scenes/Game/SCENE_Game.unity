@@ -15059,6 +15059,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &81316992301341914
 GameObject:
   m_ObjectHideFlags: 0
@@ -15400,6 +15401,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &111268306599321767
 GameObject:
   m_ObjectHideFlags: 0
@@ -21190,6 +21192,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!33 &267092687834138979
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21264,6 +21267,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!64 &273293848200608465
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26575,6 +26579,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &344169120773965430
 Transform:
   m_ObjectHideFlags: 0
@@ -26726,6 +26731,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &365619597111295869
 Transform:
   m_ObjectHideFlags: 0
@@ -28488,6 +28494,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!222 &590885461703755554
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28605,6 +28612,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &612630855968236462
 GameObject:
   m_ObjectHideFlags: 0
@@ -29340,6 +29348,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!199 &719197564986058634
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -29501,6 +29510,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!224 &739186474654933431
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39734,6 +39744,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!222 &837548696775773341
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40477,6 +40488,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &938424975625339508
 Transform:
   m_ObjectHideFlags: 0
@@ -46980,6 +46992,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!23 &1026296579336247335
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47501,7 +47514,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 9000047797378315161}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.17061645
+  m_Size: 0.17061643
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -52874,6 +52887,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &1216926754287736466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52900,6 +52914,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &1220614040723686688
 GameObject:
   m_ObjectHideFlags: 0
@@ -84675,6 +84690,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &1654585840074054114
 GameObject:
   m_ObjectHideFlags: 0
@@ -100869,6 +100885,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!198 &1896826198627533587
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -106083,6 +106100,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!222 &1942980024829854600
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -106174,6 +106192,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &1977025922252023365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111826,6 +111845,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &2108371847607083199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116880,6 +116900,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &2176880793980542134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137539,6 +137560,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &2333353167117942576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137565,6 +137587,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &2334802273727703115
 GameObject:
   m_ObjectHideFlags: 0
@@ -142773,6 +142796,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &2383341833701962184
 GameObject:
   m_ObjectHideFlags: 0
@@ -143112,6 +143136,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &2438495108632255997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143829,6 +143854,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &2477959928146931087
 GameObject:
   m_ObjectHideFlags: 0
@@ -143924,6 +143950,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &2498863549930763770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154024,6 +154051,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &2584219239913453764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159907,6 +159935,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &2722949006106928954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175256,6 +175285,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &2875432456051335713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180801,6 +180831,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!224 &2931765761592184606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -185760,6 +185791,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &2956421814834479030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191308,6 +191340,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &3059838380970803337
 GameObject:
   m_ObjectHideFlags: 0
@@ -196329,6 +196362,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &3106427051130942878
 GameObject:
   m_ObjectHideFlags: 0
@@ -196467,6 +196501,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!65 &3130770616857436957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -201930,6 +201965,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!222 &3234584156772856548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -202186,6 +202222,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &3300421002926456043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202225,6 +202262,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!33 &3301366747737735444
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -202282,6 +202320,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &3324685504193062621
 GameObject:
   m_ObjectHideFlags: 0
@@ -207441,6 +207480,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &3387700361203196245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223300,6 +223340,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &3581918337014737285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223459,6 +223500,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!23 &3587235862396804061
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -253080,6 +253122,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &3733424219792513597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272938,6 +272981,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &3877374866705228801
 Transform:
   m_ObjectHideFlags: 0
@@ -273057,6 +273101,16 @@ MonoBehaviour:
   - id: joke01
     clip: {fileID: 8300000, guid: ebecf86920494b24cb584d3b6930d6c2, type: 3}
     volume: 1
+    loop: 0
+    category: 1
+  - id: cutGrass
+    clip: {fileID: 8300000, guid: bdd9cebe00536f14188aa58412797252, type: 3}
+    volume: 1
+    loop: 0
+    category: 1
+  - id: placePlant
+    clip: {fileID: 8300000, guid: 08e1427791316604a8c64a6d84951926, type: 3}
+    volume: 0.3
     loop: 0
     category: 1
 --- !u!33 &3885342079418606034
@@ -273180,6 +273234,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &3896544209722762932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278392,6 +278447,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!65 &3955893093846382200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -278568,6 +278624,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!198 &3975183359355334581
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -298850,6 +298907,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &4141987646658803376
 Transform:
   m_ObjectHideFlags: 0
@@ -304595,6 +304653,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &4251176507368596729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304922,6 +304981,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &4308514676410665592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304948,6 +305008,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!64 &4315142428675545325
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -305181,6 +305242,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &4350082527028096577
 Transform:
   m_ObjectHideFlags: 0
@@ -305497,6 +305559,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!23 &4386514352315662467
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -321234,6 +321297,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &4536219622030005712
 GameObject:
   m_ObjectHideFlags: 0
@@ -330916,6 +330980,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!23 &4566387451495309094
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -340613,6 +340678,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!198 &4600585016048292568
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -345420,6 +345486,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &4601430268517804873
 GameObject:
   m_ObjectHideFlags: 0
@@ -350747,6 +350814,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!222 &4650182600158596982
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -351026,6 +351094,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!65 &4675825542264074033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -356328,6 +356397,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1001 &4759596441483643869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -361713,6 +361783,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!95 &4843584174524696889
 Animator:
   serializedVersion: 7
@@ -361761,6 +361832,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &4848077025840761352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373063,6 +373135,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!33 &5057237760827850203
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -409230,6 +409303,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &5409674862773722224
 Transform:
   m_ObjectHideFlags: 0
@@ -409506,6 +409580,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &5452367324128860268
 GameObject:
   m_ObjectHideFlags: 0
@@ -409736,6 +409811,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &5461773684553569344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419844,6 +419920,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &5531468286698297550
 GameObject:
   m_ObjectHideFlags: 0
@@ -420539,6 +420616,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &5659456531017406806
 Transform:
   m_ObjectHideFlags: 0
@@ -425762,6 +425840,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &5700756181974048625
 GameObject:
   m_ObjectHideFlags: 0
@@ -426693,6 +426772,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &5777348977944549611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426915,6 +426995,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!64 &5814885569769798616
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -427266,6 +427347,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &5900071228137161476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432891,6 +432973,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &5975163632914348908
 Transform:
   m_ObjectHideFlags: 0
@@ -438382,6 +438465,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!64 &6087528872779690675
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -438461,6 +438545,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!222 &6109284847410871258
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -448278,6 +448363,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &6165131281236392937
 GameObject:
   m_ObjectHideFlags: 0
@@ -453462,6 +453548,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!33 &6234308011174516721
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -453571,6 +453658,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &6269220346935415618
 GameObject:
   m_ObjectHideFlags: 0
@@ -453618,6 +453706,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &6273119799233423011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453644,6 +453733,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &6277935556818350611
 GameObject:
   m_ObjectHideFlags: 0
@@ -453922,6 +454012,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &6311158006590842966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454162,6 +454253,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &6324699787023598572
 Transform:
   m_ObjectHideFlags: 0
@@ -454203,6 +454295,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &6336517876967345621
 Transform:
   m_ObjectHideFlags: 0
@@ -460090,6 +460183,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!65 &6502326481973690177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -460437,6 +460531,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &6558046305861060335
 GameObject:
   m_ObjectHideFlags: 0
@@ -466180,6 +466275,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!23 &6740647210762154665
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -466251,6 +466347,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &6744251689670748386
 GameObject:
   m_ObjectHideFlags: 0
@@ -481410,6 +481507,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!64 &6926866188085095990
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -481592,6 +481690,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &6958270077309312919
 GameObject:
   m_ObjectHideFlags: 0
@@ -483088,6 +483187,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &7172296103416304341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483114,6 +483214,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1001 &7176249688005135164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -484371,6 +484472,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!65 &7338480191152864785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -484715,6 +484817,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!198 &7383123545714410669
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -489522,6 +489625,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!4 &7384740756600672939
 Transform:
   m_ObjectHideFlags: 0
@@ -490137,6 +490241,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &7498946788147425506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490622,6 +490727,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!23 &7567105222324848607
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -490823,6 +490929,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!222 &7614044795280436160
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -496247,6 +496354,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!33 &7709385907491347487
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -506006,6 +506114,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!224 &7730312796693568264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -506723,6 +506832,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!64 &7846930937025113426
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -507318,6 +507428,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!198 &7949850948943294423
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -512444,6 +512555,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &8014761967953362967
 GameObject:
   m_ObjectHideFlags: 0
@@ -518340,6 +518452,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &8170798686194429241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523865,6 +523978,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!1 &8274839572427140496
 GameObject:
   m_ObjectHideFlags: 0
@@ -548680,6 +548794,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &8396246219099701019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560137,6 +560252,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!114 &8681246203249023315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566676,6 +566792,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!23 &8953286813378896103
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -591557,6 +591674,7 @@ MonoBehaviour:
   grownPlant: {fileID: 0}
   plantGrowStage: 0
   placementIndicatorPrefab: {fileID: 0}
+  particleSystemPrefab: {fileID: 3263883774001495188, guid: 888c2d255efcf3a4f865bb7c8ae8ec8a, type: 3}
 --- !u!64 &9088016596831028184
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ public class PlacementSystem : MonoBehaviour
     public static event System.Action onActionDone;
     public static event System.Action onBigWeedCut;
     public static event System.Action onPlantPlaced;
+    public static event System.Action<gameTile> onCutWeeds;
 
 
     void Start()
@@ -76,6 +77,7 @@ public class PlacementSystem : MonoBehaviour
         tile.grownPlant.plantGrowStage = 0;
         //tile.plantPrefab = plants[randomIndex].organismPrefab;
         onPlantPlaced?.Invoke();
+        SoundManager.Instance.PlayGameSound("placePlant");
         tile.UpdatePlant(); 
                             
     }
@@ -108,6 +110,7 @@ public class PlacementSystem : MonoBehaviour
         }
         weedScript.growStage = 1;
         onActionDone?.Invoke();
+        onCutWeeds?.Invoke(tile);
         weedScript.UpdateWeedObject();
     }
 }
