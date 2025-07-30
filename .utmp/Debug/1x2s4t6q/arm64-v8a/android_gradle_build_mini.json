@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "C:\\Users\\leppa.aatu\\Documents\\Unity Projects\\Pike Game\\PikeGame\\Library\\PramData\\AndroidApplicationController\\Cache\\com.TurkuAMK.PikeGame\\gradle-project\\unityLibrary\\src\\main\\cpp\\CMakeLists.txt",
+    "C:\\Users\\leppa.aatu\\Documents\\Unity Projects\\Pike Game\\PikeGame\\Library\\PramData\\AndroidApplicationController\\Cache\\com.TurkuAMK.PikeGame\\gradle-project\\unityLibrary\\src\\main\\cpp\\GameActivity\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.41f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\leppa.aatu\\Documents\\Unity Projects\\Pike Game\\PikeGame\\.utmp\\Debug\\1x2s4t6q\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.41f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\leppa.aatu\\Documents\\Unity Projects\\Pike Game\\PikeGame\\.utmp\\Debug\\1x2s4t6q\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "game::@d02bb112ea9f9c2ed29f": {
+      "artifactName": "game",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\leppa.aatu\\Documents\\Unity Projects\\Pike Game\\PikeGame\\Library\\PramData\\AndroidApplicationController\\Cache\\com.TurkuAMK.PikeGame\\gradle-project\\unityLibrary\\build\\intermediates\\cxx\\Debug\\1x2s4t6q\\obj\\arm64-v8a\\libgame.so",
+      "runtimeFiles": []
+    }
+  }
+}

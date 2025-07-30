@@ -16,6 +16,7 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
     {   
         paused,
         normal,
+        guru,
         placement
     }
 
@@ -39,8 +40,12 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
         inputActions.Default.TileAction.canceled += PointerReleased;
 
         inputActions.Default.Point.performed += UpdateMouseValue;
+
+       
         
     }
+
+   
 
     private void PointerReleased(InputAction.CallbackContext ctx)
     {
@@ -48,8 +53,16 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
         {
             OnPointerReleased?.Invoke();
         }
+
+        if (DialogueManager.instance.IsDialogueActive)
+        {
+            DialogueManager.instance.InteractWithNPC();
+        }
+        
+
     }
 
+    
 
     private void UpdatePlayerState(PlayerState ctx)
     {
@@ -74,6 +87,7 @@ public class InputManager : SingletonMonoBehaviour<InputManager>
         ActionButton.OnButtonSelectionChanged -= ChangeButton;
         ActionButton.OnPlayerStateChanged -= UpdatePlayerState;
         inputActions.Default.TileAction.canceled -= PointerReleased;
+       
         inputActions.Disable();
     }
 }

@@ -72,6 +72,7 @@ public class DialogueManager : MonoBehaviour
     {
         //if (Input.GetKeyDown(KeyCode.A)) InteractWithNPC();
         TemporaryQuestManager();
+      
     }
     private void OnTurnChanged(int turnNumber)
     {
@@ -227,7 +228,7 @@ public class DialogueManager : MonoBehaviour
     {
         if(isDialogueRunning)
         {
-            if(typeWriterEffectCoroutine != null)
+            if (typeWriterEffectCoroutine != null)
             {
                 StopCoroutine(typeWriterEffectCoroutine);
                 dialogueText.text = finalText;
@@ -241,7 +242,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         if(tutorialActive)
-        {
+        {   
             ShowNextTutorialDialogue();
         }
         else if(!hasGivenHintThisTurn)
@@ -253,6 +254,8 @@ public class DialogueManager : MonoBehaviour
             ShowRandomDialogue();
         }
     }
+
+
     public void RandomDialogueSoundEffectPlayer()
     {
         int i = Random.Range(0, soundIDs.Length);

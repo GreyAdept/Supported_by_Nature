@@ -1,0 +1,10 @@
+# ninja log v5
+10	1845	7754874237700400	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	b5a0afca3f78ea65
+28	1861	7754874237867110	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	7fb374e34046d70b
+49	1882	7754874238091411	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	b761520a57b15e33
+20	1900	7754874238273392	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	d214a9776c5eca2f
+62	1935	7754874238647389	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	3643f044b616e9ab
+78	1977	7754874239075364	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	f86f217a799a28b6
+37	2053	7754874239816386	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	3e50a02b17bfa05d
+1	2102	7754874240166286	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	3aadc72beca984c2
+2103	2327	7754874242470545	C:/Users/leppa.aatu/Documents/Unity Projects/Pike Game/PikeGame/Library/PramData/AndroidApplicationController/Cache/com.TurkuAMK.PikeGame/gradle-project/unityLibrary/build/intermediates/cxx/Debug/1x2s4t6q/obj/arm64-v8a/libgame.so	221d5dcc7fbeb581

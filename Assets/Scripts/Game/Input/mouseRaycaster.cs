@@ -25,8 +25,10 @@ public class MouseRaycaster : MonoBehaviour
     //tile indicator 
     public GameObject tileIndicator;
     public Grid grid;
-    
 
+
+    //guru npc
+    public static event System.Action OnNpcButtonHit;
 
 
     
@@ -89,7 +91,9 @@ public class MouseRaycaster : MonoBehaviour
         }
         else if (hit.collider != null && hit.collider.CompareTag("NPC"))
         {
-            DialogueManager.instance.InteractWithNPC();
+            //DialogueManager.instance.InteractWithNPC();
+            //UnityEngine.Debug.Log("guru hit");
+            //OnNpcButtonHit?.Invoke();
             return selectedTile;
         }
         
