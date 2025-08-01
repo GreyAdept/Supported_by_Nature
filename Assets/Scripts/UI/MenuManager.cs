@@ -23,6 +23,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private float scrollSpeed;
     private Vector3 creditsStartPos;
     private Coroutine creditsCoroutine;
+    public CanvasGroup canvasGroupMenu;
+    public CanvasGroup canvasGroupCredits;
     private void Awake()
     {
         if (fadeCG != null)
@@ -44,11 +46,15 @@ public class MenuManager : MonoBehaviour
     {
         StopCreditScroll();
         creditsPanel.SetActive(false);
-        mainPanel.SetActive(true);
+        //mainPanel.SetActive(true);
+        canvasGroupMenu.alpha = 1;
+        canvasGroupMenu.interactable = true;
     }
     public void EnableCredits()
     {
-        mainPanel.SetActive(false);
+        //mainPanel.SetActive(false);
+        canvasGroupMenu.alpha = 0;
+        canvasGroupMenu.interactable = false;
         creditsPanel.SetActive(true);
         StartCreditScroll();
     }

@@ -12,7 +12,7 @@ public class ButtonTextLocalized : MonoBehaviour
         LanguageManager.onLanguageChanged += SetText;
         SetText();
     }
-    private void SetText()
+    public void SetText()
     {
         buttonTextObject.text = buttonText.GetText();
     }
